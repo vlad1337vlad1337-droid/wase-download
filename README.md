@@ -8,7 +8,7 @@ A self-hosted file converter in English, Russian and Simplified Chinese. Drop a 
 - **One workspace:** visible file queue, individual downloads, ZIP, retry and cancellation.
 - **Two paths:** local browser image processing or resource-limited, offline server containers.
 - **Accessible by default:** compact responsive UI, light/dark themes, keyboard menus and reduced-motion support.
-- **Discoverable:** static localized pages, 21 tested conversion examples per language, full declared catalogue and a read-only MCP endpoint.
+- **Discoverable:** static localized pages, 33 tested conversion examples per language, full declared catalogue and a read-only MCP endpoint.
 
 The pinned server build declares 915 input extensions. This is an engine catalogue, not a promise that every possible file or conversion pair works. Real byte-level smoke tests cover each family; detailed constraints are below.
 

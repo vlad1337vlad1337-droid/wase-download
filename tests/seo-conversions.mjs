@@ -1,0 +1,8 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const origin=process.env.CONVERTER_TEST_ORIGIN||'http://127.0.0.1:5189';
+const sources={png:fs.readFileSync(new URL('./fixtures/logo.png',import.meta.url)),svg:Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><path fill="red" d="M10 10h60v60H10z"/></svg>')};
+function verify(to,b){assert.ok(b.length>20);if(to==='png')assert.equal(b.subarray(1,4).toString(),'PNG');if(to==='jpg')assert.equal(b.readUInt16BE(0),0xffd8);if(to==='webp'){assert.equal(b.subarray(0,4).toString(),'RIFF');assert.equal(b.subarray(8,12).toString(),'WEBP');}if(to==='bmp')assert.equal(b.subarray(0,2).toString(),'BM');if(to==='ico')assert.deepEqual(b.subarray(0,4),Buffer.from([0,0,1,0]));if(to==='gif')assert.equal(b.subarray(0,3).toString(),'GIF');if(to==='tiff')assert.ok(['II','MM'].includes(b.subarray(0,2).toString()));}
+async function convert(from,to){const r=await fetch(`${origin}/api/convert?from=${from}&to=${to}`,{method:'POST',body:sources[from],headers:{'Content-Type':'application/octet-stream'}});assert.equal(r.status,200,`${from}->${to}`);const b=Buffer.from(await r.arrayBuffer());verify(to,b);return b;}
+for(const target of ['jpg','webp','bmp','ico','gif','tiff'])sources[target]=await convert('png',target);
+const pairs=[['png','jpg'],['svg','jpg'],['svg','webp'],['jpg','webp'],['webp','jpg'],['bmp','png'],['ico','png'],['gif','png'],['tiff','png'],['png','ico'],['png','bmp'],['png','tiff']];
+for(const [from,to]of pairs){const b=await convert(from,to);console.log(`${from} → ${to}: ${b.length} bytes, valid signature`);}
