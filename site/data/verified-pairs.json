@@ -1,0 +1,11382 @@
+{
+  "svg-to-png": [
+    "SVG",
+    "PNG"
+  ],
+  "gif-to-png": [
+    "GIF",
+    "PNG"
+  ],
+  "jpg-to-png": [
+    "JPG",
+    "PNG"
+  ],
+  "pdf-to-png": [
+    "PDF",
+    "PNG"
+  ],
+  "ppm-to-png": [
+    "PPM",
+    "PNG"
+  ],
+  "ttf-to-woff2": [
+    "TTF",
+    "WOFF2"
+  ],
+  "xmp-to-png": [
+    "XMP",
+    "PNG"
+  ],
+  "epub-to-txt": [
+    "EPUB",
+    "TXT"
+  ],
+  "ai-to-png": [
+    "AI",
+    "PNG"
+  ],
+  "flv-to-png": [
+    "FLV",
+    "PNG"
+  ],
+  "mkv-to-webm": [
+    "MKV",
+    "WEBM"
+  ],
+  "psd-to-png": [
+    "PSD",
+    "PNG"
+  ],
+  "doc-to-txt": [
+    "DOC",
+    "TXT"
+  ],
+  "dotm-to-txt": [
+    "DOTM",
+    "TXT"
+  ],
+  "sdw-to-txt": [
+    "SDW",
+    "TXT"
+  ],
+  "wps-to-txt": [
+    "WPS",
+    "TXT"
+  ],
+  "xls-to-pdf": [
+    "XLS",
+    "PDF"
+  ],
+  "aac-to-wav": [
+    "AAC",
+    "WAV"
+  ],
+  "m4a-to-wav": [
+    "M4A",
+    "WAV"
+  ],
+  "opus-to-wav": [
+    "OPUS",
+    "WAV"
+  ],
+  "3ds-to-stl": [
+    "3DS",
+    "STL"
+  ],
+  "ase-to-stl": [
+    "ASE",
+    "STL"
+  ],
+  "dae-to-stl": [
+    "DAE",
+    "STL"
+  ],
+  "lwo-to-stl": [
+    "LWO",
+    "STL"
+  ],
+  "smd-to-stl": [
+    "SMD",
+    "STL"
+  ],
+  "woff-to-ttf": [
+    "WOFF",
+    "TTF"
+  ],
+  "ppt-to-pdf": [
+    "PPT",
+    "PDF"
+  ],
+  "fodp-to-pdf": [
+    "FODP",
+    "PDF"
+  ],
+  "3ds-to-obj": [
+    "3DS",
+    "OBJ"
+  ],
+  "aac-to-ac3": [
+    "AAC",
+    "AC3"
+  ],
+  "aac-to-av1.mkv": [
+    "AAC",
+    "AV1.MKV"
+  ],
+  "aac-to-h264.mp4": [
+    "AAC",
+    "H264.MP4"
+  ],
+  "aac-to-mkv": [
+    "AAC",
+    "MKV"
+  ],
+  "aac-to-opus": [
+    "AAC",
+    "OPUS"
+  ],
+  "aac-to-sbc": [
+    "AAC",
+    "SBC"
+  ],
+  "aac-to-sox": [
+    "AAC",
+    "SOX"
+  ],
+  "aac-to-voc": [
+    "AAC",
+    "VOC"
+  ],
+  "acc-to-fbx": [
+    "ACC",
+    "FBX"
+  ],
+  "ai-to-avs": [
+    "AI",
+    "AVS"
+  ],
+  "ai-to-bmp3": [
+    "AI",
+    "BMP3"
+  ],
+  "ai-to-cin": [
+    "AI",
+    "CIN"
+  ],
+  "ai-to-dcx": [
+    "AI",
+    "DCX"
+  ],
+  "ai-to-dxt5": [
+    "AI",
+    "DXT5"
+  ],
+  "ai-to-farbfeld": [
+    "AI",
+    "FARBFELD"
+  ],
+  "ai-to-fl32": [
+    "AI",
+    "FL32"
+  ],
+  "ai-to-gif87": [
+    "AI",
+    "GIF87"
+  ],
+  "ai-to-hdr": [
+    "AI",
+    "HDR"
+  ],
+  "ai-to-jp2": [
+    "AI",
+    "JP2"
+  ],
+  "ai-to-jpg": [
+    "AI",
+    "JPG"
+  ],
+  "ai-to-json": [
+    "AI",
+    "JSON"
+  ],
+  "ai-to-miff": [
+    "AI",
+    "MIFF"
+  ],
+  "ai-to-mov": [
+    "AI",
+    "MOV"
+  ],
+  "ai-to-mpg": [
+    "AI",
+    "MPG"
+  ],
+  "ai-to-palm": [
+    "AI",
+    "PALM"
+  ],
+  "ai-to-pcds": [
+    "AI",
+    "PCDS"
+  ],
+  "ai-to-pdb": [
+    "AI",
+    "PDB"
+  ],
+  "ai-to-pgm": [
+    "AI",
+    "PGM"
+  ],
+  "ai-to-png32": [
+    "AI",
+    "PNG32"
+  ],
+  "ai-to-pnm": [
+    "AI",
+    "PNM"
+  ],
+  "ai-to-sgi": [
+    "AI",
+    "SGI"
+  ],
+  "ai-to-tiff64": [
+    "AI",
+    "TIFF64"
+  ],
+  "ai-to-wbmp": [
+    "AI",
+    "WBMP"
+  ],
+  "ai-to-wpg": [
+    "AI",
+    "WPG"
+  ],
+  "amf-to-json": [
+    "AMF",
+    "JSON"
+  ],
+  "amf-to-ply": [
+    "AMF",
+    "PLY"
+  ],
+  "amr-to-aac": [
+    "AMR",
+    "AAC"
+  ],
+  "amr-to-adx": [
+    "AMR",
+    "ADX"
+  ],
+  "amr-to-aiff": [
+    "AMR",
+    "AIFF"
+  ],
+  "amr-to-av1.mkv": [
+    "AMR",
+    "AV1.MKV"
+  ],
+  "amr-to-h264.mp4": [
+    "AMR",
+    "H264.MP4"
+  ],
+  "amr-to-mkv": [
+    "AMR",
+    "MKV"
+  ],
+  "amr-to-opus": [
+    "AMR",
+    "OPUS"
+  ],
+  "amr-to-spdif": [
+    "AMR",
+    "SPDIF"
+  ],
+  "amr-to-tta": [
+    "AMR",
+    "TTA"
+  ],
+  "ase-to-fbx": [
+    "ASE",
+    "FBX"
+  ],
+  "asf-to-aif": [
+    "ASF",
+    "AIF"
+  ],
+  "asf-to-aptx": [
+    "ASF",
+    "APTX"
+  ],
+  "asf-to-au": [
+    "ASF",
+    "AU"
+  ],
+  "asf-to-avi": [
+    "ASF",
+    "AVI"
+  ],
+  "asf-to-caf": [
+    "ASF",
+    "CAF"
+  ],
+  "asf-to-flac": [
+    "ASF",
+    "FLAC"
+  ],
+  "asf-to-gif": [
+    "ASF",
+    "GIF"
+  ],
+  "asf-to-h265.mp4": [
+    "ASF",
+    "H265.MP4"
+  ],
+  "asf-to-ircam": [
+    "ASF",
+    "IRCAM"
+  ],
+  "asf-to-loas": [
+    "ASF",
+    "LOAS"
+  ],
+  "asf-to-m4a": [
+    "ASF",
+    "M4A"
+  ],
+  "asf-to-mmf": [
+    "ASF",
+    "MMF"
+  ],
+  "asf-to-mp4": [
+    "ASF",
+    "MP4"
+  ],
+  "asf-to-mpg": [
+    "ASF",
+    "MPG"
+  ],
+  "asf-to-nut": [
+    "ASF",
+    "NUT"
+  ],
+  "asf-to-w64": [
+    "ASF",
+    "W64"
+  ],
+  "asf-to-webp": [
+    "ASF",
+    "WEBP"
+  ],
+  "asf-to-wv": [
+    "ASF",
+    "WV"
+  ],
+  "au-to-ac3": [
+    "AU",
+    "AC3"
+  ],
+  "au-to-av1.mp4": [
+    "AU",
+    "AV1.MP4"
+  ],
+  "au-to-g722": [
+    "AU",
+    "G722"
+  ],
+  "au-to-h265.mkv": [
+    "AU",
+    "H265.MKV"
+  ],
+  "au-to-mp3": [
+    "AU",
+    "MP3"
+  ],
+  "au-to-mpeg": [
+    "AU",
+    "MPEG"
+  ],
+  "au-to-ogg": [
+    "AU",
+    "OGG"
+  ],
+  "au-to-rso": [
+    "AU",
+    "RSO"
+  ],
+  "au-to-webm": [
+    "AU",
+    "WEBM"
+  ],
+  "au-to-wtv": [
+    "AU",
+    "WTV"
+  ],
+  "avif-to-art": [
+    "AVIF",
+    "ART"
+  ],
+  "avif-to-bmp": [
+    "AVIF",
+    "BMP"
+  ],
+  "avif-to-cur": [
+    "AVIF",
+    "CUR"
+  ],
+  "avif-to-dpx": [
+    "AVIF",
+    "DPX"
+  ],
+  "avif-to-epi": [
+    "AVIF",
+    "EPI"
+  ],
+  "avif-to-epsf": [
+    "AVIF",
+    "EPSF"
+  ],
+  "avif-to-ff": [
+    "AVIF",
+    "FF"
+  ],
+  "avif-to-flv": [
+    "AVIF",
+    "FLV"
+  ],
+  "avif-to-g4": [
+    "AVIF",
+    "G4"
+  ],
+  "avif-to-hrz": [
+    "AVIF",
+    "HRZ"
+  ],
+  "avif-to-ico": [
+    "AVIF",
+    "ICO"
+  ],
+  "avif-to-ipl": [
+    "AVIF",
+    "IPL"
+  ],
+  "avif-to-j2k": [
+    "AVIF",
+    "J2K"
+  ],
+  "avif-to-jpe": [
+    "AVIF",
+    "JPE"
+  ],
+  "avif-to-m2v": [
+    "AVIF",
+    "M2V"
+  ],
+  "avif-to-mng": [
+    "AVIF",
+    "MNG"
+  ],
+  "avif-to-mpc": [
+    "AVIF",
+    "MPC"
+  ],
+  "avif-to-otb": [
+    "AVIF",
+    "OTB"
+  ],
+  "avif-to-pbm": [
+    "AVIF",
+    "PBM"
+  ],
+  "avif-to-pdfa": [
+    "AVIF",
+    "PDFA"
+  ],
+  "avif-to-phm": [
+    "AVIF",
+    "PHM"
+  ],
+  "avif-to-png00": [
+    "AVIF",
+    "PNG00"
+  ],
+  "avif-to-png64": [
+    "AVIF",
+    "PNG64"
+  ],
+  "avif-to-ppm": [
+    "AVIF",
+    "PPM"
+  ],
+  "avif-to-ras": [
+    "AVIF",
+    "RAS"
+  ],
+  "avif-to-rgf": [
+    "AVIF",
+    "RGF"
+  ],
+  "avif-to-sun": [
+    "AVIF",
+    "SUN"
+  ],
+  "avif-to-vda": [
+    "AVIF",
+    "VDA"
+  ],
+  "avif-to-vips": [
+    "AVIF",
+    "VIPS"
+  ],
+  "avif-to-webp": [
+    "AVIF",
+    "WEBP"
+  ],
+  "avif-to-xpm": [
+    "AVIF",
+    "XPM"
+  ],
+  "avif-to-av1.mkv": [
+    "AVIF",
+    "AV1.MKV"
+  ],
+  "avif-to-h264.mp4": [
+    "AVIF",
+    "H264.MP4"
+  ],
+  "avif-to-hevc": [
+    "AVIF",
+    "HEVC"
+  ],
+  "avif-to-obu": [
+    "AVIF",
+    "OBU"
+  ],
+  "avif-to-wtv": [
+    "AVIF",
+    "WTV"
+  ],
+  "avif-to-xwd": [
+    "AVIF",
+    "XWD"
+  ],
+  "b3d-to-obj": [
+    "B3D",
+    "OBJ"
+  ],
+  "blend-to-obj": [
+    "BLEND",
+    "OBJ"
+  ],
+  "bmp-to-bie": [
+    "BMP",
+    "BIE"
+  ],
+  "bmp-to-epdf": [
+    "BMP",
+    "EPDF"
+  ],
+  "bmp-to-fits": [
+    "BMP",
+    "FITS"
+  ],
+  "bmp-to-icb": [
+    "BMP",
+    "ICB"
+  ],
+  "bmp-to-mng": [
+    "BMP",
+    "MNG"
+  ],
+  "bmp-to-mpg": [
+    "BMP",
+    "MPG"
+  ],
+  "bmp-to-pcds": [
+    "BMP",
+    "PCDS"
+  ],
+  "bmp-to-pdb": [
+    "BMP",
+    "PDB"
+  ],
+  "bmp-to-png48": [
+    "BMP",
+    "PNG48"
+  ],
+  "bmp-to-ppm": [
+    "BMP",
+    "PPM"
+  ],
+  "bmp-to-sun": [
+    "BMP",
+    "SUN"
+  ],
+  "bmp-to-txt": [
+    "BMP",
+    "TXT"
+  ],
+  "bmp-to-viff": [
+    "BMP",
+    "VIFF"
+  ],
+  "bmp-to-xv": [
+    "BMP",
+    "XV"
+  ],
+  "bmp-to-aai": [
+    "BMP",
+    "AAI"
+  ],
+  "bmp-to-avif": [
+    "BMP",
+    "AVIF"
+  ],
+  "bmp-to-dds": [
+    "BMP",
+    "DDS"
+  ],
+  "bmp-to-farbfeld": [
+    "BMP",
+    "FARBFELD"
+  ],
+  "bmp-to-flv": [
+    "BMP",
+    "FLV"
+  ],
+  "bmp-to-g4": [
+    "BMP",
+    "G4"
+  ],
+  "bmp-to-ipl": [
+    "BMP",
+    "IPL"
+  ],
+  "bmp-to-jpc": [
+    "BMP",
+    "JPC"
+  ],
+  "bmp-to-m4v": [
+    "BMP",
+    "M4V"
+  ],
+  "bmp-to-mp4": [
+    "BMP",
+    "MP4"
+  ],
+  "bmp-to-pfm": [
+    "BMP",
+    "PFM"
+  ],
+  "bmp-to-webm": [
+    "BMP",
+    "WEBM"
+  ],
+  "bmp-to-asf": [
+    "BMP",
+    "ASF"
+  ],
+  "bmp-to-nut": [
+    "BMP",
+    "NUT"
+  ],
+  "c-to-8bim": [
+    "C",
+    "8BIM"
+  ],
+  "c-to-iptc": [
+    "C",
+    "IPTC"
+  ],
+  "cob-to-json": [
+    "COB",
+    "JSON"
+  ],
+  "cob-to-ply": [
+    "COB",
+    "PLY"
+  ],
+  "csv-to-tiff": [
+    "CSV",
+    "TIFF"
+  ],
+  "csv-to-docx": [
+    "CSV",
+    "DOCX"
+  ],
+  "csv-to-pptx": [
+    "CSV",
+    "PPTX"
+  ],
+  "dae-to-fbx": [
+    "DAE",
+    "FBX"
+  ],
+  "dcx-to-bmp2": [
+    "DCX",
+    "BMP2"
+  ],
+  "dcx-to-cals": [
+    "DCX",
+    "CALS"
+  ],
+  "dcx-to-dpx": [
+    "DCX",
+    "DPX"
+  ],
+  "dcx-to-fax": [
+    "DCX",
+    "FAX"
+  ],
+  "dcx-to-gif87": [
+    "DCX",
+    "GIF87"
+  ],
+  "dcx-to-html": [
+    "DCX",
+    "HTML"
+  ],
+  "dcx-to-jng": [
+    "DCX",
+    "JNG"
+  ],
+  "dcx-to-m2v": [
+    "DCX",
+    "M2V"
+  ],
+  "dcx-to-miff": [
+    "DCX",
+    "MIFF"
+  ],
+  "dcx-to-mpeg": [
+    "DCX",
+    "MPEG"
+  ],
+  "dcx-to-pcd": [
+    "DCX",
+    "PCD"
+  ],
+  "dcx-to-pcx": [
+    "DCX",
+    "PCX"
+  ],
+  "dcx-to-picon": [
+    "DCX",
+    "PICON"
+  ],
+  "dcx-to-png32": [
+    "DCX",
+    "PNG32"
+  ],
+  "dcx-to-pnm": [
+    "DCX",
+    "PNM"
+  ],
+  "dcx-to-ras": [
+    "DCX",
+    "RAS"
+  ],
+  "dcx-to-tiff": [
+    "DCX",
+    "TIFF"
+  ],
+  "dcx-to-webp": [
+    "DCX",
+    "WEBP"
+  ],
+  "dcx-to-xpm": [
+    "DCX",
+    "XPM"
+  ],
+  "dcx-to-g3": [
+    "DCX",
+    "G3"
+  ],
+  "dcx-to-hrz": [
+    "DCX",
+    "HRZ"
+  ],
+  "dcx-to-jp2": [
+    "DCX",
+    "JP2"
+  ],
+  "dcx-to-jpm": [
+    "DCX",
+    "JPM"
+  ],
+  "dcx-to-jxl": [
+    "DCX",
+    "JXL"
+  ],
+  "dcx-to-pdfa": [
+    "DCX",
+    "PDFA"
+  ],
+  "dcx-to-qoi": [
+    "DCX",
+    "QOI"
+  ],
+  "dcx-to-six": [
+    "DCX",
+    "SIX"
+  ],
+  "dcx-to-vips": [
+    "DCX",
+    "VIPS"
+  ],
+  "dng-to-bie": [
+    "DNG",
+    "BIE"
+  ],
+  "dng-to-bmp3": [
+    "DNG",
+    "BMP3"
+  ],
+  "dng-to-cin": [
+    "DNG",
+    "CIN"
+  ],
+  "dng-to-dpx": [
+    "DNG",
+    "DPX"
+  ],
+  "dng-to-fax": [
+    "DNG",
+    "FAX"
+  ],
+  "dng-to-gif87": [
+    "DNG",
+    "GIF87"
+  ],
+  "dng-to-html": [
+    "DNG",
+    "HTML"
+  ],
+  "dng-to-jng": [
+    "DNG",
+    "JNG"
+  ],
+  "dng-to-miff": [
+    "DNG",
+    "MIFF"
+  ],
+  "dng-to-pcd": [
+    "DNG",
+    "PCD"
+  ],
+  "dng-to-pcx": [
+    "DNG",
+    "PCX"
+  ],
+  "dng-to-picon": [
+    "DNG",
+    "PICON"
+  ],
+  "dng-to-png32": [
+    "DNG",
+    "PNG32"
+  ],
+  "dng-to-pnm": [
+    "DNG",
+    "PNM"
+  ],
+  "dng-to-ras": [
+    "DNG",
+    "RAS"
+  ],
+  "dng-to-tiff": [
+    "DNG",
+    "TIFF"
+  ],
+  "dng-to-webp": [
+    "DNG",
+    "WEBP"
+  ],
+  "dng-to-xpm": [
+    "DNG",
+    "XPM"
+  ],
+  "doc-to-docx": [
+    "DOC",
+    "DOCX"
+  ],
+  "doc-to-epub": [
+    "DOC",
+    "EPUB"
+  ],
+  "doc-to-odt": [
+    "DOC",
+    "ODT"
+  ],
+  "doc-to-xml": [
+    "DOC",
+    "XML"
+  ],
+  "docm-to-pdf": [
+    "DOCM",
+    "PDF"
+  ],
+  "docx-to-rtf": [
+    "DOCX",
+    "RTF"
+  ],
+  "docx-to-odt": [
+    "DOCX",
+    "ODT"
+  ],
+  "dotm-to-doc": [
+    "DOTM",
+    "DOC"
+  ],
+  "dotm-to-html": [
+    "DOTM",
+    "HTML"
+  ],
+  "dotm-to-rtf": [
+    "DOTM",
+    "RTF"
+  ],
+  "dotx-to-docx": [
+    "DOTX",
+    "DOCX"
+  ],
+  "dxf-to-3ds": [
+    "DXF",
+    "3DS"
+  ],
+  "emf-to-dcx": [
+    "EMF",
+    "DCX"
+  ],
+  "emf-to-gif87": [
+    "EMF",
+    "GIF87"
+  ],
+  "emf-to-hdr": [
+    "EMF",
+    "HDR"
+  ],
+  "emf-to-html": [
+    "EMF",
+    "HTML"
+  ],
+  "emf-to-jp2": [
+    "EMF",
+    "JP2"
+  ],
+  "emf-to-jpg": [
+    "EMF",
+    "JPG"
+  ],
+  "emf-to-mov": [
+    "EMF",
+    "MOV"
+  ],
+  "emf-to-mpg": [
+    "EMF",
+    "MPG"
+  ],
+  "emf-to-pcds": [
+    "EMF",
+    "PCDS"
+  ],
+  "emf-to-pdb": [
+    "EMF",
+    "PDB"
+  ],
+  "emf-to-png32": [
+    "EMF",
+    "PNG32"
+  ],
+  "emf-to-wbmp": [
+    "EMF",
+    "WBMP"
+  ],
+  "emf-to-wpg": [
+    "EMF",
+    "WPG"
+  ],
+  "epub-to-html": [
+    "EPUB",
+    "HTML"
+  ],
+  "epub-to-pdf": [
+    "EPUB",
+    "PDF"
+  ],
+  "fb2-to-txt": [
+    "FB2",
+    "TXT"
+  ],
+  "fb2-to-json": [
+    "FB2",
+    "JSON"
+  ],
+  "fb2-to-pptx": [
+    "FB2",
+    "PPTX"
+  ],
+  "fits-to-art": [
+    "FITS",
+    "ART"
+  ],
+  "fits-to-pdf": [
+    "FITS",
+    "PDF"
+  ],
+  "fits-to-png00": [
+    "FITS",
+    "PNG00"
+  ],
+  "fits-to-png64": [
+    "FITS",
+    "PNG64"
+  ],
+  "fits-to-vda": [
+    "FITS",
+    "VDA"
+  ],
+  "fits-to-vst": [
+    "FITS",
+    "VST"
+  ],
+  "fits-to-xbm": [
+    "FITS",
+    "XBM"
+  ],
+  "fits-to-xwd": [
+    "FITS",
+    "XWD"
+  ],
+  "fits-to-j2c": [
+    "FITS",
+    "J2C"
+  ],
+  "flac-to-aif": [
+    "FLAC",
+    "AIF"
+  ],
+  "flac-to-aptx": [
+    "FLAC",
+    "APTX"
+  ],
+  "flac-to-ast": [
+    "FLAC",
+    "AST"
+  ],
+  "flac-to-av1.mp4": [
+    "FLAC",
+    "AV1.MP4"
+  ],
+  "flac-to-h265.mp4": [
+    "FLAC",
+    "H265.MP4"
+  ],
+  "flac-to-ircam": [
+    "FLAC",
+    "IRCAM"
+  ],
+  "flac-to-loas": [
+    "FLAC",
+    "LOAS"
+  ],
+  "flac-to-m4a": [
+    "FLAC",
+    "M4A"
+  ],
+  "flac-to-mp4": [
+    "FLAC",
+    "MP4"
+  ],
+  "flac-to-mpg": [
+    "FLAC",
+    "MPG"
+  ],
+  "flac-to-nut": [
+    "FLAC",
+    "NUT"
+  ],
+  "flac-to-rso": [
+    "FLAC",
+    "RSO"
+  ],
+  "flac-to-wv": [
+    "FLAC",
+    "WV"
+  ],
+  "flv-to-bmp": [
+    "FLV",
+    "BMP"
+  ],
+  "flv-to-dpx": [
+    "FLV",
+    "DPX"
+  ],
+  "flv-to-epi": [
+    "FLV",
+    "EPI"
+  ],
+  "flv-to-epsf": [
+    "FLV",
+    "EPSF"
+  ],
+  "flv-to-ff": [
+    "FLV",
+    "FF"
+  ],
+  "flv-to-gif": [
+    "FLV",
+    "GIF"
+  ],
+  "flv-to-jng": [
+    "FLV",
+    "JNG"
+  ],
+  "flv-to-mpeg": [
+    "FLV",
+    "MPEG"
+  ],
+  "flv-to-pcd": [
+    "FLV",
+    "PCD"
+  ],
+  "flv-to-pcx": [
+    "FLV",
+    "PCX"
+  ],
+  "flv-to-picon": [
+    "FLV",
+    "PICON"
+  ],
+  "flv-to-png24": [
+    "FLV",
+    "PNG24"
+  ],
+  "flv-to-png8": [
+    "FLV",
+    "PNG8"
+  ],
+  "flv-to-sixel": [
+    "FLV",
+    "SIXEL"
+  ],
+  "flv-to-vicar": [
+    "FLV",
+    "VICAR"
+  ],
+  "flv-to-vst": [
+    "FLV",
+    "VST"
+  ],
+  "flv-to-aac": [
+    "FLV",
+    "AAC"
+  ],
+  "flv-to-adx": [
+    "FLV",
+    "ADX"
+  ],
+  "flv-to-aiff": [
+    "FLV",
+    "AIFF"
+  ],
+  "flv-to-apm": [
+    "FLV",
+    "APM"
+  ],
+  "flv-to-dfpwm": [
+    "FLV",
+    "DFPWM"
+  ],
+  "flv-to-flac": [
+    "FLV",
+    "FLAC"
+  ],
+  "flv-to-h264.mp4": [
+    "FLV",
+    "H264.MP4"
+  ],
+  "flv-to-hevc": [
+    "FLV",
+    "HEVC"
+  ],
+  "flv-to-ircam": [
+    "FLV",
+    "IRCAM"
+  ],
+  "flv-to-rso": [
+    "FLV",
+    "RSO"
+  ],
+  "flv-to-wtv": [
+    "FLV",
+    "WTV"
+  ],
+  "fodp-to-odp": [
+    "FODP",
+    "ODP"
+  ],
+  "fodt-to-pdf": [
+    "FODT",
+    "PDF"
+  ],
+  "gif-to-bmp2": [
+    "GIF",
+    "BMP2"
+  ],
+  "gif-to-cals": [
+    "GIF",
+    "CALS"
+  ],
+  "gif-to-dcx": [
+    "GIF",
+    "DCX"
+  ],
+  "gif-to-eps": [
+    "GIF",
+    "EPS"
+  ],
+  "gif-to-epsi": [
+    "GIF",
+    "EPSI"
+  ],
+  "gif-to-gif87": [
+    "GIF",
+    "GIF87"
+  ],
+  "gif-to-html": [
+    "GIF",
+    "HTML"
+  ],
+  "gif-to-jng": [
+    "GIF",
+    "JNG"
+  ],
+  "gif-to-m2v": [
+    "GIF",
+    "M2V"
+  ],
+  "gif-to-miff": [
+    "GIF",
+    "MIFF"
+  ],
+  "gif-to-mpeg": [
+    "GIF",
+    "MPEG"
+  ],
+  "gif-to-pcd": [
+    "GIF",
+    "PCD"
+  ],
+  "gif-to-pcx": [
+    "GIF",
+    "PCX"
+  ],
+  "gif-to-picon": [
+    "GIF",
+    "PICON"
+  ],
+  "gif-to-png32": [
+    "GIF",
+    "PNG32"
+  ],
+  "gif-to-pnm": [
+    "GIF",
+    "PNM"
+  ],
+  "gif-to-ras": [
+    "GIF",
+    "RAS"
+  ],
+  "gif-to-tiff": [
+    "GIF",
+    "TIFF"
+  ],
+  "gif-to-webp": [
+    "GIF",
+    "WEBP"
+  ],
+  "gif-to-xpm": [
+    "GIF",
+    "XPM"
+  ],
+  "gif-to-g3": [
+    "GIF",
+    "G3"
+  ],
+  "gif-to-hrz": [
+    "GIF",
+    "HRZ"
+  ],
+  "gif-to-jp2": [
+    "GIF",
+    "JP2"
+  ],
+  "gif-to-jpm": [
+    "GIF",
+    "JPM"
+  ],
+  "gif-to-jxl": [
+    "GIF",
+    "JXL"
+  ],
+  "gif-to-mov": [
+    "GIF",
+    "MOV"
+  ],
+  "gif-to-pdfa": [
+    "GIF",
+    "PDFA"
+  ],
+  "gif-to-qoi": [
+    "GIF",
+    "QOI"
+  ],
+  "gif-to-svg": [
+    "GIF",
+    "SVG"
+  ],
+  "gif-to-vips": [
+    "GIF",
+    "VIPS"
+  ],
+  "gif-to-av1.mkv": [
+    "GIF",
+    "AV1.MKV"
+  ],
+  "gif-to-h264.mp4": [
+    "GIF",
+    "H264.MP4"
+  ],
+  "gif-to-obu": [
+    "GIF",
+    "OBU"
+  ],
+  "gif-to-wtv": [
+    "GIF",
+    "WTV"
+  ],
+  "hmp-to-json": [
+    "HMP",
+    "JSON"
+  ],
+  "hmp-to-ply": [
+    "HMP",
+    "PLY"
+  ],
+  "html-to-pdf": [
+    "HTML",
+    "PDF"
+  ],
+  "html-to-doc": [
+    "HTML",
+    "DOC"
+  ],
+  "irr-to-3ds": [
+    "IRR",
+    "3DS"
+  ],
+  "irrmesh-to-obj": [
+    "IRRMESH",
+    "OBJ"
+  ],
+  "jp2-to-aai": [
+    "JP2",
+    "AAI"
+  ],
+  "jp2-to-bmp": [
+    "JP2",
+    "BMP"
+  ],
+  "jp2-to-cur": [
+    "JP2",
+    "CUR"
+  ],
+  "jp2-to-dpx": [
+    "JP2",
+    "DPX"
+  ],
+  "jp2-to-epi": [
+    "JP2",
+    "EPI"
+  ],
+  "jp2-to-epsf": [
+    "JP2",
+    "EPSF"
+  ],
+  "jp2-to-ff": [
+    "JP2",
+    "FF"
+  ],
+  "jp2-to-flv": [
+    "JP2",
+    "FLV"
+  ],
+  "jp2-to-g4": [
+    "JP2",
+    "G4"
+  ],
+  "jp2-to-hrz": [
+    "JP2",
+    "HRZ"
+  ],
+  "jp2-to-ico": [
+    "JP2",
+    "ICO"
+  ],
+  "jp2-to-ipl": [
+    "JP2",
+    "IPL"
+  ],
+  "jp2-to-j2k": [
+    "JP2",
+    "J2K"
+  ],
+  "jp2-to-mpeg": [
+    "JP2",
+    "MPEG"
+  ],
+  "jp2-to-mtv": [
+    "JP2",
+    "MTV"
+  ],
+  "jp2-to-pcd": [
+    "JP2",
+    "PCD"
+  ],
+  "jp2-to-pcx": [
+    "JP2",
+    "PCX"
+  ],
+  "jp2-to-pfm": [
+    "JP2",
+    "PFM"
+  ],
+  "jp2-to-picon": [
+    "JP2",
+    "PICON"
+  ],
+  "jp2-to-png24": [
+    "JP2",
+    "PNG24"
+  ],
+  "jp2-to-png8": [
+    "JP2",
+    "PNG8"
+  ],
+  "jp2-to-ps": [
+    "JP2",
+    "PS"
+  ],
+  "jp2-to-sixel": [
+    "JP2",
+    "SIXEL"
+  ],
+  "jp2-to-tiff": [
+    "JP2",
+    "TIFF"
+  ],
+  "jp2-to-vicar": [
+    "JP2",
+    "VICAR"
+  ],
+  "jp2-to-vst": [
+    "JP2",
+    "VST"
+  ],
+  "jp2-to-wmv": [
+    "JP2",
+    "WMV"
+  ],
+  "jp2-to-xv": [
+    "JP2",
+    "XV"
+  ],
+  "jpg-to-art": [
+    "JPG",
+    "ART"
+  ],
+  "jpg-to-epdf": [
+    "JPG",
+    "EPDF"
+  ],
+  "jpg-to-fits": [
+    "JPG",
+    "FITS"
+  ],
+  "jpg-to-icb": [
+    "JPG",
+    "ICB"
+  ],
+  "jpg-to-mng": [
+    "JPG",
+    "MNG"
+  ],
+  "jpg-to-mpg": [
+    "JPG",
+    "MPG"
+  ],
+  "jpg-to-pcds": [
+    "JPG",
+    "PCDS"
+  ],
+  "jpg-to-pdb": [
+    "JPG",
+    "PDB"
+  ],
+  "jpg-to-pict": [
+    "JPG",
+    "PICT"
+  ],
+  "jpg-to-png48": [
+    "JPG",
+    "PNG48"
+  ],
+  "jpg-to-ppm": [
+    "JPG",
+    "PPM"
+  ],
+  "jpg-to-sun": [
+    "JPG",
+    "SUN"
+  ],
+  "jpg-to-txt": [
+    "JPG",
+    "TXT"
+  ],
+  "jpg-to-viff": [
+    "JPG",
+    "VIFF"
+  ],
+  "jpg-to-xv": [
+    "JPG",
+    "XV"
+  ],
+  "jpg-to-aai": [
+    "JPG",
+    "AAI"
+  ],
+  "jpg-to-avif": [
+    "JPG",
+    "AVIF"
+  ],
+  "jpg-to-dds": [
+    "JPG",
+    "DDS"
+  ],
+  "jpg-to-farbfeld": [
+    "JPG",
+    "FARBFELD"
+  ],
+  "jpg-to-flv": [
+    "JPG",
+    "FLV"
+  ],
+  "jpg-to-g4": [
+    "JPG",
+    "G4"
+  ],
+  "jpg-to-ipl": [
+    "JPG",
+    "IPL"
+  ],
+  "jpg-to-jpc": [
+    "JPG",
+    "JPC"
+  ],
+  "jpg-to-pgx": [
+    "JPG",
+    "PGX"
+  ],
+  "jpg-to-rgf": [
+    "JPG",
+    "RGF"
+  ],
+  "jpg-to-wmv": [
+    "JPG",
+    "WMV"
+  ],
+  "jxl-to-j2c": [
+    "JXL",
+    "J2C"
+  ],
+  "jxl-to-m2v": [
+    "JXL",
+    "M2V"
+  ],
+  "jxl-to-pbm": [
+    "JXL",
+    "PBM"
+  ],
+  "jxl-to-phm": [
+    "JXL",
+    "PHM"
+  ],
+  "jxl-to-ppm": [
+    "JXL",
+    "PPM"
+  ],
+  "jxl-to-ras": [
+    "JXL",
+    "RAS"
+  ],
+  "jxl-to-sun": [
+    "JXL",
+    "SUN"
+  ],
+  "jxl-to-vips": [
+    "JXL",
+    "VIPS"
+  ],
+  "jxl-to-webp": [
+    "JXL",
+    "WEBP"
+  ],
+  "jxl-to-av1.mp4": [
+    "JXL",
+    "AV1.MP4"
+  ],
+  "jxl-to-m4a": [
+    "JXL",
+    "M4A"
+  ],
+  "lwo-to-obj": [
+    "LWO",
+    "OBJ"
+  ],
+  "lws-to-3ds": [
+    "LWS",
+    "3DS"
+  ],
+  "lxo-to-obj": [
+    "LXO",
+    "OBJ"
+  ],
+  "m-to-8bim": [
+    "M",
+    "8BIM"
+  ],
+  "m4a-to-au": [
+    "M4A",
+    "AU"
+  ],
+  "m4a-to-avi": [
+    "M4A",
+    "AVI"
+  ],
+  "m4a-to-caf": [
+    "M4A",
+    "CAF"
+  ],
+  "m4a-to-flac": [
+    "M4A",
+    "FLAC"
+  ],
+  "m4a-to-h265.mp4": [
+    "M4A",
+    "H265.MP4"
+  ],
+  "m4a-to-ircam": [
+    "M4A",
+    "IRCAM"
+  ],
+  "m4a-to-loas": [
+    "M4A",
+    "LOAS"
+  ],
+  "m4a-to-mka": [
+    "M4A",
+    "MKA"
+  ],
+  "m4a-to-mov": [
+    "M4A",
+    "MOV"
+  ],
+  "m4a-to-rm": [
+    "M4A",
+    "RM"
+  ],
+  "m4a-to-w64": [
+    "M4A",
+    "W64"
+  ],
+  "mat-to-art": [
+    "MAT",
+    "ART"
+  ],
+  "mat-to-fits": [
+    "MAT",
+    "FITS"
+  ],
+  "mat-to-icb": [
+    "MAT",
+    "ICB"
+  ],
+  "mat-to-pam": [
+    "MAT",
+    "PAM"
+  ],
+  "mat-to-pdf": [
+    "MAT",
+    "PDF"
+  ],
+  "mat-to-png00": [
+    "MAT",
+    "PNG00"
+  ],
+  "mat-to-png64": [
+    "MAT",
+    "PNG64"
+  ],
+  "mat-to-vda": [
+    "MAT",
+    "VDA"
+  ],
+  "mat-to-vst": [
+    "MAT",
+    "VST"
+  ],
+  "mat-to-xbm": [
+    "MAT",
+    "XBM"
+  ],
+  "mat-to-xwd": [
+    "MAT",
+    "XWD"
+  ],
+  "mat-to-dxt1": [
+    "MAT",
+    "DXT1"
+  ],
+  "mat-to-ff": [
+    "MAT",
+    "FF"
+  ],
+  "mat-to-fts": [
+    "MAT",
+    "FTS"
+  ],
+  "mat-to-ico": [
+    "MAT",
+    "ICO"
+  ],
+  "mat-to-jpe": [
+    "MAT",
+    "JPE"
+  ],
+  "mat-to-pgx": [
+    "MAT",
+    "PGX"
+  ],
+  "mat-to-rgf": [
+    "MAT",
+    "RGF"
+  ],
+  "mat-to-wmv": [
+    "MAT",
+    "WMV"
+  ],
+  "md5mesh-to-fbx": [
+    "MD5MESH",
+    "FBX"
+  ],
+  "mkv-to-aai": [
+    "MKV",
+    "AAI"
+  ],
+  "mkv-to-bmp": [
+    "MKV",
+    "BMP"
+  ],
+  "mkv-to-cur": [
+    "MKV",
+    "CUR"
+  ],
+  "mkv-to-dpx": [
+    "MKV",
+    "DPX"
+  ],
+  "mkv-to-epi": [
+    "MKV",
+    "EPI"
+  ],
+  "mkv-to-epsf": [
+    "MKV",
+    "EPSF"
+  ],
+  "mkv-to-ff": [
+    "MKV",
+    "FF"
+  ],
+  "mkv-to-flv": [
+    "MKV",
+    "FLV"
+  ],
+  "mkv-to-g4": [
+    "MKV",
+    "G4"
+  ],
+  "mkv-to-hrz": [
+    "MKV",
+    "HRZ"
+  ],
+  "mkv-to-ico": [
+    "MKV",
+    "ICO"
+  ],
+  "mkv-to-ipl": [
+    "MKV",
+    "IPL"
+  ],
+  "mkv-to-j2k": [
+    "MKV",
+    "J2K"
+  ],
+  "mkv-to-jpe": [
+    "MKV",
+    "JPE"
+  ],
+  "mkv-to-m2v": [
+    "MKV",
+    "M2V"
+  ],
+  "mkv-to-mpeg": [
+    "MKV",
+    "MPEG"
+  ],
+  "mkv-to-mtv": [
+    "MKV",
+    "MTV"
+  ],
+  "mkv-to-pcd": [
+    "MKV",
+    "PCD"
+  ],
+  "mkv-to-pcx": [
+    "MKV",
+    "PCX"
+  ],
+  "mkv-to-pfm": [
+    "MKV",
+    "PFM"
+  ],
+  "mkv-to-picon": [
+    "MKV",
+    "PICON"
+  ],
+  "mkv-to-png00": [
+    "MKV",
+    "PNG00"
+  ],
+  "mkv-to-png64": [
+    "MKV",
+    "PNG64"
+  ],
+  "mkv-to-ppm": [
+    "MKV",
+    "PPM"
+  ],
+  "mkv-to-ras": [
+    "MKV",
+    "RAS"
+  ],
+  "mkv-to-rgf": [
+    "MKV",
+    "RGF"
+  ],
+  "mkv-to-sun": [
+    "MKV",
+    "SUN"
+  ],
+  "mkv-to-vda": [
+    "MKV",
+    "VDA"
+  ],
+  "mkv-to-vips": [
+    "MKV",
+    "VIPS"
+  ],
+  "mkv-to-wmv": [
+    "MKV",
+    "WMV"
+  ],
+  "mkv-to-xv": [
+    "MKV",
+    "XV"
+  ],
+  "mkv-to-asf": [
+    "MKV",
+    "ASF"
+  ],
+  "mkv-to-ivf": [
+    "MKV",
+    "IVF"
+  ],
+  "mkv-to-mjpeg": [
+    "MKV",
+    "MJPEG"
+  ],
+  "mkv-to-nut": [
+    "MKV",
+    "NUT"
+  ],
+  "mov-to-ai": [
+    "MOV",
+    "AI"
+  ],
+  "mov-to-avif": [
+    "MOV",
+    "AVIF"
+  ],
+  "mov-to-bmp2": [
+    "MOV",
+    "BMP2"
+  ],
+  "mov-to-cals": [
+    "MOV",
+    "CALS"
+  ],
+  "mov-to-dxt1": [
+    "MOV",
+    "DXT1"
+  ],
+  "mov-to-eps": [
+    "MOV",
+    "EPS"
+  ],
+  "mov-to-epsi": [
+    "MOV",
+    "EPSI"
+  ],
+  "mov-to-fits": [
+    "MOV",
+    "FITS"
+  ],
+  "mov-to-fts": [
+    "MOV",
+    "FTS"
+  ],
+  "mov-to-gif": [
+    "MOV",
+    "GIF"
+  ],
+  "mov-to-icon": [
+    "MOV",
+    "ICON"
+  ],
+  "mov-to-jng": [
+    "MOV",
+    "JNG"
+  ],
+  "mov-to-m4v": [
+    "MOV",
+    "M4V"
+  ],
+  "mov-to-mpg": [
+    "MOV",
+    "MPG"
+  ],
+  "mov-to-palm": [
+    "MOV",
+    "PALM"
+  ],
+  "mov-to-pcds": [
+    "MOV",
+    "PCDS"
+  ],
+  "mov-to-pdb": [
+    "MOV",
+    "PDB"
+  ],
+  "mov-to-pgm": [
+    "MOV",
+    "PGM"
+  ],
+  "mov-to-pict": [
+    "MOV",
+    "PICT"
+  ],
+  "mov-to-png24": [
+    "MOV",
+    "PNG24"
+  ],
+  "mov-to-png8": [
+    "MOV",
+    "PNG8"
+  ],
+  "mov-to-ps": [
+    "MOV",
+    "PS"
+  ],
+  "mov-to-tiff": [
+    "MOV",
+    "TIFF"
+  ],
+  "mov-to-vicar": [
+    "MOV",
+    "VICAR"
+  ],
+  "mov-to-vst": [
+    "MOV",
+    "VST"
+  ],
+  "mov-to-wpg": [
+    "MOV",
+    "WPG"
+  ],
+  "mov-to-av1.mp4": [
+    "MOV",
+    "AV1.MP4"
+  ],
+  "mov-to-h265.mkv": [
+    "MOV",
+    "H265.MKV"
+  ],
+  "mov-to-m4a": [
+    "MOV",
+    "M4A"
+  ],
+  "mov-to-rm": [
+    "MOV",
+    "RM"
+  ],
+  "mp3-to-au": [
+    "MP3",
+    "AU"
+  ],
+  "mp3-to-avi": [
+    "MP3",
+    "AVI"
+  ],
+  "mp3-to-caf": [
+    "MP3",
+    "CAF"
+  ],
+  "mp3-to-flac": [
+    "MP3",
+    "FLAC"
+  ],
+  "mp3-to-h265.mp4": [
+    "MP3",
+    "H265.MP4"
+  ],
+  "mp3-to-ircam": [
+    "MP3",
+    "IRCAM"
+  ],
+  "mp3-to-loas": [
+    "MP3",
+    "LOAS"
+  ],
+  "mp3-to-m4a": [
+    "MP3",
+    "M4A"
+  ],
+  "mp3-to-rm": [
+    "MP3",
+    "RM"
+  ],
+  "mp3-to-w64": [
+    "MP3",
+    "W64"
+  ],
+  "mp4-to-aai": [
+    "MP4",
+    "AAI"
+  ],
+  "mp4-to-bmp": [
+    "MP4",
+    "BMP"
+  ],
+  "mp4-to-cur": [
+    "MP4",
+    "CUR"
+  ],
+  "mp4-to-dpx": [
+    "MP4",
+    "DPX"
+  ],
+  "mp4-to-epi": [
+    "MP4",
+    "EPI"
+  ],
+  "mp4-to-epsf": [
+    "MP4",
+    "EPSF"
+  ],
+  "mp4-to-ff": [
+    "MP4",
+    "FF"
+  ],
+  "mp4-to-flv": [
+    "MP4",
+    "FLV"
+  ],
+  "mp4-to-g4": [
+    "MP4",
+    "G4"
+  ],
+  "mp4-to-hrz": [
+    "MP4",
+    "HRZ"
+  ],
+  "mp4-to-ico": [
+    "MP4",
+    "ICO"
+  ],
+  "mp4-to-ipl": [
+    "MP4",
+    "IPL"
+  ],
+  "mp4-to-j2k": [
+    "MP4",
+    "J2K"
+  ],
+  "mp4-to-jpe": [
+    "MP4",
+    "JPE"
+  ],
+  "mp4-to-m2v": [
+    "MP4",
+    "M2V"
+  ],
+  "mp4-to-mng": [
+    "MP4",
+    "MNG"
+  ],
+  "mp4-to-mpeg": [
+    "MP4",
+    "MPEG"
+  ],
+  "mp4-to-mtv": [
+    "MP4",
+    "MTV"
+  ],
+  "mp4-to-pcd": [
+    "MP4",
+    "PCD"
+  ],
+  "mp4-to-pcx": [
+    "MP4",
+    "PCX"
+  ],
+  "mp4-to-pfm": [
+    "MP4",
+    "PFM"
+  ],
+  "mp4-to-picon": [
+    "MP4",
+    "PICON"
+  ],
+  "mp4-to-png00": [
+    "MP4",
+    "PNG00"
+  ],
+  "mp4-to-png64": [
+    "MP4",
+    "PNG64"
+  ],
+  "mp4-to-ppm": [
+    "MP4",
+    "PPM"
+  ],
+  "mp4-to-ras": [
+    "MP4",
+    "RAS"
+  ],
+  "mp4-to-rgf": [
+    "MP4",
+    "RGF"
+  ],
+  "mp4-to-sun": [
+    "MP4",
+    "SUN"
+  ],
+  "mp4-to-vda": [
+    "MP4",
+    "VDA"
+  ],
+  "mp4-to-vips": [
+    "MP4",
+    "VIPS"
+  ],
+  "mp4-to-wmv": [
+    "MP4",
+    "WMV"
+  ],
+  "mp4-to-xv": [
+    "MP4",
+    "XV"
+  ],
+  "mp4-to-asf": [
+    "MP4",
+    "ASF"
+  ],
+  "mp4-to-ivf": [
+    "MP4",
+    "IVF"
+  ],
+  "mp4-to-mjpeg": [
+    "MP4",
+    "MJPEG"
+  ],
+  "mp4-to-nut": [
+    "MP4",
+    "NUT"
+  ],
+  "ms3d-to-json": [
+    "MS3D",
+    "JSON"
+  ],
+  "ms3d-to-ply": [
+    "MS3D",
+    "PLY"
+  ],
+  "nff-to-3ds": [
+    "NFF",
+    "3DS"
+  ],
+  "ods-to-csv": [
+    "ODS",
+    "CSV"
+  ],
+  "off-to-3ds": [
+    "OFF",
+    "3DS"
+  ],
+  "ogg-to-av1.mkv": [
+    "OGG",
+    "AV1.MKV"
+  ],
+  "ogg-to-h264.mp4": [
+    "OGG",
+    "H264.MP4"
+  ],
+  "ogg-to-mkv": [
+    "OGG",
+    "MKV"
+  ],
+  "ogg-to-spdif": [
+    "OGG",
+    "SPDIF"
+  ],
+  "ogg-to-tta": [
+    "OGG",
+    "TTA"
+  ],
+  "ogg-to-webm": [
+    "OGG",
+    "WEBM"
+  ],
+  "ogg-to-wtv": [
+    "OGG",
+    "WTV"
+  ],
+  "opus-to-aac": [
+    "OPUS",
+    "AAC"
+  ],
+  "opus-to-adx": [
+    "OPUS",
+    "ADX"
+  ],
+  "opus-to-aiff": [
+    "OPUS",
+    "AIFF"
+  ],
+  "opus-to-apm": [
+    "OPUS",
+    "APM"
+  ],
+  "opus-to-asf": [
+    "OPUS",
+    "ASF"
+  ],
+  "opus-to-dfpwm": [
+    "OPUS",
+    "DFPWM"
+  ],
+  "opus-to-eac3": [
+    "OPUS",
+    "EAC3"
+  ],
+  "opus-to-mka": [
+    "OPUS",
+    "MKA"
+  ],
+  "opus-to-mov": [
+    "OPUS",
+    "MOV"
+  ],
+  "opus-to-sbc": [
+    "OPUS",
+    "SBC"
+  ],
+  "opus-to-sox": [
+    "OPUS",
+    "SOX"
+  ],
+  "opus-to-voc": [
+    "OPUS",
+    "VOC"
+  ],
+  "p7-to-icc": [
+    "P7",
+    "ICC"
+  ],
+  "pct-to-bmp2": [
+    "PCT",
+    "BMP2"
+  ],
+  "pct-to-cals": [
+    "PCT",
+    "CALS"
+  ],
+  "pct-to-dcx": [
+    "PCT",
+    "DCX"
+  ],
+  "pct-to-eps": [
+    "PCT",
+    "EPS"
+  ],
+  "pct-to-epsi": [
+    "PCT",
+    "EPSI"
+  ],
+  "pct-to-gif": [
+    "PCT",
+    "GIF"
+  ],
+  "pct-to-jbig": [
+    "PCT",
+    "JBIG"
+  ],
+  "pct-to-mpc": [
+    "PCT",
+    "MPC"
+  ],
+  "pct-to-mtv": [
+    "PCT",
+    "MTV"
+  ],
+  "pct-to-otb": [
+    "PCT",
+    "OTB"
+  ],
+  "pct-to-pbm": [
+    "PCT",
+    "PBM"
+  ],
+  "pct-to-pcx": [
+    "PCT",
+    "PCX"
+  ],
+  "pct-to-picon": [
+    "PCT",
+    "PICON"
+  ],
+  "pct-to-png32": [
+    "PCT",
+    "PNG32"
+  ],
+  "pct-to-pnm": [
+    "PCT",
+    "PNM"
+  ],
+  "pct-to-ras": [
+    "PCT",
+    "RAS"
+  ],
+  "pct-to-tiff": [
+    "PCT",
+    "TIFF"
+  ],
+  "pct-to-webp": [
+    "PCT",
+    "WEBP"
+  ],
+  "pct-to-xpm": [
+    "PCT",
+    "XPM"
+  ],
+  "pct-to-g3": [
+    "PCT",
+    "G3"
+  ],
+  "pct-to-hrz": [
+    "PCT",
+    "HRZ"
+  ],
+  "pct-to-jp2": [
+    "PCT",
+    "JP2"
+  ],
+  "pct-to-jpm": [
+    "PCT",
+    "JPM"
+  ],
+  "pct-to-pdfa": [
+    "PCT",
+    "PDFA"
+  ],
+  "pct-to-qoi": [
+    "PCT",
+    "QOI"
+  ],
+  "pct-to-six": [
+    "PCT",
+    "SIX"
+  ],
+  "pct-to-vips": [
+    "PCT",
+    "VIPS"
+  ],
+  "pcx-to-art": [
+    "PCX",
+    "ART"
+  ],
+  "pcx-to-epdf": [
+    "PCX",
+    "EPDF"
+  ],
+  "pcx-to-fits": [
+    "PCX",
+    "FITS"
+  ],
+  "pcx-to-icb": [
+    "PCX",
+    "ICB"
+  ],
+  "pcx-to-mng": [
+    "PCX",
+    "MNG"
+  ],
+  "pcx-to-pcds": [
+    "PCX",
+    "PCDS"
+  ],
+  "pcx-to-pdf": [
+    "PCX",
+    "PDF"
+  ],
+  "pcx-to-png00": [
+    "PCX",
+    "PNG00"
+  ],
+  "pcx-to-png64": [
+    "PCX",
+    "PNG64"
+  ],
+  "pcx-to-vda": [
+    "PCX",
+    "VDA"
+  ],
+  "pcx-to-vst": [
+    "PCX",
+    "VST"
+  ],
+  "pcx-to-xbm": [
+    "PCX",
+    "XBM"
+  ],
+  "pcx-to-xwd": [
+    "PCX",
+    "XWD"
+  ],
+  "pcx-to-ai": [
+    "PCX",
+    "AI"
+  ],
+  "pcx-to-dxt1": [
+    "PCX",
+    "DXT1"
+  ],
+  "pcx-to-ff": [
+    "PCX",
+    "FF"
+  ],
+  "pcx-to-ico": [
+    "PCX",
+    "ICO"
+  ],
+  "pcx-to-j2c": [
+    "PCX",
+    "J2C"
+  ],
+  "pcx-to-jpe": [
+    "PCX",
+    "JPE"
+  ],
+  "pcx-to-pgx": [
+    "PCX",
+    "PGX"
+  ],
+  "pcx-to-rgf": [
+    "PCX",
+    "RGF"
+  ],
+  "pcx-to-wmv": [
+    "PCX",
+    "WMV"
+  ],
+  "pcx-to-av1.mkv": [
+    "PCX",
+    "AV1.MKV"
+  ],
+  "pcx-to-h264.mp4": [
+    "PCX",
+    "H264.MP4"
+  ],
+  "pcx-to-hevc": [
+    "PCX",
+    "HEVC"
+  ],
+  "pcx-to-obu": [
+    "PCX",
+    "OBU"
+  ],
+  "pdf-to-bmp2": [
+    "PDF",
+    "BMP2"
+  ],
+  "pdf-to-cals": [
+    "PDF",
+    "CALS"
+  ],
+  "pdf-to-dcx": [
+    "PDF",
+    "DCX"
+  ],
+  "pdf-to-eps": [
+    "PDF",
+    "EPS"
+  ],
+  "pdf-to-epsi": [
+    "PDF",
+    "EPSI"
+  ],
+  "pdf-to-gif": [
+    "PDF",
+    "GIF"
+  ],
+  "pdf-to-jbig": [
+    "PDF",
+    "JBIG"
+  ],
+  "pdf-to-mtv": [
+    "PDF",
+    "MTV"
+  ],
+  "pdf-to-otb": [
+    "PDF",
+    "OTB"
+  ],
+  "pdf-to-pbm": [
+    "PDF",
+    "PBM"
+  ],
+  "pdf-to-picon": [
+    "PDF",
+    "PICON"
+  ],
+  "pdf-to-png32": [
+    "PDF",
+    "PNG32"
+  ],
+  "pdf-to-ras": [
+    "PDF",
+    "RAS"
+  ],
+  "pdf-to-tiff": [
+    "PDF",
+    "TIFF"
+  ],
+  "pdf-to-webp": [
+    "PDF",
+    "WEBP"
+  ],
+  "pdf-to-xpm": [
+    "PDF",
+    "XPM"
+  ],
+  "pdf-to-g3": [
+    "PDF",
+    "G3"
+  ],
+  "pdf-to-hrz": [
+    "PDF",
+    "HRZ"
+  ],
+  "pdf-to-jp2": [
+    "PDF",
+    "JP2"
+  ],
+  "pdf-to-jpm": [
+    "PDF",
+    "JPM"
+  ],
+  "pdf-to-jxl": [
+    "PDF",
+    "JXL"
+  ],
+  "pdf-to-pdfa": [
+    "PDF",
+    "PDFA"
+  ],
+  "pdf-to-qoi": [
+    "PDF",
+    "QOI"
+  ],
+  "pdf-to-svg": [
+    "PDF",
+    "SVG"
+  ],
+  "pdf-to-vips": [
+    "PDF",
+    "VIPS"
+  ],
+  "ply-to-obj": [
+    "PLY",
+    "OBJ"
+  ],
+  "png-to-art": [
+    "PNG",
+    "ART"
+  ],
+  "png-to-epdf": [
+    "PNG",
+    "EPDF"
+  ],
+  "png-to-fits": [
+    "PNG",
+    "FITS"
+  ],
+  "png-to-icb": [
+    "PNG",
+    "ICB"
+  ],
+  "png-to-mng": [
+    "PNG",
+    "MNG"
+  ],
+  "png-to-mpg": [
+    "PNG",
+    "MPG"
+  ],
+  "png-to-pcds": [
+    "PNG",
+    "PCDS"
+  ],
+  "png-to-pdb": [
+    "PNG",
+    "PDB"
+  ],
+  "png-to-png48": [
+    "PNG",
+    "PNG48"
+  ],
+  "png-to-ppm": [
+    "PNG",
+    "PPM"
+  ],
+  "png-to-sun": [
+    "PNG",
+    "SUN"
+  ],
+  "png-to-txt": [
+    "PNG",
+    "TXT"
+  ],
+  "png-to-viff": [
+    "PNG",
+    "VIFF"
+  ],
+  "png-to-xv": [
+    "PNG",
+    "XV"
+  ],
+  "png-to-aai": [
+    "PNG",
+    "AAI"
+  ],
+  "png-to-avif": [
+    "PNG",
+    "AVIF"
+  ],
+  "png-to-dds": [
+    "PNG",
+    "DDS"
+  ],
+  "png-to-farbfeld": [
+    "PNG",
+    "FARBFELD"
+  ],
+  "png-to-flv": [
+    "PNG",
+    "FLV"
+  ],
+  "png-to-g4": [
+    "PNG",
+    "G4"
+  ],
+  "png-to-ipl": [
+    "PNG",
+    "IPL"
+  ],
+  "png-to-jpc": [
+    "PNG",
+    "JPC"
+  ],
+  "png-to-pgx": [
+    "PNG",
+    "PGX"
+  ],
+  "png-to-rgf": [
+    "PNG",
+    "RGF"
+  ],
+  "png-to-wmv": [
+    "PNG",
+    "WMV"
+  ],
+  "png-to-av1.mkv": [
+    "PNG",
+    "AV1.MKV"
+  ],
+  "png-to-h264.mp4": [
+    "PNG",
+    "H264.MP4"
+  ],
+  "png-to-obu": [
+    "PNG",
+    "OBU"
+  ],
+  "png-to-wtv": [
+    "PNG",
+    "WTV"
+  ],
+  "ppm-to-bmp2": [
+    "PPM",
+    "BMP2"
+  ],
+  "ppm-to-cals": [
+    "PPM",
+    "CALS"
+  ],
+  "ppm-to-dcx": [
+    "PPM",
+    "DCX"
+  ],
+  "ppm-to-eps": [
+    "PPM",
+    "EPS"
+  ],
+  "ppm-to-epsi": [
+    "PPM",
+    "EPSI"
+  ],
+  "ppm-to-gif": [
+    "PPM",
+    "GIF"
+  ],
+  "ppm-to-jbig": [
+    "PPM",
+    "JBIG"
+  ],
+  "ppm-to-mpc": [
+    "PPM",
+    "MPC"
+  ],
+  "ppm-to-mtv": [
+    "PPM",
+    "MTV"
+  ],
+  "ppm-to-otb": [
+    "PPM",
+    "OTB"
+  ],
+  "ppm-to-pbm": [
+    "PPM",
+    "PBM"
+  ],
+  "ppm-to-pgm": [
+    "PPM",
+    "PGM"
+  ],
+  "ppm-to-png24": [
+    "PPM",
+    "PNG24"
+  ],
+  "ppm-to-png8": [
+    "PPM",
+    "PNG8"
+  ],
+  "ppm-to-ras": [
+    "PPM",
+    "RAS"
+  ],
+  "ppm-to-tiff": [
+    "PPM",
+    "TIFF"
+  ],
+  "ppm-to-webp": [
+    "PPM",
+    "WEBP"
+  ],
+  "ppm-to-xpm": [
+    "PPM",
+    "XPM"
+  ],
+  "ppm-to-g3": [
+    "PPM",
+    "G3"
+  ],
+  "ppm-to-hrz": [
+    "PPM",
+    "HRZ"
+  ],
+  "ppm-to-jp2": [
+    "PPM",
+    "JP2"
+  ],
+  "ppm-to-jpm": [
+    "PPM",
+    "JPM"
+  ],
+  "ppm-to-jxl": [
+    "PPM",
+    "JXL"
+  ],
+  "ppm-to-mov": [
+    "PPM",
+    "MOV"
+  ],
+  "ppm-to-pdfa": [
+    "PPM",
+    "PDFA"
+  ],
+  "ppm-to-qoi": [
+    "PPM",
+    "QOI"
+  ],
+  "ppm-to-vips": [
+    "PPM",
+    "VIPS"
+  ],
+  "ppm-to-av1.mkv": [
+    "PPM",
+    "AV1.MKV"
+  ],
+  "ppm-to-hevc": [
+    "PPM",
+    "HEVC"
+  ],
+  "ppm-to-wtv": [
+    "PPM",
+    "WTV"
+  ],
+  "pptx-to-odp": [
+    "PPTX",
+    "ODP"
+  ],
+  "psd-to-art": [
+    "PSD",
+    "ART"
+  ],
+  "psd-to-epdf": [
+    "PSD",
+    "EPDF"
+  ],
+  "psd-to-icb": [
+    "PSD",
+    "ICB"
+  ],
+  "psd-to-j2c": [
+    "PSD",
+    "J2C"
+  ],
+  "psd-to-jpc": [
+    "PSD",
+    "JPC"
+  ],
+  "psd-to-jpm": [
+    "PSD",
+    "JPM"
+  ],
+  "psd-to-jxl": [
+    "PSD",
+    "JXL"
+  ],
+  "psd-to-mp4": [
+    "PSD",
+    "MP4"
+  ],
+  "psd-to-pgx": [
+    "PSD",
+    "PGX"
+  ],
+  "psd-to-png48": [
+    "PSD",
+    "PNG48"
+  ],
+  "psd-to-rgf": [
+    "PSD",
+    "RGF"
+  ],
+  "psd-to-sun": [
+    "PSD",
+    "SUN"
+  ],
+  "psd-to-vda": [
+    "PSD",
+    "VDA"
+  ],
+  "psd-to-vips": [
+    "PSD",
+    "VIPS"
+  ],
+  "psd-to-webp": [
+    "PSD",
+    "WEBP"
+  ],
+  "psd-to-xpm": [
+    "PSD",
+    "XPM"
+  ],
+  "psd-to-asf": [
+    "PSD",
+    "ASF"
+  ],
+  "psd-to-ivf": [
+    "PSD",
+    "IVF"
+  ],
+  "psd-to-nut": [
+    "PSD",
+    "NUT"
+  ],
+  "rtf-to-txt": [
+    "RTF",
+    "TXT"
+  ],
+  "rtf-to-json": [
+    "RTF",
+    "JSON"
+  ],
+  "rtf-to-pptx": [
+    "RTF",
+    "PPTX"
+  ],
+  "sdw-to-docx": [
+    "SDW",
+    "DOCX"
+  ],
+  "sdw-to-epub": [
+    "SDW",
+    "EPUB"
+  ],
+  "sdw-to-odt": [
+    "SDW",
+    "ODT"
+  ],
+  "sdw-to-xml": [
+    "SDW",
+    "XML"
+  ],
+  "sib-to-fbx": [
+    "SIB",
+    "FBX"
+  ],
+  "smd-to-json": [
+    "SMD",
+    "JSON"
+  ],
+  "smd-to-ply": [
+    "SMD",
+    "PLY"
+  ],
+  "srt-to-lrc": [
+    "SRT",
+    "LRC"
+  ],
+  "stw-to-epub": [
+    "STW",
+    "EPUB"
+  ],
+  "stw-to-xml": [
+    "STW",
+    "XML"
+  ],
+  "svg-to-bmp2": [
+    "SVG",
+    "BMP2"
+  ],
+  "svg-to-dcx": [
+    "SVG",
+    "DCX"
+  ],
+  "svg-to-epsi": [
+    "SVG",
+    "EPSI"
+  ],
+  "svg-to-gif": [
+    "SVG",
+    "GIF"
+  ],
+  "svg-to-jbig": [
+    "SVG",
+    "JBIG"
+  ],
+  "svg-to-otb": [
+    "SVG",
+    "OTB"
+  ],
+  "svg-to-pct": [
+    "SVG",
+    "PCT"
+  ],
+  "svg-to-png24": [
+    "SVG",
+    "PNG24"
+  ],
+  "svg-to-ps": [
+    "SVG",
+    "PS"
+  ],
+  "svg-to-sgi": [
+    "SVG",
+    "SGI"
+  ],
+  "svg-to-wbmp": [
+    "SVG",
+    "WBMP"
+  ],
+  "svg-to-hdr": [
+    "SVG",
+    "HDR"
+  ],
+  "svg-to-j2k": [
+    "SVG",
+    "J2K"
+  ],
+  "svg-to-phm": [
+    "SVG",
+    "PHM"
+  ],
+  "svg-to-vips": [
+    "SVG",
+    "VIPS"
+  ],
+  "svgz-to-fits": [
+    "SVGZ",
+    "FITS"
+  ],
+  "svgz-to-icb": [
+    "SVGZ",
+    "ICB"
+  ],
+  "svgz-to-mng": [
+    "SVGZ",
+    "MNG"
+  ],
+  "svgz-to-pcds": [
+    "SVGZ",
+    "PCDS"
+  ],
+  "svgz-to-pict": [
+    "SVGZ",
+    "PICT"
+  ],
+  "svgz-to-ppm": [
+    "SVGZ",
+    "PPM"
+  ],
+  "svgz-to-txt": [
+    "SVGZ",
+    "TXT"
+  ],
+  "svgz-to-viff": [
+    "SVGZ",
+    "VIFF"
+  ],
+  "svgz-to-xv": [
+    "SVGZ",
+    "XV"
+  ],
+  "dcx-to-png": [
+    "DCX",
+    "PNG"
+  ],
+  "pbm-to-png": [
+    "PBM",
+    "PNG"
+  ],
+  "svgz-to-png": [
+    "SVGZ",
+    "PNG"
+  ],
+  "txt-to-png": [
+    "TXT",
+    "PNG"
+  ],
+  "fb2-to-epub": [
+    "FB2",
+    "EPUB"
+  ],
+  "avi-to-webm": [
+    "AVI",
+    "WEBM"
+  ],
+  "mov-to-webm": [
+    "MOV",
+    "WEBM"
+  ],
+  "latex-to-pdf": [
+    "LATEX",
+    "PDF"
+  ],
+  "docm-to-txt": [
+    "DOCM",
+    "TXT"
+  ],
+  "fodt-to-txt": [
+    "FODT",
+    "TXT"
+  ],
+  "wri-to-txt": [
+    "WRI",
+    "TXT"
+  ],
+  "xlsx-to-pdf": [
+    "XLSX",
+    "PDF"
+  ],
+  "wav-to-mp3": [
+    "WAV",
+    "MP3"
+  ],
+  "b3d-to-stl": [
+    "B3D",
+    "STL"
+  ],
+  "dxf-to-stl": [
+    "DXF",
+    "STL"
+  ],
+  "hmp-to-stl": [
+    "HMP",
+    "STL"
+  ],
+  "lws-to-stl": [
+    "LWS",
+    "STL"
+  ],
+  "md5mesh-to-stl": [
+    "MD5MESH",
+    "STL"
+  ],
+  "obj-to-stl": [
+    "OBJ",
+    "STL"
+  ],
+  "ply-to-stl": [
+    "PLY",
+    "STL"
+  ],
+  "xgl-to-stl": [
+    "XGL",
+    "STL"
+  ],
+  "woff2-to-ttf": [
+    "WOFF2",
+    "TTF"
+  ],
+  "pptm-to-pdf": [
+    "PPTM",
+    "PDF"
+  ],
+  "3ds-to-fbx": [
+    "3DS",
+    "FBX"
+  ],
+  "aac-to-aif": [
+    "AAC",
+    "AIF"
+  ],
+  "aac-to-aptx": [
+    "AAC",
+    "APTX"
+  ],
+  "aac-to-ast": [
+    "AAC",
+    "AST"
+  ],
+  "aac-to-av1.mp4": [
+    "AAC",
+    "AV1.MP4"
+  ],
+  "aac-to-g722": [
+    "AAC",
+    "G722"
+  ],
+  "aac-to-h265.mkv": [
+    "AAC",
+    "H265.MKV"
+  ],
+  "aac-to-mp3": [
+    "AAC",
+    "MP3"
+  ],
+  "aac-to-mpeg": [
+    "AAC",
+    "MPEG"
+  ],
+  "aac-to-ogg": [
+    "AAC",
+    "OGG"
+  ],
+  "aac-to-spdif": [
+    "AAC",
+    "SPDIF"
+  ],
+  "aac-to-tta": [
+    "AAC",
+    "TTA"
+  ],
+  "aac-to-webm": [
+    "AAC",
+    "WEBM"
+  ],
+  "aac-to-wtv": [
+    "AAC",
+    "WTV"
+  ],
+  "acc-to-3ds": [
+    "ACC",
+    "3DS"
+  ],
+  "ai-to-art": [
+    "AI",
+    "ART"
+  ],
+  "ai-to-dds": [
+    "AI",
+    "DDS"
+  ],
+  "ai-to-epdf": [
+    "AI",
+    "EPDF"
+  ],
+  "ai-to-fax": [
+    "AI",
+    "FAX"
+  ],
+  "ai-to-g3": [
+    "AI",
+    "G3"
+  ],
+  "ai-to-icb": [
+    "AI",
+    "ICB"
+  ],
+  "ai-to-j2c": [
+    "AI",
+    "J2C"
+  ],
+  "ai-to-jpc": [
+    "AI",
+    "JPC"
+  ],
+  "ai-to-jpm": [
+    "AI",
+    "JPM"
+  ],
+  "ai-to-jxl": [
+    "AI",
+    "JXL"
+  ],
+  "ai-to-mkv": [
+    "AI",
+    "MKV"
+  ],
+  "ai-to-mp4": [
+    "AI",
+    "MP4"
+  ],
+  "ai-to-pam": [
+    "AI",
+    "PAM"
+  ],
+  "ai-to-pdf": [
+    "AI",
+    "PDF"
+  ],
+  "ai-to-pgx": [
+    "AI",
+    "PGX"
+  ],
+  "ai-to-png48": [
+    "AI",
+    "PNG48"
+  ],
+  "ai-to-qoi": [
+    "AI",
+    "QOI"
+  ],
+  "ai-to-strimg": [
+    "AI",
+    "STRIMG"
+  ],
+  "ai-to-tga": [
+    "AI",
+    "TGA"
+  ],
+  "ai-to-viff": [
+    "AI",
+    "VIFF"
+  ],
+  "ai-to-webm": [
+    "AI",
+    "WEBM"
+  ],
+  "ai-to-xbm": [
+    "AI",
+    "XBM"
+  ],
+  "amf-to-obj": [
+    "AMF",
+    "OBJ"
+  ],
+  "amr-to-ac3": [
+    "AMR",
+    "AC3"
+  ],
+  "amr-to-aptx": [
+    "AMR",
+    "APTX"
+  ],
+  "amr-to-ast": [
+    "AMR",
+    "AST"
+  ],
+  "amr-to-av1.mp4": [
+    "AMR",
+    "AV1.MP4"
+  ],
+  "amr-to-g722": [
+    "AMR",
+    "G722"
+  ],
+  "amr-to-h265.mkv": [
+    "AMR",
+    "H265.MKV"
+  ],
+  "amr-to-mp3": [
+    "AMR",
+    "MP3"
+  ],
+  "amr-to-mpeg": [
+    "AMR",
+    "MPEG"
+  ],
+  "amr-to-ogg": [
+    "AMR",
+    "OGG"
+  ],
+  "amr-to-rso": [
+    "AMR",
+    "RSO"
+  ],
+  "amr-to-webm": [
+    "AMR",
+    "WEBM"
+  ],
+  "amr-to-wtv": [
+    "AMR",
+    "WTV"
+  ],
+  "ase-to-3ds": [
+    "ASE",
+    "3DS"
+  ],
+  "asf-to-avif": [
+    "ASF",
+    "AVIF"
+  ],
+  "asf-to-dfpwm": [
+    "ASF",
+    "DFPWM"
+  ],
+  "asf-to-eac3": [
+    "ASF",
+    "EAC3"
+  ],
+  "asf-to-gsm": [
+    "ASF",
+    "GSM"
+  ],
+  "asf-to-mka": [
+    "ASF",
+    "MKA"
+  ],
+  "asf-to-mov": [
+    "ASF",
+    "MOV"
+  ],
+  "asf-to-sbc": [
+    "ASF",
+    "SBC"
+  ],
+  "asf-to-sox": [
+    "ASF",
+    "SOX"
+  ],
+  "asf-to-voc": [
+    "ASF",
+    "VOC"
+  ],
+  "asf-to-wav": [
+    "ASF",
+    "WAV"
+  ],
+  "au-to-aif": [
+    "AU",
+    "AIF"
+  ],
+  "au-to-aptx": [
+    "AU",
+    "APTX"
+  ],
+  "au-to-ast": [
+    "AU",
+    "AST"
+  ],
+  "au-to-avi": [
+    "AU",
+    "AVI"
+  ],
+  "au-to-caf": [
+    "AU",
+    "CAF"
+  ],
+  "au-to-flac": [
+    "AU",
+    "FLAC"
+  ],
+  "au-to-h265.mp4": [
+    "AU",
+    "H265.MP4"
+  ],
+  "au-to-ircam": [
+    "AU",
+    "IRCAM"
+  ],
+  "au-to-loas": [
+    "AU",
+    "LOAS"
+  ],
+  "au-to-m4a": [
+    "AU",
+    "M4A"
+  ],
+  "au-to-mp4": [
+    "AU",
+    "MP4"
+  ],
+  "au-to-mpg": [
+    "AU",
+    "MPG"
+  ],
+  "au-to-nut": [
+    "AU",
+    "NUT"
+  ],
+  "au-to-rm": [
+    "AU",
+    "RM"
+  ],
+  "au-to-w64": [
+    "AU",
+    "W64"
+  ],
+  "au-to-wv": [
+    "AU",
+    "WV"
+  ],
+  "avif-to-aai": [
+    "AVIF",
+    "AAI"
+  ],
+  "avif-to-bmp2": [
+    "AVIF",
+    "BMP2"
+  ],
+  "avif-to-cals": [
+    "AVIF",
+    "CALS"
+  ],
+  "avif-to-dxt1": [
+    "AVIF",
+    "DXT1"
+  ],
+  "avif-to-eps": [
+    "AVIF",
+    "EPS"
+  ],
+  "avif-to-epsi": [
+    "AVIF",
+    "EPSI"
+  ],
+  "avif-to-fits": [
+    "AVIF",
+    "FITS"
+  ],
+  "avif-to-gif": [
+    "AVIF",
+    "GIF"
+  ],
+  "avif-to-icon": [
+    "AVIF",
+    "ICON"
+  ],
+  "avif-to-jng": [
+    "AVIF",
+    "JNG"
+  ],
+  "avif-to-m4v": [
+    "AVIF",
+    "M4V"
+  ],
+  "avif-to-mpeg": [
+    "AVIF",
+    "MPEG"
+  ],
+  "avif-to-mtv": [
+    "AVIF",
+    "MTV"
+  ],
+  "avif-to-pcd": [
+    "AVIF",
+    "PCD"
+  ],
+  "avif-to-pcx": [
+    "AVIF",
+    "PCX"
+  ],
+  "avif-to-pfm": [
+    "AVIF",
+    "PFM"
+  ],
+  "avif-to-picon": [
+    "AVIF",
+    "PICON"
+  ],
+  "avif-to-png24": [
+    "AVIF",
+    "PNG24"
+  ],
+  "avif-to-png8": [
+    "AVIF",
+    "PNG8"
+  ],
+  "avif-to-ps": [
+    "AVIF",
+    "PS"
+  ],
+  "avif-to-svg": [
+    "AVIF",
+    "SVG"
+  ],
+  "avif-to-tiff": [
+    "AVIF",
+    "TIFF"
+  ],
+  "avif-to-vicar": [
+    "AVIF",
+    "VICAR"
+  ],
+  "avif-to-vst": [
+    "AVIF",
+    "VST"
+  ],
+  "avif-to-wmv": [
+    "AVIF",
+    "WMV"
+  ],
+  "avif-to-xv": [
+    "AVIF",
+    "XV"
+  ],
+  "avif-to-av1.mp4": [
+    "AVIF",
+    "AV1.MP4"
+  ],
+  "avif-to-h265.mkv": [
+    "AVIF",
+    "H265.MKV"
+  ],
+  "avif-to-m4a": [
+    "AVIF",
+    "M4A"
+  ],
+  "b3d-to-fbx": [
+    "B3D",
+    "FBX"
+  ],
+  "blend-to-fbx": [
+    "BLEND",
+    "FBX"
+  ],
+  "bmp-to-art": [
+    "BMP",
+    "ART"
+  ],
+  "bmp-to-epi": [
+    "BMP",
+    "EPI"
+  ],
+  "bmp-to-epsf": [
+    "BMP",
+    "EPSF"
+  ],
+  "bmp-to-jbg": [
+    "BMP",
+    "JBG"
+  ],
+  "bmp-to-pam": [
+    "BMP",
+    "PAM"
+  ],
+  "bmp-to-pdf": [
+    "BMP",
+    "PDF"
+  ],
+  "bmp-to-png00": [
+    "BMP",
+    "PNG00"
+  ],
+  "bmp-to-png64": [
+    "BMP",
+    "PNG64"
+  ],
+  "bmp-to-vda": [
+    "BMP",
+    "VDA"
+  ],
+  "bmp-to-vst": [
+    "BMP",
+    "VST"
+  ],
+  "bmp-to-xbm": [
+    "BMP",
+    "XBM"
+  ],
+  "bmp-to-xwd": [
+    "BMP",
+    "XWD"
+  ],
+  "bmp-to-ai": [
+    "BMP",
+    "AI"
+  ],
+  "bmp-to-dxt1": [
+    "BMP",
+    "DXT1"
+  ],
+  "bmp-to-ff": [
+    "BMP",
+    "FF"
+  ],
+  "bmp-to-ico": [
+    "BMP",
+    "ICO"
+  ],
+  "bmp-to-j2c": [
+    "BMP",
+    "J2C"
+  ],
+  "bmp-to-jpe": [
+    "BMP",
+    "JPE"
+  ],
+  "bmp-to-pgx": [
+    "BMP",
+    "PGX"
+  ],
+  "bmp-to-rgf": [
+    "BMP",
+    "RGF"
+  ],
+  "bmp-to-wmv": [
+    "BMP",
+    "WMV"
+  ],
+  "bmp-to-av1.mkv": [
+    "BMP",
+    "AV1.MKV"
+  ],
+  "bmp-to-h264.mp4": [
+    "BMP",
+    "H264.MP4"
+  ],
+  "bmp-to-obu": [
+    "BMP",
+    "OBU"
+  ],
+  "bmp-to-wtv": [
+    "BMP",
+    "WTV"
+  ],
+  "c-to-icc": [
+    "C",
+    "ICC"
+  ],
+  "cob-to-obj": [
+    "COB",
+    "OBJ"
+  ],
+  "csv-to-jxl": [
+    "CSV",
+    "JXL"
+  ],
+  "csv-to-vips": [
+    "CSV",
+    "VIPS"
+  ],
+  "dcx-to-bie": [
+    "DCX",
+    "BIE"
+  ],
+  "dcx-to-bmp3": [
+    "DCX",
+    "BMP3"
+  ],
+  "dcx-to-cin": [
+    "DCX",
+    "CIN"
+  ],
+  "dcx-to-epdf": [
+    "DCX",
+    "EPDF"
+  ],
+  "dcx-to-fits": [
+    "DCX",
+    "FITS"
+  ],
+  "dcx-to-icb": [
+    "DCX",
+    "ICB"
+  ],
+  "dcx-to-mng": [
+    "DCX",
+    "MNG"
+  ],
+  "dcx-to-mpg": [
+    "DCX",
+    "MPG"
+  ],
+  "dcx-to-pcds": [
+    "DCX",
+    "PCDS"
+  ],
+  "dcx-to-pdb": [
+    "DCX",
+    "PDB"
+  ],
+  "dcx-to-pict": [
+    "DCX",
+    "PICT"
+  ],
+  "dcx-to-png48": [
+    "DCX",
+    "PNG48"
+  ],
+  "dcx-to-ppm": [
+    "DCX",
+    "PPM"
+  ],
+  "dcx-to-sun": [
+    "DCX",
+    "SUN"
+  ],
+  "dcx-to-txt": [
+    "DCX",
+    "TXT"
+  ],
+  "dcx-to-viff": [
+    "DCX",
+    "VIFF"
+  ],
+  "dcx-to-xv": [
+    "DCX",
+    "XV"
+  ],
+  "dcx-to-aai": [
+    "DCX",
+    "AAI"
+  ],
+  "dcx-to-dds": [
+    "DCX",
+    "DDS"
+  ],
+  "dcx-to-farbfeld": [
+    "DCX",
+    "FARBFELD"
+  ],
+  "dcx-to-flv": [
+    "DCX",
+    "FLV"
+  ],
+  "dcx-to-g4": [
+    "DCX",
+    "G4"
+  ],
+  "dcx-to-ipl": [
+    "DCX",
+    "IPL"
+  ],
+  "dcx-to-jpc": [
+    "DCX",
+    "JPC"
+  ],
+  "dcx-to-pfm": [
+    "DCX",
+    "PFM"
+  ],
+  "dcx-to-sixel": [
+    "DCX",
+    "SIXEL"
+  ],
+  "dcx-to-webm": [
+    "DCX",
+    "WEBM"
+  ],
+  "dng-to-art": [
+    "DNG",
+    "ART"
+  ],
+  "dng-to-fits": [
+    "DNG",
+    "FITS"
+  ],
+  "dng-to-icb": [
+    "DNG",
+    "ICB"
+  ],
+  "dng-to-mng": [
+    "DNG",
+    "MNG"
+  ],
+  "dng-to-pcds": [
+    "DNG",
+    "PCDS"
+  ],
+  "dng-to-pdb": [
+    "DNG",
+    "PDB"
+  ],
+  "dng-to-pict": [
+    "DNG",
+    "PICT"
+  ],
+  "dng-to-png48": [
+    "DNG",
+    "PNG48"
+  ],
+  "dng-to-ppm": [
+    "DNG",
+    "PPM"
+  ],
+  "dng-to-sun": [
+    "DNG",
+    "SUN"
+  ],
+  "dng-to-txt": [
+    "DNG",
+    "TXT"
+  ],
+  "dng-to-viff": [
+    "DNG",
+    "VIFF"
+  ],
+  "dng-to-xv": [
+    "DNG",
+    "XV"
+  ],
+  "dng-to-avif": [
+    "DNG",
+    "AVIF"
+  ],
+  "docm-to-doc": [
+    "DOCM",
+    "DOC"
+  ],
+  "docm-to-html": [
+    "DOCM",
+    "HTML"
+  ],
+  "docm-to-rtf": [
+    "DOCM",
+    "RTF"
+  ],
+  "docx-to-html": [
+    "DOCX",
+    "HTML"
+  ],
+  "docx-to-pdf": [
+    "DOCX",
+    "PDF"
+  ],
+  "docx-to-doc": [
+    "DOCX",
+    "DOC"
+  ],
+  "dot-to-pdf": [
+    "DOT",
+    "PDF"
+  ],
+  "dotm-to-epub": [
+    "DOTM",
+    "EPUB"
+  ],
+  "dotm-to-odt": [
+    "DOTM",
+    "ODT"
+  ],
+  "dotm-to-xml": [
+    "DOTM",
+    "XML"
+  ],
+  "dotx-to-pdf": [
+    "DOTX",
+    "PDF"
+  ],
+  "dxf-to-json": [
+    "DXF",
+    "JSON"
+  ],
+  "dxf-to-ply": [
+    "DXF",
+    "PLY"
+  ],
+  "emf-to-art": [
+    "EMF",
+    "ART"
+  ],
+  "emf-to-epdf": [
+    "EMF",
+    "EPDF"
+  ],
+  "emf-to-fax": [
+    "EMF",
+    "FAX"
+  ],
+  "emf-to-g3": [
+    "EMF",
+    "G3"
+  ],
+  "emf-to-j2c": [
+    "EMF",
+    "J2C"
+  ],
+  "emf-to-jpc": [
+    "EMF",
+    "JPC"
+  ],
+  "emf-to-jpm": [
+    "EMF",
+    "JPM"
+  ],
+  "emf-to-jxl": [
+    "EMF",
+    "JXL"
+  ],
+  "emf-to-mkv": [
+    "EMF",
+    "MKV"
+  ],
+  "emf-to-mp4": [
+    "EMF",
+    "MP4"
+  ],
+  "emf-to-pdf": [
+    "EMF",
+    "PDF"
+  ],
+  "emf-to-png48": [
+    "EMF",
+    "PNG48"
+  ],
+  "emf-to-qoi": [
+    "EMF",
+    "QOI"
+  ],
+  "epub-to-json": [
+    "EPUB",
+    "JSON"
+  ],
+  "epub-to-pptx": [
+    "EPUB",
+    "PPTX"
+  ],
+  "fb2-to-docx": [
+    "FB2",
+    "DOCX"
+  ],
+  "fb2-to-rtf": [
+    "FB2",
+    "RTF"
+  ],
+  "fb2-to-odt": [
+    "FB2",
+    "ODT"
+  ],
+  "fits-to-bmp": [
+    "FITS",
+    "BMP"
+  ],
+  "fits-to-epi": [
+    "FITS",
+    "EPI"
+  ],
+  "fits-to-epsf": [
+    "FITS",
+    "EPSF"
+  ],
+  "fits-to-gif": [
+    "FITS",
+    "GIF"
+  ],
+  "fits-to-otb": [
+    "FITS",
+    "OTB"
+  ],
+  "fits-to-pct": [
+    "FITS",
+    "PCT"
+  ],
+  "fits-to-png24": [
+    "FITS",
+    "PNG24"
+  ],
+  "fits-to-png8": [
+    "FITS",
+    "PNG8"
+  ],
+  "fits-to-sgi": [
+    "FITS",
+    "SGI"
+  ],
+  "fits-to-tga": [
+    "FITS",
+    "TGA"
+  ],
+  "fits-to-vicar": [
+    "FITS",
+    "VICAR"
+  ],
+  "fits-to-wbmp": [
+    "FITS",
+    "WBMP"
+  ],
+  "fits-to-j2k": [
+    "FITS",
+    "J2K"
+  ],
+  "flac-to-au": [
+    "FLAC",
+    "AU"
+  ],
+  "flac-to-avi": [
+    "FLAC",
+    "AVI"
+  ],
+  "flac-to-caf": [
+    "FLAC",
+    "CAF"
+  ],
+  "flac-to-mka": [
+    "FLAC",
+    "MKA"
+  ],
+  "flac-to-mov": [
+    "FLAC",
+    "MOV"
+  ],
+  "flac-to-rm": [
+    "FLAC",
+    "RM"
+  ],
+  "flac-to-w64": [
+    "FLAC",
+    "W64"
+  ],
+  "flv-to-ai": [
+    "FLV",
+    "AI"
+  ],
+  "flv-to-avif": [
+    "FLV",
+    "AVIF"
+  ],
+  "flv-to-bmp2": [
+    "FLV",
+    "BMP2"
+  ],
+  "flv-to-cals": [
+    "FLV",
+    "CALS"
+  ],
+  "flv-to-dxt1": [
+    "FLV",
+    "DXT1"
+  ],
+  "flv-to-eps": [
+    "FLV",
+    "EPS"
+  ],
+  "flv-to-epsi": [
+    "FLV",
+    "EPSI"
+  ],
+  "flv-to-fits": [
+    "FLV",
+    "FITS"
+  ],
+  "flv-to-gif87": [
+    "FLV",
+    "GIF87"
+  ],
+  "flv-to-hdr": [
+    "FLV",
+    "HDR"
+  ],
+  "flv-to-jp2": [
+    "FLV",
+    "JP2"
+  ],
+  "flv-to-jpg": [
+    "FLV",
+    "JPG"
+  ],
+  "flv-to-json": [
+    "FLV",
+    "JSON"
+  ],
+  "flv-to-mov": [
+    "FLV",
+    "MOV"
+  ],
+  "flv-to-mpg": [
+    "FLV",
+    "MPG"
+  ],
+  "flv-to-palm": [
+    "FLV",
+    "PALM"
+  ],
+  "flv-to-pcds": [
+    "FLV",
+    "PCDS"
+  ],
+  "flv-to-pdb": [
+    "FLV",
+    "PDB"
+  ],
+  "flv-to-pict": [
+    "FLV",
+    "PICT"
+  ],
+  "flv-to-png32": [
+    "FLV",
+    "PNG32"
+  ],
+  "flv-to-sgi": [
+    "FLV",
+    "SGI"
+  ],
+  "flv-to-wbmp": [
+    "FLV",
+    "WBMP"
+  ],
+  "flv-to-wpg": [
+    "FLV",
+    "WPG"
+  ],
+  "flv-to-ac3": [
+    "FLV",
+    "AC3"
+  ],
+  "flv-to-aptx": [
+    "FLV",
+    "APTX"
+  ],
+  "flv-to-ast": [
+    "FLV",
+    "AST"
+  ],
+  "flv-to-h265.mkv": [
+    "FLV",
+    "H265.MKV"
+  ],
+  "flv-to-m4a": [
+    "FLV",
+    "M4A"
+  ],
+  "flv-to-mka": [
+    "FLV",
+    "MKA"
+  ],
+  "flv-to-mp3": [
+    "FLV",
+    "MP3"
+  ],
+  "flv-to-opus": [
+    "FLV",
+    "OPUS"
+  ],
+  "flv-to-sox": [
+    "FLV",
+    "SOX"
+  ],
+  "flv-to-w64": [
+    "FLV",
+    "W64"
+  ],
+  "flv-to-wv": [
+    "FLV",
+    "WV"
+  ],
+  "fodt-to-doc": [
+    "FODT",
+    "DOC"
+  ],
+  "fodt-to-html": [
+    "FODT",
+    "HTML"
+  ],
+  "fodt-to-rtf": [
+    "FODT",
+    "RTF"
+  ],
+  "gif-to-bie": [
+    "GIF",
+    "BIE"
+  ],
+  "gif-to-bmp3": [
+    "GIF",
+    "BMP3"
+  ],
+  "gif-to-cin": [
+    "GIF",
+    "CIN"
+  ],
+  "gif-to-dpx": [
+    "GIF",
+    "DPX"
+  ],
+  "gif-to-fax": [
+    "GIF",
+    "FAX"
+  ],
+  "gif-to-icb": [
+    "GIF",
+    "ICB"
+  ],
+  "gif-to-mng": [
+    "GIF",
+    "MNG"
+  ],
+  "gif-to-mpg": [
+    "GIF",
+    "MPG"
+  ],
+  "gif-to-pcds": [
+    "GIF",
+    "PCDS"
+  ],
+  "gif-to-pdb": [
+    "GIF",
+    "PDB"
+  ],
+  "gif-to-png48": [
+    "GIF",
+    "PNG48"
+  ],
+  "gif-to-ppm": [
+    "GIF",
+    "PPM"
+  ],
+  "gif-to-sun": [
+    "GIF",
+    "SUN"
+  ],
+  "gif-to-txt": [
+    "GIF",
+    "TXT"
+  ],
+  "gif-to-viff": [
+    "GIF",
+    "VIFF"
+  ],
+  "gif-to-xv": [
+    "GIF",
+    "XV"
+  ],
+  "gif-to-aai": [
+    "GIF",
+    "AAI"
+  ],
+  "gif-to-avif": [
+    "GIF",
+    "AVIF"
+  ],
+  "gif-to-dds": [
+    "GIF",
+    "DDS"
+  ],
+  "gif-to-farbfeld": [
+    "GIF",
+    "FARBFELD"
+  ],
+  "gif-to-flv": [
+    "GIF",
+    "FLV"
+  ],
+  "gif-to-g4": [
+    "GIF",
+    "G4"
+  ],
+  "gif-to-ipl": [
+    "GIF",
+    "IPL"
+  ],
+  "gif-to-jpc": [
+    "GIF",
+    "JPC"
+  ],
+  "gif-to-m4v": [
+    "GIF",
+    "M4V"
+  ],
+  "gif-to-mp4": [
+    "GIF",
+    "MP4"
+  ],
+  "gif-to-pfm": [
+    "GIF",
+    "PFM"
+  ],
+  "gif-to-webm": [
+    "GIF",
+    "WEBM"
+  ],
+  "gif-to-av1.mp4": [
+    "GIF",
+    "AV1.MP4"
+  ],
+  "gif-to-m4a": [
+    "GIF",
+    "M4A"
+  ],
+  "glb-to-json": [
+    "GLB",
+    "JSON"
+  ],
+  "hmp-to-obj": [
+    "HMP",
+    "OBJ"
+  ],
+  "html-to-xml": [
+    "HTML",
+    "XML"
+  ],
+  "hwp-to-doc": [
+    "HWP",
+    "DOC"
+  ],
+  "hwp-to-pdf": [
+    "HWP",
+    "PDF"
+  ],
+  "irr-to-json": [
+    "IRR",
+    "JSON"
+  ],
+  "irr-to-ply": [
+    "IRR",
+    "PLY"
+  ],
+  "irrmesh-to-fbx": [
+    "IRRMESH",
+    "FBX"
+  ],
+  "jp2-to-ai": [
+    "JP2",
+    "AI"
+  ],
+  "jp2-to-avif": [
+    "JP2",
+    "AVIF"
+  ],
+  "jp2-to-bmp2": [
+    "JP2",
+    "BMP2"
+  ],
+  "jp2-to-cals": [
+    "JP2",
+    "CALS"
+  ],
+  "jp2-to-dxt1": [
+    "JP2",
+    "DXT1"
+  ],
+  "jp2-to-eps": [
+    "JP2",
+    "EPS"
+  ],
+  "jp2-to-epsi": [
+    "JP2",
+    "EPSI"
+  ],
+  "jp2-to-fits": [
+    "JP2",
+    "FITS"
+  ],
+  "jp2-to-gif": [
+    "JP2",
+    "GIF"
+  ],
+  "jp2-to-icon": [
+    "JP2",
+    "ICON"
+  ],
+  "jp2-to-jng": [
+    "JP2",
+    "JNG"
+  ],
+  "jp2-to-jpg": [
+    "JP2",
+    "JPG"
+  ],
+  "jp2-to-json": [
+    "JP2",
+    "JSON"
+  ],
+  "jp2-to-miff": [
+    "JP2",
+    "MIFF"
+  ],
+  "jp2-to-mpg": [
+    "JP2",
+    "MPG"
+  ],
+  "jp2-to-palm": [
+    "JP2",
+    "PALM"
+  ],
+  "jp2-to-pcds": [
+    "JP2",
+    "PCDS"
+  ],
+  "jp2-to-pdb": [
+    "JP2",
+    "PDB"
+  ],
+  "jp2-to-pgm": [
+    "JP2",
+    "PGM"
+  ],
+  "jp2-to-pict": [
+    "JP2",
+    "PICT"
+  ],
+  "jp2-to-png32": [
+    "JP2",
+    "PNG32"
+  ],
+  "jp2-to-pnm": [
+    "JP2",
+    "PNM"
+  ],
+  "jp2-to-sgi": [
+    "JP2",
+    "SGI"
+  ],
+  "jp2-to-tiff64": [
+    "JP2",
+    "TIFF64"
+  ],
+  "jp2-to-wbmp": [
+    "JP2",
+    "WBMP"
+  ],
+  "jp2-to-wpg": [
+    "JP2",
+    "WPG"
+  ],
+  "jpg-to-avs": [
+    "JPG",
+    "AVS"
+  ],
+  "jpg-to-bmp": [
+    "JPG",
+    "BMP"
+  ],
+  "jpg-to-epi": [
+    "JPG",
+    "EPI"
+  ],
+  "jpg-to-epsf": [
+    "JPG",
+    "EPSF"
+  ],
+  "jpg-to-jbg": [
+    "JPG",
+    "JBG"
+  ],
+  "jpg-to-pam": [
+    "JPG",
+    "PAM"
+  ],
+  "jpg-to-pdf": [
+    "JPG",
+    "PDF"
+  ],
+  "jpg-to-png00": [
+    "JPG",
+    "PNG00"
+  ],
+  "jpg-to-png64": [
+    "JPG",
+    "PNG64"
+  ],
+  "jpg-to-vda": [
+    "JPG",
+    "VDA"
+  ],
+  "jpg-to-vst": [
+    "JPG",
+    "VST"
+  ],
+  "jpg-to-xbm": [
+    "JPG",
+    "XBM"
+  ],
+  "jpg-to-xwd": [
+    "JPG",
+    "XWD"
+  ],
+  "jpg-to-ai": [
+    "JPG",
+    "AI"
+  ],
+  "jpg-to-dxt1": [
+    "JPG",
+    "DXT1"
+  ],
+  "jpg-to-ff": [
+    "JPG",
+    "FF"
+  ],
+  "jpg-to-ico": [
+    "JPG",
+    "ICO"
+  ],
+  "jpg-to-j2c": [
+    "JPG",
+    "J2C"
+  ],
+  "jpg-to-jpe": [
+    "JPG",
+    "JPE"
+  ],
+  "jpg-to-json": [
+    "JPG",
+    "JSON"
+  ],
+  "jpg-to-mkv": [
+    "JPG",
+    "MKV"
+  ],
+  "jpg-to-palm": [
+    "JPG",
+    "PALM"
+  ],
+  "jpg-to-phm": [
+    "JPG",
+    "PHM"
+  ],
+  "jpg-to-strimg": [
+    "JPG",
+    "STRIMG"
+  ],
+  "jpg-to-tiff64": [
+    "JPG",
+    "TIFF64"
+  ],
+  "jpg-to-wpg": [
+    "JPG",
+    "WPG"
+  ],
+  "jxl-to-bmp": [
+    "JXL",
+    "BMP"
+  ],
+  "jxl-to-dpx": [
+    "JXL",
+    "DPX"
+  ],
+  "jxl-to-flv": [
+    "JXL",
+    "FLV"
+  ],
+  "jxl-to-ico": [
+    "JXL",
+    "ICO"
+  ],
+  "jxl-to-j2k": [
+    "JXL",
+    "J2K"
+  ],
+  "jxl-to-m4v": [
+    "JXL",
+    "M4V"
+  ],
+  "jxl-to-mpeg": [
+    "JXL",
+    "MPEG"
+  ],
+  "jxl-to-pcx": [
+    "JXL",
+    "PCX"
+  ],
+  "jxl-to-pfm": [
+    "JXL",
+    "PFM"
+  ],
+  "jxl-to-svg": [
+    "JXL",
+    "SVG"
+  ],
+  "jxl-to-tiff": [
+    "JXL",
+    "TIFF"
+  ],
+  "jxl-to-wmv": [
+    "JXL",
+    "WMV"
+  ],
+  "jxl-to-avi": [
+    "JXL",
+    "AVI"
+  ],
+  "jxl-to-mxf": [
+    "JXL",
+    "MXF"
+  ],
+  "jxl-to-ogg": [
+    "JXL",
+    "OGG"
+  ],
+  "jxl-to-swf": [
+    "JXL",
+    "SWF"
+  ],
+  "lwo-to-fbx": [
+    "LWO",
+    "FBX"
+  ],
+  "lws-to-json": [
+    "LWS",
+    "JSON"
+  ],
+  "lws-to-ply": [
+    "LWS",
+    "PLY"
+  ],
+  "lxo-to-fbx": [
+    "LXO",
+    "FBX"
+  ],
+  "m-to-iptc": [
+    "M",
+    "IPTC"
+  ],
+  "m3d-to-json": [
+    "M3D",
+    "JSON"
+  ],
+  "m4a-to-aac": [
+    "M4A",
+    "AAC"
+  ],
+  "m4a-to-adx": [
+    "M4A",
+    "ADX"
+  ],
+  "m4a-to-aiff": [
+    "M4A",
+    "AIFF"
+  ],
+  "m4a-to-apm": [
+    "M4A",
+    "APM"
+  ],
+  "m4a-to-asf": [
+    "M4A",
+    "ASF"
+  ],
+  "m4a-to-dfpwm": [
+    "M4A",
+    "DFPWM"
+  ],
+  "m4a-to-eac3": [
+    "M4A",
+    "EAC3"
+  ],
+  "m4a-to-mkv": [
+    "M4A",
+    "MKV"
+  ],
+  "m4a-to-opus": [
+    "M4A",
+    "OPUS"
+  ],
+  "m4a-to-sbc": [
+    "M4A",
+    "SBC"
+  ],
+  "m4a-to-sox": [
+    "M4A",
+    "SOX"
+  ],
+  "m4a-to-voc": [
+    "M4A",
+    "VOC"
+  ],
+  "mat-to-avs": [
+    "MAT",
+    "AVS"
+  ],
+  "mat-to-bmp": [
+    "MAT",
+    "BMP"
+  ],
+  "mat-to-epi": [
+    "MAT",
+    "EPI"
+  ],
+  "mat-to-epsf": [
+    "MAT",
+    "EPSF"
+  ],
+  "mat-to-jbg": [
+    "MAT",
+    "JBG"
+  ],
+  "mat-to-mpc": [
+    "MAT",
+    "MPC"
+  ],
+  "mat-to-mtv": [
+    "MAT",
+    "MTV"
+  ],
+  "mat-to-otb": [
+    "MAT",
+    "OTB"
+  ],
+  "mat-to-pbm": [
+    "MAT",
+    "PBM"
+  ],
+  "mat-to-pgm": [
+    "MAT",
+    "PGM"
+  ],
+  "mat-to-png24": [
+    "MAT",
+    "PNG24"
+  ],
+  "mat-to-png8": [
+    "MAT",
+    "PNG8"
+  ],
+  "mat-to-ps": [
+    "MAT",
+    "PS"
+  ],
+  "mat-to-sgi": [
+    "MAT",
+    "SGI"
+  ],
+  "mat-to-tga": [
+    "MAT",
+    "TGA"
+  ],
+  "mat-to-vicar": [
+    "MAT",
+    "VICAR"
+  ],
+  "mat-to-wbmp": [
+    "MAT",
+    "WBMP"
+  ],
+  "mat-to-cur": [
+    "MAT",
+    "CUR"
+  ],
+  "mat-to-dxt5": [
+    "MAT",
+    "DXT5"
+  ],
+  "mat-to-fl32": [
+    "MAT",
+    "FL32"
+  ],
+  "mat-to-hdr": [
+    "MAT",
+    "HDR"
+  ],
+  "mat-to-icon": [
+    "MAT",
+    "ICON"
+  ],
+  "mat-to-jpg": [
+    "MAT",
+    "JPG"
+  ],
+  "mat-to-json": [
+    "MAT",
+    "JSON"
+  ],
+  "mat-to-mkv": [
+    "MAT",
+    "MKV"
+  ],
+  "mat-to-palm": [
+    "MAT",
+    "PALM"
+  ],
+  "mat-to-phm": [
+    "MAT",
+    "PHM"
+  ],
+  "mat-to-strimg": [
+    "MAT",
+    "STRIMG"
+  ],
+  "mat-to-wpg": [
+    "MAT",
+    "WPG"
+  ],
+  "md5mesh-to-3ds": [
+    "MD5MESH",
+    "3DS"
+  ],
+  "mkv-to-ai": [
+    "MKV",
+    "AI"
+  ],
+  "mkv-to-avif": [
+    "MKV",
+    "AVIF"
+  ],
+  "mkv-to-bmp2": [
+    "MKV",
+    "BMP2"
+  ],
+  "mkv-to-cals": [
+    "MKV",
+    "CALS"
+  ],
+  "mkv-to-dxt1": [
+    "MKV",
+    "DXT1"
+  ],
+  "mkv-to-eps": [
+    "MKV",
+    "EPS"
+  ],
+  "mkv-to-epsi": [
+    "MKV",
+    "EPSI"
+  ],
+  "mkv-to-fits": [
+    "MKV",
+    "FITS"
+  ],
+  "mkv-to-fts": [
+    "MKV",
+    "FTS"
+  ],
+  "mkv-to-gif": [
+    "MKV",
+    "GIF"
+  ],
+  "mkv-to-icon": [
+    "MKV",
+    "ICON"
+  ],
+  "mkv-to-jng": [
+    "MKV",
+    "JNG"
+  ],
+  "mkv-to-m4v": [
+    "MKV",
+    "M4V"
+  ],
+  "mkv-to-mov": [
+    "MKV",
+    "MOV"
+  ],
+  "mkv-to-mpg": [
+    "MKV",
+    "MPG"
+  ],
+  "mkv-to-palm": [
+    "MKV",
+    "PALM"
+  ],
+  "mkv-to-pcds": [
+    "MKV",
+    "PCDS"
+  ],
+  "mkv-to-pdb": [
+    "MKV",
+    "PDB"
+  ],
+  "mkv-to-pgm": [
+    "MKV",
+    "PGM"
+  ],
+  "mkv-to-pict": [
+    "MKV",
+    "PICT"
+  ],
+  "mkv-to-png24": [
+    "MKV",
+    "PNG24"
+  ],
+  "mkv-to-png8": [
+    "MKV",
+    "PNG8"
+  ],
+  "mkv-to-ps": [
+    "MKV",
+    "PS"
+  ],
+  "mkv-to-tiff": [
+    "MKV",
+    "TIFF"
+  ],
+  "mkv-to-vicar": [
+    "MKV",
+    "VICAR"
+  ],
+  "mkv-to-vst": [
+    "MKV",
+    "VST"
+  ],
+  "mkv-to-wpg": [
+    "MKV",
+    "WPG"
+  ],
+  "mkv-to-av1.mkv": [
+    "MKV",
+    "AV1.MKV"
+  ],
+  "mkv-to-h264.mp4": [
+    "MKV",
+    "H264.MP4"
+  ],
+  "mkv-to-hevc": [
+    "MKV",
+    "HEVC"
+  ],
+  "mkv-to-obu": [
+    "MKV",
+    "OBU"
+  ],
+  "mkv-to-wtv": [
+    "MKV",
+    "WTV"
+  ],
+  "mov-to-apng": [
+    "MOV",
+    "APNG"
+  ],
+  "mov-to-avs": [
+    "MOV",
+    "AVS"
+  ],
+  "mov-to-bmp3": [
+    "MOV",
+    "BMP3"
+  ],
+  "mov-to-cin": [
+    "MOV",
+    "CIN"
+  ],
+  "mov-to-dcx": [
+    "MOV",
+    "DCX"
+  ],
+  "mov-to-dxt5": [
+    "MOV",
+    "DXT5"
+  ],
+  "mov-to-farbfeld": [
+    "MOV",
+    "FARBFELD"
+  ],
+  "mov-to-fl32": [
+    "MOV",
+    "FL32"
+  ],
+  "mov-to-gif87": [
+    "MOV",
+    "GIF87"
+  ],
+  "mov-to-hdr": [
+    "MOV",
+    "HDR"
+  ],
+  "mov-to-jp2": [
+    "MOV",
+    "JP2"
+  ],
+  "mov-to-jpg": [
+    "MOV",
+    "JPG"
+  ],
+  "mov-to-json": [
+    "MOV",
+    "JSON"
+  ],
+  "mov-to-miff": [
+    "MOV",
+    "MIFF"
+  ],
+  "mov-to-mp4": [
+    "MOV",
+    "MP4"
+  ],
+  "mov-to-pam": [
+    "MOV",
+    "PAM"
+  ],
+  "mov-to-pdf": [
+    "MOV",
+    "PDF"
+  ],
+  "mov-to-pgx": [
+    "MOV",
+    "PGX"
+  ],
+  "mov-to-png32": [
+    "MOV",
+    "PNG32"
+  ],
+  "mov-to-sgi": [
+    "MOV",
+    "SGI"
+  ],
+  "mov-to-tiff64": [
+    "MOV",
+    "TIFF64"
+  ],
+  "mov-to-wbmp": [
+    "MOV",
+    "WBMP"
+  ],
+  "mov-to-xbm": [
+    "MOV",
+    "XBM"
+  ],
+  "mov-to-avi": [
+    "MOV",
+    "AVI"
+  ],
+  "mov-to-h265.mp4": [
+    "MOV",
+    "H265.MP4"
+  ],
+  "mov-to-ogg": [
+    "MOV",
+    "OGG"
+  ],
+  "mov-to-roq": [
+    "MOV",
+    "ROQ"
+  ],
+  "mov-to-swf": [
+    "MOV",
+    "SWF"
+  ],
+  "mp3-to-aac": [
+    "MP3",
+    "AAC"
+  ],
+  "mp3-to-adx": [
+    "MP3",
+    "ADX"
+  ],
+  "mp3-to-aiff": [
+    "MP3",
+    "AIFF"
+  ],
+  "mp3-to-apm": [
+    "MP3",
+    "APM"
+  ],
+  "mp3-to-asf": [
+    "MP3",
+    "ASF"
+  ],
+  "mp3-to-dfpwm": [
+    "MP3",
+    "DFPWM"
+  ],
+  "mp3-to-eac3": [
+    "MP3",
+    "EAC3"
+  ],
+  "mp3-to-mka": [
+    "MP3",
+    "MKA"
+  ],
+  "mp3-to-mov": [
+    "MP3",
+    "MOV"
+  ],
+  "mp3-to-opus": [
+    "MP3",
+    "OPUS"
+  ],
+  "mp3-to-sbc": [
+    "MP3",
+    "SBC"
+  ],
+  "mp3-to-sox": [
+    "MP3",
+    "SOX"
+  ],
+  "mp3-to-voc": [
+    "MP3",
+    "VOC"
+  ],
+  "mp4-to-ai": [
+    "MP4",
+    "AI"
+  ],
+  "mp4-to-avif": [
+    "MP4",
+    "AVIF"
+  ],
+  "mp4-to-bmp2": [
+    "MP4",
+    "BMP2"
+  ],
+  "mp4-to-cals": [
+    "MP4",
+    "CALS"
+  ],
+  "mp4-to-dxt1": [
+    "MP4",
+    "DXT1"
+  ],
+  "mp4-to-eps": [
+    "MP4",
+    "EPS"
+  ],
+  "mp4-to-epsi": [
+    "MP4",
+    "EPSI"
+  ],
+  "mp4-to-fits": [
+    "MP4",
+    "FITS"
+  ],
+  "mp4-to-fts": [
+    "MP4",
+    "FTS"
+  ],
+  "mp4-to-gif": [
+    "MP4",
+    "GIF"
+  ],
+  "mp4-to-icon": [
+    "MP4",
+    "ICON"
+  ],
+  "mp4-to-jng": [
+    "MP4",
+    "JNG"
+  ],
+  "mp4-to-m4v": [
+    "MP4",
+    "M4V"
+  ],
+  "mp4-to-mpg": [
+    "MP4",
+    "MPG"
+  ],
+  "mp4-to-palm": [
+    "MP4",
+    "PALM"
+  ],
+  "mp4-to-pcds": [
+    "MP4",
+    "PCDS"
+  ],
+  "mp4-to-pdb": [
+    "MP4",
+    "PDB"
+  ],
+  "mp4-to-pgm": [
+    "MP4",
+    "PGM"
+  ],
+  "mp4-to-pict": [
+    "MP4",
+    "PICT"
+  ],
+  "mp4-to-png24": [
+    "MP4",
+    "PNG24"
+  ],
+  "mp4-to-png8": [
+    "MP4",
+    "PNG8"
+  ],
+  "mp4-to-ps": [
+    "MP4",
+    "PS"
+  ],
+  "mp4-to-tiff": [
+    "MP4",
+    "TIFF"
+  ],
+  "mp4-to-vicar": [
+    "MP4",
+    "VICAR"
+  ],
+  "mp4-to-vst": [
+    "MP4",
+    "VST"
+  ],
+  "mp4-to-wpg": [
+    "MP4",
+    "WPG"
+  ],
+  "mp4-to-av1.mkv": [
+    "MP4",
+    "AV1.MKV"
+  ],
+  "mp4-to-h264.mp4": [
+    "MP4",
+    "H264.MP4"
+  ],
+  "mp4-to-hevc": [
+    "MP4",
+    "HEVC"
+  ],
+  "mp4-to-obu": [
+    "MP4",
+    "OBU"
+  ],
+  "mp4-to-wtv": [
+    "MP4",
+    "WTV"
+  ],
+  "ms3d-to-obj": [
+    "MS3D",
+    "OBJ"
+  ],
+  "obj-to-fbx": [
+    "OBJ",
+    "FBX"
+  ],
+  "odt-to-docx": [
+    "ODT",
+    "DOCX"
+  ],
+  "odt-to-txt": [
+    "ODT",
+    "TXT"
+  ],
+  "off-to-json": [
+    "OFF",
+    "JSON"
+  ],
+  "off-to-ply": [
+    "OFF",
+    "PLY"
+  ],
+  "ogg-to-av1.mp4": [
+    "OGG",
+    "AV1.MP4"
+  ],
+  "ogg-to-mp3": [
+    "OGG",
+    "MP3"
+  ],
+  "ogg-to-mpeg": [
+    "OGG",
+    "MPEG"
+  ],
+  "ogg-to-rso": [
+    "OGG",
+    "RSO"
+  ],
+  "bmp-to-png": [
+    "BMP",
+    "PNG"
+  ],
+  "dng-to-png": [
+    "DNG",
+    "PNG"
+  ],
+  "ico-to-png": [
+    "ICO",
+    "PNG"
+  ],
+  "mat-to-png": [
+    "MAT",
+    "PNG"
+  ],
+  "pct-to-png": [
+    "PCT",
+    "PNG"
+  ],
+  "pgm-to-png": [
+    "PGM",
+    "PNG"
+  ],
+  "webp-to-png": [
+    "WEBP",
+    "PNG"
+  ],
+  "odt-to-epub": [
+    "ODT",
+    "EPUB"
+  ],
+  "avif-to-png": [
+    "AVIF",
+    "PNG"
+  ],
+  "jp2-to-png": [
+    "JP2",
+    "PNG"
+  ],
+  "mp4-to-webm": [
+    "MP4",
+    "WEBM"
+  ],
+  "webm-to-mp4": [
+    "WEBM",
+    "MP4"
+  ],
+  "csv-to-pdf": [
+    "CSV",
+    "PDF"
+  ],
+  "hwp-to-txt": [
+    "HWP",
+    "TXT"
+  ],
+  "sxw-to-txt": [
+    "SXW",
+    "TXT"
+  ],
+  "markdown-to-pdf": [
+    "MARKDOWN",
+    "PDF"
+  ],
+  "flac-to-wav": [
+    "FLAC",
+    "WAV"
+  ],
+  "mp3-to-wav": [
+    "MP3",
+    "WAV"
+  ],
+  "stl-to-obj": [
+    "STL",
+    "OBJ"
+  ],
+  "blend-to-stl": [
+    "BLEND",
+    "STL"
+  ],
+  "fbx-to-stl": [
+    "FBX",
+    "STL"
+  ],
+  "irr-to-stl": [
+    "IRR",
+    "STL"
+  ],
+  "lxo-to-stl": [
+    "LXO",
+    "STL"
+  ],
+  "ms3d-to-stl": [
+    "MS3D",
+    "STL"
+  ],
+  "off-to-stl": [
+    "OFF",
+    "STL"
+  ],
+  "x-to-stl": [
+    "X",
+    "STL"
+  ],
+  "zgl-to-stl": [
+    "ZGL",
+    "STL"
+  ],
+  "tar-to-zip": [
+    "TAR",
+    "ZIP"
+  ],
+  "ppsx-to-pdf": [
+    "PPSX",
+    "PDF"
+  ],
+  "aac-to-au": [
+    "AAC",
+    "AU"
+  ],
+  "aac-to-avi": [
+    "AAC",
+    "AVI"
+  ],
+  "aac-to-caf": [
+    "AAC",
+    "CAF"
+  ],
+  "aac-to-flac": [
+    "AAC",
+    "FLAC"
+  ],
+  "aac-to-h265.mp4": [
+    "AAC",
+    "H265.MP4"
+  ],
+  "aac-to-ircam": [
+    "AAC",
+    "IRCAM"
+  ],
+  "aac-to-loas": [
+    "AAC",
+    "LOAS"
+  ],
+  "aac-to-m4a": [
+    "AAC",
+    "M4A"
+  ],
+  "aac-to-mp4": [
+    "AAC",
+    "MP4"
+  ],
+  "aac-to-mpg": [
+    "AAC",
+    "MPG"
+  ],
+  "aac-to-nut": [
+    "AAC",
+    "NUT"
+  ],
+  "aac-to-rso": [
+    "AAC",
+    "RSO"
+  ],
+  "aac-to-wv": [
+    "AAC",
+    "WV"
+  ],
+  "acc-to-json": [
+    "ACC",
+    "JSON"
+  ],
+  "acc-to-ply": [
+    "ACC",
+    "PLY"
+  ],
+  "ai-to-bmp": [
+    "AI",
+    "BMP"
+  ],
+  "ai-to-cur": [
+    "AI",
+    "CUR"
+  ],
+  "ai-to-dpx": [
+    "AI",
+    "DPX"
+  ],
+  "ai-to-epi": [
+    "AI",
+    "EPI"
+  ],
+  "ai-to-epsf": [
+    "AI",
+    "EPSF"
+  ],
+  "ai-to-ff": [
+    "AI",
+    "FF"
+  ],
+  "ai-to-flv": [
+    "AI",
+    "FLV"
+  ],
+  "ai-to-g4": [
+    "AI",
+    "G4"
+  ],
+  "ai-to-hrz": [
+    "AI",
+    "HRZ"
+  ],
+  "ai-to-ico": [
+    "AI",
+    "ICO"
+  ],
+  "ai-to-ipl": [
+    "AI",
+    "IPL"
+  ],
+  "ai-to-j2k": [
+    "AI",
+    "J2K"
+  ],
+  "ai-to-jpe": [
+    "AI",
+    "JPE"
+  ],
+  "ai-to-m2v": [
+    "AI",
+    "M2V"
+  ],
+  "ai-to-mng": [
+    "AI",
+    "MNG"
+  ],
+  "ai-to-mpc": [
+    "AI",
+    "MPC"
+  ],
+  "ai-to-otb": [
+    "AI",
+    "OTB"
+  ],
+  "ai-to-pbm": [
+    "AI",
+    "PBM"
+  ],
+  "ai-to-pdfa": [
+    "AI",
+    "PDFA"
+  ],
+  "ai-to-phm": [
+    "AI",
+    "PHM"
+  ],
+  "ai-to-png00": [
+    "AI",
+    "PNG00"
+  ],
+  "ai-to-png64": [
+    "AI",
+    "PNG64"
+  ],
+  "ai-to-ppm": [
+    "AI",
+    "PPM"
+  ],
+  "ai-to-ras": [
+    "AI",
+    "RAS"
+  ],
+  "ai-to-sun": [
+    "AI",
+    "SUN"
+  ],
+  "ai-to-vda": [
+    "AI",
+    "VDA"
+  ],
+  "ai-to-vips": [
+    "AI",
+    "VIPS"
+  ],
+  "ai-to-webp": [
+    "AI",
+    "WEBP"
+  ],
+  "ai-to-xpm": [
+    "AI",
+    "XPM"
+  ],
+  "amf-to-fbx": [
+    "AMF",
+    "FBX"
+  ],
+  "amr-to-aif": [
+    "AMR",
+    "AIF"
+  ],
+  "amr-to-au": [
+    "AMR",
+    "AU"
+  ],
+  "amr-to-avi": [
+    "AMR",
+    "AVI"
+  ],
+  "amr-to-caf": [
+    "AMR",
+    "CAF"
+  ],
+  "amr-to-flac": [
+    "AMR",
+    "FLAC"
+  ],
+  "amr-to-h265.mp4": [
+    "AMR",
+    "H265.MP4"
+  ],
+  "amr-to-ircam": [
+    "AMR",
+    "IRCAM"
+  ],
+  "amr-to-loas": [
+    "AMR",
+    "LOAS"
+  ],
+  "amr-to-m4a": [
+    "AMR",
+    "M4A"
+  ],
+  "amr-to-mp4": [
+    "AMR",
+    "MP4"
+  ],
+  "amr-to-mpg": [
+    "AMR",
+    "MPG"
+  ],
+  "amr-to-nut": [
+    "AMR",
+    "NUT"
+  ],
+  "amr-to-rm": [
+    "AMR",
+    "RM"
+  ],
+  "amr-to-w64": [
+    "AMR",
+    "W64"
+  ],
+  "amr-to-wv": [
+    "AMR",
+    "WV"
+  ],
+  "ase-to-json": [
+    "ASE",
+    "JSON"
+  ],
+  "ase-to-ply": [
+    "ASE",
+    "PLY"
+  ],
+  "asf-to-aac": [
+    "ASF",
+    "AAC"
+  ],
+  "asf-to-adx": [
+    "ASF",
+    "ADX"
+  ],
+  "asf-to-aiff": [
+    "ASF",
+    "AIFF"
+  ],
+  "asf-to-apm": [
+    "ASF",
+    "APM"
+  ],
+  "asf-to-h264.mp4": [
+    "ASF",
+    "H264.MP4"
+  ],
+  "asf-to-m2v": [
+    "ASF",
+    "M2V"
+  ],
+  "asf-to-mkv": [
+    "ASF",
+    "MKV"
+  ],
+  "asf-to-opus": [
+    "ASF",
+    "OPUS"
+  ],
+  "asf-to-spdif": [
+    "ASF",
+    "SPDIF"
+  ],
+  "asf-to-tta": [
+    "ASF",
+    "TTA"
+  ],
+  "au-to-dfpwm": [
+    "AU",
+    "DFPWM"
+  ],
+  "au-to-mka": [
+    "AU",
+    "MKA"
+  ],
+  "au-to-mov": [
+    "AU",
+    "MOV"
+  ],
+  "au-to-sbc": [
+    "AU",
+    "SBC"
+  ],
+  "au-to-sox": [
+    "AU",
+    "SOX"
+  ],
+  "au-to-voc": [
+    "AU",
+    "VOC"
+  ],
+  "au-to-wav": [
+    "AU",
+    "WAV"
+  ],
+  "avif-to-ai": [
+    "AVIF",
+    "AI"
+  ],
+  "avif-to-avs": [
+    "AVIF",
+    "AVS"
+  ],
+  "avif-to-bmp3": [
+    "AVIF",
+    "BMP3"
+  ],
+  "avif-to-cin": [
+    "AVIF",
+    "CIN"
+  ],
+  "avif-to-dcx": [
+    "AVIF",
+    "DCX"
+  ],
+  "avif-to-dxt5": [
+    "AVIF",
+    "DXT5"
+  ],
+  "avif-to-farbfeld": [
+    "AVIF",
+    "FARBFELD"
+  ],
+  "avif-to-fl32": [
+    "AVIF",
+    "FL32"
+  ],
+  "avif-to-gif87": [
+    "AVIF",
+    "GIF87"
+  ],
+  "avif-to-hdr": [
+    "AVIF",
+    "HDR"
+  ],
+  "avif-to-jp2": [
+    "AVIF",
+    "JP2"
+  ],
+  "avif-to-jpg": [
+    "AVIF",
+    "JPG"
+  ],
+  "avif-to-json": [
+    "AVIF",
+    "JSON"
+  ],
+  "avif-to-miff": [
+    "AVIF",
+    "MIFF"
+  ],
+  "avif-to-mov": [
+    "AVIF",
+    "MOV"
+  ],
+  "avif-to-mpg": [
+    "AVIF",
+    "MPG"
+  ],
+  "avif-to-palm": [
+    "AVIF",
+    "PALM"
+  ],
+  "avif-to-pcds": [
+    "AVIF",
+    "PCDS"
+  ],
+  "avif-to-pdb": [
+    "AVIF",
+    "PDB"
+  ],
+  "avif-to-pgm": [
+    "AVIF",
+    "PGM"
+  ],
+  "avif-to-png32": [
+    "AVIF",
+    "PNG32"
+  ],
+  "avif-to-pnm": [
+    "AVIF",
+    "PNM"
+  ],
+  "avif-to-sgi": [
+    "AVIF",
+    "SGI"
+  ],
+  "avif-to-tiff64": [
+    "AVIF",
+    "TIFF64"
+  ],
+  "avif-to-wbmp": [
+    "AVIF",
+    "WBMP"
+  ],
+  "avif-to-wpg": [
+    "AVIF",
+    "WPG"
+  ],
+  "avif-to-avi": [
+    "AVIF",
+    "AVI"
+  ],
+  "avif-to-h265.mp4": [
+    "AVIF",
+    "H265.MP4"
+  ],
+  "avif-to-ogg": [
+    "AVIF",
+    "OGG"
+  ],
+  "avif-to-swf": [
+    "AVIF",
+    "SWF"
+  ],
+  "b3d-to-3ds": [
+    "B3D",
+    "3DS"
+  ],
+  "blend-to-3ds": [
+    "BLEND",
+    "3DS"
+  ],
+  "bmp-to-avs": [
+    "BMP",
+    "AVS"
+  ],
+  "bmp-to-bmp2": [
+    "BMP",
+    "BMP2"
+  ],
+  "bmp-to-cals": [
+    "BMP",
+    "CALS"
+  ],
+  "bmp-to-dcx": [
+    "BMP",
+    "DCX"
+  ],
+  "bmp-to-eps": [
+    "BMP",
+    "EPS"
+  ],
+  "bmp-to-epsi": [
+    "BMP",
+    "EPSI"
+  ],
+  "bmp-to-gif": [
+    "BMP",
+    "GIF"
+  ],
+  "bmp-to-jbig": [
+    "BMP",
+    "JBIG"
+  ],
+  "bmp-to-mpc": [
+    "BMP",
+    "MPC"
+  ],
+  "bmp-to-mtv": [
+    "BMP",
+    "MTV"
+  ],
+  "bmp-to-otb": [
+    "BMP",
+    "OTB"
+  ],
+  "bmp-to-pbm": [
+    "BMP",
+    "PBM"
+  ],
+  "bmp-to-pgm": [
+    "BMP",
+    "PGM"
+  ],
+  "bmp-to-png24": [
+    "BMP",
+    "PNG24"
+  ],
+  "bmp-to-png8": [
+    "BMP",
+    "PNG8"
+  ],
+  "bmp-to-ps": [
+    "BMP",
+    "PS"
+  ],
+  "bmp-to-sgi": [
+    "BMP",
+    "SGI"
+  ],
+  "bmp-to-tga": [
+    "BMP",
+    "TGA"
+  ],
+  "bmp-to-vicar": [
+    "BMP",
+    "VICAR"
+  ],
+  "bmp-to-wbmp": [
+    "BMP",
+    "WBMP"
+  ],
+  "bmp-to-cur": [
+    "BMP",
+    "CUR"
+  ],
+  "bmp-to-dxt5": [
+    "BMP",
+    "DXT5"
+  ],
+  "bmp-to-fl32": [
+    "BMP",
+    "FL32"
+  ],
+  "bmp-to-hdr": [
+    "BMP",
+    "HDR"
+  ],
+  "bmp-to-icon": [
+    "BMP",
+    "ICON"
+  ],
+  "bmp-to-j2k": [
+    "BMP",
+    "J2K"
+  ],
+  "bmp-to-jpg": [
+    "BMP",
+    "JPG"
+  ],
+  "bmp-to-json": [
+    "BMP",
+    "JSON"
+  ],
+  "bmp-to-mkv": [
+    "BMP",
+    "MKV"
+  ],
+  "bmp-to-palm": [
+    "BMP",
+    "PALM"
+  ],
+  "bmp-to-phm": [
+    "BMP",
+    "PHM"
+  ],
+  "bmp-to-strimg": [
+    "BMP",
+    "STRIMG"
+  ],
+  "bmp-to-tiff64": [
+    "BMP",
+    "TIFF64"
+  ],
+  "bmp-to-wpg": [
+    "BMP",
+    "WPG"
+  ],
+  "bmp-to-av1.mp4": [
+    "BMP",
+    "AV1.MP4"
+  ],
+  "bmp-to-m4a": [
+    "BMP",
+    "M4A"
+  ],
+  "c-to-icm": [
+    "C",
+    "ICM"
+  ],
+  "cob-to-fbx": [
+    "COB",
+    "FBX"
+  ],
+  "csv-to-fits": [
+    "CSV",
+    "FITS"
+  ],
+  "csv-to-webp": [
+    "CSV",
+    "WEBP"
+  ],
+  "dae-to-3ds": [
+    "DAE",
+    "3DS"
+  ],
+  "dae-to-json": [
+    "DAE",
+    "JSON"
+  ],
+  "dae-to-ply": [
+    "DAE",
+    "PLY"
+  ],
+  "dcx-to-art": [
+    "DCX",
+    "ART"
+  ],
+  "dcx-to-epi": [
+    "DCX",
+    "EPI"
+  ],
+  "dcx-to-epsf": [
+    "DCX",
+    "EPSF"
+  ],
+  "dcx-to-jbg": [
+    "DCX",
+    "JBG"
+  ],
+  "dcx-to-pam": [
+    "DCX",
+    "PAM"
+  ],
+  "dcx-to-pdf": [
+    "DCX",
+    "PDF"
+  ],
+  "dcx-to-png00": [
+    "DCX",
+    "PNG00"
+  ],
+  "dcx-to-png64": [
+    "DCX",
+    "PNG64"
+  ],
+  "dcx-to-vda": [
+    "DCX",
+    "VDA"
+  ],
+  "dcx-to-vst": [
+    "DCX",
+    "VST"
+  ],
+  "dcx-to-xbm": [
+    "DCX",
+    "XBM"
+  ],
+  "dcx-to-xwd": [
+    "DCX",
+    "XWD"
+  ],
+  "dcx-to-ai": [
+    "DCX",
+    "AI"
+  ],
+  "dcx-to-dxt1": [
+    "DCX",
+    "DXT1"
+  ],
+  "dcx-to-ff": [
+    "DCX",
+    "FF"
+  ],
+  "dcx-to-ico": [
+    "DCX",
+    "ICO"
+  ],
+  "dcx-to-j2c": [
+    "DCX",
+    "J2C"
+  ],
+  "dcx-to-jpe": [
+    "DCX",
+    "JPE"
+  ],
+  "dcx-to-pgx": [
+    "DCX",
+    "PGX"
+  ],
+  "dcx-to-rgf": [
+    "DCX",
+    "RGF"
+  ],
+  "dcx-to-wmv": [
+    "DCX",
+    "WMV"
+  ],
+  "dng-to-avs": [
+    "DNG",
+    "AVS"
+  ],
+  "dng-to-bmp": [
+    "DNG",
+    "BMP"
+  ],
+  "dng-to-epi": [
+    "DNG",
+    "EPI"
+  ],
+  "dng-to-epsf": [
+    "DNG",
+    "EPSF"
+  ],
+  "dng-to-icc": [
+    "DNG",
+    "ICC"
+  ],
+  "dng-to-jbg": [
+    "DNG",
+    "JBG"
+  ],
+  "dng-to-pam": [
+    "DNG",
+    "PAM"
+  ],
+  "dng-to-pdf": [
+    "DNG",
+    "PDF"
+  ],
+  "dng-to-png00": [
+    "DNG",
+    "PNG00"
+  ],
+  "dng-to-png64": [
+    "DNG",
+    "PNG64"
+  ],
+  "dng-to-vda": [
+    "DNG",
+    "VDA"
+  ],
+  "dng-to-vst": [
+    "DNG",
+    "VST"
+  ],
+  "dng-to-xbm": [
+    "DNG",
+    "XBM"
+  ],
+  "dng-to-xwd": [
+    "DNG",
+    "XWD"
+  ],
+  "doc-to-pdf": [
+    "DOC",
+    "PDF"
+  ],
+  "docm-to-docx": [
+    "DOCM",
+    "DOCX"
+  ],
+  "docm-to-epub": [
+    "DOCM",
+    "EPUB"
+  ],
+  "docm-to-odt": [
+    "DOCM",
+    "ODT"
+  ],
+  "docm-to-xml": [
+    "DOCM",
+    "XML"
+  ],
+  "docx-to-xml": [
+    "DOCX",
+    "XML"
+  ],
+  "dotm-to-docx": [
+    "DOTM",
+    "DOCX"
+  ],
+  "dotx-to-doc": [
+    "DOTX",
+    "DOC"
+  ],
+  "dotx-to-html": [
+    "DOTX",
+    "HTML"
+  ],
+  "dotx-to-rtf": [
+    "DOTX",
+    "RTF"
+  ],
+  "dxf-to-obj": [
+    "DXF",
+    "OBJ"
+  ],
+  "emf-to-flv": [
+    "EMF",
+    "FLV"
+  ],
+  "emf-to-g4": [
+    "EMF",
+    "G4"
+  ],
+  "emf-to-hrz": [
+    "EMF",
+    "HRZ"
+  ],
+  "emf-to-ico": [
+    "EMF",
+    "ICO"
+  ],
+  "emf-to-j2k": [
+    "EMF",
+    "J2K"
+  ],
+  "emf-to-jpe": [
+    "EMF",
+    "JPE"
+  ],
+  "emf-to-m2v": [
+    "EMF",
+    "M2V"
+  ],
+  "emf-to-mng": [
+    "EMF",
+    "MNG"
+  ],
+  "emf-to-otb": [
+    "EMF",
+    "OTB"
+  ],
+  "emf-to-pbm": [
+    "EMF",
+    "PBM"
+  ],
+  "emf-to-pdfa": [
+    "EMF",
+    "PDFA"
+  ],
+  "emf-to-png00": [
+    "EMF",
+    "PNG00"
+  ],
+  "emf-to-png64": [
+    "EMF",
+    "PNG64"
+  ],
+  "emf-to-six": [
+    "EMF",
+    "SIX"
+  ],
+  "emf-to-webp": [
+    "EMF",
+    "WEBP"
+  ],
+  "epub-to-docx": [
+    "EPUB",
+    "DOCX"
+  ],
+  "epub-to-odt": [
+    "EPUB",
+    "ODT"
+  ],
+  "fb2-to-html": [
+    "FB2",
+    "HTML"
+  ],
+  "fb2-to-pdf": [
+    "FB2",
+    "PDF"
+  ],
+  "fb2-to-doc": [
+    "FB2",
+    "DOC"
+  ],
+  "fbx-to-3ds": [
+    "FBX",
+    "3DS"
+  ],
+  "fbx-to-json": [
+    "FBX",
+    "JSON"
+  ],
+  "fbx-to-ply": [
+    "FBX",
+    "PLY"
+  ],
+  "fits-to-cals": [
+    "FITS",
+    "CALS"
+  ],
+  "fits-to-eps": [
+    "FITS",
+    "EPS"
+  ],
+  "fits-to-epsi": [
+    "FITS",
+    "EPSI"
+  ],
+  "fits-to-html": [
+    "FITS",
+    "HTML"
+  ],
+  "fits-to-jng": [
+    "FITS",
+    "JNG"
+  ],
+  "fits-to-pcd": [
+    "FITS",
+    "PCD"
+  ],
+  "fits-to-pcx": [
+    "FITS",
+    "PCX"
+  ],
+  "fits-to-picon": [
+    "FITS",
+    "PICON"
+  ],
+  "fits-to-png32": [
+    "FITS",
+    "PNG32"
+  ],
+  "fits-to-ras": [
+    "FITS",
+    "RAS"
+  ],
+  "fits-to-tiff": [
+    "FITS",
+    "TIFF"
+  ],
+  "fits-to-webp": [
+    "FITS",
+    "WEBP"
+  ],
+  "fits-to-xpm": [
+    "FITS",
+    "XPM"
+  ],
+  "fits-to-jp2": [
+    "FITS",
+    "JP2"
+  ],
+  "fits-to-jxl": [
+    "FITS",
+    "JXL"
+  ],
+  "fits-to-vips": [
+    "FITS",
+    "VIPS"
+  ],
+  "flac-to-aac": [
+    "FLAC",
+    "AAC"
+  ],
+  "flac-to-adx": [
+    "FLAC",
+    "ADX"
+  ],
+  "flac-to-aiff": [
+    "FLAC",
+    "AIFF"
+  ],
+  "flac-to-apm": [
+    "FLAC",
+    "APM"
+  ],
+  "flac-to-asf": [
+    "FLAC",
+    "ASF"
+  ],
+  "flac-to-dfpwm": [
+    "FLAC",
+    "DFPWM"
+  ],
+  "flac-to-h264.mp4": [
+    "FLAC",
+    "H264.MP4"
+  ],
+  "flac-to-mkv": [
+    "FLAC",
+    "MKV"
+  ],
+  "flac-to-opus": [
+    "FLAC",
+    "OPUS"
+  ],
+  "flac-to-sbc": [
+    "FLAC",
+    "SBC"
+  ],
+  "flac-to-sox": [
+    "FLAC",
+    "SOX"
+  ],
+  "flac-to-voc": [
+    "FLAC",
+    "VOC"
+  ],
+  "flv-to-apng": [
+    "FLV",
+    "APNG"
+  ],
+  "flv-to-bmp3": [
+    "FLV",
+    "BMP3"
+  ],
+  "flv-to-cin": [
+    "FLV",
+    "CIN"
+  ],
+  "flv-to-dxt5": [
+    "FLV",
+    "DXT5"
+  ],
+  "flv-to-farbfeld": [
+    "FLV",
+    "FARBFELD"
+  ],
+  "flv-to-fl32": [
+    "FLV",
+    "FL32"
+  ],
+  "flv-to-g3": [
+    "FLV",
+    "G3"
+  ],
+  "flv-to-icb": [
+    "FLV",
+    "ICB"
+  ],
+  "flv-to-j2c": [
+    "FLV",
+    "J2C"
+  ],
+  "flv-to-jpc": [
+    "FLV",
+    "JPC"
+  ],
+  "flv-to-jpm": [
+    "FLV",
+    "JPM"
+  ],
+  "flv-to-mkv": [
+    "FLV",
+    "MKV"
+  ],
+  "flv-to-mp4": [
+    "FLV",
+    "MP4"
+  ],
+  "flv-to-pdf": [
+    "FLV",
+    "PDF"
+  ],
+  "flv-to-pgx": [
+    "FLV",
+    "PGX"
+  ],
+  "flv-to-png48": [
+    "FLV",
+    "PNG48"
+  ],
+  "flv-to-qoi": [
+    "FLV",
+    "QOI"
+  ],
+  "flv-to-strimg": [
+    "FLV",
+    "STRIMG"
+  ],
+  "flv-to-tga": [
+    "FLV",
+    "TGA"
+  ],
+  "flv-to-webm": [
+    "FLV",
+    "WEBM"
+  ],
+  "flv-to-xbm": [
+    "FLV",
+    "XBM"
+  ],
+  "flv-to-aif": [
+    "FLV",
+    "AIF"
+  ],
+  "flv-to-au": [
+    "FLV",
+    "AU"
+  ],
+  "flv-to-avi": [
+    "FLV",
+    "AVI"
+  ],
+  "flv-to-g722": [
+    "FLV",
+    "G722"
+  ],
+  "flv-to-h265.mp4": [
+    "FLV",
+    "H265.MP4"
+  ],
+  "flv-to-loas": [
+    "FLV",
+    "LOAS"
+  ],
+  "flv-to-ogg": [
+    "FLV",
+    "OGG"
+  ],
+  "flv-to-sbc": [
+    "FLV",
+    "SBC"
+  ],
+  "flv-to-spdif": [
+    "FLV",
+    "SPDIF"
+  ],
+  "flv-to-swf": [
+    "FLV",
+    "SWF"
+  ],
+  "flv-to-voc": [
+    "FLV",
+    "VOC"
+  ],
+  "flv-to-wav": [
+    "FLV",
+    "WAV"
+  ],
+  "fodt-to-odt": [
+    "FODT",
+    "ODT"
+  ],
+  "fodt-to-xml": [
+    "FODT",
+    "XML"
+  ],
+  "gif-to-art": [
+    "GIF",
+    "ART"
+  ],
+  "gif-to-epdf": [
+    "GIF",
+    "EPDF"
+  ],
+  "gif-to-fits": [
+    "GIF",
+    "FITS"
+  ],
+  "gif-to-jbg": [
+    "GIF",
+    "JBG"
+  ],
+  "gif-to-pam": [
+    "GIF",
+    "PAM"
+  ],
+  "gif-to-pdf": [
+    "GIF",
+    "PDF"
+  ],
+  "gif-to-png00": [
+    "GIF",
+    "PNG00"
+  ],
+  "gif-to-png64": [
+    "GIF",
+    "PNG64"
+  ],
+  "gif-to-vda": [
+    "GIF",
+    "VDA"
+  ],
+  "gif-to-vst": [
+    "GIF",
+    "VST"
+  ],
+  "gif-to-xbm": [
+    "GIF",
+    "XBM"
+  ],
+  "gif-to-xwd": [
+    "GIF",
+    "XWD"
+  ],
+  "gif-to-ai": [
+    "GIF",
+    "AI"
+  ],
+  "gif-to-dxt1": [
+    "GIF",
+    "DXT1"
+  ],
+  "gif-to-ff": [
+    "GIF",
+    "FF"
+  ],
+  "gif-to-ico": [
+    "GIF",
+    "ICO"
+  ],
+  "gif-to-j2c": [
+    "GIF",
+    "J2C"
+  ],
+  "gif-to-jpe": [
+    "GIF",
+    "JPE"
+  ],
+  "gif-to-pgx": [
+    "GIF",
+    "PGX"
+  ],
+  "gif-to-rgf": [
+    "GIF",
+    "RGF"
+  ],
+  "gif-to-wmv": [
+    "GIF",
+    "WMV"
+  ],
+  "gif-to-avi": [
+    "GIF",
+    "AVI"
+  ],
+  "gif-to-mxf": [
+    "GIF",
+    "MXF"
+  ],
+  "gif-to-ogg": [
+    "GIF",
+    "OGG"
+  ],
+  "gif-to-swf": [
+    "GIF",
+    "SWF"
+  ],
+  "hmp-to-fbx": [
+    "HMP",
+    "FBX"
+  ],
+  "html-to-docx": [
+    "HTML",
+    "DOCX"
+  ],
+  "html-to-txt": [
+    "HTML",
+    "TXT"
+  ],
+  "html-to-json": [
+    "HTML",
+    "JSON"
+  ],
+  "html-to-pptx": [
+    "HTML",
+    "PPTX"
+  ],
+  "hwp-to-html": [
+    "HWP",
+    "HTML"
+  ],
+  "hwp-to-rtf": [
+    "HWP",
+    "RTF"
+  ],
+  "irr-to-obj": [
+    "IRR",
+    "OBJ"
+  ],
+  "irrmesh-to-3ds": [
+    "IRRMESH",
+    "3DS"
+  ],
+  "jp2-to-avs": [
+    "JP2",
+    "AVS"
+  ],
+  "jp2-to-bmp3": [
+    "JP2",
+    "BMP3"
+  ],
+  "jp2-to-cin": [
+    "JP2",
+    "CIN"
+  ],
+  "jp2-to-dcx": [
+    "JP2",
+    "DCX"
+  ],
+  "jp2-to-dxt5": [
+    "JP2",
+    "DXT5"
+  ],
+  "jp2-to-farbfeld": [
+    "JP2",
+    "FARBFELD"
+  ],
+  "jp2-to-fl32": [
+    "JP2",
+    "FL32"
+  ],
+  "jp2-to-gif87": [
+    "JP2",
+    "GIF87"
+  ],
+  "jp2-to-hdr": [
+    "JP2",
+    "HDR"
+  ],
+  "jp2-to-jpc": [
+    "JP2",
+    "JPC"
+  ],
+  "jp2-to-jpm": [
+    "JP2",
+    "JPM"
+  ],
+  "jp2-to-jxl": [
+    "JP2",
+    "JXL"
+  ],
+  "jp2-to-pam": [
+    "JP2",
+    "PAM"
+  ],
+  "jp2-to-pdf": [
+    "JP2",
+    "PDF"
+  ],
+  "jp2-to-pgx": [
+    "JP2",
+    "PGX"
+  ],
+  "jp2-to-png48": [
+    "JP2",
+    "PNG48"
+  ],
+  "jp2-to-qoi": [
+    "JP2",
+    "QOI"
+  ],
+  "jp2-to-strimg": [
+    "JP2",
+    "STRIMG"
+  ],
+  "jp2-to-tga": [
+    "JP2",
+    "TGA"
+  ],
+  "jp2-to-txt": [
+    "JP2",
+    "TXT"
+  ],
+  "jp2-to-viff": [
+    "JP2",
+    "VIFF"
+  ],
+  "jp2-to-webm": [
+    "JP2",
+    "WEBM"
+  ],
+  "jp2-to-xbm": [
+    "JP2",
+    "XBM"
+  ],
+  "jpg-to-bmp2": [
+    "JPG",
+    "BMP2"
+  ],
+  "jpg-to-cals": [
+    "JPG",
+    "CALS"
+  ],
+  "jpg-to-dcx": [
+    "JPG",
+    "DCX"
+  ],
+  "jpg-to-eps": [
+    "JPG",
+    "EPS"
+  ],
+  "jpg-to-epsi": [
+    "JPG",
+    "EPSI"
+  ],
+  "jpg-to-gif": [
+    "JPG",
+    "GIF"
+  ],
+  "jpg-to-jbig": [
+    "JPG",
+    "JBIG"
+  ],
+  "jpg-to-mpc": [
+    "JPG",
+    "MPC"
+  ],
+  "jpg-to-mtv": [
+    "JPG",
+    "MTV"
+  ],
+  "jpg-to-otb": [
+    "JPG",
+    "OTB"
+  ],
+  "jpg-to-pbm": [
+    "JPG",
+    "PBM"
+  ],
+  "jpg-to-pct": [
+    "JPG",
+    "PCT"
+  ],
+  "jpg-to-pgm": [
+    "JPG",
+    "PGM"
+  ],
+  "jpg-to-png24": [
+    "JPG",
+    "PNG24"
+  ],
+  "jpg-to-png8": [
+    "JPG",
+    "PNG8"
+  ],
+  "jpg-to-ps": [
+    "JPG",
+    "PS"
+  ],
+  "jpg-to-sgi": [
+    "JPG",
+    "SGI"
+  ],
+  "jpg-to-tga": [
+    "JPG",
+    "TGA"
+  ],
+  "jpg-to-vicar": [
+    "JPG",
+    "VICAR"
+  ],
+  "jpg-to-wbmp": [
+    "JPG",
+    "WBMP"
+  ],
+  "jpg-to-cur": [
+    "JPG",
+    "CUR"
+  ],
+  "jpg-to-dxt5": [
+    "JPG",
+    "DXT5"
+  ],
+  "jpg-to-fl32": [
+    "JPG",
+    "FL32"
+  ],
+  "jpg-to-hdr": [
+    "JPG",
+    "HDR"
+  ],
+  "jpg-to-icon": [
+    "JPG",
+    "ICON"
+  ],
+  "jpg-to-j2k": [
+    "JPG",
+    "J2K"
+  ],
+  "jpg-to-jpm": [
+    "JPG",
+    "JPM"
+  ],
+  "jpg-to-jxl": [
+    "JPG",
+    "JXL"
+  ],
+  "jpg-to-mov": [
+    "JPG",
+    "MOV"
+  ],
+  "jpg-to-pdfa": [
+    "JPG",
+    "PDFA"
+  ],
+  "jpg-to-qoi": [
+    "JPG",
+    "QOI"
+  ],
+  "jpg-to-six": [
+    "JPG",
+    "SIX"
+  ],
+  "jpg-to-svg": [
+    "JPG",
+    "SVG"
+  ],
+  "jpg-to-vips": [
+    "JPG",
+    "VIPS"
+  ],
+  "jxl-to-avif": [
+    "JXL",
+    "AVIF"
+  ],
+  "jxl-to-fits": [
+    "JXL",
+    "FITS"
+  ],
+  "jxl-to-gif": [
+    "JXL",
+    "GIF"
+  ],
+  "jxl-to-mov": [
+    "JXL",
+    "MOV"
+  ],
+  "jxl-to-mpg": [
+    "JXL",
+    "MPG"
+  ],
+  "jxl-to-pgm": [
+    "JXL",
+    "PGM"
+  ],
+  "jxl-to-sgi": [
+    "JXL",
+    "SGI"
+  ],
+  "jxl-to-wbmp": [
+    "JXL",
+    "WBMP"
+  ],
+  "jxl-to-asf": [
+    "JXL",
+    "ASF"
+  ],
+  "jxl-to-nut": [
+    "JXL",
+    "NUT"
+  ],
+  "lwo-to-3ds": [
+    "LWO",
+    "3DS"
+  ],
+  "lws-to-obj": [
+    "LWS",
+    "OBJ"
+  ],
+  "lxo-to-3ds": [
+    "LXO",
+    "3DS"
+  ],
+  "m-to-icc": [
+    "M",
+    "ICC"
+  ],
+  "m4a-to-ac3": [
+    "M4A",
+    "AC3"
+  ],
+  "m4a-to-av1.mkv": [
+    "M4A",
+    "AV1.MKV"
+  ],
+  "m4a-to-h264.mp4": [
+    "M4A",
+    "H264.MP4"
+  ],
+  "m4a-to-mp3": [
+    "M4A",
+    "MP3"
+  ],
+  "m4a-to-mpeg": [
+    "M4A",
+    "MPEG"
+  ],
+  "m4a-to-ogg": [
+    "M4A",
+    "OGG"
+  ],
+  "m4a-to-spdif": [
+    "M4A",
+    "SPDIF"
+  ],
+  "m4a-to-tta": [
+    "M4A",
+    "TTA"
+  ],
+  "m4a-to-webm": [
+    "M4A",
+    "WEBM"
+  ],
+  "m4a-to-wtv": [
+    "M4A",
+    "WTV"
+  ],
+  "mat-to-bmp2": [
+    "MAT",
+    "BMP2"
+  ],
+  "mat-to-cals": [
+    "MAT",
+    "CALS"
+  ],
+  "mat-to-dcx": [
+    "MAT",
+    "DCX"
+  ],
+  "mat-to-eps": [
+    "MAT",
+    "EPS"
+  ],
+  "mat-to-epsi": [
+    "MAT",
+    "EPSI"
+  ],
+  "mat-to-gif": [
+    "MAT",
+    "GIF"
+  ],
+  "mat-to-jbig": [
+    "MAT",
+    "JBIG"
+  ],
+  "mat-to-miff": [
+    "MAT",
+    "MIFF"
+  ],
+  "mat-to-mpeg": [
+    "MAT",
+    "MPEG"
+  ],
+  "mat-to-pcd": [
+    "MAT",
+    "PCD"
+  ],
+  "mat-to-pcx": [
+    "MAT",
+    "PCX"
+  ],
+  "mat-to-picon": [
+    "MAT",
+    "PICON"
+  ],
+  "mat-to-png32": [
+    "MAT",
+    "PNG32"
+  ],
+  "mat-to-ras": [
+    "MAT",
+    "RAS"
+  ],
+  "mat-to-tiff": [
+    "MAT",
+    "TIFF"
+  ],
+  "mat-to-webp": [
+    "MAT",
+    "WEBP"
+  ],
+  "mat-to-xpm": [
+    "MAT",
+    "XPM"
+  ],
+  "mat-to-g3": [
+    "MAT",
+    "G3"
+  ],
+  "mat-to-hrz": [
+    "MAT",
+    "HRZ"
+  ],
+  "mat-to-jxl": [
+    "MAT",
+    "JXL"
+  ],
+  "mat-to-mov": [
+    "MAT",
+    "MOV"
+  ],
+  "mat-to-qoi": [
+    "MAT",
+    "QOI"
+  ],
+  "md5mesh-to-json": [
+    "MD5MESH",
+    "JSON"
+  ],
+  "md5mesh-to-ply": [
+    "MD5MESH",
+    "PLY"
+  ],
+  "mkv-to-apng": [
+    "MKV",
+    "APNG"
+  ],
+  "mkv-to-avs": [
+    "MKV",
+    "AVS"
+  ],
+  "mkv-to-bmp3": [
+    "MKV",
+    "BMP3"
+  ],
+  "mkv-to-cin": [
+    "MKV",
+    "CIN"
+  ],
+  "mkv-to-dcx": [
+    "MKV",
+    "DCX"
+  ],
+  "mkv-to-dxt5": [
+    "MKV",
+    "DXT5"
+  ],
+  "mkv-to-farbfeld": [
+    "MKV",
+    "FARBFELD"
+  ],
+  "mkv-to-fl32": [
+    "MKV",
+    "FL32"
+  ],
+  "mkv-to-gif87": [
+    "MKV",
+    "GIF87"
+  ],
+  "mkv-to-hdr": [
+    "MKV",
+    "HDR"
+  ],
+  "mkv-to-jp2": [
+    "MKV",
+    "JP2"
+  ],
+  "mkv-to-jpg": [
+    "MKV",
+    "JPG"
+  ],
+  "mkv-to-json": [
+    "MKV",
+    "JSON"
+  ],
+  "mkv-to-miff": [
+    "MKV",
+    "MIFF"
+  ],
+  "mkv-to-mp4": [
+    "MKV",
+    "MP4"
+  ],
+  "mkv-to-pam": [
+    "MKV",
+    "PAM"
+  ],
+  "mkv-to-pdf": [
+    "MKV",
+    "PDF"
+  ],
+  "mkv-to-pgx": [
+    "MKV",
+    "PGX"
+  ],
+  "mkv-to-png32": [
+    "MKV",
+    "PNG32"
+  ],
+  "mkv-to-sgi": [
+    "MKV",
+    "SGI"
+  ],
+  "mkv-to-tiff64": [
+    "MKV",
+    "TIFF64"
+  ],
+  "mkv-to-wbmp": [
+    "MKV",
+    "WBMP"
+  ],
+  "mkv-to-xbm": [
+    "MKV",
+    "XBM"
+  ],
+  "mkv-to-av1.mp4": [
+    "MKV",
+    "AV1.MP4"
+  ],
+  "mkv-to-h265.mkv": [
+    "MKV",
+    "H265.MKV"
+  ],
+  "mkv-to-m4a": [
+    "MKV",
+    "M4A"
+  ],
+  "mkv-to-rm": [
+    "MKV",
+    "RM"
+  ],
+  "mov-to-art": [
+    "MOV",
+    "ART"
+  ],
+  "mov-to-dds": [
+    "MOV",
+    "DDS"
+  ],
+  "mov-to-epdf": [
+    "MOV",
+    "EPDF"
+  ],
+  "mov-to-fax": [
+    "MOV",
+    "FAX"
+  ],
+  "mov-to-g3": [
+    "MOV",
+    "G3"
+  ],
+  "mov-to-icb": [
+    "MOV",
+    "ICB"
+  ],
+  "mov-to-j2c": [
+    "MOV",
+    "J2C"
+  ],
+  "mov-to-jpc": [
+    "MOV",
+    "JPC"
+  ],
+  "mov-to-jpm": [
+    "MOV",
+    "JPM"
+  ],
+  "mov-to-mkv": [
+    "MOV",
+    "MKV"
+  ],
+  "mov-to-mpc": [
+    "MOV",
+    "MPC"
+  ],
+  "mov-to-otb": [
+    "MOV",
+    "OTB"
+  ],
+  "mov-to-pbm": [
+    "MOV",
+    "PBM"
+  ],
+  "mov-to-pct": [
+    "MOV",
+    "PCT"
+  ],
+  "mov-to-pdfa": [
+    "MOV",
+    "PDFA"
+  ],
+  "mov-to-phm": [
+    "MOV",
+    "PHM"
+  ],
+  "mov-to-png": [
+    "MOV",
+    "PNG"
+  ],
+  "mov-to-png48": [
+    "MOV",
+    "PNG48"
+  ],
+  "mov-to-qoi": [
+    "MOV",
+    "QOI"
+  ],
+  "mov-to-strimg": [
+    "MOV",
+    "STRIMG"
+  ],
+  "mov-to-tga": [
+    "MOV",
+    "TGA"
+  ],
+  "mov-to-txt": [
+    "MOV",
+    "TXT"
+  ],
+  "mov-to-viff": [
+    "MOV",
+    "VIFF"
+  ],
+  "mov-to-webp": [
+    "MOV",
+    "WEBP"
+  ],
+  "mov-to-xpm": [
+    "MOV",
+    "XPM"
+  ],
+  "mov-to-asf": [
+    "MOV",
+    "ASF"
+  ],
+  "mov-to-ivf": [
+    "MOV",
+    "IVF"
+  ],
+  "mov-to-mjpeg": [
+    "MOV",
+    "MJPEG"
+  ],
+  "mov-to-nut": [
+    "MOV",
+    "NUT"
+  ],
+  "mp3-to-av1.mkv": [
+    "MP3",
+    "AV1.MKV"
+  ],
+  "mp3-to-h264.mp4": [
+    "MP3",
+    "H264.MP4"
+  ],
+  "mp3-to-mkv": [
+    "MP3",
+    "MKV"
+  ],
+  "mp3-to-mpeg": [
+    "MP3",
+    "MPEG"
+  ],
+  "mp3-to-ogg": [
+    "MP3",
+    "OGG"
+  ],
+  "mp3-to-spdif": [
+    "MP3",
+    "SPDIF"
+  ],
+  "mp3-to-tta": [
+    "MP3",
+    "TTA"
+  ],
+  "mp3-to-webm": [
+    "MP3",
+    "WEBM"
+  ],
+  "mp3-to-wtv": [
+    "MP3",
+    "WTV"
+  ],
+  "mp4-to-apng": [
+    "MP4",
+    "APNG"
+  ],
+  "mp4-to-avs": [
+    "MP4",
+    "AVS"
+  ],
+  "mp4-to-bmp3": [
+    "MP4",
+    "BMP3"
+  ],
+  "mp4-to-cin": [
+    "MP4",
+    "CIN"
+  ],
+  "mp4-to-dcx": [
+    "MP4",
+    "DCX"
+  ],
+  "mp4-to-dxt5": [
+    "MP4",
+    "DXT5"
+  ],
+  "mp4-to-farbfeld": [
+    "MP4",
+    "FARBFELD"
+  ],
+  "mp4-to-fl32": [
+    "MP4",
+    "FL32"
+  ],
+  "mp4-to-gif87": [
+    "MP4",
+    "GIF87"
+  ],
+  "mp4-to-hdr": [
+    "MP4",
+    "HDR"
+  ],
+  "mp4-to-jp2": [
+    "MP4",
+    "JP2"
+  ],
+  "mp4-to-jpg": [
+    "MP4",
+    "JPG"
+  ],
+  "mp4-to-json": [
+    "MP4",
+    "JSON"
+  ],
+  "mp4-to-miff": [
+    "MP4",
+    "MIFF"
+  ],
+  "mp4-to-mov": [
+    "MP4",
+    "MOV"
+  ],
+  "mp4-to-pam": [
+    "MP4",
+    "PAM"
+  ],
+  "mp4-to-pdf": [
+    "MP4",
+    "PDF"
+  ],
+  "mp4-to-pgx": [
+    "MP4",
+    "PGX"
+  ],
+  "mp4-to-png32": [
+    "MP4",
+    "PNG32"
+  ],
+  "mp4-to-sgi": [
+    "MP4",
+    "SGI"
+  ],
+  "mp4-to-tiff64": [
+    "MP4",
+    "TIFF64"
+  ],
+  "mp4-to-wbmp": [
+    "MP4",
+    "WBMP"
+  ],
+  "mp4-to-xbm": [
+    "MP4",
+    "XBM"
+  ],
+  "mp4-to-av1.mp4": [
+    "MP4",
+    "AV1.MP4"
+  ],
+  "mp4-to-h265.mkv": [
+    "MP4",
+    "H265.MKV"
+  ],
+  "mp4-to-m4a": [
+    "MP4",
+    "M4A"
+  ],
+  "mp4-to-rm": [
+    "MP4",
+    "RM"
+  ],
+  "ms3d-to-fbx": [
+    "MS3D",
+    "FBX"
+  ],
+  "obj-to-3ds": [
+    "OBJ",
+    "3DS"
+  ],
+  "obj-to-ply": [
+    "OBJ",
+    "PLY"
+  ],
+  "odt-to-rtf": [
+    "ODT",
+    "RTF"
+  ],
+  "off-to-obj": [
+    "OFF",
+    "OBJ"
+  ],
+  "ogg-to-au": [
+    "OGG",
+    "AU"
+  ],
+  "ogg-to-avi": [
+    "OGG",
+    "AVI"
+  ],
+  "ogg-to-caf": [
+    "OGG",
+    "CAF"
+  ],
+  "ogg-to-h265.mp4": [
+    "OGG",
+    "H265.MP4"
+  ],
+  "ogg-to-ircam": [
+    "OGG",
+    "IRCAM"
+  ],
+  "ogg-to-loas": [
+    "OGG",
+    "LOAS"
+  ],
+  "ogg-to-m4a": [
+    "OGG",
+    "M4A"
+  ],
+  "ogg-to-mp4": [
+    "OGG",
+    "MP4"
+  ],
+  "ogg-to-mpg": [
+    "OGG",
+    "MPG"
+  ],
+  "ogg-to-nut": [
+    "OGG",
+    "NUT"
+  ],
+  "ogg-to-rm": [
+    "OGG",
+    "RM"
+  ],
+  "ogg-to-w64": [
+    "OGG",
+    "W64"
+  ],
+  "opus-to-aif": [
+    "OPUS",
+    "AIF"
+  ],
+  "opus-to-aptx": [
+    "OPUS",
+    "APTX"
+  ],
+  "opus-to-ast": [
+    "OPUS",
+    "AST"
+  ],
+  "opus-to-av1.mp4": [
+    "OPUS",
+    "AV1.MP4"
+  ],
+  "opus-to-g722": [
+    "OPUS",
+    "G722"
+  ],
+  "opus-to-h265.mkv": [
+    "OPUS",
+    "H265.MKV"
+  ],
+  "opus-to-mp3": [
+    "OPUS",
+    "MP3"
+  ],
+  "opus-to-mpeg": [
+    "OPUS",
+    "MPEG"
+  ],
+  "opus-to-ogg": [
+    "OPUS",
+    "OGG"
+  ],
+  "opus-to-rso": [
+    "OPUS",
+    "RSO"
+  ],
+  "opus-to-wv": [
+    "OPUS",
+    "WV"
+  ],
+  "p7-to-8bim": [
+    "P7",
+    "8BIM"
+  ],
+  "pct-to-art": [
+    "PCT",
+    "ART"
+  ],
+  "pct-to-epdf": [
+    "PCT",
+    "EPDF"
+  ],
+  "pct-to-fits": [
+    "PCT",
+    "FITS"
+  ],
+  "pct-to-icb": [
+    "PCT",
+    "ICB"
+  ],
+  "pct-to-mng": [
+    "PCT",
+    "MNG"
+  ],
+  "pct-to-pcds": [
+    "PCT",
+    "PCDS"
+  ],
+  "pct-to-pdf": [
+    "PCT",
+    "PDF"
+  ],
+  "pct-to-png00": [
+    "PCT",
+    "PNG00"
+  ],
+  "pct-to-png64": [
+    "PCT",
+    "PNG64"
+  ],
+  "pct-to-vda": [
+    "PCT",
+    "VDA"
+  ],
+  "pct-to-vst": [
+    "PCT",
+    "VST"
+  ],
+  "pct-to-xbm": [
+    "PCT",
+    "XBM"
+  ],
+  "pct-to-xwd": [
+    "PCT",
+    "XWD"
+  ],
+  "pct-to-ai": [
+    "PCT",
+    "AI"
+  ],
+  "pct-to-dxt1": [
+    "PCT",
+    "DXT1"
+  ],
+  "pct-to-ff": [
+    "PCT",
+    "FF"
+  ],
+  "pct-to-ico": [
+    "PCT",
+    "ICO"
+  ],
+  "pct-to-j2c": [
+    "PCT",
+    "J2C"
+  ],
+  "pct-to-jpe": [
+    "PCT",
+    "JPE"
+  ],
+  "pct-to-pgx": [
+    "PCT",
+    "PGX"
+  ],
+  "pct-to-rgf": [
+    "PCT",
+    "RGF"
+  ],
+  "pct-to-wmv": [
+    "PCT",
+    "WMV"
+  ],
+  "pcx-to-bmp2": [
+    "PCX",
+    "BMP2"
+  ],
+  "pcx-to-cals": [
+    "PCX",
+    "CALS"
+  ],
+  "pcx-to-dcx": [
+    "PCX",
+    "DCX"
+  ],
+  "pcx-to-eps": [
+    "PCX",
+    "EPS"
+  ],
+  "pcx-to-epsi": [
+    "PCX",
+    "EPSI"
+  ],
+  "pcx-to-gif": [
+    "PCX",
+    "GIF"
+  ],
+  "pcx-to-jbig": [
+    "PCX",
+    "JBIG"
+  ],
+  "pcx-to-mpc": [
+    "PCX",
+    "MPC"
+  ],
+  "pcx-to-mtv": [
+    "PCX",
+    "MTV"
+  ],
+  "pcx-to-otb": [
+    "PCX",
+    "OTB"
+  ],
+  "pcx-to-pbm": [
+    "PCX",
+    "PBM"
+  ],
+  "pcx-to-pct": [
+    "PCX",
+    "PCT"
+  ],
+  "pcx-to-picon": [
+    "PCX",
+    "PICON"
+  ],
+  "pcx-to-png32": [
+    "PCX",
+    "PNG32"
+  ],
+  "pcx-to-pnm": [
+    "PCX",
+    "PNM"
+  ],
+  "pcx-to-ras": [
+    "PCX",
+    "RAS"
+  ],
+  "pcx-to-tiff": [
+    "PCX",
+    "TIFF"
+  ],
+  "pcx-to-webp": [
+    "PCX",
+    "WEBP"
+  ],
+  "pcx-to-xpm": [
+    "PCX",
+    "XPM"
+  ],
+  "pcx-to-g3": [
+    "PCX",
+    "G3"
+  ],
+  "pcx-to-hrz": [
+    "PCX",
+    "HRZ"
+  ],
+  "pcx-to-jp2": [
+    "PCX",
+    "JP2"
+  ],
+  "pcx-to-jpm": [
+    "PCX",
+    "JPM"
+  ],
+  "pcx-to-jxl": [
+    "PCX",
+    "JXL"
+  ],
+  "pcx-to-mov": [
+    "PCX",
+    "MOV"
+  ],
+  "pcx-to-pdfa": [
+    "PCX",
+    "PDFA"
+  ],
+  "pcx-to-qoi": [
+    "PCX",
+    "QOI"
+  ],
+  "pcx-to-six": [
+    "PCX",
+    "SIX"
+  ],
+  "pcx-to-vips": [
+    "PCX",
+    "VIPS"
+  ],
+  "pcx-to-avi": [
+    "PCX",
+    "AVI"
+  ],
+  "pcx-to-ogg": [
+    "PCX",
+    "OGG"
+  ],
+  "pdf-to-art": [
+    "PDF",
+    "ART"
+  ],
+  "pdf-to-epdf": [
+    "PDF",
+    "EPDF"
+  ],
+  "pdf-to-fits": [
+    "PDF",
+    "FITS"
+  ],
+  "pdf-to-icb": [
+    "PDF",
+    "ICB"
+  ],
+  "pdf-to-mng": [
+    "PDF",
+    "MNG"
+  ],
+  "pdf-to-mpg": [
+    "PDF",
+    "MPG"
+  ],
+  "pdf-to-pcds": [
+    "PDF",
+    "PCDS"
+  ],
+  "pdf-to-png00": [
+    "PDF",
+    "PNG00"
+  ],
+  "pdf-to-png64": [
+    "PDF",
+    "PNG64"
+  ],
+  "pdf-to-vda": [
+    "PDF",
+    "VDA"
+  ],
+  "pdf-to-vst": [
+    "PDF",
+    "VST"
+  ],
+  "pdf-to-xbm": [
+    "PDF",
+    "XBM"
+  ],
+  "pdf-to-xwd": [
+    "PDF",
+    "XWD"
+  ],
+  "pdf-to-docx": [
+    "PDF",
+    "DOCX"
+  ],
+  "pdf-to-ai": [
+    "PDF",
+    "AI"
+  ],
+  "pdf-to-ico": [
+    "PDF",
+    "ICO"
+  ],
+  "pdf-to-j2c": [
+    "PDF",
+    "J2C"
+  ],
+  "pdf-to-jpe": [
+    "PDF",
+    "JPE"
+  ],
+  "pdf-to-wmv": [
+    "PDF",
+    "WMV"
+  ],
+  "ply-to-3ds": [
+    "PLY",
+    "3DS"
+  ],
+  "png-to-bmp2": [
+    "PNG",
+    "BMP2"
+  ],
+  "png-to-cals": [
+    "PNG",
+    "CALS"
+  ],
+  "png-to-dcx": [
+    "PNG",
+    "DCX"
+  ],
+  "png-to-eps": [
+    "PNG",
+    "EPS"
+  ],
+  "png-to-epsi": [
+    "PNG",
+    "EPSI"
+  ],
+  "png-to-gif": [
+    "PNG",
+    "GIF"
+  ],
+  "png-to-jbig": [
+    "PNG",
+    "JBIG"
+  ],
+  "png-to-mpc": [
+    "PNG",
+    "MPC"
+  ],
+  "png-to-mtv": [
+    "PNG",
+    "MTV"
+  ],
+  "png-to-otb": [
+    "PNG",
+    "OTB"
+  ],
+  "png-to-pbm": [
+    "PNG",
+    "PBM"
+  ],
+  "png-to-pgm": [
+    "PNG",
+    "PGM"
+  ],
+  "png-to-png24": [
+    "PNG",
+    "PNG24"
+  ],
+  "png-to-png8": [
+    "PNG",
+    "PNG8"
+  ],
+  "png-to-ps": [
+    "PNG",
+    "PS"
+  ],
+  "png-to-sgi": [
+    "PNG",
+    "SGI"
+  ],
+  "png-to-tga": [
+    "PNG",
+    "TGA"
+  ],
+  "png-to-vicar": [
+    "PNG",
+    "VICAR"
+  ],
+  "png-to-wbmp": [
+    "PNG",
+    "WBMP"
+  ],
+  "png-to-cur": [
+    "PNG",
+    "CUR"
+  ],
+  "png-to-dxt5": [
+    "PNG",
+    "DXT5"
+  ],
+  "png-to-fl32": [
+    "PNG",
+    "FL32"
+  ],
+  "png-to-hdr": [
+    "PNG",
+    "HDR"
+  ],
+  "png-to-icon": [
+    "PNG",
+    "ICON"
+  ],
+  "png-to-j2k": [
+    "PNG",
+    "J2K"
+  ],
+  "png-to-jpm": [
+    "PNG",
+    "JPM"
+  ],
+  "png-to-jxl": [
+    "PNG",
+    "JXL"
+  ],
+  "png-to-mov": [
+    "PNG",
+    "MOV"
+  ],
+  "png-to-pdfa": [
+    "PNG",
+    "PDFA"
+  ],
+  "png-to-qoi": [
+    "PNG",
+    "QOI"
+  ],
+  "png-to-svg": [
+    "PNG",
+    "SVG"
+  ],
+  "png-to-vips": [
+    "PNG",
+    "VIPS"
+  ],
+  "png-to-mxf": [
+    "PNG",
+    "MXF"
+  ],
+  "png-to-swf": [
+    "PNG",
+    "SWF"
+  ],
+  "ppm-to-art": [
+    "PPM",
+    "ART"
+  ],
+  "ppm-to-epdf": [
+    "PPM",
+    "EPDF"
+  ],
+  "ppm-to-fits": [
+    "PPM",
+    "FITS"
+  ],
+  "ppm-to-icb": [
+    "PPM",
+    "ICB"
+  ],
+  "ppm-to-mng": [
+    "PPM",
+    "MNG"
+  ],
+  "ppm-to-mpg": [
+    "PPM",
+    "MPG"
+  ],
+  "ppm-to-pcds": [
+    "PPM",
+    "PCDS"
+  ],
+  "ppm-to-pdb": [
+    "PPM",
+    "PDB"
+  ],
+  "ppm-to-png48": [
+    "PPM",
+    "PNG48"
+  ],
+  "ppm-to-vda": [
+    "PPM",
+    "VDA"
+  ],
+  "ppm-to-vst": [
+    "PPM",
+    "VST"
+  ],
+  "ppm-to-xbm": [
+    "PPM",
+    "XBM"
+  ],
+  "ppm-to-xwd": [
+    "PPM",
+    "XWD"
+  ],
+  "ppm-to-ai": [
+    "PPM",
+    "AI"
+  ],
+  "ppm-to-dxt1": [
+    "PPM",
+    "DXT1"
+  ],
+  "ppm-to-ff": [
+    "PPM",
+    "FF"
+  ],
+  "ppm-to-ico": [
+    "PPM",
+    "ICO"
+  ],
+  "ppm-to-j2c": [
+    "PPM",
+    "J2C"
+  ],
+  "ppm-to-jpe": [
+    "PPM",
+    "JPE"
+  ],
+  "ppm-to-pgx": [
+    "PPM",
+    "PGX"
+  ],
+  "ppm-to-rgf": [
+    "PPM",
+    "RGF"
+  ],
+  "ppm-to-wmv": [
+    "PPM",
+    "WMV"
+  ],
+  "ppm-to-h265.mp4": [
+    "PPM",
+    "H265.MP4"
+  ],
+  "ppm-to-mxf": [
+    "PPM",
+    "MXF"
+  ],
+  "ppm-to-ogg": [
+    "PPM",
+    "OGG"
+  ],
+  "ppm-to-swf": [
+    "PPM",
+    "SWF"
+  ],
+  "ppsx-to-odp": [
+    "PPSX",
+    "ODP"
+  ],
+  "pptm-to-odp": [
+    "PPTM",
+    "ODP"
+  ],
+  "psd-to-avif": [
+    "PSD",
+    "AVIF"
+  ],
+  "psd-to-bmp2": [
+    "PSD",
+    "BMP2"
+  ],
+  "psd-to-dxt1": [
+    "PSD",
+    "DXT1"
+  ],
+  "psd-to-eps": [
+    "PSD",
+    "EPS"
+  ],
+  "psd-to-epsi": [
+    "PSD",
+    "EPSI"
+  ],
+  "psd-to-fits": [
+    "PSD",
+    "FITS"
+  ],
+  "psd-to-gif": [
+    "PSD",
+    "GIF"
+  ],
+  "psd-to-jng": [
+    "PSD",
+    "JNG"
+  ],
+  "psd-to-m4v": [
+    "PSD",
+    "M4V"
+  ],
+  "psd-to-mpeg": [
+    "PSD",
+    "MPEG"
+  ],
+  "psd-to-pcd": [
+    "PSD",
+    "PCD"
+  ],
+  "psd-to-pcx": [
+    "PSD",
+    "PCX"
+  ],
+  "psd-to-pfm": [
+    "PSD",
+    "PFM"
+  ],
+  "psd-to-picon": [
+    "PSD",
+    "PICON"
+  ],
+  "psd-to-png24": [
+    "PSD",
+    "PNG24"
+  ],
+  "psd-to-png8": [
+    "PSD",
+    "PNG8"
+  ],
+  "psd-to-sgi": [
+    "PSD",
+    "SGI"
+  ],
+  "psd-to-wbmp": [
+    "PSD",
+    "WBMP"
+  ],
+  "psd-to-av1.mp4": [
+    "PSD",
+    "AV1.MP4"
+  ],
+  "psd-to-h265.mkv": [
+    "PSD",
+    "H265.MKV"
+  ],
+  "psd-to-m4a": [
+    "PSD",
+    "M4A"
+  ],
+  "q3o-to-obj": [
+    "Q3O",
+    "OBJ"
+  ],
+  "rtf-to-doc": [
+    "RTF",
+    "DOC"
+  ],
+  "sdw-to-doc": [
+    "SDW",
+    "DOC"
+  ],
+  "sib-to-json": [
+    "SIB",
+    "JSON"
+  ],
+  "smd-to-fbx": [
+    "SMD",
+    "FBX"
+  ],
+  "srt-to-h265.mkv": [
+    "SRT",
+    "H265.MKV"
+  ],
+  "stl-to-ass": [
+    "STL",
+    "ASS"
+  ],
+  "stl-to-json": [
+    "STL",
+    "JSON"
+  ],
+  "stw-to-doc": [
+    "STW",
+    "DOC"
+  ],
+  "svg-to-art": [
+    "SVG",
+    "ART"
+  ],
+  "svg-to-epdf": [
+    "SVG",
+    "EPDF"
+  ],
+  "svg-to-mng": [
+    "SVG",
+    "MNG"
+  ],
+  "svg-to-pcds": [
+    "SVG",
+    "PCDS"
+  ],
+  "svg-to-pdb": [
+    "SVG",
+    "PDB"
+  ],
+  "svg-to-pict": [
+    "SVG",
+    "PICT"
+  ],
+  "svg-to-png48": [
+    "SVG",
+    "PNG48"
+  ],
+  "svg-to-ppm": [
+    "SVG",
+    "PPM"
+  ],
+  "svg-to-sun": [
+    "SVG",
+    "SUN"
+  ],
+  "svg-to-txt": [
+    "SVG",
+    "TXT"
+  ],
+  "svg-to-viff": [
+    "SVG",
+    "VIFF"
+  ],
+  "svg-to-avif": [
+    "SVG",
+    "AVIF"
+  ],
+  "svgz-to-bmp2": [
+    "SVGZ",
+    "BMP2"
+  ],
+  "svgz-to-cals": [
+    "SVGZ",
+    "CALS"
+  ],
+  "svgz-to-dcx": [
+    "SVGZ",
+    "DCX"
+  ],
+  "svgz-to-eps": [
+    "SVGZ",
+    "EPS"
+  ],
+  "svgz-to-epsi": [
+    "SVGZ",
+    "EPSI"
+  ],
+  "svgz-to-gif": [
+    "SVGZ",
+    "GIF"
+  ],
+  "svgz-to-jbig": [
+    "SVGZ",
+    "JBIG"
+  ],
+  "svgz-to-mtv": [
+    "SVGZ",
+    "MTV"
+  ],
+  "svgz-to-otb": [
+    "SVGZ",
+    "OTB"
+  ],
+  "svgz-to-pbm": [
+    "SVGZ",
+    "PBM"
+  ],
+  "svgz-to-pct": [
+    "SVGZ",
+    "PCT"
+  ],
+  "svgz-to-pgm": [
+    "SVGZ",
+    "PGM"
+  ],
+  "svgz-to-png24": [
+    "SVGZ",
+    "PNG24"
+  ],
+  "svgz-to-png8": [
+    "SVGZ",
+    "PNG8"
+  ],
+  "svgz-to-ps": [
+    "SVGZ",
+    "PS"
+  ],
+  "svgz-to-sgi": [
+    "SVGZ",
+    "SGI"
+  ],
+  "svgz-to-tga": [
+    "SVGZ",
+    "TGA"
+  ],
+  "svgz-to-vicar": [
+    "SVGZ",
+    "VICAR"
+  ],
+  "svgz-to-wbmp": [
+    "SVGZ",
+    "WBMP"
+  ],
+  "fits-to-png": [
+    "FITS",
+    "PNG"
+  ],
+  "pcx-to-png": [
+    "PCX",
+    "PNG"
+  ],
+  "png-to-jpg": [
+    "PNG",
+    "JPG"
+  ],
+  "tiff-to-png": [
+    "TIFF",
+    "PNG"
+  ],
+  "wmf-to-png": [
+    "WMF",
+    "PNG"
+  ],
+  "docx-to-epub": [
+    "DOCX",
+    "EPUB"
+  ],
+  "rtf-to-epub": [
+    "RTF",
+    "EPUB"
+  ],
+  "emf-to-png": [
+    "EMF",
+    "PNG"
+  ],
+  "jxl-to-png": [
+    "JXL",
+    "PNG"
+  ],
+  "otf-to-ttf": [
+    "OTF",
+    "TTF"
+  ],
+  "wmv-to-webm": [
+    "WMV",
+    "WEBM"
+  ],
+  "zip-to-tar-gz": [
+    "ZIP",
+    "TAR.GZ"
+  ],
+  "dotx-to-txt": [
+    "DOTX",
+    "TXT"
+  ],
+  "wpd-to-txt": [
+    "WPD",
+    "TXT"
+  ],
+  "ods-to-pdf": [
+    "ODS",
+    "PDF"
+  ],
+  "rst-to-pdf": [
+    "RST",
+    "PDF"
+  ],
+  "amf-to-stl": [
+    "AMF",
+    "STL"
+  ],
+  "ogg-to-wav": [
+    "OGG",
+    "WAV"
+  ],
+  "acc-to-stl": [
+    "ACC",
+    "STL"
+  ],
+  "cob-to-stl": [
+    "COB",
+    "STL"
+  ],
+  "irrmesh-to-stl": [
+    "IRRMESH",
+    "STL"
+  ],
+  "sib-to-stl": [
+    "SIB",
+    "STL"
+  ],
+  "pptx-to-pdf": [
+    "PPTX",
+    "PDF"
+  ],
+  "tgz-to-zip": [
+    "TGZ",
+    "ZIP"
+  ],
+  "odp-to-pdf": [
+    "ODP",
+    "PDF"
+  ],
+  "3ds-to-json": [
+    "3DS",
+    "JSON"
+  ],
+  "3ds-to-ply": [
+    "3DS",
+    "PLY"
+  ],
+  "aac-to-adx": [
+    "AAC",
+    "ADX"
+  ],
+  "aac-to-aiff": [
+    "AAC",
+    "AIFF"
+  ],
+  "aac-to-apm": [
+    "AAC",
+    "APM"
+  ],
+  "aac-to-asf": [
+    "AAC",
+    "ASF"
+  ],
+  "aac-to-dfpwm": [
+    "AAC",
+    "DFPWM"
+  ],
+  "aac-to-eac3": [
+    "AAC",
+    "EAC3"
+  ],
+  "aac-to-mka": [
+    "AAC",
+    "MKA"
+  ],
+  "aac-to-mov": [
+    "AAC",
+    "MOV"
+  ],
+  "aac-to-rm": [
+    "AAC",
+    "RM"
+  ],
+  "aac-to-w64": [
+    "AAC",
+    "W64"
+  ],
+  "ac-to-json": [
+    "AC",
+    "JSON"
+  ],
+  "acc-to-obj": [
+    "ACC",
+    "OBJ"
+  ],
+  "ai-to-aai": [
+    "AI",
+    "AAI"
+  ],
+  "ai-to-bmp2": [
+    "AI",
+    "BMP2"
+  ],
+  "ai-to-cals": [
+    "AI",
+    "CALS"
+  ],
+  "ai-to-dxt1": [
+    "AI",
+    "DXT1"
+  ],
+  "ai-to-eps": [
+    "AI",
+    "EPS"
+  ],
+  "ai-to-epsi": [
+    "AI",
+    "EPSI"
+  ],
+  "ai-to-fits": [
+    "AI",
+    "FITS"
+  ],
+  "ai-to-fts": [
+    "AI",
+    "FTS"
+  ],
+  "ai-to-gif": [
+    "AI",
+    "GIF"
+  ],
+  "ai-to-icon": [
+    "AI",
+    "ICON"
+  ],
+  "ai-to-jng": [
+    "AI",
+    "JNG"
+  ],
+  "ai-to-m4v": [
+    "AI",
+    "M4V"
+  ],
+  "ai-to-mpeg": [
+    "AI",
+    "MPEG"
+  ],
+  "ai-to-mtv": [
+    "AI",
+    "MTV"
+  ],
+  "ai-to-pcd": [
+    "AI",
+    "PCD"
+  ],
+  "ai-to-pcx": [
+    "AI",
+    "PCX"
+  ],
+  "ai-to-pfm": [
+    "AI",
+    "PFM"
+  ],
+  "ai-to-picon": [
+    "AI",
+    "PICON"
+  ],
+  "ai-to-png24": [
+    "AI",
+    "PNG24"
+  ],
+  "ai-to-png8": [
+    "AI",
+    "PNG8"
+  ],
+  "ai-to-ps": [
+    "AI",
+    "PS"
+  ],
+  "ai-to-tiff": [
+    "AI",
+    "TIFF"
+  ],
+  "ai-to-vicar": [
+    "AI",
+    "VICAR"
+  ],
+  "ai-to-vst": [
+    "AI",
+    "VST"
+  ],
+  "ai-to-wmv": [
+    "AI",
+    "WMV"
+  ],
+  "ai-to-xv": [
+    "AI",
+    "XV"
+  ],
+  "amf-to-3ds": [
+    "AMF",
+    "3DS"
+  ],
+  "amr-to-apm": [
+    "AMR",
+    "APM"
+  ],
+  "amr-to-asf": [
+    "AMR",
+    "ASF"
+  ],
+  "amr-to-dfpwm": [
+    "AMR",
+    "DFPWM"
+  ],
+  "amr-to-eac3": [
+    "AMR",
+    "EAC3"
+  ],
+  "amr-to-mka": [
+    "AMR",
+    "MKA"
+  ],
+  "amr-to-mov": [
+    "AMR",
+    "MOV"
+  ],
+  "amr-to-sbc": [
+    "AMR",
+    "SBC"
+  ],
+  "amr-to-sox": [
+    "AMR",
+    "SOX"
+  ],
+  "amr-to-voc": [
+    "AMR",
+    "VOC"
+  ],
+  "amr-to-wav": [
+    "AMR",
+    "WAV"
+  ],
+  "ase-to-obj": [
+    "ASE",
+    "OBJ"
+  ],
+  "asf-to-ac3": [
+    "ASF",
+    "AC3"
+  ],
+  "asf-to-apng": [
+    "ASF",
+    "APNG"
+  ],
+  "asf-to-ast": [
+    "ASF",
+    "AST"
+  ],
+  "asf-to-g722": [
+    "ASF",
+    "G722"
+  ],
+  "asf-to-h265.mkv": [
+    "ASF",
+    "H265.MKV"
+  ],
+  "asf-to-hevc": [
+    "ASF",
+    "HEVC"
+  ],
+  "asf-to-ivf": [
+    "ASF",
+    "IVF"
+  ],
+  "asf-to-mjpeg": [
+    "ASF",
+    "MJPEG"
+  ],
+  "asf-to-mp3": [
+    "ASF",
+    "MP3"
+  ],
+  "asf-to-mpeg": [
+    "ASF",
+    "MPEG"
+  ],
+  "asf-to-ogg": [
+    "ASF",
+    "OGG"
+  ],
+  "asf-to-rso": [
+    "ASF",
+    "RSO"
+  ],
+  "asf-to-webm": [
+    "ASF",
+    "WEBM"
+  ],
+  "asf-to-wtv": [
+    "ASF",
+    "WTV"
+  ],
+  "au-to-aac": [
+    "AU",
+    "AAC"
+  ],
+  "au-to-adx": [
+    "AU",
+    "ADX"
+  ],
+  "au-to-aiff": [
+    "AU",
+    "AIFF"
+  ],
+  "au-to-apm": [
+    "AU",
+    "APM"
+  ],
+  "au-to-asf": [
+    "AU",
+    "ASF"
+  ],
+  "au-to-av1.mkv": [
+    "AU",
+    "AV1.MKV"
+  ],
+  "au-to-h264.mp4": [
+    "AU",
+    "H264.MP4"
+  ],
+  "au-to-mkv": [
+    "AU",
+    "MKV"
+  ],
+  "au-to-opus": [
+    "AU",
+    "OPUS"
+  ],
+  "au-to-spdif": [
+    "AU",
+    "SPDIF"
+  ],
+  "au-to-tta": [
+    "AU",
+    "TTA"
+  ],
+  "avif-to-dds": [
+    "AVIF",
+    "DDS"
+  ],
+  "avif-to-epdf": [
+    "AVIF",
+    "EPDF"
+  ],
+  "avif-to-fax": [
+    "AVIF",
+    "FAX"
+  ],
+  "avif-to-g3": [
+    "AVIF",
+    "G3"
+  ],
+  "avif-to-icb": [
+    "AVIF",
+    "ICB"
+  ],
+  "avif-to-j2c": [
+    "AVIF",
+    "J2C"
+  ],
+  "avif-to-jpc": [
+    "AVIF",
+    "JPC"
+  ],
+  "avif-to-jpm": [
+    "AVIF",
+    "JPM"
+  ],
+  "avif-to-jxl": [
+    "AVIF",
+    "JXL"
+  ],
+  "avif-to-mkv": [
+    "AVIF",
+    "MKV"
+  ],
+  "avif-to-mp4": [
+    "AVIF",
+    "MP4"
+  ],
+  "avif-to-pam": [
+    "AVIF",
+    "PAM"
+  ],
+  "avif-to-pdf": [
+    "AVIF",
+    "PDF"
+  ],
+  "avif-to-pgx": [
+    "AVIF",
+    "PGX"
+  ],
+  "avif-to-png48": [
+    "AVIF",
+    "PNG48"
+  ],
+  "avif-to-qoi": [
+    "AVIF",
+    "QOI"
+  ],
+  "avif-to-strimg": [
+    "AVIF",
+    "STRIMG"
+  ],
+  "avif-to-tga": [
+    "AVIF",
+    "TGA"
+  ],
+  "avif-to-txt": [
+    "AVIF",
+    "TXT"
+  ],
+  "avif-to-viff": [
+    "AVIF",
+    "VIFF"
+  ],
+  "avif-to-webm": [
+    "AVIF",
+    "WEBM"
+  ],
+  "avif-to-xbm": [
+    "AVIF",
+    "XBM"
+  ],
+  "avif-to-asf": [
+    "AVIF",
+    "ASF"
+  ],
+  "avif-to-ivf": [
+    "AVIF",
+    "IVF"
+  ],
+  "avif-to-nut": [
+    "AVIF",
+    "NUT"
+  ],
+  "b3d-to-json": [
+    "B3D",
+    "JSON"
+  ],
+  "b3d-to-ply": [
+    "B3D",
+    "PLY"
+  ],
+  "blend-to-json": [
+    "BLEND",
+    "JSON"
+  ],
+  "blend-to-ply": [
+    "BLEND",
+    "PLY"
+  ],
+  "bmp-to-bmp3": [
+    "BMP",
+    "BMP3"
+  ],
+  "bmp-to-cin": [
+    "BMP",
+    "CIN"
+  ],
+  "bmp-to-dpx": [
+    "BMP",
+    "DPX"
+  ],
+  "bmp-to-fax": [
+    "BMP",
+    "FAX"
+  ],
+  "bmp-to-gif87": [
+    "BMP",
+    "GIF87"
+  ],
+  "bmp-to-html": [
+    "BMP",
+    "HTML"
+  ],
+  "bmp-to-jng": [
+    "BMP",
+    "JNG"
+  ],
+  "bmp-to-m2v": [
+    "BMP",
+    "M2V"
+  ],
+  "bmp-to-miff": [
+    "BMP",
+    "MIFF"
+  ],
+  "bmp-to-mpeg": [
+    "BMP",
+    "MPEG"
+  ],
+  "bmp-to-pcd": [
+    "BMP",
+    "PCD"
+  ],
+  "bmp-to-pcx": [
+    "BMP",
+    "PCX"
+  ],
+  "bmp-to-picon": [
+    "BMP",
+    "PICON"
+  ],
+  "bmp-to-png32": [
+    "BMP",
+    "PNG32"
+  ],
+  "bmp-to-pnm": [
+    "BMP",
+    "PNM"
+  ],
+  "bmp-to-ras": [
+    "BMP",
+    "RAS"
+  ],
+  "bmp-to-tiff": [
+    "BMP",
+    "TIFF"
+  ],
+  "bmp-to-webp": [
+    "BMP",
+    "WEBP"
+  ],
+  "bmp-to-xpm": [
+    "BMP",
+    "XPM"
+  ],
+  "bmp-to-g3": [
+    "BMP",
+    "G3"
+  ],
+  "bmp-to-hrz": [
+    "BMP",
+    "HRZ"
+  ],
+  "bmp-to-jp2": [
+    "BMP",
+    "JP2"
+  ],
+  "bmp-to-jpm": [
+    "BMP",
+    "JPM"
+  ],
+  "bmp-to-jxl": [
+    "BMP",
+    "JXL"
+  ],
+  "bmp-to-mov": [
+    "BMP",
+    "MOV"
+  ],
+  "bmp-to-pdfa": [
+    "BMP",
+    "PDFA"
+  ],
+  "bmp-to-qoi": [
+    "BMP",
+    "QOI"
+  ],
+  "bmp-to-svg": [
+    "BMP",
+    "SVG"
+  ],
+  "bmp-to-vips": [
+    "BMP",
+    "VIPS"
+  ],
+  "bmp-to-avi": [
+    "BMP",
+    "AVI"
+  ],
+  "bmp-to-mxf": [
+    "BMP",
+    "MXF"
+  ],
+  "bmp-to-ogg": [
+    "BMP",
+    "OGG"
+  ],
+  "bmp-to-swf": [
+    "BMP",
+    "SWF"
+  ],
+  "c-to-app1": [
+    "C",
+    "APP1"
+  ],
+  "cob-to-3ds": [
+    "COB",
+    "3DS"
+  ],
+  "csv-to-gif": [
+    "CSV",
+    "GIF"
+  ],
+  "csv-to-png": [
+    "CSV",
+    "PNG"
+  ],
+  "csv-to-epub": [
+    "CSV",
+    "EPUB"
+  ],
+  "csv-to-json": [
+    "CSV",
+    "JSON"
+  ],
+  "csv-to-odt": [
+    "CSV",
+    "ODT"
+  ],
+  "dae-to-obj": [
+    "DAE",
+    "OBJ"
+  ],
+  "dcx-to-avs": [
+    "DCX",
+    "AVS"
+  ],
+  "dcx-to-bmp": [
+    "DCX",
+    "BMP"
+  ],
+  "dcx-to-eps": [
+    "DCX",
+    "EPS"
+  ],
+  "dcx-to-epsi": [
+    "DCX",
+    "EPSI"
+  ],
+  "dcx-to-gif": [
+    "DCX",
+    "GIF"
+  ],
+  "dcx-to-jbig": [
+    "DCX",
+    "JBIG"
+  ],
+  "dcx-to-mpc": [
+    "DCX",
+    "MPC"
+  ],
+  "dcx-to-mtv": [
+    "DCX",
+    "MTV"
+  ],
+  "dcx-to-otb": [
+    "DCX",
+    "OTB"
+  ],
+  "dcx-to-pbm": [
+    "DCX",
+    "PBM"
+  ],
+  "dcx-to-pct": [
+    "DCX",
+    "PCT"
+  ],
+  "dcx-to-pgm": [
+    "DCX",
+    "PGM"
+  ],
+  "dcx-to-png24": [
+    "DCX",
+    "PNG24"
+  ],
+  "dcx-to-png8": [
+    "DCX",
+    "PNG8"
+  ],
+  "dcx-to-ps": [
+    "DCX",
+    "PS"
+  ],
+  "dcx-to-sgi": [
+    "DCX",
+    "SGI"
+  ],
+  "dcx-to-tga": [
+    "DCX",
+    "TGA"
+  ],
+  "dcx-to-vicar": [
+    "DCX",
+    "VICAR"
+  ],
+  "dcx-to-wbmp": [
+    "DCX",
+    "WBMP"
+  ],
+  "dcx-to-cur": [
+    "DCX",
+    "CUR"
+  ],
+  "dcx-to-dxt5": [
+    "DCX",
+    "DXT5"
+  ],
+  "dcx-to-fl32": [
+    "DCX",
+    "FL32"
+  ],
+  "dcx-to-hdr": [
+    "DCX",
+    "HDR"
+  ],
+  "dcx-to-icon": [
+    "DCX",
+    "ICON"
+  ],
+  "dcx-to-j2k": [
+    "DCX",
+    "J2K"
+  ],
+  "dcx-to-jpg": [
+    "DCX",
+    "JPG"
+  ],
+  "dcx-to-json": [
+    "DCX",
+    "JSON"
+  ],
+  "dcx-to-palm": [
+    "DCX",
+    "PALM"
+  ],
+  "dcx-to-phm": [
+    "DCX",
+    "PHM"
+  ],
+  "dcx-to-strimg": [
+    "DCX",
+    "STRIMG"
+  ],
+  "dcx-to-tiff64": [
+    "DCX",
+    "TIFF64"
+  ],
+  "dcx-to-wpg": [
+    "DCX",
+    "WPG"
+  ],
+  "dng-to-bmp2": [
+    "DNG",
+    "BMP2"
+  ],
+  "dng-to-cals": [
+    "DNG",
+    "CALS"
+  ],
+  "dng-to-dcx": [
+    "DNG",
+    "DCX"
+  ],
+  "dng-to-eps": [
+    "DNG",
+    "EPS"
+  ],
+  "dng-to-epsi": [
+    "DNG",
+    "EPSI"
+  ],
+  "dng-to-gif": [
+    "DNG",
+    "GIF"
+  ],
+  "dng-to-icm": [
+    "DNG",
+    "ICM"
+  ],
+  "dng-to-jbig": [
+    "DNG",
+    "JBIG"
+  ],
+  "dng-to-mtv": [
+    "DNG",
+    "MTV"
+  ],
+  "dng-to-otb": [
+    "DNG",
+    "OTB"
+  ],
+  "dng-to-pbm": [
+    "DNG",
+    "PBM"
+  ],
+  "dng-to-pct": [
+    "DNG",
+    "PCT"
+  ],
+  "dng-to-pgm": [
+    "DNG",
+    "PGM"
+  ],
+  "dng-to-png24": [
+    "DNG",
+    "PNG24"
+  ],
+  "dng-to-png8": [
+    "DNG",
+    "PNG8"
+  ],
+  "dng-to-ps": [
+    "DNG",
+    "PS"
+  ],
+  "dng-to-sgi": [
+    "DNG",
+    "SGI"
+  ],
+  "dng-to-tga": [
+    "DNG",
+    "TGA"
+  ],
+  "dng-to-vicar": [
+    "DNG",
+    "VICAR"
+  ],
+  "dng-to-wbmp": [
+    "DNG",
+    "WBMP"
+  ],
+  "doc-to-html": [
+    "DOC",
+    "HTML"
+  ],
+  "doc-to-rtf": [
+    "DOC",
+    "RTF"
+  ],
+  "docx-to-txt": [
+    "DOCX",
+    "TXT"
+  ],
+  "docx-to-json": [
+    "DOCX",
+    "JSON"
+  ],
+  "docx-to-pptx": [
+    "DOCX",
+    "PPTX"
+  ],
+  "dotm-to-pdf": [
+    "DOTM",
+    "PDF"
+  ],
+  "dotx-to-epub": [
+    "DOTX",
+    "EPUB"
+  ],
+  "dotx-to-odt": [
+    "DOTX",
+    "ODT"
+  ],
+  "dotx-to-xml": [
+    "DOTX",
+    "XML"
+  ],
+  "dxf-to-fbx": [
+    "DXF",
+    "FBX"
+  ],
+  "emf-to-ai": [
+    "EMF",
+    "AI"
+  ],
+  "emf-to-cals": [
+    "EMF",
+    "CALS"
+  ],
+  "emf-to-eps": [
+    "EMF",
+    "EPS"
+  ],
+  "emf-to-gif": [
+    "EMF",
+    "GIF"
+  ],
+  "emf-to-jng": [
+    "EMF",
+    "JNG"
+  ],
+  "emf-to-m4v": [
+    "EMF",
+    "M4V"
+  ],
+  "emf-to-mpeg": [
+    "EMF",
+    "MPEG"
+  ],
+  "emf-to-pcd": [
+    "EMF",
+    "PCD"
+  ],
+  "emf-to-pcx": [
+    "EMF",
+    "PCX"
+  ],
+  "emf-to-picon": [
+    "EMF",
+    "PICON"
+  ],
+  "emf-to-png24": [
+    "EMF",
+    "PNG24"
+  ],
+  "emf-to-png8": [
+    "EMF",
+    "PNG8"
+  ],
+  "emf-to-ps": [
+    "EMF",
+    "PS"
+  ],
+  "emf-to-sixel": [
+    "EMF",
+    "SIXEL"
+  ],
+  "emf-to-svg": [
+    "EMF",
+    "SVG"
+  ],
+  "emf-to-wmv": [
+    "EMF",
+    "WMV"
+  ],
+  "epub-to-rtf": [
+    "EPUB",
+    "RTF"
+  ],
+  "fb2-to-xml": [
+    "FB2",
+    "XML"
+  ],
+  "fbx-to-obj": [
+    "FBX",
+    "OBJ"
+  ],
+  "fits-to-cin": [
+    "FITS",
+    "CIN"
+  ],
+  "fits-to-dpx": [
+    "FITS",
+    "DPX"
+  ],
+  "fits-to-fax": [
+    "FITS",
+    "FAX"
+  ],
+  "fits-to-icb": [
+    "FITS",
+    "ICB"
+  ],
+  "fits-to-mng": [
+    "FITS",
+    "MNG"
+  ],
+  "fits-to-pcds": [
+    "FITS",
+    "PCDS"
+  ],
+  "fits-to-pdb": [
+    "FITS",
+    "PDB"
+  ],
+  "fits-to-pict": [
+    "FITS",
+    "PICT"
+  ],
+  "fits-to-png48": [
+    "FITS",
+    "PNG48"
+  ],
+  "fits-to-sun": [
+    "FITS",
+    "SUN"
+  ],
+  "fits-to-txt": [
+    "FITS",
+    "TXT"
+  ],
+  "flac-to-ac3": [
+    "FLAC",
+    "AC3"
+  ],
+  "flac-to-av1.mkv": [
+    "FLAC",
+    "AV1.MKV"
+  ],
+  "flac-to-g722": [
+    "FLAC",
+    "G722"
+  ],
+  "flac-to-h265.mkv": [
+    "FLAC",
+    "H265.MKV"
+  ],
+  "flac-to-mp3": [
+    "FLAC",
+    "MP3"
+  ],
+  "flac-to-mpeg": [
+    "FLAC",
+    "MPEG"
+  ],
+  "flac-to-ogg": [
+    "FLAC",
+    "OGG"
+  ],
+  "flac-to-spdif": [
+    "FLAC",
+    "SPDIF"
+  ],
+  "flac-to-tta": [
+    "FLAC",
+    "TTA"
+  ],
+  "flac-to-webm": [
+    "FLAC",
+    "WEBM"
+  ],
+  "flac-to-wtv": [
+    "FLAC",
+    "WTV"
+  ],
+  "flv-to-art": [
+    "FLV",
+    "ART"
+  ],
+  "flv-to-dds": [
+    "FLV",
+    "DDS"
+  ],
+  "flv-to-epdf": [
+    "FLV",
+    "EPDF"
+  ],
+  "flv-to-fax": [
+    "FLV",
+    "FAX"
+  ],
+  "flv-to-g4": [
+    "FLV",
+    "G4"
+  ],
+  "flv-to-hrz": [
+    "FLV",
+    "HRZ"
+  ],
+  "flv-to-ico": [
+    "FLV",
+    "ICO"
+  ],
+  "flv-to-ipl": [
+    "FLV",
+    "IPL"
+  ],
+  "flv-to-j2k": [
+    "FLV",
+    "J2K"
+  ],
+  "flv-to-jpe": [
+    "FLV",
+    "JPE"
+  ],
+  "flv-to-m2v": [
+    "FLV",
+    "M2V"
+  ],
+  "flv-to-otb": [
+    "FLV",
+    "OTB"
+  ],
+  "flv-to-pct": [
+    "FLV",
+    "PCT"
+  ],
+  "flv-to-png00": [
+    "FLV",
+    "PNG00"
+  ],
+  "flv-to-png64": [
+    "FLV",
+    "PNG64"
+  ],
+  "flv-to-rgf": [
+    "FLV",
+    "RGF"
+  ],
+  "flv-to-six": [
+    "FLV",
+    "SIX"
+  ],
+  "flv-to-vda": [
+    "FLV",
+    "VDA"
+  ],
+  "flv-to-vips": [
+    "FLV",
+    "VIPS"
+  ],
+  "flv-to-webp": [
+    "FLV",
+    "WEBP"
+  ],
+  "flv-to-xpm": [
+    "FLV",
+    "XPM"
+  ],
+  "flv-to-asf": [
+    "FLV",
+    "ASF"
+  ],
+  "flv-to-caf": [
+    "FLV",
+    "CAF"
+  ],
+  "flv-to-eac3": [
+    "FLV",
+    "EAC3"
+  ],
+  "flv-to-ivf": [
+    "FLV",
+    "IVF"
+  ],
+  "flv-to-mjpeg": [
+    "FLV",
+    "MJPEG"
+  ],
+  "flv-to-mmf": [
+    "FLV",
+    "MMF"
+  ],
+  "flv-to-nut": [
+    "FLV",
+    "NUT"
+  ],
+  "flv-to-tta": [
+    "FLV",
+    "TTA"
+  ],
+  "fodp-to-pptx": [
+    "FODP",
+    "PPTX"
+  ],
+  "fodt-to-docx": [
+    "FODT",
+    "DOCX"
+  ],
+  "fodt-to-epub": [
+    "FODT",
+    "EPUB"
+  ],
+  "gif-to-avs": [
+    "GIF",
+    "AVS"
+  ],
+  "gif-to-bmp": [
+    "GIF",
+    "BMP"
+  ],
+  "gif-to-epi": [
+    "GIF",
+    "EPI"
+  ],
+  "gif-to-epsf": [
+    "GIF",
+    "EPSF"
+  ],
+  "gif-to-jbig": [
+    "GIF",
+    "JBIG"
+  ],
+  "gif-to-mpc": [
+    "GIF",
+    "MPC"
+  ],
+  "gif-to-mtv": [
+    "GIF",
+    "MTV"
+  ],
+  "gif-to-otb": [
+    "GIF",
+    "OTB"
+  ],
+  "gif-to-pbm": [
+    "GIF",
+    "PBM"
+  ],
+  "gif-to-pgm": [
+    "GIF",
+    "PGM"
+  ],
+  "gif-to-png24": [
+    "GIF",
+    "PNG24"
+  ],
+  "gif-to-png8": [
+    "GIF",
+    "PNG8"
+  ],
+  "gif-to-ps": [
+    "GIF",
+    "PS"
+  ],
+  "gif-to-sgi": [
+    "GIF",
+    "SGI"
+  ],
+  "gif-to-tga": [
+    "GIF",
+    "TGA"
+  ],
+  "gif-to-vicar": [
+    "GIF",
+    "VICAR"
+  ],
+  "gif-to-wbmp": [
+    "GIF",
+    "WBMP"
+  ],
+  "gif-to-cur": [
+    "GIF",
+    "CUR"
+  ],
+  "gif-to-dxt5": [
+    "GIF",
+    "DXT5"
+  ],
+  "gif-to-fl32": [
+    "GIF",
+    "FL32"
+  ],
+  "gif-to-hdr": [
+    "GIF",
+    "HDR"
+  ],
+  "gif-to-icon": [
+    "GIF",
+    "ICON"
+  ],
+  "gif-to-j2k": [
+    "GIF",
+    "J2K"
+  ],
+  "gif-to-jpg": [
+    "GIF",
+    "JPG"
+  ],
+  "gif-to-json": [
+    "GIF",
+    "JSON"
+  ],
+  "gif-to-mkv": [
+    "GIF",
+    "MKV"
+  ],
+  "gif-to-palm": [
+    "GIF",
+    "PALM"
+  ],
+  "gif-to-phm": [
+    "GIF",
+    "PHM"
+  ],
+  "gif-to-strimg": [
+    "GIF",
+    "STRIMG"
+  ],
+  "gif-to-tiff64": [
+    "GIF",
+    "TIFF64"
+  ],
+  "gif-to-wpg": [
+    "GIF",
+    "WPG"
+  ],
+  "gif-to-asf": [
+    "GIF",
+    "ASF"
+  ],
+  "gif-to-mjpeg": [
+    "GIF",
+    "MJPEG"
+  ],
+  "gif-to-nut": [
+    "GIF",
+    "NUT"
+  ],
+  "hmp-to-3ds": [
+    "HMP",
+    "3DS"
+  ],
+  "html-to-epub": [
+    "HTML",
+    "EPUB"
+  ],
+  "html-to-rtf": [
+    "HTML",
+    "RTF"
+  ],
+  "html-to-odt": [
+    "HTML",
+    "ODT"
+  ],
+  "hwp-to-docx": [
+    "HWP",
+    "DOCX"
+  ],
+  "hwp-to-epub": [
+    "HWP",
+    "EPUB"
+  ],
+  "hwp-to-odt": [
+    "HWP",
+    "ODT"
+  ],
+  "hwp-to-xml": [
+    "HWP",
+    "XML"
+  ],
+  "irr-to-fbx": [
+    "IRR",
+    "FBX"
+  ],
+  "irrmesh-to-json": [
+    "IRRMESH",
+    "JSON"
+  ],
+  "irrmesh-to-ply": [
+    "IRRMESH",
+    "PLY"
+  ],
+  "jp2-to-art": [
+    "JP2",
+    "ART"
+  ],
+  "jp2-to-dds": [
+    "JP2",
+    "DDS"
+  ],
+  "jp2-to-epdf": [
+    "JP2",
+    "EPDF"
+  ],
+  "jp2-to-fax": [
+    "JP2",
+    "FAX"
+  ],
+  "jp2-to-g3": [
+    "JP2",
+    "G3"
+  ],
+  "jp2-to-icb": [
+    "JP2",
+    "ICB"
+  ],
+  "jp2-to-j2c": [
+    "JP2",
+    "J2C"
+  ],
+  "jp2-to-jpe": [
+    "JP2",
+    "JPE"
+  ],
+  "jp2-to-m2v": [
+    "JP2",
+    "M2V"
+  ],
+  "jp2-to-mng": [
+    "JP2",
+    "MNG"
+  ],
+  "jp2-to-mpc": [
+    "JP2",
+    "MPC"
+  ],
+  "jp2-to-otb": [
+    "JP2",
+    "OTB"
+  ],
+  "jp2-to-pbm": [
+    "JP2",
+    "PBM"
+  ],
+  "jp2-to-pct": [
+    "JP2",
+    "PCT"
+  ],
+  "jp2-to-pdfa": [
+    "JP2",
+    "PDFA"
+  ],
+  "jp2-to-phm": [
+    "JP2",
+    "PHM"
+  ],
+  "jp2-to-png00": [
+    "JP2",
+    "PNG00"
+  ],
+  "jp2-to-png64": [
+    "JP2",
+    "PNG64"
+  ],
+  "jp2-to-ppm": [
+    "JP2",
+    "PPM"
+  ],
+  "jp2-to-ras": [
+    "JP2",
+    "RAS"
+  ],
+  "jp2-to-rgf": [
+    "JP2",
+    "RGF"
+  ],
+  "jp2-to-six": [
+    "JP2",
+    "SIX"
+  ],
+  "jp2-to-sun": [
+    "JP2",
+    "SUN"
+  ],
+  "jp2-to-vda": [
+    "JP2",
+    "VDA"
+  ],
+  "jp2-to-vips": [
+    "JP2",
+    "VIPS"
+  ],
+  "jp2-to-webp": [
+    "JP2",
+    "WEBP"
+  ],
+  "jp2-to-xpm": [
+    "JP2",
+    "XPM"
+  ],
+  "jpg-to-bie": [
+    "JPG",
+    "BIE"
+  ],
+  "jpg-to-bmp3": [
+    "JPG",
+    "BMP3"
+  ],
+  "jpg-to-cin": [
+    "JPG",
+    "CIN"
+  ],
+  "jpg-to-dpx": [
+    "JPG",
+    "DPX"
+  ],
+  "jpg-to-fax": [
+    "JPG",
+    "FAX"
+  ],
+  "jpg-to-gif87": [
+    "JPG",
+    "GIF87"
+  ],
+  "jpg-to-html": [
+    "JPG",
+    "HTML"
+  ],
+  "jpg-to-jng": [
+    "JPG",
+    "JNG"
+  ],
+  "jpg-to-m2v": [
+    "JPG",
+    "M2V"
+  ],
+  "jpg-to-miff": [
+    "JPG",
+    "MIFF"
+  ],
+  "jpg-to-mpeg": [
+    "JPG",
+    "MPEG"
+  ],
+  "jpg-to-pcd": [
+    "JPG",
+    "PCD"
+  ],
+  "jpg-to-pcx": [
+    "JPG",
+    "PCX"
+  ],
+  "jpg-to-picon": [
+    "JPG",
+    "PICON"
+  ],
+  "jpg-to-png32": [
+    "JPG",
+    "PNG32"
+  ],
+  "jpg-to-pnm": [
+    "JPG",
+    "PNM"
+  ],
+  "jpg-to-ras": [
+    "JPG",
+    "RAS"
+  ],
+  "jpg-to-tiff": [
+    "JPG",
+    "TIFF"
+  ],
+  "jpg-to-webp": [
+    "JPG",
+    "WEBP"
+  ],
+  "jpg-to-xpm": [
+    "JPG",
+    "XPM"
+  ],
+  "jpg-to-g3": [
+    "JPG",
+    "G3"
+  ],
+  "jpg-to-hrz": [
+    "JPG",
+    "HRZ"
+  ],
+  "jpg-to-jp2": [
+    "JPG",
+    "JP2"
+  ],
+  "jpg-to-m4v": [
+    "JPG",
+    "M4V"
+  ],
+  "jpg-to-mp4": [
+    "JPG",
+    "MP4"
+  ],
+  "jpg-to-pfm": [
+    "JPG",
+    "PFM"
+  ],
+  "jpg-to-sixel": [
+    "JPG",
+    "SIXEL"
+  ],
+  "jpg-to-webm": [
+    "JPG",
+    "WEBM"
+  ],
+  "jxl-to-hdr": [
+    "JXL",
+    "HDR"
+  ],
+  "jxl-to-jp2": [
+    "JXL",
+    "JP2"
+  ],
+  "jxl-to-jpg": [
+    "JXL",
+    "JPG"
+  ],
+  "jxl-to-mkv": [
+    "JXL",
+    "MKV"
+  ],
+  "jxl-to-mp4": [
+    "JXL",
+    "MP4"
+  ],
+  "jxl-to-pam": [
+    "JXL",
+    "PAM"
+  ],
+  "jxl-to-qoi": [
+    "JXL",
+    "QOI"
+  ],
+  "jxl-to-tga": [
+    "JXL",
+    "TGA"
+  ],
+  "jxl-to-xbm": [
+    "JXL",
+    "XBM"
+  ],
+  "jxl-to-av1.mkv": [
+    "JXL",
+    "AV1.MKV"
+  ],
+  "jxl-to-h264.mp4": [
+    "JXL",
+    "H264.MP4"
+  ],
+  "jxl-to-obu": [
+    "JXL",
+    "OBU"
+  ],
+  "jxl-to-wtv": [
+    "JXL",
+    "WTV"
+  ],
+  "jxl-to-xwd": [
+    "JXL",
+    "XWD"
+  ],
+  "lwo-to-json": [
+    "LWO",
+    "JSON"
+  ],
+  "lwo-to-ply": [
+    "LWO",
+    "PLY"
+  ],
+  "lws-to-fbx": [
+    "LWS",
+    "FBX"
+  ],
+  "lxo-to-json": [
+    "LXO",
+    "JSON"
+  ],
+  "lxo-to-ply": [
+    "LXO",
+    "PLY"
+  ],
+  "m-to-app1": [
+    "M",
+    "APP1"
+  ],
+  "m-to-icm": [
+    "M",
+    "ICM"
+  ],
+  "m4a-to-aif": [
+    "M4A",
+    "AIF"
+  ],
+  "m4a-to-aptx": [
+    "M4A",
+    "APTX"
+  ],
+  "m4a-to-ast": [
+    "M4A",
+    "AST"
+  ],
+  "m4a-to-av1.mp4": [
+    "M4A",
+    "AV1.MP4"
+  ],
+  "m4a-to-g722": [
+    "M4A",
+    "G722"
+  ],
+  "m4a-to-h265.mkv": [
+    "M4A",
+    "H265.MKV"
+  ],
+  "m4a-to-mp4": [
+    "M4A",
+    "MP4"
+  ],
+  "m4a-to-mpg": [
+    "M4A",
+    "MPG"
+  ],
+  "m4a-to-nut": [
+    "M4A",
+    "NUT"
+  ],
+  "m4a-to-rso": [
+    "M4A",
+    "RSO"
+  ],
+  "m4a-to-wv": [
+    "M4A",
+    "WV"
+  ],
+  "mat-to-bie": [
+    "MAT",
+    "BIE"
+  ],
+  "mat-to-bmp3": [
+    "MAT",
+    "BMP3"
+  ],
+  "mat-to-cin": [
+    "MAT",
+    "CIN"
+  ],
+  "mat-to-dpx": [
+    "MAT",
+    "DPX"
+  ],
+  "mat-to-fax": [
+    "MAT",
+    "FAX"
+  ],
+  "mat-to-gif87": [
+    "MAT",
+    "GIF87"
+  ],
+  "mat-to-html": [
+    "MAT",
+    "HTML"
+  ],
+  "mat-to-jng": [
+    "MAT",
+    "JNG"
+  ],
+  "mat-to-m2v": [
+    "MAT",
+    "M2V"
+  ],
+  "mat-to-mng": [
+    "MAT",
+    "MNG"
+  ],
+  "mat-to-mpg": [
+    "MAT",
+    "MPG"
+  ],
+  "mat-to-pcds": [
+    "MAT",
+    "PCDS"
+  ],
+  "mat-to-pdb": [
+    "MAT",
+    "PDB"
+  ],
+  "mat-to-png48": [
+    "MAT",
+    "PNG48"
+  ],
+  "mat-to-ppm": [
+    "MAT",
+    "PPM"
+  ],
+  "mat-to-sun": [
+    "MAT",
+    "SUN"
+  ],
+  "mat-to-txt": [
+    "MAT",
+    "TXT"
+  ],
+  "mat-to-viff": [
+    "MAT",
+    "VIFF"
+  ],
+  "mat-to-xv": [
+    "MAT",
+    "XV"
+  ],
+  "mat-to-aai": [
+    "MAT",
+    "AAI"
+  ],
+  "mat-to-dds": [
+    "MAT",
+    "DDS"
+  ],
+  "mat-to-farbfeld": [
+    "MAT",
+    "FARBFELD"
+  ],
+  "mat-to-flv": [
+    "MAT",
+    "FLV"
+  ],
+  "mat-to-g4": [
+    "MAT",
+    "G4"
+  ],
+  "mat-to-ipl": [
+    "MAT",
+    "IPL"
+  ],
+  "mat-to-m4v": [
+    "MAT",
+    "M4V"
+  ],
+  "mat-to-mp4": [
+    "MAT",
+    "MP4"
+  ],
+  "mat-to-pfm": [
+    "MAT",
+    "PFM"
+  ],
+  "mat-to-webm": [
+    "MAT",
+    "WEBM"
+  ],
+  "md5mesh-to-obj": [
+    "MD5MESH",
+    "OBJ"
+  ],
+  "mkv-to-art": [
+    "MKV",
+    "ART"
+  ],
+  "mkv-to-dds": [
+    "MKV",
+    "DDS"
+  ],
+  "mkv-to-epdf": [
+    "MKV",
+    "EPDF"
+  ],
+  "mkv-to-fax": [
+    "MKV",
+    "FAX"
+  ],
+  "mkv-to-g3": [
+    "MKV",
+    "G3"
+  ],
+  "mkv-to-icb": [
+    "MKV",
+    "ICB"
+  ],
+  "mkv-to-j2c": [
+    "MKV",
+    "J2C"
+  ],
+  "mkv-to-jpc": [
+    "MKV",
+    "JPC"
+  ],
+  "mkv-to-jpm": [
+    "MKV",
+    "JPM"
+  ],
+  "mkv-to-mng": [
+    "MKV",
+    "MNG"
+  ],
+  "mkv-to-mpc": [
+    "MKV",
+    "MPC"
+  ],
+  "mkv-to-otb": [
+    "MKV",
+    "OTB"
+  ],
+  "mkv-to-pbm": [
+    "MKV",
+    "PBM"
+  ],
+  "mkv-to-pct": [
+    "MKV",
+    "PCT"
+  ],
+  "mkv-to-pdfa": [
+    "MKV",
+    "PDFA"
+  ],
+  "mkv-to-phm": [
+    "MKV",
+    "PHM"
+  ],
+  "mkv-to-png": [
+    "MKV",
+    "PNG"
+  ],
+  "mkv-to-png48": [
+    "MKV",
+    "PNG48"
+  ],
+  "mkv-to-qoi": [
+    "MKV",
+    "QOI"
+  ],
+  "mkv-to-strimg": [
+    "MKV",
+    "STRIMG"
+  ],
+  "mkv-to-tga": [
+    "MKV",
+    "TGA"
+  ],
+  "mkv-to-txt": [
+    "MKV",
+    "TXT"
+  ],
+  "mkv-to-viff": [
+    "MKV",
+    "VIFF"
+  ],
+  "mkv-to-webp": [
+    "MKV",
+    "WEBP"
+  ],
+  "mkv-to-xpm": [
+    "MKV",
+    "XPM"
+  ],
+  "mkv-to-avi": [
+    "MKV",
+    "AVI"
+  ],
+  "mkv-to-h265.mp4": [
+    "MKV",
+    "H265.MP4"
+  ],
+  "mkv-to-ogg": [
+    "MKV",
+    "OGG"
+  ],
+  "mkv-to-roq": [
+    "MKV",
+    "ROQ"
+  ],
+  "mkv-to-swf": [
+    "MKV",
+    "SWF"
+  ],
+  "mov-to-aai": [
+    "MOV",
+    "AAI"
+  ],
+  "mov-to-bmp": [
+    "MOV",
+    "BMP"
+  ],
+  "mov-to-cur": [
+    "MOV",
+    "CUR"
+  ],
+  "mov-to-dpx": [
+    "MOV",
+    "DPX"
+  ],
+  "mov-to-epi": [
+    "MOV",
+    "EPI"
+  ],
+  "mov-to-epsf": [
+    "MOV",
+    "EPSF"
+  ],
+  "mov-to-ff": [
+    "MOV",
+    "FF"
+  ],
+  "mov-to-flv": [
+    "MOV",
+    "FLV"
+  ],
+  "mov-to-g4": [
+    "MOV",
+    "G4"
+  ],
+  "mov-to-hrz": [
+    "MOV",
+    "HRZ"
+  ],
+  "mov-to-ico": [
+    "MOV",
+    "ICO"
+  ],
+  "mov-to-ipl": [
+    "MOV",
+    "IPL"
+  ],
+  "mov-to-j2k": [
+    "MOV",
+    "J2K"
+  ],
+  "mov-to-jpe": [
+    "MOV",
+    "JPE"
+  ],
+  "mov-to-m2v": [
+    "MOV",
+    "M2V"
+  ],
+  "mov-to-mng": [
+    "MOV",
+    "MNG"
+  ],
+  "mov-to-mpeg": [
+    "MOV",
+    "MPEG"
+  ],
+  "mov-to-mtv": [
+    "MOV",
+    "MTV"
+  ],
+  "mov-to-pcd": [
+    "MOV",
+    "PCD"
+  ],
+  "mov-to-pcx": [
+    "MOV",
+    "PCX"
+  ],
+  "mov-to-pfm": [
+    "MOV",
+    "PFM"
+  ],
+  "mov-to-picon": [
+    "MOV",
+    "PICON"
+  ],
+  "mov-to-png00": [
+    "MOV",
+    "PNG00"
+  ],
+  "mov-to-png64": [
+    "MOV",
+    "PNG64"
+  ],
+  "mov-to-ppm": [
+    "MOV",
+    "PPM"
+  ],
+  "mov-to-ras": [
+    "MOV",
+    "RAS"
+  ],
+  "mov-to-rgf": [
+    "MOV",
+    "RGF"
+  ],
+  "mov-to-sun": [
+    "MOV",
+    "SUN"
+  ],
+  "mov-to-vda": [
+    "MOV",
+    "VDA"
+  ],
+  "mov-to-vips": [
+    "MOV",
+    "VIPS"
+  ],
+  "mov-to-wmv": [
+    "MOV",
+    "WMV"
+  ],
+  "mov-to-xv": [
+    "MOV",
+    "XV"
+  ],
+  "mov-to-av1.mkv": [
+    "MOV",
+    "AV1.MKV"
+  ],
+  "mov-to-h264.mp4": [
+    "MOV",
+    "H264.MP4"
+  ],
+  "mov-to-hevc": [
+    "MOV",
+    "HEVC"
+  ],
+  "mov-to-obu": [
+    "MOV",
+    "OBU"
+  ],
+  "mov-to-wtv": [
+    "MOV",
+    "WTV"
+  ],
+  "mp3-to-aif": [
+    "MP3",
+    "AIF"
+  ],
+  "mp3-to-aptx": [
+    "MP3",
+    "APTX"
+  ],
+  "mp3-to-ast": [
+    "MP3",
+    "AST"
+  ],
+  "mp3-to-av1.mp4": [
+    "MP3",
+    "AV1.MP4"
+  ],
+  "mp3-to-g722": [
+    "MP3",
+    "G722"
+  ],
+  "mp3-to-h265.mkv": [
+    "MP3",
+    "H265.MKV"
+  ],
+  "mp3-to-mp4": [
+    "MP3",
+    "MP4"
+  ],
+  "mp3-to-mpg": [
+    "MP3",
+    "MPG"
+  ],
+  "mp3-to-nut": [
+    "MP3",
+    "NUT"
+  ],
+  "mp3-to-rso": [
+    "MP3",
+    "RSO"
+  ],
+  "mp3-to-wv": [
+    "MP3",
+    "WV"
+  ],
+  "mp4-to-art": [
+    "MP4",
+    "ART"
+  ],
+  "mp4-to-dds": [
+    "MP4",
+    "DDS"
+  ],
+  "mp4-to-epdf": [
+    "MP4",
+    "EPDF"
+  ],
+  "mp4-to-fax": [
+    "MP4",
+    "FAX"
+  ],
+  "mp4-to-g3": [
+    "MP4",
+    "G3"
+  ],
+  "mp4-to-icb": [
+    "MP4",
+    "ICB"
+  ],
+  "mp4-to-j2c": [
+    "MP4",
+    "J2C"
+  ],
+  "mp4-to-jpc": [
+    "MP4",
+    "JPC"
+  ],
+  "mp4-to-jpm": [
+    "MP4",
+    "JPM"
+  ],
+  "mp4-to-mkv": [
+    "MP4",
+    "MKV"
+  ],
+  "mp4-to-mpc": [
+    "MP4",
+    "MPC"
+  ],
+  "mp4-to-otb": [
+    "MP4",
+    "OTB"
+  ],
+  "mp4-to-pbm": [
+    "MP4",
+    "PBM"
+  ],
+  "mp4-to-pct": [
+    "MP4",
+    "PCT"
+  ],
+  "mp4-to-pdfa": [
+    "MP4",
+    "PDFA"
+  ],
+  "mp4-to-phm": [
+    "MP4",
+    "PHM"
+  ],
+  "mp4-to-png": [
+    "MP4",
+    "PNG"
+  ],
+  "mp4-to-png48": [
+    "MP4",
+    "PNG48"
+  ],
+  "mp4-to-qoi": [
+    "MP4",
+    "QOI"
+  ],
+  "mp4-to-strimg": [
+    "MP4",
+    "STRIMG"
+  ],
+  "mp4-to-tga": [
+    "MP4",
+    "TGA"
+  ],
+  "mp4-to-txt": [
+    "MP4",
+    "TXT"
+  ],
+  "mp4-to-viff": [
+    "MP4",
+    "VIFF"
+  ],
+  "mp4-to-webp": [
+    "MP4",
+    "WEBP"
+  ],
+  "mp4-to-xpm": [
+    "MP4",
+    "XPM"
+  ],
+  "mp4-to-avi": [
+    "MP4",
+    "AVI"
+  ],
+  "mp4-to-h265.mp4": [
+    "MP4",
+    "H265.MP4"
+  ],
+  "mp4-to-ogg": [
+    "MP4",
+    "OGG"
+  ],
+  "mp4-to-roq": [
+    "MP4",
+    "ROQ"
+  ],
+  "mp4-to-swf": [
+    "MP4",
+    "SWF"
+  ],
+  "ms3d-to-3ds": [
+    "MS3D",
+    "3DS"
+  ],
+  "obj-to-json": [
+    "OBJ",
+    "JSON"
+  ],
+  "odp-to-pptx": [
+    "ODP",
+    "PPTX"
+  ],
+  "odt-to-html": [
+    "ODT",
+    "HTML"
+  ],
+  "odt-to-pdf": [
+    "ODT",
+    "PDF"
+  ],
+  "odt-to-doc": [
+    "ODT",
+    "DOC"
+  ],
+  "odt-to-xml": [
+    "ODT",
+    "XML"
+  ],
+  "off-to-fbx": [
+    "OFF",
+    "FBX"
+  ],
+  "ogex-to-json": [
+    "OGEX",
+    "JSON"
+  ],
+  "ogg-to-aac": [
+    "OGG",
+    "AAC"
+  ],
+  "ogg-to-adx": [
+    "OGG",
+    "ADX"
+  ],
+  "ogg-to-aiff": [
+    "OGG",
+    "AIFF"
+  ],
+  "ogg-to-apm": [
+    "OGG",
+    "APM"
+  ],
+  "ogg-to-asf": [
+    "OGG",
+    "ASF"
+  ],
+  "ogg-to-dfpwm": [
+    "OGG",
+    "DFPWM"
+  ],
+  "ogg-to-eac3": [
+    "OGG",
+    "EAC3"
+  ],
+  "ogg-to-mka": [
+    "OGG",
+    "MKA"
+  ],
+  "ogg-to-mov": [
+    "OGG",
+    "MOV"
+  ],
+  "ogg-to-opus": [
+    "OGG",
+    "OPUS"
+  ],
+  "ogg-to-sbc": [
+    "OGG",
+    "SBC"
+  ],
+  "ogg-to-sox": [
+    "OGG",
+    "SOX"
+  ],
+  "ogg-to-voc": [
+    "OGG",
+    "VOC"
+  ],
+  "opus-to-au": [
+    "OPUS",
+    "AU"
+  ],
+  "opus-to-avi": [
+    "OPUS",
+    "AVI"
+  ],
+  "opus-to-caf": [
+    "OPUS",
+    "CAF"
+  ],
+  "opus-to-flac": [
+    "OPUS",
+    "FLAC"
+  ],
+  "opus-to-h265.mp4": [
+    "OPUS",
+    "H265.MP4"
+  ],
+  "opus-to-ircam": [
+    "OPUS",
+    "IRCAM"
+  ],
+  "opus-to-loas": [
+    "OPUS",
+    "LOAS"
+  ],
+  "opus-to-m4a": [
+    "OPUS",
+    "M4A"
+  ],
+  "opus-to-mp4": [
+    "OPUS",
+    "MP4"
+  ],
+  "opus-to-mpg": [
+    "OPUS",
+    "MPG"
+  ],
+  "opus-to-nut": [
+    "OPUS",
+    "NUT"
+  ],
+  "opus-to-rm": [
+    "OPUS",
+    "RM"
+  ],
+  "opus-to-w64": [
+    "OPUS",
+    "W64"
+  ],
+  "p7-to-iptc": [
+    "P7",
+    "IPTC"
+  ],
+  "pct-to-avs": [
+    "PCT",
+    "AVS"
+  ],
+  "pct-to-bmp": [
+    "PCT",
+    "BMP"
+  ],
+  "pct-to-epi": [
+    "PCT",
+    "EPI"
+  ],
+  "pct-to-epsf": [
+    "PCT",
+    "EPSF"
+  ],
+  "pct-to-jbg": [
+    "PCT",
+    "JBG"
+  ],
+  "pct-to-pam": [
+    "PCT",
+    "PAM"
+  ],
+  "pct-to-pgm": [
+    "PCT",
+    "PGM"
+  ],
+  "pct-to-png24": [
+    "PCT",
+    "PNG24"
+  ],
+  "pct-to-png8": [
+    "PCT",
+    "PNG8"
+  ],
+  "pct-to-ps": [
+    "PCT",
+    "PS"
+  ],
+  "pct-to-sgi": [
+    "PCT",
+    "SGI"
+  ],
+  "pct-to-tga": [
+    "PCT",
+    "TGA"
+  ],
+  "pct-to-vicar": [
+    "PCT",
+    "VICAR"
+  ],
+  "pct-to-wbmp": [
+    "PCT",
+    "WBMP"
+  ],
+  "pct-to-cur": [
+    "PCT",
+    "CUR"
+  ],
+  "pct-to-dxt5": [
+    "PCT",
+    "DXT5"
+  ],
+  "pct-to-fl32": [
+    "PCT",
+    "FL32"
+  ],
+  "pct-to-hdr": [
+    "PCT",
+    "HDR"
+  ],
+  "pct-to-icon": [
+    "PCT",
+    "ICON"
+  ],
+  "pct-to-j2k": [
+    "PCT",
+    "J2K"
+  ],
+  "pct-to-jpg": [
+    "PCT",
+    "JPG"
+  ],
+  "pct-to-json": [
+    "PCT",
+    "JSON"
+  ],
+  "pct-to-palm": [
+    "PCT",
+    "PALM"
+  ],
+  "pct-to-phm": [
+    "PCT",
+    "PHM"
+  ],
+  "pct-to-strimg": [
+    "PCT",
+    "STRIMG"
+  ],
+  "pct-to-tiff64": [
+    "PCT",
+    "TIFF64"
+  ],
+  "pct-to-wpg": [
+    "PCT",
+    "WPG"
+  ],
+  "pcx-to-bie": [
+    "PCX",
+    "BIE"
+  ],
+  "pcx-to-bmp3": [
+    "PCX",
+    "BMP3"
+  ],
+  "pcx-to-cin": [
+    "PCX",
+    "CIN"
+  ],
+  "pcx-to-dpx": [
+    "PCX",
+    "DPX"
+  ],
+  "pcx-to-fax": [
+    "PCX",
+    "FAX"
+  ],
+  "pcx-to-gif87": [
+    "PCX",
+    "GIF87"
+  ],
+  "pcx-to-html": [
+    "PCX",
+    "HTML"
+  ],
+  "pcx-to-jng": [
+    "PCX",
+    "JNG"
+  ],
+  "pcx-to-m2v": [
+    "PCX",
+    "M2V"
+  ],
+  "pcx-to-miff": [
+    "PCX",
+    "MIFF"
+  ],
+  "pcx-to-mpeg": [
+    "PCX",
+    "MPEG"
+  ],
+  "pcx-to-pcd": [
+    "PCX",
+    "PCD"
+  ],
+  "pcx-to-pdb": [
+    "PCX",
+    "PDB"
+  ],
+  "pcx-to-pict": [
+    "PCX",
+    "PICT"
+  ],
+  "pcx-to-png48": [
+    "PCX",
+    "PNG48"
+  ],
+  "pcx-to-ppm": [
+    "PCX",
+    "PPM"
+  ],
+  "pcx-to-sun": [
+    "PCX",
+    "SUN"
+  ],
+  "pcx-to-txt": [
+    "PCX",
+    "TXT"
+  ],
+  "pcx-to-viff": [
+    "PCX",
+    "VIFF"
+  ],
+  "pcx-to-xv": [
+    "PCX",
+    "XV"
+  ],
+  "pcx-to-aai": [
+    "PCX",
+    "AAI"
+  ],
+  "pcx-to-avif": [
+    "PCX",
+    "AVIF"
+  ],
+  "pcx-to-dds": [
+    "PCX",
+    "DDS"
+  ],
+  "pcx-to-farbfeld": [
+    "PCX",
+    "FARBFELD"
+  ],
+  "pcx-to-flv": [
+    "PCX",
+    "FLV"
+  ],
+  "pcx-to-g4": [
+    "PCX",
+    "G4"
+  ],
+  "pcx-to-ipl": [
+    "PCX",
+    "IPL"
+  ],
+  "pcx-to-jpc": [
+    "PCX",
+    "JPC"
+  ],
+  "pcx-to-pfm": [
+    "PCX",
+    "PFM"
+  ],
+  "pcx-to-sixel": [
+    "PCX",
+    "SIXEL"
+  ],
+  "pcx-to-webm": [
+    "PCX",
+    "WEBM"
+  ],
+  "pcx-to-asf": [
+    "PCX",
+    "ASF"
+  ],
+  "pcx-to-nut": [
+    "PCX",
+    "NUT"
+  ],
+  "pdf-to-avs": [
+    "PDF",
+    "AVS"
+  ],
+  "pdf-to-bmp": [
+    "PDF",
+    "BMP"
+  ],
+  "pdf-to-epi": [
+    "PDF",
+    "EPI"
+  ],
+  "pdf-to-epsf": [
+    "PDF",
+    "EPSF"
+  ],
+  "pdf-to-jbg": [
+    "PDF",
+    "JBG"
+  ],
+  "pdf-to-pam": [
+    "PDF",
+    "PAM"
+  ],
+  "pdf-to-pgm": [
+    "PDF",
+    "PGM"
+  ],
+  "pdf-to-png24": [
+    "PDF",
+    "PNG24"
+  ],
+  "pdf-to-png8": [
+    "PDF",
+    "PNG8"
+  ],
+  "pdf-to-ps": [
+    "PDF",
+    "PS"
+  ],
+  "pdf-to-sgi": [
+    "PDF",
+    "SGI"
+  ],
+  "pdf-to-tga": [
+    "PDF",
+    "TGA"
+  ],
+  "pdf-to-vicar": [
+    "PDF",
+    "VICAR"
+  ],
+  "pdf-to-wbmp": [
+    "PDF",
+    "WBMP"
+  ],
+  "pdf-to-epub": [
+    "PDF",
+    "EPUB"
+  ],
+  "pdf-to-hdr": [
+    "PDF",
+    "HDR"
+  ],
+  "pdf-to-j2k": [
+    "PDF",
+    "J2K"
+  ],
+  "pdf-to-jpg": [
+    "PDF",
+    "JPG"
+  ],
+  "pdf-to-wpg": [
+    "PDF",
+    "WPG"
+  ],
+  "ply-to-json": [
+    "PLY",
+    "JSON"
+  ],
+  "png-to-bie": [
+    "PNG",
+    "BIE"
+  ],
+  "png-to-bmp3": [
+    "PNG",
+    "BMP3"
+  ],
+  "png-to-cin": [
+    "PNG",
+    "CIN"
+  ],
+  "png-to-dpx": [
+    "PNG",
+    "DPX"
+  ],
+  "png-to-fax": [
+    "PNG",
+    "FAX"
+  ],
+  "png-to-gif87": [
+    "PNG",
+    "GIF87"
+  ],
+  "png-to-html": [
+    "PNG",
+    "HTML"
+  ],
+  "png-to-jng": [
+    "PNG",
+    "JNG"
+  ],
+  "png-to-miff": [
+    "PNG",
+    "MIFF"
+  ],
+  "png-to-pcd": [
+    "PNG",
+    "PCD"
+  ],
+  "png-to-pcx": [
+    "PNG",
+    "PCX"
+  ],
+  "png-to-picon": [
+    "PNG",
+    "PICON"
+  ],
+  "png-to-png32": [
+    "PNG",
+    "PNG32"
+  ],
+  "png-to-pnm": [
+    "PNG",
+    "PNM"
+  ],
+  "png-to-ras": [
+    "PNG",
+    "RAS"
+  ],
+  "png-to-tiff": [
+    "PNG",
+    "TIFF"
+  ],
+  "png-to-webp": [
+    "PNG",
+    "WEBP"
+  ],
+  "png-to-xpm": [
+    "PNG",
+    "XPM"
+  ],
+  "png-to-g3": [
+    "PNG",
+    "G3"
+  ],
+  "png-to-hrz": [
+    "PNG",
+    "HRZ"
+  ],
+  "png-to-jp2": [
+    "PNG",
+    "JP2"
+  ],
+  "png-to-pfm": [
+    "PNG",
+    "PFM"
+  ],
+  "ppm-to-avs": [
+    "PPM",
+    "AVS"
+  ],
+  "ppm-to-bmp": [
+    "PPM",
+    "BMP"
+  ],
+  "ppm-to-epi": [
+    "PPM",
+    "EPI"
+  ],
+  "ppm-to-epsf": [
+    "PPM",
+    "EPSF"
+  ],
+  "ppm-to-jbg": [
+    "PPM",
+    "JBG"
+  ],
+  "ppm-to-pam": [
+    "PPM",
+    "PAM"
+  ],
+  "ppm-to-pdf": [
+    "PPM",
+    "PDF"
+  ],
+  "ppm-to-png00": [
+    "PPM",
+    "PNG00"
+  ],
+  "ppm-to-png64": [
+    "PPM",
+    "PNG64"
+  ],
+  "ppm-to-ps": [
+    "PPM",
+    "PS"
+  ],
+  "ppm-to-sgi": [
+    "PPM",
+    "SGI"
+  ],
+  "ppm-to-tga": [
+    "PPM",
+    "TGA"
+  ],
+  "ppm-to-vicar": [
+    "PPM",
+    "VICAR"
+  ],
+  "ppm-to-wbmp": [
+    "PPM",
+    "WBMP"
+  ],
+  "ppm-to-cur": [
+    "PPM",
+    "CUR"
+  ],
+  "ppm-to-dxt5": [
+    "PPM",
+    "DXT5"
+  ],
+  "ppm-to-fl32": [
+    "PPM",
+    "FL32"
+  ],
+  "ppm-to-hdr": [
+    "PPM",
+    "HDR"
+  ],
+  "ppm-to-icon": [
+    "PPM",
+    "ICON"
+  ],
+  "ppm-to-j2k": [
+    "PPM",
+    "J2K"
+  ],
+  "ppm-to-jpg": [
+    "PPM",
+    "JPG"
+  ],
+  "ppm-to-json": [
+    "PPM",
+    "JSON"
+  ],
+  "ppm-to-palm": [
+    "PPM",
+    "PALM"
+  ],
+  "ppm-to-phm": [
+    "PPM",
+    "PHM"
+  ],
+  "ppm-to-strimg": [
+    "PPM",
+    "STRIMG"
+  ],
+  "ppm-to-tiff64": [
+    "PPM",
+    "TIFF64"
+  ]
+}

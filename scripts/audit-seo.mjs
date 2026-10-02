@@ -1,20 +1,23 @@
 import {readdirSync,readFileSync,existsSync,writeFileSync} from 'node:fs';
 import {resolve,relative} from 'node:path';
-import {pairs,strings} from '../site/src/strings.js';
+import {sitemapURLs} from './sitemap-urls.mjs';
+import {strings} from '../site/src/strings.js';
+import {pairs} from '../site/src/published-pairs.js';
 const base='https://wase.download',root=resolve('dist');
 const read=p=>readFileSync(p,'utf8');
 const walk=p=>readdirSync(p,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(resolve(p,e.name)):e.name.endsWith('.html')?[resolve(p,e.name)]:[]);
 export function audit(){
  const issues=[],xml=read(resolve(root,'sitemap.xml'));
- const urls=[...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]),listed=new Set(urls),pages=new Map(),titles=new Set();
+ const urls=sitemapURLs(root),listed=new Set(urls),pages=new Map(),titles=new Set();
  if(urls.length!==listed.size)issues.push('Duplicate sitemap URLs');
- if(urls.length>50000||Buffer.byteLength(xml)>50*1024*1024)issues.push('Sitemap exceeds protocol limits');
+
  for(const file of walk(root)){
   const html=read(file),path='/'+relative(root,file).replaceAll('\\','/').replace(/index\.html$/,''),url=base+path;
   const canonical=html.match(/<link rel="canonical" href="([^"]+)"/),title=html.match(/<title>([^<]+)<\/title>/)?.[1];
   if(!canonical){issues.push(`${path}: missing canonical`);continue;}
   // The language chooser at / intentionally duplicates /en/; it is not a canonical page.
   if(canonical[1]!==url){if(path!=='/')issues.push(`${path}: unexpected canonical ${canonical[1]}`);continue;}
+  if(/<meta name="robots" content="noindex,follow"/.test(html)){if(!/^\/(en|ru|zh)\/formats\/[^/]+\/$/.test(path))issues.push(`${path}: unexpected noindex`);continue;}
   pages.set(url,html);
   if(!listed.has(url))issues.push(`${path}: canonical page missing from sitemap`);
   if(!title||titles.has(title))issues.push(`${path}: missing or duplicate title`);titles.add(title);

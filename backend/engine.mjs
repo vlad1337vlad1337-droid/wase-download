@@ -13,9 +13,18 @@ for(const ext of ['ppt','pptx','pptm','pps','ppsx','pot','potx','odp','fodp']){c
 if(process.argv[2]==='catalog'){console.log(JSON.stringify({matrix:catalog,categories}));process.exit(0);}
 const [input,output,engine]=process.argv.slice(2);
 if(!catalog[input]?.[output]?.includes(engine))throw new Error('Unsupported conversion');
-if(engine==='wasepresentation'){const filters={pdf:'impress_pdf_Export',pptx:'Impress MS PowerPoint 2007 XML',odp:'impress8'};await promisify(execFile)('soffice',['--headless','-env:UserInstallation=file:///tmp/wase-impress','--convert-to',output+':'+filters[output],'--outdir','/job',`/job/input.${input}`],{timeout:160000});}else if(engine==='wasefont'||engine==='wasearchive')await promisify(execFile)('python3',['/extra.py',engine,input,output],{timeout:170000});else if(output==='avif')await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,'-frames:v','1','-c:v','libaom-av1','-cpu-used','8','-crf','30','-still-picture','1','-threads','1','/job/output.avif'],{timeout:50000});else if(output==='svg'&&['avif','heic','heif','jxl'].includes(input)){await engines.vips.convert(`/job/input.${input}`,input,'png','/job/normalized.png');await engines.vtracer.convert('/job/normalized.png','png','svg','/job/output.svg');await rm('/job/normalized.png');}else if(engine==='vips'&&output==='dzi')await promisify(execFile)('vips',['dzsave',`/job/input.${input}`,'/job/output']);else await engines[engine].convert(`/job/input.${input}`,input,output,`/job/output.${output}`);
+let conversionError;try{
+if(engine==='wasepresentation'){const filters={pdf:'impress_pdf_Export',pptx:'Impress MS PowerPoint 2007 XML',odp:'impress8'};await promisify(execFile)('soffice',['--headless','-env:UserInstallation=file:///tmp/wase-impress','--convert-to',output+':'+filters[output],'--outdir','/job',`/job/input.${input}`],{timeout:160000});}else if(engine==='wasefont'||engine==='wasearchive')await promisify(execFile)('python3',['/extra.py',engine,input,output],{timeout:170000});else if(output==='avif')await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,'-frames:v','1','-c:v','libaom-av1','-cpu-used','8','-crf','30','-still-picture','1','-threads','1','/job/output.avif'],{timeout:50000});else if(output==='svg'&&['avif','heic','heif','jxl'].includes(input)){await engines.vips.convert(`/job/input.${input}`,input,'png','/job/normalized.png');await engines.vtracer.convert('/job/normalized.png','png','svg','/job/output.svg');await rm('/job/normalized.png');}else if(engine==='ffmpeg'&&['png','jpg','jpeg','bmp','ico','tif','tiff'].includes(output))await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,...(output==='ico'?['-vf','scale=256:256:force_original_aspect_ratio=decrease']:[]),'-frames:v','1','-threads','1',`/job/output.${output}`],{timeout:60000});else if(engine==='vips'&&output==='dzi')await promisify(execFile)('vips',['dzsave',`/job/input.${input}`,'/job/output']);else await engines[engine].convert(`/job/input.${input}`,input,output,`/job/output.${output}`);
 
-const outputs=(await readdir('/job')).filter(f=>f!==`input.${input}`);if(!outputs.length)throw new Error('No output files');
+}catch(error){conversionError=error;}
+
+const outputs=(await readdir('/job')).filter(f=>f!==`input.${input}`);
 
 // The broker owns the mounted root and input; only converter-created outputs belong to this UID.
 async function permissions(folder){if(folder!=='/job')await chmod(folder,0o777);for(const file of await readdir(folder)){if(folder==='/job'&&file===`input.${input}`)continue;const p=folder+'/'+file,s=await lstat(p);if(s.isSymbolicLink())throw new Error('Unsafe output');if(s.isDirectory())await permissions(p);else if(s.isFile())await chmod(p,0o644);}}await permissions('/job');
+
+if(conversionError)throw conversionError;
+// Reject invalid or mislabeled common outputs before accepting an engine attempt.
+await promisify(execFile)('python3',['/output-validation.py',output,'/job',input],{timeout:10000});
+
+if(!outputs.length)throw new Error('No output files');

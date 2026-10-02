@@ -1,0 +1,7322 @@
+[
+  {
+    "input": "264",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "265",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "266",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "302",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "602",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "669",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "722",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "svg",
+    "fixture": true,
+    "tested": 387,
+    "passed": 29,
+    "failed": 337,
+    "unvalidated": 21
+  },
+  {
+    "input": "3fr",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "8bim",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "8bimtext",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "8bimwtext",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "app1",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "app1jpeg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "art",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "arw",
+    "fixture": true,
+    "tested": 212,
+    "passed": 0,
+    "failed": 212,
+    "unvalidated": 0
+  },
+  {
+    "input": "avs",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "b",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bie",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bigtiff",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bmp",
+    "fixture": true,
+    "tested": 373,
+    "passed": 125,
+    "failed": 127,
+    "unvalidated": 121
+  },
+  {
+    "input": "c",
+    "fixture": true,
+    "tested": 129,
+    "passed": 5,
+    "failed": 124,
+    "unvalidated": 0
+  },
+  {
+    "input": "cals",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "caption",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cin",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cmyk",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cmyka",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cr2",
+    "fixture": true,
+    "tested": 212,
+    "passed": 0,
+    "failed": 212,
+    "unvalidated": 0
+  },
+  {
+    "input": "crw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cur",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cut",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dcm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dcr",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dcx",
+    "fixture": true,
+    "tested": 211,
+    "passed": 110,
+    "failed": 26,
+    "unvalidated": 75
+  },
+  {
+    "input": "dng",
+    "fixture": true,
+    "tested": 212,
+    "passed": 68,
+    "failed": 112,
+    "unvalidated": 32
+  },
+  {
+    "input": "dpx",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "epdf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "epi",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "eps",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "epsf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "epsi",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ept",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ept2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ept3",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "erf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "exif",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "fax",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "file",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "fits",
+    "fixture": true,
+    "tested": 377,
+    "passed": 51,
+    "failed": 257,
+    "unvalidated": 69
+  },
+  {
+    "input": "fractal",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ftp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "g",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "gif",
+    "fixture": true,
+    "tested": 377,
+    "passed": 125,
+    "failed": 147,
+    "unvalidated": 105
+  },
+  {
+    "input": "gif87",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "gradient",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "gray",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "graya",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "heic",
+    "fixture": true,
+    "tested": 222,
+    "passed": 0,
+    "failed": 222,
+    "unvalidated": 0
+  },
+  {
+    "input": "heif",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "hrz",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "http",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "icb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "icc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "icm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ico",
+    "fixture": true,
+    "tested": 367,
+    "passed": 1,
+    "failed": 366,
+    "unvalidated": 0
+  },
+  {
+    "input": "icon",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "identity",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "image",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "iptc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "iptctext",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "iptcwtext",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jbg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jbig",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jng",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jnx",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jpeg",
+    "fixture": true,
+    "tested": 377,
+    "passed": 1,
+    "failed": 376,
+    "unvalidated": 0
+  },
+  {
+    "input": "jpg",
+    "fixture": true,
+    "tested": 211,
+    "passed": 116,
+    "failed": 19,
+    "unvalidated": 76
+  },
+  {
+    "input": "k",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "k25",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "kdc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "label",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "m",
+    "fixture": true,
+    "tested": 129,
+    "passed": 5,
+    "failed": 124,
+    "unvalidated": 0
+  },
+  {
+    "input": "mac",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "map",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mat",
+    "fixture": true,
+    "tested": 221,
+    "passed": 101,
+    "failed": 35,
+    "unvalidated": 85
+  },
+  {
+    "input": "mef",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "miff",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mng",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mono",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mpc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mrw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "msl",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mtv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mvg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "nef",
+    "fixture": true,
+    "tested": 212,
+    "passed": 0,
+    "failed": 212,
+    "unvalidated": 0
+  },
+  {
+    "input": "null",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "o",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "orf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "otb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "p7",
+    "fixture": true,
+    "tested": 129,
+    "passed": 3,
+    "failed": 126,
+    "unvalidated": 0
+  },
+  {
+    "input": "pal",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "palm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pam",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pbm",
+    "fixture": true,
+    "tested": 373,
+    "passed": 1,
+    "failed": 372,
+    "unvalidated": 0
+  },
+  {
+    "input": "pcd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pcds",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pct",
+    "fixture": true,
+    "tested": 211,
+    "passed": 78,
+    "failed": 74,
+    "unvalidated": 59
+  },
+  {
+    "input": "pcx",
+    "fixture": true,
+    "tested": 367,
+    "passed": 92,
+    "failed": 202,
+    "unvalidated": 73
+  },
+  {
+    "input": "pdb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pdf",
+    "fixture": true,
+    "tested": 261,
+    "passed": 65,
+    "failed": 125,
+    "unvalidated": 71
+  },
+  {
+    "input": "pef",
+    "fixture": true,
+    "tested": 212,
+    "passed": 0,
+    "failed": 212,
+    "unvalidated": 0
+  },
+  {
+    "input": "pfa",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pfb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pgm",
+    "fixture": true,
+    "tested": 383,
+    "passed": 1,
+    "failed": 382,
+    "unvalidated": 0
+  },
+  {
+    "input": "picon",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pict",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pix",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "plasma",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "png",
+    "fixture": true,
+    "tested": 387,
+    "passed": 87,
+    "failed": 224,
+    "unvalidated": 76
+  },
+  {
+    "input": "png00",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "png24",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "png32",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "png48",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "png64",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "png8",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pnm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ppm",
+    "fixture": true,
+    "tested": 377,
+    "passed": 84,
+    "failed": 219,
+    "unvalidated": 74
+  },
+  {
+    "input": "ps",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ptif",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pwp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "r",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "raf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ras",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rgb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rgba",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rla",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rle",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sct",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sfw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sgi",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sr2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "srf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "stegano",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sun",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "svgz",
+    "fixture": true,
+    "tested": 211,
+    "passed": 29,
+    "failed": 169,
+    "unvalidated": 13
+  },
+  {
+    "input": "text",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tga",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tif",
+    "fixture": true,
+    "tested": 317,
+    "passed": 1,
+    "failed": 316,
+    "unvalidated": 0
+  },
+  {
+    "input": "tiff",
+    "fixture": true,
+    "tested": 377,
+    "passed": 1,
+    "failed": 376,
+    "unvalidated": 0
+  },
+  {
+    "input": "tile",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tim",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "topol",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ttf",
+    "fixture": true,
+    "tested": 3,
+    "passed": 1,
+    "failed": 2,
+    "unvalidated": 0
+  },
+  {
+    "input": "txt",
+    "fixture": true,
+    "tested": 395,
+    "passed": 1,
+    "failed": 394,
+    "unvalidated": 0
+  },
+  {
+    "input": "uyvy",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vda",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vicar",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vid",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "viff",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vst",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "wbmp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "webp",
+    "fixture": true,
+    "tested": 377,
+    "passed": 1,
+    "failed": 376,
+    "unvalidated": 0
+  },
+  {
+    "input": "wmf",
+    "fixture": true,
+    "tested": 221,
+    "passed": 1,
+    "failed": 220,
+    "unvalidated": 0
+  },
+  {
+    "input": "wpg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "x3f",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xbm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xcf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xmp",
+    "fixture": true,
+    "tested": 129,
+    "passed": 1,
+    "failed": 128,
+    "unvalidated": 0
+  },
+  {
+    "input": "xpm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xwd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "y",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "yuv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "azw3",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "azw4",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "chm",
+    "fixture": true,
+    "tested": 20,
+    "passed": 0,
+    "failed": 20,
+    "unvalidated": 0
+  },
+  {
+    "input": "cbr",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cbz",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cbt",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cba",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cb7",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "djvu",
+    "fixture": true,
+    "tested": 20,
+    "passed": 0,
+    "failed": 20,
+    "unvalidated": 0
+  },
+  {
+    "input": "docx",
+    "fixture": true,
+    "tested": 92,
+    "passed": 10,
+    "failed": 5,
+    "unvalidated": 77
+  },
+  {
+    "input": "epub",
+    "fixture": true,
+    "tested": 92,
+    "passed": 8,
+    "failed": 18,
+    "unvalidated": 66
+  },
+  {
+    "input": "fb2",
+    "fixture": true,
+    "tested": 91,
+    "passed": 11,
+    "failed": 5,
+    "unvalidated": 75
+  },
+  {
+    "input": "htlz",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "html",
+    "fixture": true,
+    "tested": 92,
+    "passed": 10,
+    "failed": 5,
+    "unvalidated": 77
+  },
+  {
+    "input": "lit",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "lrf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mobi",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "odt",
+    "fixture": true,
+    "tested": 33,
+    "passed": 8,
+    "failed": 2,
+    "unvalidated": 23
+  },
+  {
+    "input": "pml",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rtf",
+    "fixture": true,
+    "tested": 91,
+    "passed": 5,
+    "failed": 58,
+    "unvalidated": 28
+  },
+  {
+    "input": "snb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tcr",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "msg",
+    "fixture": true,
+    "tested": 2,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 2
+  },
+  {
+    "input": "3g2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "3gp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "aai",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ai",
+    "fixture": true,
+    "tested": 182,
+    "passed": 104,
+    "failed": 12,
+    "unvalidated": 66
+  },
+  {
+    "input": "apng",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "avci",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "avi",
+    "fixture": true,
+    "tested": 340,
+    "passed": 1,
+    "failed": 339,
+    "unvalidated": 0
+  },
+  {
+    "input": "avif",
+    "fixture": true,
+    "tested": 350,
+    "passed": 124,
+    "failed": 135,
+    "unvalidated": 91
+  },
+  {
+    "input": "bayer",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bayera",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bgr",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bgra",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bgro",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bmp2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bmp3",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cal",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "canvas",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "clip",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "clipboard",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cr3",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cube",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "data",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dcraw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dds",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dfont",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dxt1",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dxt5",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "emf",
+    "fixture": true,
+    "tested": 192,
+    "passed": 59,
+    "failed": 91,
+    "unvalidated": 42
+  },
+  {
+    "input": "exr",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "farbfeld",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ff",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "fff",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "fl32",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "flif",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "flv",
+    "fixture": true,
+    "tested": 340,
+    "passed": 125,
+    "failed": 103,
+    "unvalidated": 112
+  },
+  {
+    "input": "fts",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ftxt",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "g3",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "g4",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "group4",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "hald",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "hdr",
+    "fixture": true,
+    "tested": 192,
+    "passed": 0,
+    "failed": 192,
+    "unvalidated": 0
+  },
+  {
+    "input": "https",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "iiq",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "inline",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ipl",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "j2c",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "j2k",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jp2",
+    "fixture": true,
+    "tested": 192,
+    "passed": 106,
+    "failed": 23,
+    "unvalidated": 63
+  },
+  {
+    "input": "jpc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jpe",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jpm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jps",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jpt",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jxl",
+    "fixture": true,
+    "tested": 350,
+    "passed": 54,
+    "failed": 254,
+    "unvalidated": 42
+  },
+  {
+    "input": "m2v",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "m4v",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mask",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mdc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mkv",
+    "fixture": true,
+    "tested": 340,
+    "passed": 126,
+    "failed": 125,
+    "unvalidated": 89
+  },
+  {
+    "input": "mos",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mov",
+    "fixture": true,
+    "tested": 340,
+    "passed": 126,
+    "failed": 125,
+    "unvalidated": 89
+  },
+  {
+    "input": "mp4",
+    "fixture": true,
+    "tested": 340,
+    "passed": 126,
+    "failed": 125,
+    "unvalidated": 89
+  },
+  {
+    "input": "mpeg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mpg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mpo",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "msvg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "nrw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ora",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "otf",
+    "fixture": true,
+    "tested": 3,
+    "passed": 1,
+    "failed": 2,
+    "unvalidated": 0
+  },
+  {
+    "input": "pango",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pattern",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pcl",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pdfa",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pes",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pfm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pgx",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "phm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pjpeg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pocketmod",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "psb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "psd",
+    "fixture": true,
+    "tested": 340,
+    "passed": 42,
+    "failed": 257,
+    "unvalidated": 41
+  },
+  {
+    "input": "qoi",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "radial",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "raw",
+    "fixture": true,
+    "tested": 215,
+    "passed": 0,
+    "failed": 215,
+    "unvalidated": 0
+  },
+  {
+    "input": "rgb565",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rgbo",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rgf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rmf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rsvg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rw2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rwl",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "scr",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "screenshot",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "six",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sixel",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "srw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sti",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "strimg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tiff64",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tm2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ttc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vips",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "webm",
+    "fixture": true,
+    "tested": 340,
+    "passed": 1,
+    "failed": 339,
+    "unvalidated": 0
+  },
+  {
+    "input": "wmv",
+    "fixture": true,
+    "tested": 340,
+    "passed": 1,
+    "failed": 339,
+    "unvalidated": 0
+  },
+  {
+    "input": "xps",
+    "fixture": true,
+    "tested": 183,
+    "passed": 0,
+    "failed": 183,
+    "unvalidated": 0
+  },
+  {
+    "input": "ycbcr",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ycbcra",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tex",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "latex",
+    "fixture": true,
+    "tested": 64,
+    "passed": 1,
+    "failed": 63,
+    "unvalidated": 0
+  },
+  {
+    "input": "dvi",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xdv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "avcs",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "h264",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "heics",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "heifs",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "hif",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bif",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "csv",
+    "fixture": true,
+    "tested": 99,
+    "passed": 14,
+    "failed": 20,
+    "unvalidated": 65
+  },
+  {
+    "input": "hdr.gz",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "img.gz",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "img",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jpx",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mrxs",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ndpi",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "nia.gz",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "nia",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "nii.gz",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "nii",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pic",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "scn",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "svs",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "svslide",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "szi",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "v",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vms",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vmu",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "zip",
+    "fixture": true,
+    "tested": 4,
+    "passed": 1,
+    "failed": 3,
+    "unvalidated": 0
+  },
+  {
+    "input": "abw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cwk",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "doc",
+    "fixture": true,
+    "tested": 19,
+    "passed": 8,
+    "failed": 0,
+    "unvalidated": 11
+  },
+  {
+    "input": "docm",
+    "fixture": true,
+    "tested": 19,
+    "passed": 9,
+    "failed": 0,
+    "unvalidated": 10
+  },
+  {
+    "input": "dot",
+    "fixture": true,
+    "tested": 19,
+    "passed": 1,
+    "failed": 18,
+    "unvalidated": 0
+  },
+  {
+    "input": "dotx",
+    "fixture": true,
+    "tested": 19,
+    "passed": 9,
+    "failed": 0,
+    "unvalidated": 10
+  },
+  {
+    "input": "dotm",
+    "fixture": true,
+    "tested": 19,
+    "passed": 9,
+    "failed": 0,
+    "unvalidated": 10
+  },
+  {
+    "input": "fodt",
+    "fixture": true,
+    "tested": 19,
+    "passed": 9,
+    "failed": 0,
+    "unvalidated": 10
+  },
+  {
+    "input": "htm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "hwp",
+    "fixture": true,
+    "tested": 20,
+    "passed": 9,
+    "failed": 0,
+    "unvalidated": 11
+  },
+  {
+    "input": "mcw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mwd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "lwp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ott",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pages",
+    "fixture": true,
+    "tested": 20,
+    "passed": 0,
+    "failed": 20,
+    "unvalidated": 0
+  },
+  {
+    "input": "psw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sdw",
+    "fixture": true,
+    "tested": 20,
+    "passed": 6,
+    "failed": 11,
+    "unvalidated": 3
+  },
+  {
+    "input": "stw",
+    "fixture": true,
+    "tested": 20,
+    "passed": 4,
+    "failed": 13,
+    "unvalidated": 3
+  },
+  {
+    "input": "sxw",
+    "fixture": true,
+    "tested": 20,
+    "passed": 1,
+    "failed": 19,
+    "unvalidated": 0
+  },
+  {
+    "input": "tab",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "wn",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "wpd",
+    "fixture": true,
+    "tested": 20,
+    "passed": 1,
+    "failed": 19,
+    "unvalidated": 0
+  },
+  {
+    "input": "wps",
+    "fixture": true,
+    "tested": 19,
+    "passed": 1,
+    "failed": 18,
+    "unvalidated": 0
+  },
+  {
+    "input": "wpt",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "wri",
+    "fixture": true,
+    "tested": 20,
+    "passed": 1,
+    "failed": 19,
+    "unvalidated": 0
+  },
+  {
+    "input": "xhtml",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xml",
+    "fixture": true,
+    "tested": 46,
+    "passed": 0,
+    "failed": 46,
+    "unvalidated": 0
+  },
+  {
+    "input": "zabw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ods",
+    "fixture": true,
+    "tested": 9,
+    "passed": 2,
+    "failed": 2,
+    "unvalidated": 5
+  },
+  {
+    "input": "tsv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xls",
+    "fixture": true,
+    "tested": 10,
+    "passed": 1,
+    "failed": 9,
+    "unvalidated": 0
+  },
+  {
+    "input": "xlsx",
+    "fixture": true,
+    "tested": 10,
+    "passed": 1,
+    "failed": 9,
+    "unvalidated": 0
+  },
+  {
+    "input": "textile",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tikiwiki",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "twiki",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "typst",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vimwiki",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "biblatex",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bibtex",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bits",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "commonmark",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "commonmark_x",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "creole",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "csljson",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "djot",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "docbook",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dokuwiki",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "endnotexml",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "gfm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "haddock",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ipynb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jats",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jira",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "json",
+    "fixture": true,
+    "tested": 68,
+    "passed": 0,
+    "failed": 65,
+    "unvalidated": 3
+  },
+  {
+    "input": "man",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "markdown",
+    "fixture": true,
+    "tested": 64,
+    "passed": 1,
+    "failed": 63,
+    "unvalidated": 0
+  },
+  {
+    "input": "markdown_mmd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "markdown_phpextra",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "markdown_strict",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mediawiki",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "muse",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pandoc native",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "opml",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "org",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ris",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rst",
+    "fixture": true,
+    "tested": 64,
+    "passed": 1,
+    "failed": 63,
+    "unvalidated": 0
+  },
+  {
+    "input": "t2t",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "yaml",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "toml",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "3dostr",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "4xm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "aa",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "aa3",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "aac",
+    "fixture": true,
+    "tested": 202,
+    "passed": 45,
+    "failed": 114,
+    "unvalidated": 43
+  },
+  {
+    "input": "aax",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ac3",
+    "fixture": true,
+    "tested": 202,
+    "passed": 0,
+    "failed": 202,
+    "unvalidated": 0
+  },
+  {
+    "input": "ac4",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ace",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "acm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "act",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "adf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "adp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ads",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "adx",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "aea",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "afc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "aiff",
+    "fixture": true,
+    "tested": 202,
+    "passed": 0,
+    "failed": 202,
+    "unvalidated": 0
+  },
+  {
+    "input": "aix",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "al",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "alaw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "alias_pix",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "alp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "alsa",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "amf",
+    "fixture": true,
+    "tested": 226,
+    "passed": 6,
+    "failed": 203,
+    "unvalidated": 17
+  },
+  {
+    "input": "amr",
+    "fixture": true,
+    "tested": 202,
+    "passed": 46,
+    "failed": 113,
+    "unvalidated": 43
+  },
+  {
+    "input": "amrnb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "amrwb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ams",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "anm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ans",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "apc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ape",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "apl",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "apm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "aptx",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "aptxhd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "aqt",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "aqtitle",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "argo_asf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "argo_brp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "asc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "asf",
+    "fixture": true,
+    "tested": 202,
+    "passed": 52,
+    "failed": 101,
+    "unvalidated": 49
+  },
+  {
+    "input": "asf_o",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ass",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ast",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "au",
+    "fixture": true,
+    "tested": 202,
+    "passed": 44,
+    "failed": 114,
+    "unvalidated": 44
+  },
+  {
+    "input": "av1",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "avc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "avr",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "avs2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "avs3",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "awb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bcstm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bethsoftvid",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bfi",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bfstm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bin",
+    "fixture": true,
+    "tested": 203,
+    "passed": 0,
+    "failed": 203,
+    "unvalidated": 0
+  },
+  {
+    "input": "bink",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "binka",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bit",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bitpacked",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bmv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bonk",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "boa",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "brender_pix",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "brstm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "c2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "c93",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "caf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cavsvideo",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cdata",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cdg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cdxl",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cgi",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cif",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cine",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "codec2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "codec2raw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "concat",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cri",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dash",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dat",
+    "fixture": true,
+    "tested": 203,
+    "passed": 0,
+    "failed": 203,
+    "unvalidated": 0
+  },
+  {
+    "input": "daud",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dav",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dbm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dcstr",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "derf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dfpwm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dfa",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dhav",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dif",
+    "fixture": true,
+    "tested": 203,
+    "passed": 0,
+    "failed": 203,
+    "unvalidated": 0
+  },
+  {
+    "input": "digi",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dirac",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "diz",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dmf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dnxhd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dpx_pipe",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dsf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dsicin",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dsm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dss",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dtk",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dtm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dts",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dtshd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dvbsub",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dvbtxt",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dxa",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ea",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "eac3",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ea_cdata",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "epaf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "exr_pipe",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "f32be",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "f32le",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ec3",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "evc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "f4v",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "f64be",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "f64le",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "fap",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "far",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "fbdev",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ffmetadata",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "filmstrip",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "film_cpk",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "flac",
+    "fixture": true,
+    "tested": 202,
+    "passed": 44,
+    "failed": 114,
+    "unvalidated": 44
+  },
+  {
+    "input": "flic",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "flm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "frm",
+    "fixture": true,
+    "tested": 203,
+    "passed": 0,
+    "failed": 203,
+    "unvalidated": 0
+  },
+  {
+    "input": "fsb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "fwse",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "g722",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "g723_1",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "g726",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "g726le",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "g729",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "gdm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "gdv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "genh",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "gsm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "gxf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "h261",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "h263",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "h265",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "h266",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "h26l",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "hca",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "hcom",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "hevc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "hls",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "hnm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ice",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "idcin",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "idf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "idx",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "iec61883",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "iff",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ifv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ilbc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "image2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "imf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "imx",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ingenient",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ipmovie",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ipu",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ircam",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ism",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "isma",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ismv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "iss",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "it",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "iv8",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ivf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ivr",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "j2b",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jack",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jacosub",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "jpegls",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "kmsgrab",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "kux",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "kvag",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "lavfi",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "laf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "lmlm4",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "loas",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "lrc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "luodat",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "lvf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "lxf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "m15",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "m2a",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "m2ts",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "m4a",
+    "fixture": true,
+    "tested": 202,
+    "passed": 45,
+    "failed": 114,
+    "unvalidated": 43
+  },
+  {
+    "input": "m4b",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mca",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mcc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mdl",
+    "fixture": true,
+    "tested": 226,
+    "passed": 0,
+    "failed": 226,
+    "unvalidated": 0
+  },
+  {
+    "input": "med",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "microdvd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mj2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mjpeg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mjpg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mk3d",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mka",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mks",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mlp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mlv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mmcmp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mmf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mms",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mo3",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mod",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mods",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "moflex",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mp2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mp3",
+    "fixture": true,
+    "tested": 203,
+    "passed": 44,
+    "failed": 115,
+    "unvalidated": 44
+  },
+  {
+    "input": "mpa",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mpc8",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mpjpeg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mpl2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mpsub",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mptm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "msbc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "msf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "msnwctcp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "msp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mt2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mtaf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mtm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mulaw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "musx",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mvi",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mxf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mxg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "nc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "nfo",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "nist",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "nistsphere",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "nsp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "nst",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "nsv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "nut",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "nuv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "obu",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ogg",
+    "fixture": true,
+    "tested": 202,
+    "passed": 37,
+    "failed": 127,
+    "unvalidated": 38
+  },
+  {
+    "input": "okt",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "oma",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "omg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "opus",
+    "fixture": true,
+    "tested": 202,
+    "passed": 37,
+    "failed": 134,
+    "unvalidated": 31
+  },
+  {
+    "input": "openal",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "oss",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "osq",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "paf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pdv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pgmyuv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "photocd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pictor",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pjs",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "plm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pmp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "psm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "psp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "psxstr",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pt36",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ptm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pulse",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pva",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pvf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "qcif",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "qcp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "qdraw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "r3d",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rawvideo",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rco",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rcv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "realtext",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "redspark",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rl2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "roq",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rpl",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rka",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rsd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rso",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rt",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rtp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "rtsp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "s16be",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "s16le",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "s24be",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "s24le",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "s32be",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "s32le",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "s337m",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "s3m",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "s8",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sami",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sap",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sbc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sbg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "scc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sdns",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sdp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sdr2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sds",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sdx",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ser",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sfx",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sfx2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sga",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "shn",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "siff",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sln",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "smi",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "smjpeg",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "smk",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "smush",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sndio",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sol",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "son",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sox",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "spdif",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sph",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "srt",
+    "fixture": true,
+    "tested": 202,
+    "passed": 2,
+    "failed": 198,
+    "unvalidated": 2
+  },
+  {
+    "input": "ss2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ssa",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "st26",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "stk",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "stl",
+    "fixture": true,
+    "tested": 225,
+    "passed": 3,
+    "failed": 212,
+    "unvalidated": 10
+  },
+  {
+    "input": "stm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "stp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "str",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sub",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sup",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "svag",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "swf",
+    "fixture": true,
+    "tested": 202,
+    "passed": 0,
+    "failed": 202,
+    "unvalidated": 0
+  },
+  {
+    "input": "tak",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tco",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tedcaptions",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "thd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "thp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tiertexseq",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tmv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "truehd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ts",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tta",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tty",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "txd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ty",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ty+",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "u16be",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "u16le",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "u24be",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "u24le",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "u32be",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "u32le",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "u8",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ub",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ul",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ult",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "umx",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "usm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "uw",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "v210",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "v210x",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vag",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vc1",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vc1test",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vidc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "video4linux2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "viv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vividas",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vivo",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vmd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vobsub",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vob",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "voc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vpk",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vplayer",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vqe",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vqf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vql",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vt",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vtt",
+    "fixture": true,
+    "tested": 202,
+    "passed": 0,
+    "failed": 202,
+    "unvalidated": 0
+  },
+  {
+    "input": "vvc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "w64",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "wa",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "wav",
+    "fixture": true,
+    "tested": 203,
+    "passed": 1,
+    "failed": 202,
+    "unvalidated": 0
+  },
+  {
+    "input": "way",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "wc3movie",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "webvtt",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "wma",
+    "fixture": true,
+    "tested": 202,
+    "passed": 0,
+    "failed": 202,
+    "unvalidated": 0
+  },
+  {
+    "input": "wow",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "wsaud",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "wsd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "wsvqa",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "wtv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "wv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "wve",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "x11grab",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xa",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xbin",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xl",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xmd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xmv",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xpk",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xvag",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "xwma",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "y4m",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "yop",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "yuv10",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "3d",
+    "fixture": true,
+    "tested": 23,
+    "passed": 0,
+    "failed": 23,
+    "unvalidated": 0
+  },
+  {
+    "input": "3ds",
+    "fixture": true,
+    "tested": 22,
+    "passed": 5,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "3mf",
+    "fixture": true,
+    "tested": 22,
+    "passed": 0,
+    "failed": 22,
+    "unvalidated": 0
+  },
+  {
+    "input": "ac",
+    "fixture": true,
+    "tested": 23,
+    "passed": 1,
+    "failed": 7,
+    "unvalidated": 15
+  },
+  {
+    "input": "ac3d",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "acc",
+    "fixture": true,
+    "tested": 23,
+    "passed": 6,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "amj",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ase",
+    "fixture": true,
+    "tested": 23,
+    "passed": 6,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "ask",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "assbin",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "b3d",
+    "fixture": true,
+    "tested": 23,
+    "passed": 6,
+    "failed": 1,
+    "unvalidated": 16
+  },
+  {
+    "input": "blend",
+    "fixture": true,
+    "tested": 23,
+    "passed": 6,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "bsp",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "bvh",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "cob",
+    "fixture": true,
+    "tested": 23,
+    "passed": 6,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "csm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "dae",
+    "fixture": true,
+    "tested": 22,
+    "passed": 6,
+    "failed": 2,
+    "unvalidated": 14
+  },
+  {
+    "input": "dxf",
+    "fixture": true,
+    "tested": 23,
+    "passed": 6,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "enff",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "fbx",
+    "fixture": true,
+    "tested": 22,
+    "passed": 5,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "glb",
+    "fixture": true,
+    "tested": 22,
+    "passed": 1,
+    "failed": 6,
+    "unvalidated": 15
+  },
+  {
+    "input": "gltf",
+    "fixture": true,
+    "tested": 22,
+    "passed": 0,
+    "failed": 22,
+    "unvalidated": 0
+  },
+  {
+    "input": "hmb",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "hmp",
+    "fixture": true,
+    "tested": 23,
+    "passed": 6,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "ifc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ifczip",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "iqm",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "irr",
+    "fixture": true,
+    "tested": 23,
+    "passed": 6,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "irrmesh",
+    "fixture": true,
+    "tested": 23,
+    "passed": 6,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "lwo",
+    "fixture": true,
+    "tested": 23,
+    "passed": 6,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "lws",
+    "fixture": true,
+    "tested": 23,
+    "passed": 6,
+    "failed": 2,
+    "unvalidated": 15
+  },
+  {
+    "input": "lxo",
+    "fixture": true,
+    "tested": 23,
+    "passed": 6,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "m3d",
+    "fixture": true,
+    "tested": 23,
+    "passed": 1,
+    "failed": 5,
+    "unvalidated": 17
+  },
+  {
+    "input": "md2",
+    "fixture": true,
+    "tested": 23,
+    "passed": 0,
+    "failed": 23,
+    "unvalidated": 0
+  },
+  {
+    "input": "md3",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "md5anim",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "md5camera",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "md5mesh",
+    "fixture": true,
+    "tested": 23,
+    "passed": 6,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "mesh.xml",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mesh",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "mot",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ms3d",
+    "fixture": true,
+    "tested": 23,
+    "passed": 6,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "ndo",
+    "fixture": true,
+    "tested": 23,
+    "passed": 0,
+    "failed": 23,
+    "unvalidated": 0
+  },
+  {
+    "input": "nff",
+    "fixture": true,
+    "tested": 23,
+    "passed": 1,
+    "failed": 17,
+    "unvalidated": 5
+  },
+  {
+    "input": "obj",
+    "fixture": true,
+    "tested": 22,
+    "passed": 5,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "off",
+    "fixture": true,
+    "tested": 23,
+    "passed": 6,
+    "failed": 0,
+    "unvalidated": 17
+  },
+  {
+    "input": "ogex",
+    "fixture": true,
+    "tested": 23,
+    "passed": 1,
+    "failed": 5,
+    "unvalidated": 17
+  },
+  {
+    "input": "pk3",
+    "fixture": true,
+    "tested": 23,
+    "passed": 0,
+    "failed": 10,
+    "unvalidated": 13
+  },
+  {
+    "input": "ply",
+    "fixture": true,
+    "tested": 22,
+    "passed": 4,
+    "failed": 5,
+    "unvalidated": 13
+  },
+  {
+    "input": "pmx",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "prj",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "q3o",
+    "fixture": true,
+    "tested": 23,
+    "passed": 1,
+    "failed": 15,
+    "unvalidated": 7
+  },
+  {
+    "input": "q3s",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "sib",
+    "fixture": true,
+    "tested": 23,
+    "passed": 3,
+    "failed": 14,
+    "unvalidated": 6
+  },
+  {
+    "input": "smd",
+    "fixture": true,
+    "tested": 23,
+    "passed": 4,
+    "failed": 14,
+    "unvalidated": 5
+  },
+  {
+    "input": "step",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ter",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "uc",
+    "fixture": true,
+    "tested": 23,
+    "passed": 0,
+    "failed": 23,
+    "unvalidated": 0
+  },
+  {
+    "input": "usd",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "usda",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "usdc",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "usdz",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "vta",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "x",
+    "fixture": true,
+    "tested": 22,
+    "passed": 1,
+    "failed": 21,
+    "unvalidated": 0
+  },
+  {
+    "input": "x3d",
+    "fixture": true,
+    "tested": 23,
+    "passed": 0,
+    "failed": 23,
+    "unvalidated": 0
+  },
+  {
+    "input": "x3db",
+    "fixture": true,
+    "tested": 23,
+    "passed": 0,
+    "failed": 23,
+    "unvalidated": 0
+  },
+  {
+    "input": "xgl",
+    "fixture": true,
+    "tested": 23,
+    "passed": 1,
+    "failed": 22,
+    "unvalidated": 0
+  },
+  {
+    "input": "zae",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "zgl",
+    "fixture": true,
+    "tested": 23,
+    "passed": 1,
+    "failed": 22,
+    "unvalidated": 0
+  },
+  {
+    "input": "vcf",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "pptx",
+    "fixture": true,
+    "tested": 3,
+    "passed": 2,
+    "failed": 1,
+    "unvalidated": 0
+  },
+  {
+    "input": "woff",
+    "fixture": true,
+    "tested": 3,
+    "passed": 1,
+    "failed": 2,
+    "unvalidated": 0
+  },
+  {
+    "input": "woff2",
+    "fixture": true,
+    "tested": 3,
+    "passed": 1,
+    "failed": 2,
+    "unvalidated": 0
+  },
+  {
+    "input": "tar",
+    "fixture": true,
+    "tested": 4,
+    "passed": 1,
+    "failed": 3,
+    "unvalidated": 0
+  },
+  {
+    "input": "tar.gz",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tgz",
+    "fixture": true,
+    "tested": 5,
+    "passed": 1,
+    "failed": 4,
+    "unvalidated": 0
+  },
+  {
+    "input": "tar.bz2",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "tar.xz",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ppt",
+    "fixture": true,
+    "tested": 3,
+    "passed": 1,
+    "failed": 2,
+    "unvalidated": 0
+  },
+  {
+    "input": "pptm",
+    "fixture": true,
+    "tested": 3,
+    "passed": 2,
+    "failed": 1,
+    "unvalidated": 0
+  },
+  {
+    "input": "pps",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "ppsx",
+    "fixture": true,
+    "tested": 3,
+    "passed": 2,
+    "failed": 1,
+    "unvalidated": 0
+  },
+  {
+    "input": "pot",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "potx",
+    "fixture": false,
+    "tested": 0,
+    "passed": 0,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "odp",
+    "fixture": true,
+    "tested": 2,
+    "passed": 2,
+    "failed": 0,
+    "unvalidated": 0
+  },
+  {
+    "input": "fodp",
+    "fixture": true,
+    "tested": 3,
+    "passed": 3,
+    "failed": 0,
+    "unvalidated": 0
+  }
+]

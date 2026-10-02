@@ -11,7 +11,7 @@
   "scripts": {
     "generate": "node scripts/generate.mjs",
     "dev": "npm run generate && vite --host 127.0.0.1 --port 5188",
-    "build": "npm run generate && vite build",
+    "build": "npm run generate && vite build && node scripts/expand-catalogue.mjs",
     "preview": "vite preview --host 127.0.0.1 --port 5188",
     "test": "playwright test",
     "api": "node backend/server.mjs"

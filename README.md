@@ -8,7 +8,7 @@ A self-hosted file converter in English, Russian and Simplified Chinese. Drop a 
 - **One workspace:** visible file queue, individual downloads, ZIP, retry and cancellation.
 - **Two paths:** local browser image processing or resource-limited, offline server containers.
 - **Accessible by default:** compact responsive UI, light/dark themes, keyboard menus and reduced-motion support.
-- **Discoverable:** static localized pages, 33 tested conversion examples per language, full declared catalogue and a read-only MCP endpoint.
+- **Discoverable:** static localized pages, 2,853 conversion pages per language, backed by real HTTP checks, full declared catalogue and a read-only MCP endpoint.
 
 The pinned server build declares 915 input extensions. This is an engine catalogue, not a promise that every possible file or conversion pair works. Real byte-level smoke tests cover each family; detailed constraints are below.
 
@@ -72,3 +72,9 @@ This repository is an ImageTracer fork: its original Unlicense and [upstream REA
 ## Design
 
 Monochrome Wase Chat tokens, local Inter, Lucide controls and four small Blobatar helpers. Mascots never capture input; their animation stops when reduced motion is requested. No fabricated endorsements, usage numbers or project history.
+
+## Conversion and indexing audit
+
+The October 3 audit exercised 20,448 declared pairs using 156 representative input fixtures. Decoder validation and actual HTTP requests admitted 2,853 published pairs, including the original popular converters. This does not mean all 915 catalogue entries or arbitrary input files work. See [the complete coverage report](deploy/seo/SITEMAP-COVERAGE.md), [per-input gaps](deploy/seo/input-verification.json), and [new-pair receipts](deploy/seo/verified-receipts.json).
+
+Build output contains static EN/RU/ZH pages and a Sitemap index with language-specific child maps. Untested per-input directories remain accessible with `noindex,follow` and are excluded from Sitemap. Search-engine submission does not guarantee indexing or ranking.

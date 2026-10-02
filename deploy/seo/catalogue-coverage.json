@@ -1,7 +1,7 @@
 {
-  "canonicalPages": 114,
-  "sitemapURLs": 114,
-  "publishedPairs": 33,
+  "canonicalPages": 8574,
+  "sitemapURLs": 8574,
+  "publishedPairs": 2853,
   "languages": [
     "en",
     "ru",
@@ -12,7 +12,7 @@
   "declaredPairs": 153786,
   "sameFormatPairs": 380,
   "crossFormatPairs": 153406,
-  "unpublishedCrossFormatPairs": 153373,
+  "unpublishedCrossFormatPairs": 150553,
   "categories": {
     "document": {
       "inputs": 549,

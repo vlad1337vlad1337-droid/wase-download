@@ -1,37 +1,52 @@
-# Sitemap and catalogue coverage — 2026-10-02
+# Conversion and Sitemap audit — 2026-10-03
 
-## Verified counts
+## What was actually tested
 
 | Measure | Count |
 | --- | ---: |
-| Declared input extensions | 915 |
-| Unique declared output extensions | 521 |
-| Directional engine declarations | 153,786 |
-| Same-format declarations | 380 |
-| Cross-format declarations | 153,406 |
-| Published conversion pairs | 33 |
-| Published canonical HTML pages, including three languages and utility pages | 114 |
-| Published canonical pages absent from Sitemap | 0 |
-| Unpublished declared cross-format pairs | 153,373 |
+| Declared input identifiers | 915 |
+| Unique declared output identifiers | 521 |
+| Declared cross-format pairs | 153,406 |
+| Input formats with representative fixtures | 156 |
+| Input identifiers without fixtures | 759 |
+| Unique conversion cases exercised in isolated local containers | 20,448 |
+| Outputs passing structural/decoder checks | 2,875 |
+| Outputs produced but not validated as the requested type | 3,001 |
+| Cases failing on the selected sample, engines or timeout | 14,572 |
+| New canonical pairs passing actual HTTP API requests | 2,845 |
+| Published pairs including separately rechecked original pages | 2,853 |
+| Localized canonical pages including utility pages | 8,574 |
+| Canonical pages absent from Sitemap | 0 |
+| Child Sitemaps | 3 |
 
-The count of 916 is not the count of input extensions in the pinned catalogue. AUTO is a selector mode, not a file format. The catalogue is not an all-to-all Cartesian product. Direction matters, aliases are still extensions, and a declaration is not a successful conversion test. For example, generic engine output lists can declare semantically inappropriate media targets. Do not turn every declaration into a promise of a working converter.
+The registry is not a list of 915 fully supported uploaded-file formats. For example, FFmpeg advertises device identifiers such as `alsa`, `lavfi`, and `x11grab`; those are not ordinary uploaded files. Directional declarations are not an all-to-all product. Three languages applied blindly to all declared cross-format pairs would produce 460,218 pages, without proving their converters work.
 
-## Reproducible audit
+The 20,448-case discovery sweep was followed by decoder validation of 5,999 cases that had produced output. Of the canonical new pairs eligible after that sweep, 2,846 went through the actual HTTP broker: 2,845 passed and STW → TXT returned HTTP 422. STW → TXT was excluded from new published pages. Eight original converters not in the new admitted list passed a separate HTTP regression check, including TAR.GZ → ZIP. That check also covered multi-file DZI ZIPs, GIF → JPG, EPUB → TXT, PDF → SVG, fonts, and recovery after a corrupt PNG.
 
-Run `npm run build`, then `node scripts/audit-seo.mjs` or `node scripts/audit-seo.mjs path/to/report.json`.
+## Limits of the evidence
 
-The audit scans every built HTML file, compares canonical pages against Sitemap in both directions, verifies internal resources/links, unique titles, descriptions, one H1, reciprocal localized hreflang, structured-data URLs and published pairs against the catalogue. It checks the 50,000 URL / 50 MB protocol limits. Tests include deliberate missing Sitemap entries and broken links, so the checks demonstrably catch regressions. CI already runs the SEO test file after each build.
+Bulk execution was local ARM64 Docker, against the pinned converter image, with networking disabled, read-only root filesystem, isolated writable job directories, bounded CPU/RAM and timeouts. Production is AMD64; production representative HTTP checks are recorded separately. Bulk success does not prove every file of a format, visual fidelity, animation preservation, or success for the 759 identifiers lacking fixtures. A failed representative file may be malformed, metadata-only, unsupported by a chosen engine, or exceed the test timeout. These reports do not assert that its entire format is impossible.
 
-The root language chooser intentionally canonicalizes to `/en/`; it is excluded from Sitemap. Generated locale folders are rebuilt from scratch, preventing obsolete pages from silently surviving a removed route. Static HTML supplies metadata and guidance before JavaScript executes. API paths are excluded from crawling; private conversion results are not indexable routes.
+All newly admitted pairs have the actual source sample hash/provenance, selected engine, output hash/size and HTTP status in `verified-receipts.json`. `input-verification.json` lists all 915 inputs, including gaps. Third-party samples come from the official Apache Tika and Assimp repositories, with Git blob/SHA256 verification; generated samples contain our own simple test content. The raw corpus stays outside the public repository.
 
-## Coverage limit and expansion criteria
+## Fixes and bounded execution
 
-All existing canonical HTML pages are covered. The remaining 153,373 declarations do **not** currently have SEO landing pages. Blind expansion to three languages would create 460,218 cross-format URLs, not prove their usefulness or operation.
+Engine choices remain limited to declared capabilities and at most three attempts. Each attempt receives a fresh output directory and a unique container name. Invalid or mislabeled output is rejected rather than downloaded. GIF → JPG explicitly exports the first frame. Failed-attempt artifacts cannot leak into successful downloads. The HTTP slot is released after response completion and cleanup, including errors.
 
-For a new published pair: verify a representative input through the actual conversion pipeline, validate output structure/content, document material format limitations, add localized useful guidance, and add the pair to the shared route source. Generation adds it to Sitemap automatically; CI checks coverage and links. Large future sitemaps must be split and referenced by a sitemap index before exceeding protocol limits. No artificial lastmod, hidden keywords, fabricated popularity or traffic.
+Production retains one conversion at a time, an eight-job waiting limit, 100 MB input / 200 MB output limits, a 180-second total job deadline, and the existing aggregate 35% CPU quota. The bulk audit never ran on the VPN server.
 
-Google recommends canonical URLs in Sitemap and treats submission as a discovery hint, not an indexing guarantee. Its scaled-content policy concerns mass pages created primarily to manipulate rankings without helping users; programmatic generation itself is not prohibited.
+## Static page and Sitemap coverage
 
-Sources:
+`npm run build` generates static localized pair pages and 915 per-input configuration directories in each language. Only verified pair and utility pages enter the language-specific child Sitemaps. Untested input directories use `noindex,follow`. The catalogue groups verified links by source format; each published pair is reachable through normal HTML links. Canonical, reciprocal hreflang, titles/descriptions, structured data, internal resources and exact Sitemap coverage are audited across the full build.
+
+`node scripts/audit-seo.mjs deploy/seo/catalogue-coverage.json` checks all built pages, both directions of Sitemap coverage, links, and the 50,000 URL / 50 MB limit. `node --test tests/discovery.test.mjs tests/seo.test.mjs tests/engine-order.test.mjs` includes negative missing-page/broken-link checks. Archive security and output type checks run in CI. Build expansion happens after asset bundling, so thousands of page routes do not inflate the converter's client JavaScript.
+
+The site already uses `/sitemap.xml`; it is now a Sitemap index. Search engines can discover its child maps through the existing submitted address and `robots.txt`. This is delivery and discovery readiness, not a claim that these pages have already been indexed or ranked. Generic long-tail guidance is a starting point; richer format-specific examples and constraints remain useful editorial work.
+
+Official sources:
 - https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
+- https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview
 - https://developers.google.com/search/docs/essentials/spam-policies#scaled-content
+- https://yandex.ru/support/webmaster/ru/controlling-robot/sitemap
+
+Both Google and Yandex explicitly decline to guarantee indexing of every submitted URL. No fabricated lastmod, popularity, review count or hidden keyword text is added.
