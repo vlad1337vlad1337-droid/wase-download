@@ -1,14 +1,14 @@
 # wase.download
 
-A free image converter with English, Russian and Simplified Chinese pages. Select a file, drop images or paste a screenshot with Ctrl/Cmd+V. The browser image mode processes files on the device. Optional server mode uses self-hosted ConvertX in one isolated, offline container per job; no third-party conversion API or account is required.
+A self-hosted file converter with English, Russian and Simplified Chinese pages. Select a file, drop images or paste a screenshot with Ctrl/Cmd+V. The browser image mode processes files on the device. Server mode uses self-hosted ConvertX in one isolated, offline container per job; no third-party conversion API or account is required.
 
 This repository is a fork of [ImageTracer](https://github.com/jankovicsandras/imagetracerjs). The original tracing engine and its Unlicense are preserved. `UPSTREAM_README.md` documents the engine. WebP export on Safari uses locally hosted jSquash/libwebp WebAssembly; see `THIRD_PARTY_NOTICES.md`.
 
 ## Features
 
-- Inputs: PNG, JPEG, WebP, GIF, BMP, supported self-contained SVG.
-- Outputs: true vector SVG, PNG, JPEG, WebP, BMP and PNG-based ICO.
-- Per-file results and downloads, up to 12 files per batch.
+- Ten server categories: images, documents, ebooks, audio, archives, video, presentations, fonts, vectors and CAD/3D.
+- Input-dependent searchable server formats; browser fallback exports SVG, PNG, JPEG, WebP, BMP and ICO.
+- Per-file results and downloads, ZIP packaging and up to 20 files per batch.
 - SVG detail/color controls, raster quality/size controls.
 - Heavy tracing and Safari WebP encoding run in cancellable Web Workers.
 - Light/dark themes, mobile layouts and keyboard-accessible format menus.
@@ -39,9 +39,9 @@ RUN_SERVER_TESTS=1 npm test
 
 ## Limits
 
-20 MB per file, 12 files per batch, 16 megapixels and an 8192-pixel input edge. SVG tracing downscales to at most 768/1024/1536 pixels for Simple/Balanced/Detailed, with 16/32/64 colors. Photographs are approximated, not losslessly vectorized. GIF output uses the first frame. ICO has a maximum edge of 256 pixels. JPEG and BMP use a white background for transparency.
+100 MB per file in server mode, 20 MB in browser fallback, 20 files per batch, 16 megapixels and an 8192-pixel input edge. SVG tracing downscales to at most 768/1024/1536 pixels for Simple/Balanced/Detailed, with 16/32/64 colors. Photographs are approximated, not losslessly vectorized. Browser GIF input uses the first frame. ICO has a maximum edge of 256 pixels. JPEG and BMP use a white background for transparency.
 
-Browser mode supports the six output formats above. Server mode reads its catalogue from the pinned ConvertX image (900 input extensions and 511 output extensions in this build). These are declared engine capabilities, not a claim that every arbitrary input file or pair has been tested. Available targets depend on the input extension. SVG scripts, external resources, embedded raster images and unsupported constructs are rejected; ordinary paths, shapes, text and gradients are supported.
+Browser mode supports the six output formats above. Server mode reads its catalogue from the pinned ConvertX image (915 input extensions in this build). These are declared engine capabilities, not a claim that every arbitrary input file or pair has been tested. Available targets depend on the input extension. SVG scripts, external resources, embedded raster images and unsupported constructs are rejected; ordinary paths, shapes, text and gradients are supported.
 
 Clipboard formats and browser permissions vary. Paste keyboard shortcuts use the native paste event. The optional clipboard button shows a useful fallback when clipboard read is unavailable. Automated synthetic paste tests verify the event handling; physical iOS clipboard/device acceptance still needs a real-device check.
 
@@ -62,3 +62,5 @@ Language is selected on the root page using the saved manual preference, then br
 The compact UI uses custom keyboard-operable menus for all selectors. Decorative Blobatar characters are generated locally at build time, remain outside the file controls, and never intercept taps. FAQ and suggested format sections are omitted from the tool screen; localized conversion pages remain available for direct links and indexing.
 
 AVIF export explicitly uses FFmpeg/libaom with one thread and a 50-second limit: the upstream Vips AVIF encoder is unavailable in this pinned image. AVIF/HEIC/HEIF/JXL vectorization first normalizes to PNG before tracing rather than embedding a raster inside an SVG.
+
+Presentation input support extends the upstream catalogue using explicit LibreOffice Impress filters (PPT/PPTX/ODP to PDF/PPTX/ODP). Synthetic EPUB, presentation and WebM byte-level checks complement the image, audio, archive, font and CAD checks.

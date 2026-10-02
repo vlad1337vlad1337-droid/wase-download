@@ -1,0 +1,16 @@
+# Example only: replace upstream names with verified private deployment values.
+# Include outside the http block; requires nginx stream and ssl_preread modules.
+stream {
+ map $ssl_preread_server_name $wase_backend {
+  default 127.0.0.1:8443;
+  de1.kids-games.ru 127.0.0.1:12001;
+  fi1.kids-games.ru 127.0.0.1:12003;
+  pl1.kids-games.ru 127.0.0.1:12004;
+  at1.kids-games.ru 127.0.0.1:12005;
+ }
+ server { listen 443; listen [::]:443; ssl_preread on; proxy_pass $wase_backend; proxy_protocol on; proxy_connect_timeout 6s; proxy_timeout 1h; }
+ server { listen 127.0.0.1:12001 proxy_protocol; proxy_pass DE_NODE_IP:443; proxy_timeout 1h; }
+ server { listen 127.0.0.1:12003 proxy_protocol; proxy_pass FI_NODE_IP:443; proxy_timeout 1h; }
+ server { listen 127.0.0.1:12004 proxy_protocol; proxy_pass PL_NODE_IP:443; proxy_timeout 1h; }
+ server { listen 127.0.0.1:12005 proxy_protocol; proxy_pass AT_NODE_IP:443; proxy_timeout 1h; }
+}

@@ -9,8 +9,13 @@ User=wase-download
 Group=wase-download
 SupplementaryGroups=docker
 WorkingDirectory=/opt/wase-download
-Environment=PUBLIC_ORIGINS=https://wase.download
+Environment=PUBLIC_ORIGINS=https://wase.download,https://www.wase.download
 Environment=API_PORT=5189
+Environment=CONVERTX_IMAGE=wase-converter:20261002
+Environment=MAX_FILE_MB=100
+Environment=MAX_CONCURRENT=1
+MemoryMax=512M
+CPUQuota=20%
 ExecStart=/usr/bin/node /opt/wase-download/backend/server.mjs
 Restart=on-failure
 RestartSec=3

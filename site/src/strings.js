@@ -17,3 +17,7 @@ export const pairTitle = (lang, a,b) => lang==='ru' ? `Конвертер ${a} �
 Object.assign(strings.ru,{choose:'Выбрать файл',paste:'Вставить',browser:'В браузере',server:'На сервере',mode:'Обработка',serverInfo:'Файлы удаляются после обработки',local:'Без загрузки на сервер',files:'Файлы'});
 Object.assign(strings.en,{choose:'Choose file',paste:'Paste',browser:'In browser',server:'On server',mode:'Processing',serverInfo:'Files deleted after conversion',local:'No upload',files:'Files'});
 Object.assign(strings.zh,{choose:'选择文件',paste:'粘贴',browser:'浏览器',server:'服务器',mode:'处理方式',serverInfo:'转换后删除文件',local:'无需上传',files:'文件'});
+
+Object.assign(strings.ru,{limit:'100 МБ · 20 файлов',serverInfo:'Файлы удаляются после обработки',choose:'Выбрать файлы'});
+Object.assign(strings.en,{limit:'100 MB · 20 files',choose:'Choose files'});
+Object.assign(strings.zh,{limit:'100 MB · 20 个文件',choose:'选择文件'});
