@@ -1,39 +1,28 @@
 {
-  "name": "imagetracerjs",
-  "version": "1.2.6",
-  "description": "raster image tracer and vectorizer, bitmap to SVG converter",
-  "main": "imagetracer_v1.2.6.js",
+  "name": "wase-download",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Private, multilingual image conversion and vector tracing in your browser",
+  "license": "(Unlicense AND AGPL-3.0-only)",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
-    "test": "node ./nodecli/nodecli.js"
+    "generate": "node scripts/generate.mjs",
+    "dev": "npm run generate && vite --host 127.0.0.1 --port 5188",
+    "build": "npm run generate && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5188",
+    "test": "playwright test",
+    "api": "node backend/server.mjs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jankovicsandras/imagetracerjs.git"
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "lucide": "1.50.0",
+    "vite": "8.3.2"
   },
-  "keywords": [
-    "image",
-    "tracer",
-    "tracing",
-    "vector",
-    "raster",
-    "vectorize",
-    "vectorizing",
-    "convert",
-    "conversion",
-    "converting",
-    "tracing",
-    "bitmap",
-    "svg",
-    "bmp",
-    "png",
-    "jpg",
-    "jpeg",
-    "gif"
-  ],
-  "author": "András Jankovics",
-  "license": "Unlicense",
-  "bugs": {
-    "url": "https://github.com/jankovicsandras/imagetracerjs/issues"
-  },
-  "homepage": "https://github.com/jankovicsandras/imagetracerjs#readme"
+  "dependencies": {
+    "@jsquash/webp": "1.5.0",
+    "fflate": "^0.8.3"
+  }
 }

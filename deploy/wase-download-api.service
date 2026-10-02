@@ -1,0 +1,22 @@
+[Unit]
+Description=Wase Download isolated converter API
+After=docker.service network.target
+Requires=docker.service
+
+[Service]
+Type=simple
+User=wase-download
+Group=wase-download
+SupplementaryGroups=docker
+WorkingDirectory=/opt/wase-download
+Environment=PUBLIC_ORIGINS=https://wase.download
+Environment=API_PORT=5189
+ExecStart=/usr/bin/node /opt/wase-download/backend/server.mjs
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=20
+NoNewPrivileges=true
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+.env
+.env.*
+!.env.example
+.DS_Store
+site/en/
+site/ru/
+site/zh/
+site/index.html
+site/public/sitemap.xml
+site/public/robots.txt
+
+backend/.jobs/

@@ -1,0 +1,2 @@
+import ImageTracer from '../../imagetracer_v1.2.6.js';
+self.onmessage=({data})=>{try{const presets={simple:{ltres:2,qtres:2,pathomit:12},balanced:{ltres:1,qtres:1,pathomit:6},detailed:{ltres:.5,qtres:.5,pathomit:2}};const svg=ImageTracer.imagedataToSVG({width:data.width,height:data.height,data:new Uint8ClampedArray(data.pixels)},{...presets[data.detail],numberofcolors:data.colors,colorsampling:2,colorquantcycles:3,mincolorratio:0,strokewidth:0,roundcoords:2,viewbox:true,desc:false});self.postMessage({svg});}catch{self.postMessage({error:'worker'});}};
