@@ -1,0 +1,11 @@
+[Unit]
+Description=Shared resource budget for Wase file conversion
+
+[Slice]
+CPUQuota=35%
+CPUWeight=10
+MemoryAccounting=yes
+MemoryHigh=1100M
+MemoryMax=1300M
+IOAccounting=yes
+IOWeight=10

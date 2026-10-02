@@ -14,8 +14,12 @@ Environment=API_PORT=5189
 Environment=CONVERTX_IMAGE=wase-converter:20261002
 Environment=MAX_FILE_MB=100
 Environment=MAX_CONCURRENT=1
+Environment=CONVERT_CPU=0.25
+Environment=CONVERT_CGROUP=wase-conversion.slice
 MemoryMax=512M
-CPUQuota=20%
+CPUQuota=15%
+CPUWeight=10
+Slice=wase-conversion.slice
 ExecStart=/usr/bin/node /opt/wase-download/backend/server.mjs
 Restart=on-failure
 RestartSec=3

@@ -1,0 +1,11 @@
+# wase.download
+
+Self-hosted file conversion. Public pages are static HTML.
+
+- [Formats](https://wase.download/en/formats/): Declared capabilities and tested pages.
+- [Machine catalogue](https://wase.download/formats.json): Input-dependent targets; declarations are not guarantees.
+- [Developers](https://wase.download/en/developers/): HTTP upload API and read-only MCP.
+- [Privacy](https://wase.download/en/privacy/): Files deleted after conversion.
+
+MCP: https://wase.download/api/mcp (list_formats, conversion_info). No remote URL fetching.
+Limits: 100 MB per file, 20 files per batch; conversion is queued and resource-limited.

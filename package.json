@@ -17,6 +17,7 @@
     "api": "node backend/server.mjs"
   },
   "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.0",
     "@playwright/test": "1.63.0",
     "blobatar": "2.7.0",
     "lucide": "1.50.0",

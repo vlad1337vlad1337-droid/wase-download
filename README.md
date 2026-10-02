@@ -1,19 +1,16 @@
-# wase.download
+<p align="center"><img src=".github/assets/banner.svg" alt="wase.download — a small tool for files" width="100%"></p>
 
-A self-hosted file converter with English, Russian and Simplified Chinese pages. Select a file, drop images or paste a screenshot with Ctrl/Cmd+V. The browser image mode processes files on the device. Server mode uses self-hosted ConvertX in one isolated, offline container per job; no third-party conversion API or account is required.
+<p align="center"><a href="https://wase.download">Open converter</a> · <a href="https://wase.download/en/formats/">Supported formats</a> · <a href="https://wase.download/en/developers/">Developers</a> · <a href="https://wase.download/en/privacy/">Privacy</a></p>
 
-This repository is a fork of [ImageTracer](https://github.com/jankovicsandras/imagetracerjs). The original tracing engine and its Unlicense are preserved. `UPSTREAM_README.md` documents the engine. WebP export on Safari uses locally hosted jSquash/libwebp WebAssembly; see `THIRD_PARTY_NOTICES.md`.
+A self-hosted file converter in English, Russian and Simplified Chinese. Drop a file, paste a screenshot, choose an output and download the result. No account and no third-party conversion API.
 
-## Features
+- **Ten families:** images, documents, ebooks, audio, archives, video, presentations, fonts, vectors and CAD/3D.
+- **One workspace:** visible file queue, individual downloads, ZIP, retry and cancellation.
+- **Two paths:** local browser image processing or resource-limited, offline server containers.
+- **Accessible by default:** compact responsive UI, light/dark themes, keyboard menus and reduced-motion support.
+- **Discoverable:** static localized pages, 21 tested conversion examples per language, full declared catalogue and a read-only MCP endpoint.
 
-- Ten server categories: images, documents, ebooks, audio, archives, video, presentations, fonts, vectors and CAD/3D.
-- Input-dependent searchable server formats; browser fallback exports SVG, PNG, JPEG, WebP, BMP and ICO.
-- Per-file results and downloads, ZIP packaging and up to 20 files per batch.
-- SVG detail/color controls, raster quality/size controls.
-- Heavy tracing and Safari WebP encoding run in cancellable Web Workers.
-- Light/dark themes, mobile layouts and keyboard-accessible format menus.
-- Static localized HTML, canonical/hreflang, structured data, sitemap and robots.txt.
-- Optional Yandex Metrika; disabled without a real counter and explicit consent. No Webvisor or file-name events.
+The pinned server build declares 915 input extensions. This is an engine catalogue, not a promise that every possible file or conversion pair works. Real byte-level smoke tests cover each family; detailed constraints are below.
 
 ## Run
 
@@ -51,16 +48,27 @@ Clipboard formats and browser permissions vary. Paste keyboard shortcuts use the
 
 See `deploy/README.md` for certificates, caching, analytics and Search Console / Yandex Webmaster verification. Wordstat is keyword research, not a website registration tool.
 
-## Design and integration
+## Architecture and resources
 
-Tool-first layout: queue, status, settings, error and download are inside the upload surface. Recommendations from [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) informed visible feedback, compact spacing, focus and recovery. The current user-requested Wase Chat brand uses monochrome tokens and local Inter fonts; shadcn control-state patterns and Lucide SVGs were adapted from that design library. ZIP packaging uses fflate, already used by Wase Chat. No copied third-party logos or fabricated customer endorsements.
+Static HTML → a small browser app → loopback Node broker → one isolated ConvertX container per job. Browser image tools use Web Workers. Public file URLs and persistent histories are not created; temporary inputs and outputs are deleted on completion, cancellation or error.
 
-ConvertX fork: https://github.com/vlad1337vlad1337-droid/wase-converter-engine . The adapter does not expose the upstream unauthenticated application. ConvertX and server adapter are AGPL-3.0; original ImageTracer remains under its upstream Unlicense.
+On the current one-core deployment, the API and converter containers share a **35% CPU budget**, with one active conversion. This deliberately favors server headroom over conversion speed. Deployment templates and the verified resource model are in [backend/README.md](backend/README.md).
 
-Language is selected on the root page using the saved manual preference, then browser languages (EN/RU/ZH), with English fallback. Explicit locale URLs are preserved for sharing and SEO. The complete public catalogue is grouped/deduplicated; format menus render at most 120 matching entries and search the complete catalogue without creating thousands of hidden DOM buttons.
+## Built with open source
 
-The compact UI uses custom keyboard-operable menus for all selectors. Decorative Blobatar characters are generated locally at build time, remain outside the file controls, and never intercept taps. FAQ and suggested format sections are omitted from the tool screen; localized conversion pages remain available for direct links and indexing.
+| Project | Role |
+| --- | --- |
+| [ImageTracer](https://github.com/jankovicsandras/imagetracerjs) | Original fork and local SVG tracing |
+| [ConvertX](https://github.com/C4illin/ConvertX) | Self-hosted converter modules |
+| [VTracer](https://github.com/visioncortex/vtracer) | Server vectorization into real SVG paths |
+| [Blobatar](https://github.com/Alain00/blobatar) | Locally generated helper mascots |
+| [fflate](https://github.com/101arrowz/fflate) | ZIP packaging |
+| [jSquash](https://github.com/jamsinclair/jSquash) | Local WebP encoding on Safari |
 
-AVIF export explicitly uses FFmpeg/libaom with one thread and a 50-second limit: the upstream Vips AVIF encoder is unavailable in this pinned image. AVIF/HEIC/HEIF/JXL vectorization first normalizes to PNG before tracing rather than embedding a raster inside an SVG.
+LibreOffice, Pandoc, FFmpeg, resvg, FontTools and FontForge provide specialized conversions in the pinned server image. We retain upstream notices and do not claim these engines as original work.
 
-Presentation input support extends the upstream catalogue using explicit LibreOffice Impress filters (PPT/PPTX/ODP to PDF/PPTX/ODP). Synthetic EPUB, presentation and WebM byte-level checks complement the image, audio, archive, font and CAD checks.
+This repository is an ImageTracer fork: its original Unlicense and [upstream README](UPSTREAM_README.md) are preserved. The server integration is AGPL-3.0; complete modified engine source is at [wase-converter-engine](https://github.com/vlad1337vlad1337-droid/wase-converter-engine). See [third-party notices](THIRD_PARTY_NOTICES.md).
+
+## Design
+
+Monochrome Wase Chat tokens, local Inter, Lucide controls and four small Blobatar helpers. Mascots never capture input; their animation stops when reduced motion is requested. No fabricated endorsements, usage numbers or project history.

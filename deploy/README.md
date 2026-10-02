@@ -10,7 +10,7 @@
 8. Create a dedicated Yandex Metrika counter for this domain. Set its real numeric ID in `VITE_METRIKA_ID` at build time. Tracking stays disabled by default and runs only after consent. Do not reuse a different product's counter. Test acceptance and revocation; images and filenames are not event parameters, and Webvisor is disabled.
 9. Test in a physical Safari/iPhone and Chrome/Android, including native screenshot paste, large files, cancellation and downloads. Automated WebKit is useful but does not prove acceptance on every iOS version.
 
-Production host: 150.251.143.215. Nginx serves the static release and loopback API. Both public names use DNS only, Let’s Encrypt certificates and TLS 1.2. Public TCP listeners are 22, 80 and 443; private 8443 accepts the website stream. Certificate renewal reloads nginx. Account verification and Metrika identifiers remain unset.
+Production host: 150.251.143.215. Nginx serves the static release and loopback API. Both public names use DNS only, Let’s Encrypt certificates and TLS 1.2. Public TCP listeners are 22, 80 and 443; private 8443 accepts the website stream. Certificate renewal reloads nginx. Google domain ownership is verified in the user account; the sitemap has been submitted. Metrika remains disabled without its real counter ID and consent.
 
 ## Server-mode activation
 
