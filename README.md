@@ -58,3 +58,7 @@ Tool-first layout: queue, status, settings, error and download are inside the up
 ConvertX fork: https://github.com/vlad1337vlad1337-droid/wase-converter-engine . The adapter does not expose the upstream unauthenticated application. ConvertX and server adapter are AGPL-3.0; original ImageTracer remains under its upstream Unlicense.
 
 Language is selected on the root page using the saved manual preference, then browser languages (EN/RU/ZH), with English fallback. Explicit locale URLs are preserved for sharing and SEO. The complete public catalogue is grouped/deduplicated; format menus render at most 120 matching entries and search the complete catalogue without creating thousands of hidden DOM buttons.
+
+The compact UI uses custom keyboard-operable menus for all selectors. Decorative Blobatar characters are generated locally at build time, remain outside the file controls, and never intercept taps. FAQ and suggested format sections are omitted from the tool screen; localized conversion pages remain available for direct links and indexing.
+
+AVIF export explicitly uses FFmpeg/libaom with one thread and a 50-second limit: the upstream Vips AVIF encoder is unavailable in this pinned image. AVIF/HEIC/HEIF/JXL vectorization first normalizes to PNG before tracing rather than embedding a raster inside an SVG.

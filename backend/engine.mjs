@@ -1,6 +1,6 @@
 import {execFile} from 'node:child_process';
 import {promisify} from 'node:util';
-import { readdir,lstat,chmod } from 'node:fs/promises';
+import { readdir,lstat,chmod,rm } from 'node:fs/promises';
 const dir='/app/dist/src/converters';
 const engines={};
 for(const f of await readdir(dir)){if(!f.endsWith('.js')||['main.js','types.js'].includes(f))continue;try{const m=await import(`${dir}/${f}`);if(m.properties&&m.convert)engines[f.slice(0,-3)]=m;}catch{}}
@@ -9,7 +9,7 @@ for(const [engine,m] of Object.entries(engines))for(const [category,inputs] of O
 if(process.argv[2]==='catalog'){console.log(JSON.stringify(catalog));process.exit(0);}
 const [input,output,engine]=process.argv.slice(2);
 if(!catalog[input]?.[output]?.includes(engine))throw new Error('Unsupported conversion');
-if(engine==='vips'&&output==='dzi')await promisify(execFile)('vips',['dzsave',`/job/input.${input}`,'/job/output']);else await engines[engine].convert(`/job/input.${input}`,input,output,`/job/output.${output}`);
+if(output==='avif')await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,'-frames:v','1','-c:v','libaom-av1','-cpu-used','8','-crf','30','-still-picture','1','-threads','1','/job/output.avif'],{timeout:50000});else if(output==='svg'&&['avif','heic','heif','jxl'].includes(input)){await engines.vips.convert(`/job/input.${input}`,input,'png','/job/normalized.png');await engines.vtracer.convert('/job/normalized.png','png','svg','/job/output.svg');await rm('/job/normalized.png');}else if(engine==='vips'&&output==='dzi')await promisify(execFile)('vips',['dzsave',`/job/input.${input}`,'/job/output']);else await engines[engine].convert(`/job/input.${input}`,input,output,`/job/output.${output}`);
 
 const outputs=(await readdir('/job')).filter(f=>f!==`input.${input}`);if(!outputs.length)throw new Error('No output files');
 

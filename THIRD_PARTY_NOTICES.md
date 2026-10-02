@@ -13,3 +13,7 @@
 - shadcn/ui neutral button/focus/disabled patterns adapted from the Wase Chat design library, MIT; notice included. Brand palette and local Inter fonts reused from the user-owned Wase Chat app.
 
 - Inter / Inter Tight, SIL Open Font License 1.1; original fonts hosted locally without alteration.
+
+## Blobatar
+
+Local decorative SVG characters are generated at build time with [Alain00/blobatar](https://github.com/Alain00/blobatar), version 2.7.0. MIT License, Copyright (c) 2026 Alain. The full license is available at `site/public/licenses/blobatar-MIT.txt`. No external avatar service or runtime animation library is used.
