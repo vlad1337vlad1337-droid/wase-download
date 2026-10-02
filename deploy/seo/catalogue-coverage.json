@@ -1,0 +1,59 @@
+{
+  "canonicalPages": 114,
+  "sitemapURLs": 114,
+  "publishedPairs": 33,
+  "languages": [
+    "en",
+    "ru",
+    "zh"
+  ],
+  "inputFormats": 915,
+  "outputFormats": 521,
+  "declaredPairs": 153786,
+  "sameFormatPairs": 380,
+  "crossFormatPairs": 153406,
+  "unpublishedCrossFormatPairs": 153373,
+  "categories": {
+    "document": {
+      "inputs": 549,
+      "declaredPairs": 95188
+    },
+    "ebook": {
+      "inputs": 26,
+      "declaredPairs": 1737
+    },
+    "image": {
+      "inputs": 227,
+      "declaredPairs": 48647
+    },
+    "vector": {
+      "inputs": 6,
+      "declaredPairs": 1430
+    },
+    "font": {
+      "inputs": 4,
+      "declaredPairs": 12
+    },
+    "presentation": {
+      "inputs": 9,
+      "declaredPairs": 26
+    },
+    "audio": {
+      "inputs": 7,
+      "declaredPairs": 1423
+    },
+    "archive": {
+      "inputs": 6,
+      "declaredPairs": 25
+    },
+    "video": {
+      "inputs": 7,
+      "declaredPairs": 2387
+    },
+    "cad": {
+      "inputs": 74,
+      "declaredPairs": 2911
+    }
+  },
+  "issues": []
+}

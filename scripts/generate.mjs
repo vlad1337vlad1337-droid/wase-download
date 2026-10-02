@@ -1,4 +1,4 @@
-import { mkdirSync,writeFileSync,readFileSync } from 'node:fs';
+import { mkdirSync,writeFileSync,readFileSync,rmSync } from 'node:fs';
 import { blobatar } from 'blobatar/blob';
 import { happy } from 'blobatar/expression';
 import { strings,pairs,pairTitle } from '../site/src/strings.js';
@@ -34,6 +34,8 @@ Content-Type: application/octet-stream</pre><p>${t.limits}</p><a href="/${lang}/
 
 ${pair?`<details class="conversion-guide"><summary>${t.guide}</summary><h2>${guide.heading}</h2><ol>${guide.steps.map(step=>`<li>${esc(step)}</li>`).join('')}</ol><p>${esc(description)}</p><p>${esc(guide.source)}</p><p>${esc(guide.target)}</p><p>${t.limits}</p><h2>${guide.related}</h2><div class="conversion-links">${related.map(([other,p])=>`<a href="/${lang}/${other}/">${p.join(' → ')}</a>`).join('')}</div><a href="/${lang}/formats/">${t.formatsTitle} →</a></details>`:''}</main>`+footer;
 }
+// Locale folders contain generated files only. Remove obsolete routes before rebuilding.
+for(const l of Object.keys(strings))rmSync(`site/${l}`,{recursive:true,force:true});
 for(const l of Object.keys(strings))for(const slug of ['',...Object.keys(pairs),'privacy','about','formats','developers']){
  const dir=`site/${l}/${slug}`;mkdirSync(dir,{recursive:true});writeFileSync(dir+'/index.html',page(l,slug));
 }

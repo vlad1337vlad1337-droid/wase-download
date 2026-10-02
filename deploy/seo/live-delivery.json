@@ -1,0 +1,23 @@
+{
+  "sitemapStatus": 200,
+  "urls": 114,
+  "checked": 114,
+  "issues": [],
+  "checks": [
+    {
+      "url": "http://wase.download/ru/",
+      "status": 301,
+      "location": "https://wase.download/ru/"
+    },
+    {
+      "url": "https://www.wase.download/ru/",
+      "status": 301,
+      "location": "https://wase.download/ru/"
+    },
+    {
+      "url": "https://wase.download/__missing-seo-audit-page__/",
+      "status": 404,
+      "location": null
+    }
+  ]
+}
