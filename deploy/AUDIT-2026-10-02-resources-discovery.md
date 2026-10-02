@@ -25,3 +25,9 @@ Ten archive safety tests passed. The read-only MCP endpoint passed an official S
 The existing Google domain property is verified and Sitemap was submitted. Googlebot fetched the earlier sitemap with HTTP 200, but Search Console initially reported a processing error/zero discovered pages. Submission does not prove indexing. Check the current console state separately. Yandex and AI search crawlers also fetched robots.txt successfully. Metrika remains inactive without a real counter ID and consent.
 
 GitHub project/profile are branded with real Blobatar artwork, attribution and documented capabilities. No fabricated history, customers or popularity.
+
+## Final production checks
+
+Code release `6613bca` is live. Four additional production tests passed with the new CPU budget: real vector download, two-visitor queue, EPUB/PPTX/PDF/ODP round trips and WebM. The official MCP SDK connected to the public endpoint and listed both tools. Unknown URLs return 404. All job containers and test files were removed; API NRestarts=0, memory approximately 60 MB. Let's Encrypt certificates are valid through 2026-12-31. GitHub Actions run 37058851079 passed build, metadata/MCP and archive checks.
+
+Googlebot fetched the new 78-URL Sitemap with HTTP 200 at 20:11:33 UTC. Search Console live URL inspection explicitly confirmed “URL available to Google” and “Page can be indexed”; the homepage indexing request was accepted. The Sitemap report still showed the initial processing error at the last check, so search indexing is pending rather than claimed complete.
