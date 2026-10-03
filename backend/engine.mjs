@@ -19,7 +19,7 @@ const traceInputs=new Set(['jpg','jpeg','jpe','png','bmp','gif','webp','tif','ti
 // tracing detail rather than increasing the worker's production CPU allowance.
 async function traceRaster(){
  const started=performance.now(),source=`/job/input.${input}`,normalized='/job/normalized.png';
- const call=(program,args,budget)=>{const remaining=52000-(performance.now()-started);if(remaining<=0)throw new Error('Vector tracing deadline exceeded');return promisify(execFile)(program,args,{timeout:Math.max(1,Math.min(budget,remaining)),maxBuffer:65536,env:{...process.env,VIPS_CONCURRENCY:'1'}});};
+ const call=(program,args,budget)=>{const remaining=52000-(performance.now()-started);if(remaining<=0)throw new Error('Vector tracing deadline exceeded');return promisify(execFile)(program,args,{timeout:Math.max(1,Math.floor(Math.min(budget,remaining))),maxBuffer:65536,env:{...process.env,VIPS_CONCURRENCY:'1'}});};
  const metadata=await call('vipsheader',['-a',source],5000);
  const width=Number(metadata.stdout.match(/^width:\s*(\d+)/m)?.[1]),height=Number(metadata.stdout.match(/^height:\s*(\d+)/m)?.[1]);
  if(!width||!height)throw new Error('Could not read raster dimensions');
