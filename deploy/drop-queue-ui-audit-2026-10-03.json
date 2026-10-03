@@ -1,0 +1,137 @@
+{
+  "changes": [
+    "Whole-viewport OS file drop with a native top-layer dialog and localized mascot affordance",
+    "Only the file queue scrolls; conversion and download actions remain visible",
+    "Hidden redundant processing privacy line; privacy document remains unchanged",
+    "Default mascot eye artwork with staggered calm processing gaze",
+    "Keyboard-focusable queue; scroll offset retained when results update",
+    "In-flow settings choices inside a bounded panel"
+  ],
+  "verification": {
+    "unitAndIntegrationTests": 52,
+    "failed": 0,
+    "queuedFiles": 20,
+    "viewports": [
+      {
+        "buttonBottom": 472.953125,
+        "buttonTop": 428.953125,
+        "cardHeight": 367,
+        "cardScroll": 367,
+        "height": 568,
+        "listHeight": 139,
+        "listScroll": 1550,
+        "pageHeight": 568,
+        "pageWidth": 320,
+        "width": 320
+      },
+      {
+        "width": 390,
+        "height": 700,
+        "pageWidth": 390,
+        "pageHeight": 700,
+        "buttonTop": 554.953125,
+        "buttonBottom": 598.953125,
+        "listHeight": 254,
+        "listScroll": 1550,
+        "cardHeight": 482,
+        "cardScroll": 482
+      },
+      {
+        "buttonBottom": 638.953125,
+        "buttonTop": 594.953125,
+        "cardHeight": 522,
+        "cardScroll": 522,
+        "height": 740,
+        "listHeight": 294,
+        "listScroll": 1550,
+        "pageHeight": 740,
+        "pageWidth": 430,
+        "width": 430
+      },
+      {
+        "buttonBottom": 520.5,
+        "buttonTop": 476.5,
+        "cardHeight": 406,
+        "cardScroll": 406,
+        "height": 600,
+        "listHeight": 174,
+        "listScroll": 1630,
+        "pageHeight": 600,
+        "pageWidth": 768,
+        "width": 768
+      },
+      {
+        "buttonBottom": 345,
+        "buttonTop": 301,
+        "cardHeight": 313,
+        "cardScroll": 313,
+        "height": 390,
+        "listHeight": 91,
+        "listScroll": 1630,
+        "pageHeight": 390,
+        "pageWidth": 844,
+        "width": 844
+      },
+      {
+        "buttonBottom": 620.5,
+        "buttonTop": 576.5,
+        "cardHeight": 468,
+        "cardScroll": 468,
+        "height": 720,
+        "listHeight": 236,
+        "listScroll": 1630,
+        "pageHeight": 720,
+        "pageWidth": 1280,
+        "width": 1280
+      },
+      {
+        "buttonBottom": 800.5,
+        "buttonTop": 756.5,
+        "cardHeight": 648,
+        "cardScroll": 648,
+        "height": 900,
+        "listHeight": 416,
+        "listScroll": 1630,
+        "pageHeight": 900,
+        "pageWidth": 1440,
+        "width": 1440
+      }
+    ],
+    "browserConversion": {
+      "input": "20 synthetic 256x192 JPG fixtures",
+      "output": "SVG",
+      "completed": 20,
+      "failed": 0,
+      "primaryLabel": "Скачать всё",
+      "pageHeight": 568,
+      "primaryBottom": 472.953125
+    },
+    "settings": [
+      {
+        "viewport": "320x568",
+        "lastDimensionOption": "512 px",
+        "selected": true,
+        "primaryBottom": 472.953125
+      },
+      {
+        "viewport": "844x390",
+        "dimensionOption": "1024 px",
+        "selected": true,
+        "primaryBottom": 344.796875
+      }
+    ],
+    "processingAnimations": {
+      "gaze": "wase-processing-look",
+      "eyes": "wase-natural-blink",
+      "body": "helper-breathe"
+    }
+  },
+  "limitations": [
+    "Native Finder drag is not exposed by the DOM browser automation; controller events are covered by regression tests.",
+    "Responsive browser viewport checks do not substitute for a physical iPhone test.",
+    "No new all-format conversion claim or sitemap expansion."
+  ],
+  "sources": [
+    "https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop"
+  ]
+}

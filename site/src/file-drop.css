@@ -1,0 +1,19 @@
+/* A native top-layer dialog also covers open format/preview dialogs. */
+.file-drop-overlay{position:fixed;inset:0;width:100%;max-width:none;height:100%;max-height:none;margin:0;padding:max(18px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left));border:0;box-sizing:border-box;background:var(--paper);color:var(--ink);overflow:hidden;pointer-events:none}
+.file-drop-overlay:not([open]){display:none}
+.file-drop-overlay[open]{display:grid;place-items:center;animation:drop-reveal .15s ease-out}
+.file-drop-overlay::backdrop{background:transparent}
+.file-drop-frame{position:absolute;inset:18px;border:2px dashed var(--brand-purple,#8173e8);border-radius:32px;background:var(--brand-purple-soft);opacity:.65}
+.file-drop-content{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;max-width:100%;padding:24px;gap:10px}
+.file-drop-mascots{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:4px}
+.file-drop-mascots>svg{width:clamp(90px,16vw,160px);height:clamp(90px,16vw,160px);overflow:visible;transform:rotate(-12deg);animation:drop-welcome 2.6s ease-in-out infinite}
+.file-drop-mascots>svg+svg{transform:rotate(14deg);animation-delay:-1.3s}
+.file-drop-overlay h2{margin:0;font-size:clamp(22px,3vw,32px);font-weight:580;line-height:1.2;letter-spacing:-.7px}
+.file-drop-overlay p{margin:0;font-size:14px;color:var(--muted);line-height:1.5;max-width:320px}
+.file-drop-overlay[data-blocked=true] .file-drop-frame{border-color:var(--muted);background:var(--soft)}
+.file-drop-overlay[data-blocked=true] .file-drop-mascots>svg{animation:none}
+@keyframes drop-reveal{from{opacity:0}to{opacity:1}}
+@keyframes drop-welcome{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@media(max-width:720px){.file-drop-frame{inset:12px;border-radius:24px}.file-drop-content{padding:20px}.file-drop-overlay p{font-size:12px}}
+@media(max-height:400px){.file-drop-mascots>svg{width:80px;height:80px}.file-drop-content{padding:12px;gap:6px}}
+@media(prefers-reduced-motion:reduce){.file-drop-overlay[open],.file-drop-mascots>svg{animation:none}}

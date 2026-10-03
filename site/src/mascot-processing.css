@@ -1,0 +1,64 @@
+/* SPDX-License-Identifier: MIT
+ * Copyright (c) 2026 Wase Download contributors
+ * Keep the original eye artwork. Only the gaze group moves while working. */
+.converter-shell[data-state="processing"] .helper-figure .helper-gaze {
+ animation:wase-processing-look 8.4s ease-in-out infinite;
+ transition:none;
+}
+.converter-shell[data-state="processing"] .helper-figure.helper-1 .helper-gaze {
+ animation-delay:-2.1s;
+ animation-duration:9.2s;
+}
+.converter-shell[data-state="processing"] .helper-figure.helper-2 .helper-gaze {
+ animation-delay:-4.4s;
+ animation-duration:8.9s;
+}
+.converter-shell[data-state="processing"] .helper-figure.helper-3 .helper-gaze {
+ animation-delay:-6.3s;
+ animation-duration:9.7s;
+}
+.converter-shell[data-state="processing"] .helper-figure .helper-gaze .helper-eyes {
+ transform:scaleY(1);
+ transition:none;
+ animation:wase-natural-blink 7.3s ease-in-out infinite;
+}
+.converter-shell[data-state="processing"] .helper-figure.helper-1 .helper-eyes {
+ animation-delay:-2.6s;
+}
+.converter-shell[data-state="processing"] .helper-figure.helper-2 .helper-eyes {
+ animation-delay:-4.7s;
+}
+.converter-shell[data-state="processing"] .helper-figure.helper-3 .helper-eyes {
+ animation-delay:-.7s;
+}
+.converter-shell[data-state="processing"] .helper-figure.helper-1>svg {
+ animation:helper-breathe 8s ease-in-out infinite;
+ animation-delay:-3s;
+}
+@keyframes wase-processing-look {
+ 0%,14%,96%,100% {transform:translate(0,0)}
+ 24%,38% {transform:translate(-2.2px,.4px)}
+ 52%,68% {transform:translate(2.2px,-.5px)}
+ 80%,87% {transform:translate(.6px,1px)}
+}
+/* A quick blink, rather than the earlier sustained half-closed eyes. */
+@keyframes wase-natural-blink {
+ 0%,43%,46%,100% {transform:scaleY(1)}
+ 44.5% {transform:scaleY(.08)}
+}
+.converter-shell.motion-paused[data-state="processing"] .helper-figure .helper-gaze,
+.converter-shell.offscreen[data-state="processing"] .helper-figure .helper-gaze {
+ animation:none;
+ transform:none;
+}
+.converter-shell.motion-paused[data-state="processing"] .helper-figure .helper-gaze .helper-eyes {
+ animation:none!important;
+ transform:none;
+}
+@media(prefers-reduced-motion:reduce) {
+ .converter-shell[data-state="processing"] .helper-figure .helper-gaze,
+ .converter-shell[data-state="processing"] .helper-figure .helper-gaze .helper-eyes {
+  animation:none!important;
+  transform:none!important;
+ }
+}
