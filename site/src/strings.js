@@ -42,3 +42,7 @@ for(const [lang,t] of Object.entries(strings)){Object.assign(t.errors,({ru:{serv
 
 Object.assign(strings,additionalLocales);
 for(const [lang,t]of Object.entries(strings))Object.assign(t,baseInterfaceTranslations[lang]||{},previewTranslations[lang]);
+
+// This note is shown only after selecting the browser fallback. Keep it short
+// and avoid the old universal no-upload/no-queue promise in generated HTML.
+for(const t of Object.values(strings))t.saving=t.local;

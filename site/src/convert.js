@@ -46,7 +46,7 @@ function bmp(canvas){const {width:w,height:h}=canvas,stride=(w*3+3)&~3,size=54+s
 async function ico(canvas){const png=await canvasBlob(canvas,MIME.PNG),data=await png.arrayBuffer(),head=new ArrayBuffer(22),v=new DataView(head);v.setUint16(2,1,true);v.setUint16(4,1,true);v.setUint8(6,canvas.width===256?0:canvas.width);v.setUint8(7,canvas.height===256?0:canvas.height);v.setUint16(10,1,true);v.setUint16(12,32,true);v.setUint32(14,data.byteLength,true);v.setUint32(18,22,true);return new Blob([head,data],{type:MIME.ICO});}
 export async function convert(item,target,opts,signal){
  if(signal.aborted)throw new Error('cancelled');
- if(target==='SVG'&&item.type==='SVG')return {blob:new Blob([item.svg],{type:MIME.SVG}),width:item.width,height:item.height};
+ if(target==='SVG'&&item.type==='SVG')return {blob:new Blob([item.svg],{type:MIME.SVG}),extension:'svg',width:item.width,height:item.height};
  const tracing=target==='SVG',traceLimit={simple:768,balanced:1024,detailed:1536}[opts.detail],max=target==='ICO'?256:tracing?Math.min(opts.edge||traceLimit,traceLimit):opts.edge||Math.max(item.width,item.height),scale=Math.min(1,max/Math.max(item.width,item.height)),w=Math.max(1,Math.round(item.width*scale)),h=Math.max(1,Math.round(item.height*scale));
  const canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;const ctx=canvas.getContext('2d',{willReadFrequently:tracing||target==='BMP'});
  if(target==='JPG'||target==='BMP'){ctx.fillStyle='#fff';ctx.fillRect(0,0,w,h);}ctx.drawImage(item.image,0,0,w,h);
@@ -55,10 +55,13 @@ export async function convert(item,target,opts,signal){
    const worker=new Worker(new URL('./trace.worker.js',import.meta.url),{type:'module'});let finished=false;
    const end=(error,result)=>{if(finished)return;finished=true;clearTimeout(timer);worker.terminate();signal.removeEventListener('abort',abort);error?reject(new Error(error)):resolve(result);};
    const abort=()=>end('cancelled'),timer=setTimeout(()=>end('timeout'),45000);signal.addEventListener('abort',abort,{once:true});worker.onmessage=e=>end(e.data.error,e.data.svg);worker.onerror=()=>end('worker');worker.postMessage({pixels,width:w,height:h,detail:opts.detail,colors:opts.colors},[pixels]);
-  });return {blob:new Blob([svg],{type:MIME.SVG}),width:w,height:h};}
+  });return {blob:new Blob([svg],{type:MIME.SVG}),extension:'svg',width:w,height:h};}
   let blob;
   if(target==='WEBP'){
    try{blob=await canvasBlob(canvas,MIME.WEBP,opts.quality);}catch{
+    // Safari may report unsupported WebP only after the user has cancelled.
+    // Do not start a worker with an already-aborted signal: its event has fired.
+    if(signal.aborted)throw new Error('cancelled');
     const pixels=ctx.getImageData(0,0,w,h).data.buffer;
     const bytes=await new Promise((resolve,reject)=>{
      const worker=new Worker(new URL('./webp.worker.js',import.meta.url),{type:'module'});let finished=false;
@@ -66,6 +69,6 @@ export async function convert(item,target,opts,signal){
      const abort=()=>end('cancelled'),timer=setTimeout(()=>end('timeout'),45000);signal.addEventListener('abort',abort,{once:true});worker.onmessage=e=>end(e.data.error,e.data.bytes);worker.onerror=()=>end('encode');worker.postMessage({pixels,width:w,height:h,quality:opts.quality},[pixels]);
     });blob=new Blob([bytes],{type:MIME.WEBP});
    }
-  }else blob=target==='BMP'?bmp(canvas):target==='ICO'?await ico(canvas):await canvasBlob(canvas,MIME[target],opts.quality);if(signal.aborted)throw new Error('cancelled');return {blob,width:w,height:h};
+  }else blob=target==='BMP'?bmp(canvas):target==='ICO'?await ico(canvas):await canvasBlob(canvas,MIME[target],opts.quality);if(signal.aborted)throw new Error('cancelled');return {blob,extension:target.toLowerCase(),width:w,height:h};
  }finally{canvas.width=1;canvas.height=1;}
 }

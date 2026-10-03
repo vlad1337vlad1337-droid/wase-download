@@ -31,10 +31,11 @@ const handleDiscovery=discoveryHandler(registry,allowedOrigins,maxFileMB);
 let active=0;const waiting=[];
 function acquire(signal){if(signal.aborted)return Promise.reject(new Error('Cancelled'));if(active<maxConcurrent){active++;return Promise.resolve();}return new Promise((resolve,reject)=>{const ticket={run(){signal.removeEventListener('abort',cancel);active++;resolve();}};function cancel(){const index=waiting.indexOf(ticket);if(index!==-1)waiting.splice(index,1);reject(new Error('Cancelled'));}waiting.push(ticket);signal.addEventListener('abort',cancel,{once:true});});}
 function releaseSlot(){active--;waiting.shift()?.run();}
-const jobs=new Map();const visits=rateLimit({limit:20,globalLimit:120});const metadataVisits=rateLimit({limit:120,globalLimit:1200});const queueClients=occupancy({perClient:2,total:maxConcurrent+8});
+const requests=new Set();let stopping=false;const visits=rateLimit({limit:20,globalLimit:120});const metadataVisits=rateLimit({limit:120,globalLimit:1200});const queueClients=occupancy({perClient:2,total:maxConcurrent+8});
 const catalogETag='"'+createHash('sha256').update(publicCatalog).digest('hex')+'"';
 const readGithubStats=githubStats();
 async function handle(req,res){res.setHeader('Cache-Control','no-store');res.setHeader('X-Content-Type-Options','nosniff');const url=new URL(req.url,'http://localhost');
+if(stopping){reject(req,res,503,'Try again shortly');return;}
 if(url.pathname==='/api/mcp'){await handleDiscovery(req,res);return;}
 if(req.method==='GET'&&url.pathname==='/api/github'){if(!metadataVisits.allow(clientIP(req))){reject(req,res,429);return;}res.setHeader('Content-Type','application/json');res.setHeader('Cache-Control','public, max-age=120');res.end(JSON.stringify(await readGithubStats()));return;}
 if(req.method==='GET'&&url.pathname==='/api/formats'){if(!metadataVisits.allow(clientIP(req))){reject(req,res,429);return;}res.setHeader('Cache-Control','private, max-age=60');res.setHeader('ETag',catalogETag);res.setHeader('Content-Type','application/json');if(matchesETag(req.headers['if-none-match'],catalogETag)){res.writeHead(304).end();return;}res.end(publicCatalog);return;}
@@ -45,10 +46,13 @@ if(!Array.isArray(choices)){reject(req,res,400,'Unsupported format pair');return
 const key=clientIP(req);if(!visits.allow(key)||waiting.length>=8){reject(req,res,429,'Try again shortly');return;}
 if(Number(req.headers['content-length'])>maxFileMB*1024*1024){reject(req,res,413);return;}
 const leaveQueue=queueClients.enter(key);if(!leaveQueue){reject(req,res,429,'Try again shortly');return;}
-let acquired=false,dir,name,resultDir;const abort=new AbortController();const clearDeadline=deadline(req,res,abort,jobTimeout),clearUpload=deadline(req,res,abort,90000);res.on('close',()=>{if(!res.writableEnded)abort.abort();});let cleaned=false;async function cleanup(){if(cleaned)return;cleaned=true;clearDeadline();clearUpload();try{if(name){await run(['rm','-f',name]).catch(()=>{});await run(['volume','rm',name]).catch(()=>{});}if(dir)await rm(dir,{recursive:true,force:true});}finally{if(name)jobs.delete(name);if(acquired)releaseSlot();leaveQueue();}}
-try{dir=await mkdtemp(join(jobRoot,'wase-job-'));await chmod(dir,0o777);const inputPath=join(dir,`input.${source}`);const file=await open(inputPath,'w',0o644);let length=0;try{for await(const chunk of req){length+=chunk.length;if(length>maxFileMB*1024*1024){reject(req,res,413);throw new Error('File too large');}let offset=0;while(offset<chunk.length){abort.signal.throwIfAborted();const {bytesWritten}=await file.write(chunk,offset,chunk.length-offset);offset+=bytesWritten;}}}finally{await file.close();}clearUpload();if(!length)throw new Error('Empty file');await chmod(inputPath,0o644);await acquire(abort.signal);acquired=true;name='wase-'+dir.split('/').pop();jobs.set(name,dir);let converted=false,attemptIndex=0;const containerBase=name;
+let acquired=false,dir,name,resultDir;const abort=new AbortController();const clearDeadline=deadline(req,res,abort,jobTimeout),clearUpload=deadline(req,res,abort,90000);res.on('close',()=>{if(!res.writableEnded)abort.abort();});let cleaned=false;async function cleanup(){if(cleaned)return;cleaned=true;clearDeadline();clearUpload();try{if(name){await run(['rm','-f',name]).catch(()=>{});await run(['volume','rm',name]).catch(()=>{});}if(dir)await rm(dir,{recursive:true,force:true});}finally{if(acquired)releaseSlot();leaveQueue();}}
+// Track the request before the first async upload operation. A deploy must
+// clean uploading and queued files too, not only jobs that started Docker.
+let complete;const request={done:new Promise(resolve=>{complete=resolve;}),cancel(){abort.abort();req.destroy();res.destroy();}};requests.add(request);
+try{dir=await mkdtemp(join(jobRoot,'wase-job-'));await chmod(dir,0o777);const inputPath=join(dir,`input.${source}`);const file=await open(inputPath,'w',0o644);let length=0;try{for await(const chunk of req){length+=chunk.length;if(length>maxFileMB*1024*1024){reject(req,res,413);throw new Error('File too large');}let offset=0;while(offset<chunk.length){abort.signal.throwIfAborted();const {bytesWritten}=await file.write(chunk,offset,chunk.length-offset);offset+=bytesWritten;}}}finally{await file.close();}clearUpload();if(!length)throw new Error('Empty file');await chmod(inputPath,0o644);await acquire(abort.signal);acquired=true;name='wase-'+dir.split('/').pop();let converted=false,attemptIndex=0;const containerBase=name;
 for(const engine of engineOrder(choices,source,target)){
- jobs.delete(name);name=containerBase+'-'+(++attemptIndex);jobs.set(name,dir);
+ name=containerBase+'-'+(++attemptIndex);
  if(abort.signal.aborted)throw new Error('Cancelled');
  // Each attempt gets a clean output directory and a fresh isolated container.
  resultDir=join(dir,'attempt-'+attemptIndex);await mkdir(resultDir,{mode:0o777});await chmod(resultDir,0o777);
@@ -62,10 +66,10 @@ const outputFiles=[];let total=0,entries=0;async function collect(folder,prefix=
 let outputPath=outputFiles[0].path,extension=target;if(outputFiles.length>1){outputPath=join(dir,'bundle.zip');await zipFiles(outputFiles,outputPath,abort.signal);extension='zip';}
 const output=await brandedFile(outputPath,extension,abort.signal);res.setHeader('Content-Type',extension==='zip'?'application/zip':'application/octet-stream');res.setHeader('Content-Disposition',`attachment; filename="converted - wase.download.${extension}"`);res.setHeader('Content-Length',output.length);await pipeline(Readable.from(output.stream),res,{signal:abort.signal});
 }catch(error){if(process.env.CONVERTER_DEBUG==='1')console.error('Request failed',error.message);await cleanup();if(!res.destroyed&&!res.headersSent)res.writeHead(422).end('Could not convert this file. Try another output format.');}
-finally{await cleanup();}
+finally{try{await cleanup();}finally{requests.delete(request);complete();}}
 }
 const server=http.createServer({maxHeaderSize:16384,connectionsCheckingInterval:1000},(req,res)=>{handle(req,res).catch(error=>{console.error('API request failed',error.name);if(!res.headersSent)reject(req,res,500);else res.destroy();});});
 server.maxConnections=128;server.maxRequestsPerSocket=100;server.keepAliveTimeout=5000;
 server.requestTimeout=jobTimeout+15000;server.headersTimeout=15000;server.listen(Number(process.env.API_PORT||5189),'127.0.0.1',()=>console.log('Converter API ready: 127.0.0.1:'+server.address().port));
 
-let stopping=false;async function shutdown(){if(stopping)return;stopping=true;server.close();await Promise.all([...jobs].map(async([name,dir])=>{await run(['rm','-f',name]).catch(()=>{});await run(['volume','rm',name]).catch(()=>{});await rm(dir,{recursive:true,force:true});}));process.exit(0);}process.on('SIGTERM',shutdown);process.on('SIGINT',shutdown);
+async function shutdown(){if(stopping)return;stopping=true;server.close();const pending=[...requests];for(const request of pending)request.cancel();await Promise.all(pending.map(request=>request.done));process.exit(0);}process.on('SIGTERM',shutdown);process.on('SIGINT',shutdown);

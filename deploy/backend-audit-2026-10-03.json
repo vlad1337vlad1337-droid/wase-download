@@ -1,0 +1,183 @@
+{
+  "verifiedAtUTC": "2026-10-03T12:53:48.957193+00:00",
+  "scope": "Local Wase Download broker/API/converter audit; bounded fixtures and regression tests, not production load testing or a full matrix/penetration test",
+  "changes": [
+    {
+      "issue": "Graceful SIGTERM cleanup omitted uploads and queued files without active containers",
+      "evidenceBeforeFix": "Actual local HTTP upload left wase-job-* directory after broker exited",
+      "fix": "Track every admitted conversion request before asynchronous upload and await its existing cleanup on SIGTERM/SIGINT; reject requests during shutdown"
+    },
+    {
+      "issue": "ZIP/TAR repacking accepted Windows drive-absolute and drive-relative paths",
+      "evidenceBeforeFix": "Both C:\\Users\\escape.txt and C:escape.txt were successfully repacked in failing security regressions",
+      "fix": "Reject Windows drive paths as well as POSIX absolute paths, traversal and empty paths"
+    }
+  ],
+  "verification": {
+    "focusedNodeTests": {
+      "passed": 29,
+      "files": [
+        "tests/request-guard.test.mjs",
+        "tests/output-stream.test.mjs",
+        "tests/engine-order.test.mjs",
+        "tests/branding-policy.test.mjs",
+        "tests/community.test.mjs",
+        "tests/discovery.test.mjs",
+        "tests/server-lifecycle.test.mjs"
+      ]
+    },
+    "archiveSecurity": {
+      "passed": 12
+    },
+    "outputTypeRejection": "passed",
+    "localConversionSmoke": {
+      "origin": "http://127.0.0.1:5198",
+      "results": [
+        {
+          "category": "image",
+          "from": "png",
+          "to": "svg",
+          "http": 200,
+          "bytes": 526,
+          "passed": true,
+          "ms": 2709
+        },
+        {
+          "category": "vector",
+          "from": "svg",
+          "to": "png",
+          "http": 200,
+          "bytes": 229,
+          "passed": true,
+          "ms": 1274
+        },
+        {
+          "category": "document",
+          "from": "txt",
+          "to": "pdf",
+          "http": 200,
+          "bytes": 12857,
+          "passed": true,
+          "ms": 5557
+        },
+        {
+          "category": "audio",
+          "from": "wav",
+          "to": "mp3",
+          "http": 200,
+          "bytes": 1413,
+          "passed": true,
+          "ms": 1903
+        },
+        {
+          "category": "video",
+          "from": "mp4",
+          "to": "webm",
+          "http": 200,
+          "bytes": 692,
+          "passed": true,
+          "ms": 2115
+        },
+        {
+          "category": "archive",
+          "from": "zip",
+          "to": "tar.gz",
+          "http": 200,
+          "bytes": 122,
+          "passed": true,
+          "ms": 1443
+        },
+        {
+          "category": "font",
+          "from": "woff2",
+          "to": "woff",
+          "http": 200,
+          "bytes": 59784,
+          "passed": true,
+          "ms": 2752
+        },
+        {
+          "category": "cad",
+          "from": "stl",
+          "to": "obj",
+          "http": 200,
+          "bytes": 736,
+          "passed": true,
+          "ms": 1249
+        },
+        {
+          "category": "presentation",
+          "from": "odp",
+          "to": "pdf",
+          "http": 200,
+          "bytes": 16228,
+          "passed": true,
+          "ms": 5516
+        },
+        {
+          "category": "ebook",
+          "from": "epub",
+          "to": "txt",
+          "http": 200,
+          "bytes": 16,
+          "passed": true,
+          "ms": 7149
+        },
+        {
+          "scenario": "unsupported-pair",
+          "http": 400,
+          "expected": 400,
+          "passed": true
+        },
+        {
+          "scenario": "forbidden-origin",
+          "http": 403,
+          "expected": 403,
+          "passed": true
+        },
+        {
+          "scenario": "empty-file",
+          "http": 422,
+          "expected": 422,
+          "passed": true
+        }
+      ]
+    },
+    "localRuntimeSecurity": [
+      "per-address queue occupancy returns 429 on third outstanding upload",
+      "other address remains usable",
+      "aborted upload slots are reusable",
+      "ETag revalidation returns 304"
+    ],
+    "cleanup": "Dedicated test broker stopped; no residual test containers or labeled temporary Docker volumes. Unrelated local matrix workers were not touched.",
+    "initialEnvironmentFailure": "First smoke attempt used /tmp JOB_ROOT which Colima did not share; all conversions returned 422. Repeated with workspace-shared JOB_ROOT and verified 10 successes. No production configuration was changed.",
+    "sourceSHA256": {
+      "backend/server.mjs": "e48ff7c9908c96a2d70428a1240fddc38ee6d9fdab40e9eb922afcfe4cb444ad",
+      "backend/extra.py": "53d4f791e5d1b672494530d9392be2906c11c29120ce152ba7c260c79dfce01c",
+      "tests/archive-security.py": "d3a9108e82ea3154df8af47f81e89a7925a7110bcff73776ef3961a7ada0573f",
+      "tests/server-lifecycle.test.mjs": "7d7dcca946b3b4c8bddd00aa21f44acc2aea3095fcca18f402d2616d2b95450f"
+    }
+  },
+  "unchangedBudgets": {
+    "activeConverters": 1,
+    "queueSlots": 8,
+    "perAddressOutstanding": 2,
+    "uploadMiB": 100,
+    "outputMiB": 200,
+    "totalDeadlineSeconds": 180,
+    "jobCPU": 0.25,
+    "containerMemoryMiB": 768,
+    "tmpfsOutputMiB": 256,
+    "network": "none",
+    "rootFilesystem": "read-only",
+    "MCP": "two read-only metadata tools"
+  },
+  "limitations": [
+    "Conversion samples cover ten categories, not every declared direction or arbitrary file.",
+    "Distributed queue exhaustion and network-level DDoS remain possible; application limits bound resource use but do not guarantee availability.",
+    "Broker retains Docker-daemon privileges; worker/host isolation is not a substitute for dedicated infrastructure.",
+    "SIGKILL/host crash cleanup still needs administrative stale-artifact handling; this patch covers graceful SIGTERM/SIGINT only.",
+    "No Docker/OS CVE scan or exploit-oriented penetration test in this scoped audit.",
+    "No production deployment performed by this audit subtask."
+  ]
+}

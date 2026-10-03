@@ -7,11 +7,12 @@ import {readFile} from 'node:fs/promises';
 const source=await readFile(new URL('../site/src/mascots.js',import.meta.url),'utf8');
 const {initMascots}=await import(`data:text/javascript;base64,${Buffer.from(source.replace("import './mascot-processing.css';",'')).toString('base64')}`);
 
-function harness(){
+function harness({legacyMedia=false}={}){
  const names=['document','window','matchMedia','IntersectionObserver','requestAnimationFrame','cancelAnimationFrame'];
  const previous=new Map(names.map(name=>[name,Object.getOwnPropertyDescriptor(globalThis,name)]));
  const document=new EventTarget();document.hidden=false;document.documentElement=new EventTarget();
  const reduced=new EventTarget();reduced.matches=false;
+ if(legacyMedia){reduced.addListener=callback=>reduced.legacyChange=callback;reduced.addEventListener=undefined;}
  const fine=new EventTarget();fine.matches=true;
  const classes=new Set(),frames=new Map(),styles=[new Map(),new Map()];
  let nextFrame=1,measurements=0,intersection;
@@ -25,7 +26,7 @@ function harness(){
   flush(){const pending=[...frames.values()];frames.clear();pending.forEach(callback=>callback());},
   visibility(hidden){document.hidden=hidden;document.dispatchEvent(new Event('visibilitychange'));},
   intersect(visible){intersection([{isIntersecting:visible}]);},
-  reduce(enabled){reduced.matches=enabled;reduced.dispatchEvent(new Event('change'));},
+  reduce(enabled){reduced.matches=enabled;if(legacyMedia)reduced.legacyChange();else reduced.dispatchEvent(new Event('change'));},
   get pending(){return frames.size;},get measurements(){return measurements;},
   restore(){for(const name of names){const old=previous.get(name);if(old)Object.defineProperty(globalThis,name,old);else delete globalThis[name];}}
  };
@@ -56,5 +57,13 @@ test('hidden, offscreen, reduced-motion and coarse-pointer mascots do no pointer
   h.intersect(true);h.point();h.reduce(true);assert.equal(h.pending,0);h.point();h.flush();assert.equal(h.measurements,0);
   h.reduce(false);h.fine.matches=false;h.point();assert.equal(h.pending,0);
   h.fine.matches=true;h.point();h.flush();assert.equal(h.measurements,2);
+ }finally{h.restore();}
+});
+
+test('legacy Safari media listener does not prevent converter startup',()=>{
+ const h=harness({legacyMedia:true});try{
+  h.point();assert.equal(h.pending,1);h.reduce(true);assert.equal(h.pending,0);
+  assert.equal(h.shell.classList.contains('motion-paused'),true);
+  h.reduce(false);h.point();h.flush();assert.equal(h.measurements,2);
  }finally{h.restore();}
 });

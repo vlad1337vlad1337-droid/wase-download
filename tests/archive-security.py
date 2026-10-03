@@ -21,6 +21,8 @@ class Archives(unittest.TestCase):
  def test_traversal(self):self.run_job('zip','tar',self.zip([('../escape.txt',b'bad')]),False)
  def test_absolute(self):self.run_job('zip','tar',self.zip([('/tmp/escape.txt',b'bad')]),False)
  def test_windows_traversal(self):self.run_job('zip','tar',self.zip([('..\\escape.txt',b'bad')]),False)
+ def test_windows_absolute(self):self.run_job('zip','tar',self.zip([('C:\\Users\\escape.txt',b'bad')]),False)
+ def test_windows_drive_relative(self):self.run_job('zip','tar',self.zip([('C:escape.txt',b'bad')]),False)
  def test_duplicate(self):self.run_job('zip','tar',self.zip([('same.txt',b'1'),('same.txt',b'2')]),False)
  def test_zip_symlink(self):
   def make(p):

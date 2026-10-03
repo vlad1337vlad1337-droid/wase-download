@@ -15,7 +15,9 @@ else:
  def add(name,size,reader):
   global count,total
   path=pathlib.PurePosixPath(name.replace('\\','/'))
-  if path.is_absolute() or '..' in path.parts or not str(path) or '\x00' in name:raise ValueError('Unsafe archive path')
+  # The broker runs on Linux, but the returned archive may be extracted on
+  # Windows. Drive-absolute and drive-relative paths are unsafe there too.
+  if path.is_absolute() or pathlib.PureWindowsPath(name).drive or '..' in path.parts or not path.parts or '\x00' in name:raise ValueError('Unsafe archive path')
   count+=1;total+=size
   if count>5000 or size<0 or total>limit:raise ValueError('Archive exceeds extraction budget')
   data=reader.read(size+1)
