@@ -4,7 +4,7 @@ import {rateLimit,clientIP,reject,occupancy,deadline,matchesETag} from './reques
 import {pipeline} from 'node:stream/promises';
 import {Readable} from 'node:stream';
 import {createHash} from 'node:crypto';
-import {engineOrder} from './engine-order.mjs';
+import {engineOrder,attemptTimeout} from './engine-order.mjs';
 import {discoveryHandler} from './discovery.mjs';
 import http from 'node:http';
 import { spawn } from 'node:child_process';
@@ -49,7 +49,7 @@ for(const engine of engineOrder(choices,source,target)){
  if(abort.signal.aborted)throw new Error('Cancelled');
  // Each attempt gets a clean output directory and a fresh isolated container.
  resultDir=join(dir,'attempt-'+attemptIndex);await mkdir(resultDir,{mode:0o777});await chmod(resultDir,0o777);
- const attempt=new AbortController(),attemptTimer=setTimeout(()=>attempt.abort(),60000);
+ const attempt=new AbortController(),attemptTimer=setTimeout(()=>attempt.abort(),attemptTimeout(source,target));
  try{await run(['volume','create','--driver','local','--label','wase.download.job=true','--opt','type=tmpfs','--opt','device=tmpfs','--opt','o=size=256m,nr_inodes=10000,mode=1777',name],abort.signal);await readyContainer([...base.slice(0,-2).filter(value=>value!=='--rm'),'--name',name,'-v',name+':/job:rw','-v',`${inputPath}:/job/input.${source}:ro`,'--entrypoint','timeout',image,'180','bun','/engine.mjs',source,target,engine,'hold'],AbortSignal.any([abort.signal,attempt.signal]));clearTimeout(attemptTimer);await run(['cp',name+':/job/.',resultDir],abort.signal);await run(['rm','-f',name]);await run(['volume','rm',name]);converted=true;break;}
  catch(error){if(process.env.CONVERTER_DEBUG==='1')console.error('Attempt failed',engine,error.message);await run(['rm','-f',name]).catch(()=>{});await run(['volume','rm',name]).catch(()=>{});await rm(resultDir,{recursive:true,force:true});if(abort.signal.aborted)throw new Error('Cancelled');}
  finally{clearTimeout(attemptTimer);}

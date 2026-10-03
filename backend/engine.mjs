@@ -14,12 +14,12 @@ if(process.argv[2]==='catalog'){console.log(JSON.stringify({matrix:catalog,categ
 const [input,output,engine]=process.argv.slice(2);
 if(!catalog[input]?.[output]?.includes(engine))throw new Error('Unsupported conversion');
 const traceInputs=new Set(['jpg','jpeg','jpe','png','bmp','gif','webp','tif','tiff','ico','avif','heic','heif','jxl']);
-// Full-resolution photographs can exceed the broker's 60-second engine budget.
+// Full-resolution photographs can exceed the ordinary 60-second engine budget.
 // Normalize codecs/colors/orientation, keep the original SVG canvas, and bound
 // tracing detail rather than increasing the worker's production CPU allowance.
 async function traceRaster(){
  const started=performance.now(),source=`/job/input.${input}`,normalized='/job/normalized.png';
- const call=(program,args,budget)=>{const remaining=52000-(performance.now()-started);if(remaining<=0)throw new Error('Vector tracing deadline exceeded');return promisify(execFile)(program,args,{timeout:Math.max(1,Math.floor(Math.min(budget,remaining))),maxBuffer:65536,env:{...process.env,VIPS_CONCURRENCY:'1'}});};
+ const call=(program,args,budget)=>{const remaining=120000-(performance.now()-started);if(remaining<=0)throw new Error('Vector tracing deadline exceeded');return promisify(execFile)(program,args,{timeout:Math.max(1,Math.floor(Math.min(budget,remaining))),maxBuffer:65536,env:{...process.env,VIPS_CONCURRENCY:'1'}});};
  const metadata=await call('vipsheader',['-a',source],5000);
  const width=Number(metadata.stdout.match(/^width:\s*(\d+)/m)?.[1]),height=Number(metadata.stdout.match(/^height:\s*(\d+)/m)?.[1]);
  if(!width||!height)throw new Error('Could not read raster dimensions');
@@ -28,7 +28,10 @@ async function traceRaster(){
  const detailed=width*height<=1024*1024&&Math.max(width,height)<=1536;
  let failure;
  try{
-  for(const edge of [1536,1024]){
+  // Complex photos start at the useful trace resolution instead of spending
+  // most of the budget on a 1536-pixel attempt that slow workers cannot finish.
+  const edges=detailed?[1536,1024]:[1024,768];
+  for(const [index,edge]of edges.entries()){
    try{
     await rm('/job/output.svg',{force:true});await rm(normalized,{force:true});
     await call('vips',['thumbnail',source,normalized,String(edge),'--height',String(edge),'--size','down'],10000);
@@ -42,13 +45,14 @@ async function traceRaster(){
      const alpha=await call('vips',['max','/tmp/wase-alpha.v'],5000);
      if(Number(alpha.stdout.trim())===0){await writeFile('/job/output.svg',`<svg xmlns="http://www.w3.org/2000/svg" width="${canvasWidth}" height="${canvasHeight}" viewBox="0 0 ${canvasWidth} ${canvasHeight}"/>`);return;}
     }
-    await call('vtracer',['--input',normalized,'--output','/job/output.svg',...(!detailed||edge===1024?['--preset','poster']:[])],edge===1536?30000:20000);
+    const traceBudget=index===0?(detailed?60000:85000):(detailed?45000:25000);
+    await call('vtracer',['--input',normalized,'--output','/job/output.svg',...(!detailed||index>0?['--preset','poster']:[]),...(!detailed?['--mode','polygon']:[])],traceBudget);
     const svg=await readFile('/job/output.svg','utf8');
     // A fully transparent source can legitimately produce an empty SVG.
     if(!/<svg\b/.test(svg))throw new Error('No SVG document produced');
     const result=svg.replace(/<svg\b([^>]*)>/,(_match,attributes)=>'<svg'+attributes.replace(/\s(?:width|height|viewBox)="[^"]*"/g,'')+` width="${canvasWidth}" height="${canvasHeight}" viewBox="0 0 ${tracedWidth} ${tracedHeight}">`);
     await writeFile('/job/output.svg',result);return;
-   }catch(error){failure=error;if(performance.now()-started>=52000)break;}
+   }catch(error){failure=error;if(performance.now()-started>=120000)break;}
   }
   throw failure||new Error('Could not trace raster image');
  }finally{await rm(normalized,{force:true});}

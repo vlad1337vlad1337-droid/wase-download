@@ -14,6 +14,9 @@ control, not authentication.
 - An upload must finish before it acquires the converter slot. Uploads have a
   100 MiB cap and a 90-second deadline. The complete job, including queueing and
   download, has a 180-second deadline.
+- Known raster-to-SVG attempts have a 150-second wall deadline for slow workers;
+  other attempts retain 60 seconds. CPU, memory, queue and complete-job limits
+  remain unchanged. The tracing pipeline itself has a 120-second deadline.
 - MCP accepts at most 16 KiB JSON with a five-second read deadline, 90 requests
   per IP per minute and 600 globally. IDs and tool arguments are validated.
 - Conversion containers run as a non-root user, without networking or Linux

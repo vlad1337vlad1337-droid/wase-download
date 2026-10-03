@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-03T08:57:44.791597+00:00",
+  "host": "150.251.143.215",
+  "endpoint": "separate localhost candidate before traffic switch",
+  "limits": {
+    "converterCPU": 0.25,
+    "API_CPU": 0.15,
+    "sliceCPU": 0.35,
+    "converterMemoryMB": 768,
+    "concurrentConversions": 1,
+    "rasterSVGAttemptMs": 150000,
+    "completeRequestMs": 180000
+  },
+  "results": [
+    {
+      "sample": "rgb.jpg",
+      "sourceSHA256": "06eb2dd0edf846fb58adb1aad50ce21f136ba870392900d3d55bc3bbfbd3f95d",
+      "http": 200,
+      "seconds": 5.675029,
+      "bytes": 394,
+      "outputSHA256": "b5418dcbf460799a7d6b6aa85dd1d4d7351fb8ee2544ef25ff3925953d1e0bed",
+      "width": "256",
+      "height": "192",
+      "viewBox": "0 0 256 192",
+      "paths": 1,
+      "distinctPathFills": 1,
+      "embeddedRaster": false,
+      "passed": true
+    },
+    {
+      "sample": "large-photo.jpg",
+      "sourceSHA256": "911f1ce5ed5810139252880059d23c450b6fe166e98b71a60cf3321c3d6a12a7",
+      "http": 200,
+      "seconds": 85.079377,
+      "bytes": 950675,
+      "outputSHA256": "e1ab9b183f1779592166f913214ec1a3421b21453c09aa39c1e395311149b2dc",
+      "width": "2048",
+      "height": "1536",
+      "viewBox": "0 0 1024 768",
+      "paths": 3875,
+      "distinctPathFills": 3868,
+      "embeddedRaster": false,
+      "passed": true
+    }
+  ]
+}

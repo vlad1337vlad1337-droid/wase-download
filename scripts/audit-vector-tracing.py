@@ -36,7 +36,8 @@ open(fixtures+'/rotated.jpg','wb').write(rgb[:2]+b'\xff\xe1'+struct.pack('>H',le
 generate(['-size','64x64','xc:none',fixtures+'/transparent.png'])
 for extension in ['png','webp','bmp','gif','tiff','avif','ico']:
  generate([fixtures+'/rgb.jpg',fixtures+'/regular.'+extension])
-generate(['-seed','20261003','-size','2048x1536','plasma:fractal','-quality','95',fixtures+'/large-photo.jpg'])
+if os.environ.get('VECTOR_LARGE_JPEG'):shutil.copyfile(os.environ['VECTOR_LARGE_JPEG'],fixtures+'/large-photo.jpg')
+else:generate(['-seed','20261003','-size','2048x1536','plasma:fractal','-quality','95',fixtures+'/large-photo.jpg'])
 open(fixtures+'/broken.jpg','wb').write(b'not a valid JPEG')
 cases=[('rgb.jpg','jpg','vtracer'),('rgb.jpg','jpeg','vtracer'),('progressive.jpeg','jpeg','vtracer'),('cmyk.jpg','jpg','vtracer'),('rotated.jpg','jpeg','vtracer')]
 cases += [('regular.'+ext,ext,'vtracer' if ext in ('png','webp','bmp','gif','tiff') else 'imagemagick')for ext in ['png','webp','bmp','gif','tiff','avif','ico']]
