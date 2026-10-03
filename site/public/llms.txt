@@ -1,11 +1,55 @@
-# wase.download
+# Wase Download
 
-Self-hosted file conversion. Public pages are static HTML.
+> Self-hosted file conversion with static instructions in 13 languages. No account or third-party conversion API key. Read-only MCP discovers declared capabilities; file upload is a separate user-authorized operation.
 
-- [Formats](https://wase.download/en/formats/): Declared capabilities and tested pages.
-- [Machine catalogue](https://wase.download/formats.json): Input-dependent targets; declarations are not guarantees.
+The public build declares 885 inputs, 517 outputs and 143995 directional combinations. 2681 published directions have representative-fixture HTTP evidence. Declarations and fixture success do not guarantee arbitrary files. Server processing accepts up to 100 MiB per file; the app permits 20 files per batch, processed individually. Optional browser image processing has separate, narrower limits.
+
+## Documentation
+
+- [Formats](https://wase.download/en/formats/): human-readable tested pages and declared format directory.
 - [Developers](https://wase.download/en/developers/): HTTP upload API and read-only MCP.
-- [Privacy](https://wase.download/en/privacy/): Files deleted after conversion.
+- [API and agent guide](https://wase.download/api-guide.md): exact requests, response handling, limits, errors and file privacy.
+- [Public catalogue](https://wase.download/formats.json): input-dependent declared targets; no uploaded files.
+- [Representative-tested directions](https://wase.download/verified-conversions.json): complete published pair list and evidence boundary.
+- [Privacy](https://wase.download/en/privacy/): server deletion, browser processing and optional analytics.
+- [Sitemap](https://wase.download/sitemap.xml): canonical pages admitted for web indexing.
 
-MCP: https://wase.download/api/mcp (list_formats, conversion_info). No remote URL fetching.
-Limits: 100 MB per file, 20 files per batch; conversion is queued and resource-limited.
+## Languages
+
+- [English](https://wase.download/en/): converter, [formats](https://wase.download/en/formats/), [developers](https://wase.download/en/developers/), [privacy](https://wase.download/en/privacy/).
+- [Русский](https://wase.download/ru/): converter, [formats](https://wase.download/ru/formats/), [developers](https://wase.download/ru/developers/), [privacy](https://wase.download/ru/privacy/).
+- [简体中文](https://wase.download/zh/): converter, [formats](https://wase.download/zh/formats/), [developers](https://wase.download/zh/developers/), [privacy](https://wase.download/zh/privacy/).
+- [Español](https://wase.download/es/): converter, [formats](https://wase.download/es/formats/), [developers](https://wase.download/es/developers/), [privacy](https://wase.download/es/privacy/).
+- [Français](https://wase.download/fr/): converter, [formats](https://wase.download/fr/formats/), [developers](https://wase.download/fr/developers/), [privacy](https://wase.download/fr/privacy/).
+- [Deutsch](https://wase.download/de/): converter, [formats](https://wase.download/de/formats/), [developers](https://wase.download/de/developers/), [privacy](https://wase.download/de/privacy/).
+- [Português](https://wase.download/pt/): converter, [formats](https://wase.download/pt/formats/), [developers](https://wase.download/pt/developers/), [privacy](https://wase.download/pt/privacy/).
+- [Italiano](https://wase.download/it/): converter, [formats](https://wase.download/it/formats/), [developers](https://wase.download/it/developers/), [privacy](https://wase.download/it/privacy/).
+- [Türkçe](https://wase.download/tr/): converter, [formats](https://wase.download/tr/formats/), [developers](https://wase.download/tr/developers/), [privacy](https://wase.download/tr/privacy/).
+- [日本語](https://wase.download/ja/): converter, [formats](https://wase.download/ja/formats/), [developers](https://wase.download/ja/developers/), [privacy](https://wase.download/ja/privacy/).
+- [한국어](https://wase.download/ko/): converter, [formats](https://wase.download/ko/formats/), [developers](https://wase.download/ko/developers/), [privacy](https://wase.download/ko/privacy/).
+- [العربية](https://wase.download/ar/): converter, [formats](https://wase.download/ar/formats/), [developers](https://wase.download/ar/developers/), [privacy](https://wase.download/ar/privacy/).
+- [हिन्दी](https://wase.download/hi/): converter, [formats](https://wase.download/hi/formats/), [developers](https://wase.download/hi/developers/), [privacy](https://wase.download/hi/privacy/).
+
+## Example conversions
+
+- [PNG → SVG](https://wase.download/en/png-to-svg/): representative-tested direction; input-specific limitations still apply.
+- [JPG → SVG](https://wase.download/en/jpg-to-svg/): representative-tested direction; input-specific limitations still apply.
+- [SVG → PNG](https://wase.download/en/svg-to-png/): representative-tested direction; input-specific limitations still apply.
+- [PNG → WEBP](https://wase.download/en/png-to-webp/): representative-tested direction; input-specific limitations still apply.
+- [WEBP → PNG](https://wase.download/en/webp-to-png/): representative-tested direction; input-specific limitations still apply.
+- [TXT → PDF](https://wase.download/en/txt-to-pdf/): representative-tested direction; input-specific limitations still apply.
+- [HTML → TXT](https://wase.download/en/html-to-txt/): representative-tested direction; input-specific limitations still apply.
+- [EPUB → TXT](https://wase.download/en/epub-to-txt/): representative-tested direction; input-specific limitations still apply.
+- [WAV → MP3](https://wase.download/en/wav-to-mp3/): representative-tested direction; input-specific limitations still apply.
+- [ZIP → TAR.GZ](https://wase.download/en/zip-to-tar-gz/): representative-tested direction; input-specific limitations still apply.
+- [TAR.GZ → ZIP](https://wase.download/en/tar-gz-to-zip/): representative-tested direction; input-specific limitations still apply.
+- [WOFF2 → TTF](https://wase.download/en/woff2-to-ttf/): representative-tested direction; input-specific limitations still apply.
+- [TTF → OTF](https://wase.download/en/ttf-to-otf/): representative-tested direction; input-specific limitations still apply.
+- [PDF → SVG](https://wase.download/en/pdf-to-svg/): representative-tested direction; input-specific limitations still apply.
+
+## Optional
+
+- [Expanded plain-text guide](https://wase.download/llms-full.txt): API guide, language navigation and representative examples in one document.
+- [Source and licenses](https://github.com/vlad1337vlad1337-droid/wase-download): MIT interface/tooling, separate AGPL server integration and retained upstream licenses.
+
+This llms.txt is a voluntary community-format navigation aid, not a provider registry or guarantee of indexing, ranking or citations. MCP endpoint: https://wase.download/api/mcp (list_formats, conversion_info). Metadata discovery does not upload files; remote URL conversion is not implemented.

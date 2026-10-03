@@ -58,6 +58,17 @@ Clipboard formats and browser permissions vary. Paste keyboard shortcuts use the
 
 See `deploy/README.md` for certificates, caching, analytics and Search Console / Yandex Webmaster verification. Wordstat is keyword research, not a website registration tool.
 
+### Search and AI agents
+
+Localized instructions and links are shipped as static HTML. The converter needs JavaScript, but reading the format guides does not. Public pages use canonical URLs, reciprocal language alternatives and honest application/site/publisher metadata. `robots.txt` allows public crawlers while excluding `/api/`; it does not authenticate clients or bypass upload/discovery limits. Training bot policies are separate from search visibility.
+
+- [Agent navigation](https://wase.download/llms.txt) and [expanded guide](https://wase.download/llms-full.txt).
+- [API and MCP guide](https://wase.download/api-guide.md): initialization, the two read-only tools, explicit uploads, limits, errors and privacy.
+- [Published evidence manifest](https://wase.download/verified-conversions.json): representative-tested directions, distinguished from declared targets in `formats.json`.
+- [Provider rules and visibility checks](deploy/seo/AI-SEARCH-GUIDE.md): official Google, Yandex, OpenAI, Anthropic, Perplexity, Microsoft and Apple sources.
+
+The sitemap publishes 34,918 canonical pages across 13 languages for 2,681 representative-tested conversion directions plus the useful site pages. It deliberately excludes unverified input catalogues and errors. `llms.txt` is an optional documentation convention, not universal AI registration or a Google ranking signal. IndexNow notifies participating engines of changed canonical URLs after a release; receipt does not prove indexing. Search engines and AI systems choose which pages to index, show or cite.
+
 ## Architecture and resources
 
 Static HTML → a small browser app → loopback Node broker → one isolated ConvertX container per job. Browser image tools use Web Workers. Public file URLs and persistent histories are not created; temporary inputs and outputs are deleted on completion, cancellation or error.

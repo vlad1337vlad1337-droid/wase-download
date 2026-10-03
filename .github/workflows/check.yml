@@ -13,6 +13,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: node --test tests/discovery.test.mjs tests/seo.test.mjs tests/engine-order.test.mjs tests/branding-policy.test.mjs tests/boot.test.mjs tests/catalog-cache.test.mjs tests/not-found.test.mjs tests/request-guard.test.mjs tests/output-stream.test.mjs tests/result-preview.test.mjs tests/file-drop.test.mjs tests/mascot-motion.test.mjs tests/community.test.mjs tests/boot-screen.test.mjs tests/theme.test.mjs tests/queue-motion.test.mjs
+      - run: node --test tests/discovery.test.mjs tests/seo.test.mjs tests/engine-order.test.mjs tests/branding-policy.test.mjs tests/boot.test.mjs tests/catalog-cache.test.mjs tests/not-found.test.mjs tests/request-guard.test.mjs tests/output-stream.test.mjs tests/result-preview.test.mjs tests/file-drop.test.mjs tests/mascot-motion.test.mjs tests/community.test.mjs tests/boot-screen.test.mjs tests/theme.test.mjs tests/queue-motion.test.mjs tests/agent-discovery.test.mjs tests/ai-search.test.mjs tests/indexnow.test.mjs
       - run: python3 tests/archive-security.py
       - run: python3 tests/output-validation.py

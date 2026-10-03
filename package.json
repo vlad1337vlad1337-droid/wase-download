@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Private, multilingual image conversion and vector tracing in your browser",
+  "description": "Self-hosted file conversion, vector tracing and read-only agent discovery in 13 languages",
   "license": "MIT AND AGPL-3.0-only AND Unlicense",
   "engines": {
     "node": ">=22.13.0"
