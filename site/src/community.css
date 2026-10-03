@@ -1,0 +1,15 @@
+body>footer .community-link,body>footer .save-page-button{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-height:32px;padding:0 4px;font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-decoration:none;border-radius:8px}
+body>footer .community-link:focus-visible,body>footer .save-page-button:focus-visible{outline:2px solid var(--brand-purple);outline-offset:2px}
+.github-stars{min-width:1.5ch;text-align:center;font-variant-numeric:tabular-nums}
+.community-link svg{width:13px;height:13px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7}
+.save-page-dialog{width:min(420px,calc(100vw - 24px));max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);margin:auto;padding:18px;border:0;border-radius:24px;background:var(--paper);color:var(--ink);box-shadow:0 20px 80px #0003;overflow:auto;overscroll-behavior:contain}
+.save-page-dialog::backdrop{background:#17162488}
+.save-page-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.save-page-heading h2{font-size:16px;line-height:1.4;margin:0;font-weight:570}
+.save-page-dialog .picker-close{width:40px;height:40px;min-width:40px;padding:0;flex:none;background:var(--soft)}
+.save-page-dialog input{width:100%;min-width:0;border:0;border-radius:14px;padding:12px;font-size:12px;background:var(--soft);color:var(--ink);direction:ltr}
+.save-page-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.save-page-actions button{min-height:42px;font-size:12px;border-radius:14px;flex:1;justify-content:center}
+.save-page-dialog .bookmark-hint{margin:14px 0 0;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.save-page-dialog [role=status]{min-height:18px;font-size:12px;line-height:1.5;color:var(--muted);margin:8px 0 0}
+.save-page-dialog [hidden],body>footer .save-page-button[hidden]{display:none}

@@ -6,6 +6,7 @@ import {Readable} from 'node:stream';
 import {createHash} from 'node:crypto';
 import {engineOrder,attemptTimeout} from './engine-order.mjs';
 import {discoveryHandler} from './discovery.mjs';
+import {githubStats} from './github-stats.mjs';
 import http from 'node:http';
 import { spawn } from 'node:child_process';
 import { mkdtemp,mkdir,chmod,open,rm,readdir,lstat } from 'node:fs/promises';
@@ -32,8 +33,10 @@ function acquire(signal){if(signal.aborted)return Promise.reject(new Error('Canc
 function releaseSlot(){active--;waiting.shift()?.run();}
 const jobs=new Map();const visits=rateLimit({limit:20,globalLimit:120});const metadataVisits=rateLimit({limit:120,globalLimit:1200});const queueClients=occupancy({perClient:2,total:maxConcurrent+8});
 const catalogETag='"'+createHash('sha256').update(publicCatalog).digest('hex')+'"';
+const readGithubStats=githubStats();
 async function handle(req,res){res.setHeader('Cache-Control','no-store');res.setHeader('X-Content-Type-Options','nosniff');const url=new URL(req.url,'http://localhost');
 if(url.pathname==='/api/mcp'){await handleDiscovery(req,res);return;}
+if(req.method==='GET'&&url.pathname==='/api/github'){if(!metadataVisits.allow(clientIP(req))){reject(req,res,429);return;}res.setHeader('Content-Type','application/json');res.setHeader('Cache-Control','public, max-age=120');res.end(JSON.stringify(await readGithubStats()));return;}
 if(req.method==='GET'&&url.pathname==='/api/formats'){if(!metadataVisits.allow(clientIP(req))){reject(req,res,429);return;}res.setHeader('Cache-Control','private, max-age=60');res.setHeader('ETag',catalogETag);res.setHeader('Content-Type','application/json');if(matchesETag(req.headers['if-none-match'],catalogETag)){res.writeHead(304).end();return;}res.end(publicCatalog);return;}
 if(req.method!=='POST'||url.pathname!=='/api/convert'){reject(req,res,404);return;}
 const origin=req.headers.origin;if(origin&&!allowedOrigins.has(origin)){reject(req,res,403);return;}

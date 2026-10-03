@@ -1,6 +1,6 @@
 <p align="center"><img src=".github/assets/banner-generated.png" alt="wase.download — a small tool for files" width="100%"></p>
 
-<p align="center"><a href="https://wase.download">Open converter</a> · <a href="https://wase.download/en/formats/">Supported formats</a> · <a href="https://wase.download/en/developers/">Developers</a> · <a href="https://wase.download/en/privacy/">Privacy</a></p>
+<p align="center"><a href="https://wase.download">Open converter</a> · <a href="https://wase.download/en/formats/">Supported formats</a> · <a href="https://wase.download/en/developers/">Developers</a> · <a href="https://wase.download/en/privacy/">Privacy</a> · <a href="#contribute">Contribute</a> · <a href="https://dalink.to/wase_download">Buy me a coffee</a></p>
 
 A self-hosted file converter in 13 languages: English, Russian, Simplified Chinese, Spanish, French, German, Portuguese, Italian, Turkish, Japanese, Korean, Arabic and Hindi. Drop a file, paste a screenshot, choose an output and download the result. No account and no third-party conversion API.
 
@@ -15,6 +15,12 @@ The pinned engine build declares 915 input extensions; the upload policy exposes
 ## Support
 
 [Buy me a coffee](https://dalink.to/wase_download) to support hosting and development. If the project is useful, a GitHub star helps other people discover it. Donations are optional; the converter remains free to use.
+
+The footer shows a cached public GitHub star count. Starring opens GitHub and uses the visitor’s own account; we never embed a GitHub token or ask for repository access. “Save” shares the current page through the device menu, copies its canonical link, or shows the browser bookmark shortcut. Uploaded files are not included.
+
+## Contribute
+
+Try the converter, [report a bug or suggest an improvement](https://github.com/vlad1337vlad1337-droid/wase-download/issues), or send a pull request. The [contribution guide](CONTRIBUTING.md) covers setup, useful conversion-bug details and the checks to run before a change. Keep upstream and Wase Download license notices when reusing code; see [LICENSING.md](LICENSING.md).
 
 ## Run
 

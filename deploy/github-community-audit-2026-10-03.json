@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-03",
+  "scope": "GitHub integration, page saving, SEO readiness and source security",
+  "features": {
+    "stars": "GET /api/github, fixed public repository, no token, 15-minute single-flight cache, 3-second upstream deadline, 4 KiB response limit, retry backoff and existing bounded metadata limiter",
+    "starAction": "opens GitHub; starring uses the visitor account",
+    "save": "native share menu when supported; canonical link copy; browser bookmark instructions; no user files shared",
+    "fallback": "unsupported browser targets reset and visible server-unavailable message with correct 20 MB limit"
+  },
+  "validation": {
+    "nodeTests": 59,
+    "archiveTests": 10,
+    "outputValidation": "passed",
+    "seo": {
+      "canonicalPages": 34918,
+      "sitemapURLs": 34918,
+      "languages": 13,
+      "publishedPairs": 2681,
+      "issues": 0
+    },
+    "viewports": [
+      [
+        320,
+        568
+      ],
+      [
+        390,
+        700
+      ],
+      [
+        430,
+        740
+      ],
+      [
+        768,
+        600
+      ],
+      [
+        844,
+        390
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        1440,
+        900
+      ]
+    ],
+    "queuedFilesPerViewport": 20,
+    "languagesAt390x700": 13,
+    "candidateConversion": {
+      "pair": "EPUB:TXT",
+      "http": 200,
+      "bytes": 60,
+      "sha256": "76272530b0555f4cc9c242bf96bfff2cd35afdc7106d2e6d86f0d1dea9dbdfc8"
+    }
+  },
+  "security": {
+    "workingSourceFilesScanned": 230,
+    "gitleaksFindings": 0,
+    "npmAdvisories": 0,
+    "secretScanningAndPushProtection": "enabled",
+    "dependabotAlertsAndSecurityUpdates": "enabled"
+  },
+  "limits": [
+    "Browser viewport checks are not physical iPhone tests.",
+    "A successful fixture is not proof for all arbitrary files.",
+    "Sitemap readiness does not guarantee search-engine indexing.",
+    "Source scanning cannot guarantee absence of every secret or vulnerability.",
+    "Starring directly inside this site would require visitor GitHub authorization; no visitor OAuth tokens are collected."
+  ]
+}
