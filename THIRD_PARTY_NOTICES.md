@@ -13,7 +13,7 @@
 - shadcn/ui neutral button/focus/disabled patterns adapted from the Wase Chat design library, MIT; notice included. Brand palette and local Inter fonts reused from the user-owned Wase Chat app.
 
 - Inter / Inter Tight, SIL Open Font License 1.1; original fonts hosted locally without alteration.
-- Caveat, Copyright 2014 The Caveat Project Authors, SIL Open Font License 1.1. A greeting-only font subset is hosted locally; full notice: `site/public/licenses/caveat-OFL.txt`. Source: https://github.com/google/fonts/tree/main/ofl/caveat.
+- Caveat, Copyright 2014 The Caveat Project Authors, SIL Open Font License 1.1. Small greeting and converter-title font subsets are hosted locally; full notice: `site/public/licenses/caveat-OFL.txt`. Source: https://github.com/google/fonts/tree/main/ofl/caveat.
 
 ## Blobatar
 
