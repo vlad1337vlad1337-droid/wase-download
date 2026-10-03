@@ -13,6 +13,10 @@ export function audit(){
 
  for(const file of walk(root)){
   const html=read(file),path='/'+relative(root,file).replaceAll('\\','/').replace(/index\.html$/,''),url=base+path;
+  if(html.includes('data-error-page="true"')){
+   if(!/^\/(en|ru|zh)\/404\.html$/.test(path)||!html.includes('noindex,follow')||listed.has(url))issues.push(`${path}: invalid error page indexing`);
+   continue;
+  }
   const canonical=html.match(/<link rel="canonical" href="([^"]+)"/),title=html.match(/<title>([^<]+)<\/title>/)?.[1];
   if(!canonical){issues.push(`${path}: missing canonical`);continue;}
   // The language chooser at / intentionally duplicates /en/; it is not a canonical page.

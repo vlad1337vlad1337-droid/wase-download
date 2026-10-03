@@ -1,0 +1,202 @@
+{
+  "date": "2026-10-03",
+  "scope": "Wase Download product audit",
+  "productionConversions": [
+    {
+      "category": "image",
+      "from": "png",
+      "to": "svg",
+      "http": 200,
+      "bytes": 504,
+      "passed": true,
+      "ms": 3020
+    },
+    {
+      "category": "vector",
+      "from": "svg",
+      "to": "png",
+      "http": 200,
+      "bytes": 229,
+      "passed": true,
+      "ms": 2508
+    },
+    {
+      "category": "document",
+      "from": "txt",
+      "to": "pdf",
+      "http": 200,
+      "bytes": 12852,
+      "passed": true,
+      "ms": 10847
+    },
+    {
+      "category": "audio",
+      "from": "wav",
+      "to": "mp3",
+      "http": 200,
+      "bytes": 1413,
+      "passed": true,
+      "ms": 4393
+    },
+    {
+      "category": "video",
+      "from": "mp4",
+      "to": "webm",
+      "http": 200,
+      "bytes": 692,
+      "passed": true,
+      "ms": 3976
+    },
+    {
+      "category": "archive",
+      "from": "zip",
+      "to": "tar.gz",
+      "http": 200,
+      "bytes": 122,
+      "passed": true,
+      "ms": 2711
+    },
+    {
+      "category": "font",
+      "from": "woff2",
+      "to": "woff",
+      "http": 200,
+      "bytes": 59784,
+      "passed": true,
+      "ms": 5155
+    },
+    {
+      "category": "cad",
+      "from": "stl",
+      "to": "obj",
+      "http": 200,
+      "bytes": 704,
+      "passed": true,
+      "ms": 2840
+    },
+    {
+      "category": "presentation",
+      "from": "odp",
+      "to": "pdf",
+      "http": 200,
+      "bytes": 16223,
+      "passed": true,
+      "ms": 10568
+    },
+    {
+      "category": "ebook",
+      "from": "epub",
+      "to": "txt",
+      "http": 200,
+      "bytes": 16,
+      "passed": true,
+      "ms": 17712
+    },
+    {
+      "scenario": "unsupported-pair",
+      "http": 400,
+      "expected": 400,
+      "passed": true
+    },
+    {
+      "scenario": "forbidden-origin",
+      "http": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "scenario": "empty-file",
+      "http": 422,
+      "expected": 422,
+      "passed": true
+    }
+  ],
+  "seo": {
+    "canonicalPages": 8058,
+    "sitemapURLs": 8058,
+    "publishedPairs": 2681,
+    "languages": [
+      "en",
+      "ru",
+      "zh"
+    ],
+    "inputFormats": 903,
+    "outputFormats": 520,
+    "declaredPairs": 148202,
+    "sameFormatPairs": 375,
+    "crossFormatPairs": 147827,
+    "unpublishedCrossFormatPairs": 145146,
+    "categories": {
+      "document": {
+        "inputs": 538,
+        "declaredPairs": 92924
+      },
+      "ebook": {
+        "inputs": 26,
+        "declaredPairs": 1734
+      },
+      "image": {
+        "inputs": 226,
+        "declaredPairs": 45430
+      },
+      "vector": {
+        "inputs": 6,
+        "declaredPairs": 1339
+      },
+      "font": {
+        "inputs": 4,
+        "declaredPairs": 12
+      },
+      "presentation": {
+        "inputs": 9,
+        "declaredPairs": 26
+      },
+      "audio": {
+        "inputs": 7,
+        "declaredPairs": 1423
+      },
+      "archive": {
+        "inputs": 6,
+        "declaredPairs": 25
+      },
+      "video": {
+        "inputs": 7,
+        "declaredPairs": 2380
+      },
+      "cad": {
+        "inputs": 74,
+        "declaredPairs": 2909
+      }
+    },
+    "issues": []
+  },
+  "checks": {
+    "nodeTests": 24,
+    "archiveSecurityTests": 10,
+    "outputValidation": "passed",
+    "browserZip": {
+      "files": 2,
+      "uniqueNames": true,
+      "validSVG": true
+    },
+    "viewportWidths": [
+      320,
+      390,
+      1280
+    ],
+    "server": {
+      "nginx": "active",
+      "api": "active",
+      "temporaryJobs": 0,
+      "serviceErrorsLastTwoHours": 0,
+      "cpuQuota": "35% of one CPU",
+      "memoryMaxMiB": 1300
+    }
+  },
+  "changes": [
+    "Localized mascot 404 with genuine HTTP status and noindex",
+    "Clear queue-busy and upload-limit error messages",
+    "Hide analytics consent until initial loading finishes",
+    "Synchronize origin template upload limit and proxy timeout with production"
+  ]
+}

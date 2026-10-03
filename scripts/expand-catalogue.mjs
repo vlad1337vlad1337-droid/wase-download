@@ -11,6 +11,8 @@ const css=template.match(/<link rel="stylesheet"[^>]+href="\/assets\/[^\"]+"[^>]
 if(!script||!css)throw new Error('Missing compiled converter assets');
 const sitemaps=[];
 for(const lang of Object.keys(strings)){
+ const errorHTML=page(lang,'404').replace('<script type="module" src="/src/app.js"></script>',script).replace('<link rel="stylesheet" href="/src/style.css">',css);
+ writeFileSync(`dist/${lang}/404.html`,errorHTML);
  for(const [slug,[input]]of retired){const route=inputRoutes[input.toLowerCase()];if(!route)continue;const target=`/${lang}/${route}/`,dir=`dist/${lang}/${slug}`;mkdirSync(dir,{recursive:true});writeFileSync(`${dir}/index.html`,`<!doctype html><html lang="${lang}"><head><meta charset="UTF-8"><meta name="robots" content="noindex,follow"><link rel="canonical" href="${base+target}"><meta http-equiv="refresh" content="0;url=${target}"><title>wase.download</title></head><body data-retired="true"><a href="${target}">Choose an available output format →</a></body></html>`);}
  const paths=['',...Object.keys(pairs),'privacy','about','formats','developers'];
  for(const path of [...Object.keys(pairs),...Object.values(inputRoutes)]){

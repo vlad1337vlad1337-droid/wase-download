@@ -36,3 +36,5 @@ Object.assign(strings.en,{aboutText:'wase.download is an independent file conver
 Object.assign(strings.zh,{aboutText:'wase.download 是独立文件转换器，提供中文、英文和俄文界面。文件默认在我们的服务器上以隔离且限制资源的任务处理。服务器不可用时，部分图片可在浏览器中转换。开源引擎作者和许可证列于 GitHub。本服务与 Convertio 无关。'});
 
 for(const [lang,t] of Object.entries(strings)){t.errors.batch=({ru:'Можно добавить до 20 файлов за раз.',en:'You can add up to 20 files at a time.',zh:'每次最多可添加 20 个文件。'})[lang];t.fileTooLarge=({ru:'Размер файла превышает {limit} МБ.',en:'The file exceeds {limit} MB.',zh:'文件超过 {limit} MB。'})[lang];t.unsupportedFile=({ru:'Этот формат недоступен в текущем режиме обработки.',en:'This format is unavailable in the current processing mode.',zh:'当前处理模式不支持此格式。'})[lang];}
+
+for(const [lang,t] of Object.entries(strings)){Object.assign(t.errors,({ru:{serverBusy:'Сейчас много заданий. Подождите немного и повторите конвертацию.',uploadLimit:'Файл превышает серверный лимит 100 МБ.'},en:{serverBusy:'The queue is busy. Wait a moment and retry conversion.',uploadLimit:'The file exceeds the 100 MB server limit.'},zh:{serverBusy:'当前任务较多，请稍后重试转换。',uploadLimit:'文件超过服务器的 100 MB 限制。'}})[lang]);}
