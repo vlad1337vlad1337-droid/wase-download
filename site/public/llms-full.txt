@@ -23,7 +23,7 @@ Use the official MCP client to initialize and negotiate a supported protocol ver
 
 Initialize:
 
-````sh
+```sh
 curl --fail --max-time 15 'https://wase.download/api/mcp' \
   --header 'Content-Type: application/json' \
   --header 'Accept: application/json, text/event-stream' \
@@ -33,7 +33,7 @@ curl --fail --max-time 15 'https://wase.download/api/mcp' \
 
 Send the initialized notification after the initialization response, then discover tools:
 
-````sh
+```sh
 curl --fail --max-time 15 'https://wase.download/api/mcp' \
   --header 'Content-Type: application/json' \
   --header 'Accept: application/json, text/event-stream' \
@@ -48,7 +48,7 @@ curl --fail --max-time 15 'https://wase.download/api/mcp' \
 
 Find declared inputs in the image category:
 
-````sh
+```sh
 curl --fail --max-time 15 'https://wase.download/api/mcp' \
   --header 'Content-Type: application/json' \
   --header 'Accept: application/json, text/event-stream' \
@@ -60,7 +60,7 @@ curl --fail --max-time 15 'https://wase.download/api/mcp' \
 
 Check PNG to SVG, or omit `to` to list a source's declared outputs:
 
-````sh
+```sh
 curl --fail --max-time 15 'https://wase.download/api/mcp' \
   --header 'Content-Type: application/json' \
   --header 'Accept: application/json, text/event-stream' \

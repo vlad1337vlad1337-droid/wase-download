@@ -57,20 +57,20 @@ Use the official MCP client to initialize and negotiate a supported protocol ver
 
 Initialize:
 
-\`\`\`\`sh
+\`\`\`sh
 ${post(mcpExamples.initialize)}
 \`\`\`
 
 Send the initialized notification after the initialization response, then discover tools:
 
-\`\`\`\`sh
+\`\`\`sh
 ${post(mcpExamples.initialized)}
 ${post(mcpExamples.listTools)}
 \`\`\`
 
 Find declared inputs in the image category:
 
-\`\`\`\`sh
+\`\`\`sh
 ${post(mcpExamples.listFormats)}
 \`\`\`
 
@@ -78,7 +78,7 @@ ${post(mcpExamples.listFormats)}
 
 Check PNG to SVG, or omit \`to\` to list a source's declared outputs:
 
-\`\`\`\`sh
+\`\`\`sh
 ${post(mcpExamples.conversionInfo)}
 \`\`\`
 

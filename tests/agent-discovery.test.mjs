@@ -49,7 +49,7 @@ test('discovery counts update for another valid published build instead of stale
 
 test('generated agent guide has valid Markdown fences and accurate upload/response semantics',()=>{
  const guide=documents['api-guide.md'];
- assert.equal((guide.match(/^```/gm)||[]).length,12);
+ assert.deepEqual([...guide.matchAll(/^(`+)([a-z]*)$/gm)].map(match=>[match[1].length,match[2]]),[[3,'sh'],[3,''],[3,'sh'],[3,''],[3,'sh'],[3,''],[3,'sh'],[3,''],[3,'text'],[3,''],[3,'sh'],[3,'']]);
  assert.ok(!/^``(?:sh|text)$/m.test(guide));assert.ok(!guide.includes('\\`'));
  assert.match(guide,/--data-binary '@input\.png'/);assert.match(guide,/Content-Disposition/);
  assert.match(guide,/application\/octet-stream/);assert.match(guide,/Multi-file exports return a ZIP/);
