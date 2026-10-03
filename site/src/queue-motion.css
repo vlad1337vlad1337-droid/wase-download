@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: MIT
  * The document keeps its normal flex layout throughout the short transition. */
 .converter-shell.queue-is-animating{will-change:transform}
-.converter-shell.queue-is-animating .converter{will-change:height;overflow:hidden}
+.converter-shell.queue-is-animating .converter{will-change:height;overflow:clip}
 @media(prefers-reduced-motion:reduce){
  .converter-shell.queue-is-animating,.converter-shell.queue-is-animating .converter{will-change:auto}
 }
