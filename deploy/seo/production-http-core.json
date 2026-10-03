@@ -1,0 +1,118 @@
+{
+  "origin": "https://wase.download",
+  "checkedAt": "2026-10-03T05:23:01.277Z",
+  "results": [
+    {
+      "from": "txt",
+      "to": "pdf",
+      "status": 200,
+      "bytes": 13711,
+      "seconds": 9.803
+    },
+    {
+      "from": "ttf",
+      "to": "otf",
+      "status": 200,
+      "bytes": 167384,
+      "seconds": 4.556
+    },
+    {
+      "from": "svg",
+      "to": "jpg",
+      "status": 200,
+      "bytes": 841,
+      "seconds": 3.02
+    },
+    {
+      "from": "svg",
+      "to": "webp",
+      "status": 200,
+      "bytes": 446,
+      "seconds": 2.718
+    },
+    {
+      "from": "webp",
+      "to": "jpg",
+      "status": 200,
+      "bytes": 1323,
+      "seconds": 2.993
+    },
+    {
+      "from": "png",
+      "to": "ico",
+      "status": 200,
+      "bytes": 216721,
+      "seconds": 3.385
+    },
+    {
+      "from": "png",
+      "to": "bmp",
+      "status": 200,
+      "bytes": 128054,
+      "seconds": 2.743
+    },
+    {
+      "from": "gif",
+      "to": "jpg",
+      "status": 200,
+      "bytes": 1747,
+      "seconds": 2.429
+    },
+    {
+      "from": "epub",
+      "to": "txt",
+      "status": 200,
+      "bytes": 40,
+      "seconds": 15.41
+    },
+    {
+      "from": "pdf",
+      "to": "svg",
+      "status": 200,
+      "bytes": 7796,
+      "seconds": 12.585
+    },
+    {
+      "from": "woff2",
+      "to": "ttf",
+      "status": 200,
+      "bytes": 96984,
+      "seconds": 5.971
+    },
+    {
+      "from": "zip",
+      "to": "tar.gz",
+      "status": 200,
+      "bytes": 133,
+      "seconds": 2.314
+    },
+    {
+      "from": "tar.gz",
+      "to": "zip",
+      "status": 200,
+      "bytes": 147,
+      "seconds": 2.346
+    },
+    {
+      "from": "png",
+      "to": "dzi",
+      "status": 200,
+      "bytes": 11098,
+      "seconds": 2.618
+    },
+    {
+      "from": "png",
+      "to": "svg",
+      "status": 422,
+      "bytes": 55,
+      "seconds": 10.483
+    },
+    {
+      "from": "png",
+      "to": "svg",
+      "status": 200,
+      "bytes": 471,
+      "seconds": 2.134
+    }
+  ]
+}

@@ -50,3 +50,9 @@ Official sources:
 - https://yandex.ru/support/webmaster/ru/controlling-robot/sitemap
 
 Both Google and Yandex explicitly decline to guarantee indexing of every submitted URL. No fabricated lastmod, popularity, review count or hidden keyword text is added.
+
+## Production delivery evidence
+
+Code release `d93dffc` was installed with a backend backup and atomic static symlink replacement after GitHub CI passed. Actual production HTTP regression checks passed on AMD64, including the deliberately rejected corrupt input followed by a successful conversion; see `production-http-core.json`. EPUB → TXT was also exercised through the public browser interface, reaching a downloadable result and ZIP action.
+
+All 8,574 canonical Sitemap URLs were checked over public HTTPS. Six initial transport errors succeeded on targeted retry; `live-delivery.json` preserves both the initial failures and successful rechecks. All final results are HTTP 200 HTML. Child Sitemaps, robots, non-indexable input directories and a genuine unknown-path 404 were checked separately. This confirms URL delivery, not search-engine indexing.
