@@ -4,6 +4,8 @@ import assert from 'node:assert/strict';
 import {page} from '../scripts/generate.mjs';
 import {strings} from '../site/src/strings.js';
 import {localeCodes,textDirection} from '../site/src/locales.js';
+import {createHash} from 'node:crypto';
+import {readFileSync} from 'node:fs';
 
 const escape=value=>String(value).replace(/[&<>"']/g,character=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
 
@@ -37,4 +39,13 @@ test('Arabic pages retain RTL prose while protocol examples and format identifie
  assert.ok(examples.length>=3);assert.ok(examples.every(([,attributes])=>attributes.includes('dir="ltr"')));
  const converter=page('ar','png-to-svg');
  for(const match of converter.matchAll(/<button([^>]*data-format="[^"]+"[^>]*)>/g))assert.ok(match[1].includes('dir="ltr"'));
+});
+
+test('all generated pages reference the normalized language bootstrap content version',()=>{
+ const source=readFileSync('site/public/language.js','utf8').replace(/const supported=\[[^\]]*\]/,'const supported='+JSON.stringify(localeCodes));
+ const version=createHash('sha256').update(source).digest('hex').slice(0,16);
+ for(const lang of localeCodes)for(const route of ['','formats/png','developers','404']){
+  const html=page(lang,route);assert.ok(html.includes(`<script src="/language.js?v=${version}"></script>`),`${lang}/${route}: content-versioned bootstrap`);
+  assert.ok(!html.includes('<script src="/language.js"></script>'));
+ }
 });

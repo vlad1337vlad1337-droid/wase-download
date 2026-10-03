@@ -62,6 +62,6 @@ test('all locales publish the same verified pair set and exclude unverified cata
 
 test('automatic language selection honors a supported preference and falls back to browser languages',()=>{
  const source=read('dist/language.js');
- const select=(saved,languages,path='/')=>{let redirect=null;runInNewContext(source,{document:{documentElement:{dataset:{}}},localStorage:{getItem:key=>key==='wase-language'?saved:null},matchMedia:()=>({matches:false}),navigator:{languages,language:languages[0]},location:{pathname:path,search:'?a=1',hash:'#converter',replace:url=>{redirect=url}}});return redirect;};
+ const select=(saved,languages,path='/')=>{let redirect=null;runInNewContext(source,{document:{documentElement:{dataset:{}},querySelector:()=>null,querySelectorAll:()=>[],addEventListener(){}},localStorage:{getItem:key=>key==='wase-language'?saved:null},matchMedia:()=>({matches:false}),navigator:{languages,language:languages[0]},location:{pathname:path,search:'?a=1',hash:'#converter',replace:url=>{redirect=url}}});return redirect;};
  assert.equal(select('fr',['ru-RU']),'/fr/?a=1#converter');assert.equal(select('invalid',['ar-EG','en-US']),'/ar/?a=1#converter');assert.equal(select(null,['ko-KR']),'/ko/?a=1#converter');assert.equal(select(null,['zz-ZZ']),'/en/?a=1#converter');assert.equal(select('de',['de-DE'],'/ru/png-to-svg/'),null);
 });

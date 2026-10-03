@@ -4,34 +4,44 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {bootHead,bootMarkup} from '../scripts/boot-screen.mjs';
 import {localeCodes} from '../site/src/locales.js';
-import {strings} from '../site/src/strings.js';
 
-test('all locales start with their translated converter title, four corner mascots and no dot spinner',()=>{
+test('all locales get a bounded decorative pile using only the four original mascot assets',()=>{
  for(const lang of localeCodes){
   const html=bootMarkup(lang);
-  assert.match(html,new RegExp(`is-first" lang="${lang}"`));
-  assert.ok(html.includes(`--word-index:0">${strings[lang].title}</span>`));
-  assert.equal((html.match(/class="boot-corner boot-corner-/g)||[]).length,4);
-  assert.equal((html.match(/class="boot-word/g)||[]).length,4);
-  assert.doesNotMatch(html,/boot-dots|<i>/);
+  assert.equal((html.match(/boot-face--resting/g)||[]).length,15);
+  assert.equal((html.match(/boot-face--falling/g)||[]).length,35);
+  assert.equal((html.match(/<img /g)||[]).length,50);
+  assert.equal((html.match(/alt=""/g)||[]).length,50);
+  assert.deepEqual([...new Set([...html.matchAll(/src="([^"]+)"/g)].map(match=>match[1]))].sort(),[0,1,2,3].map(i=>`/mascots/boot-${i}.svg`));
   assert.match(html,/aria-hidden="true"/);
+  assert.doesNotMatch(html,/boot-corner|boot-word|boot-brand|boot-swoosh|<svg|<canvas|<script/);
  }
 });
 
-test('loader critical CSS provides a reduced-motion static title and local font only',()=>{
- assert.match(bootHead,/@media\(prefers-reduced-motion:reduce\)/);
- assert.match(bootHead,/\.boot-word\.is-first\{opacity:1\}/);
+test('arrival cadence fills the screen within the 1700ms boot minimum',()=>{
+ const html=bootMarkup('en');
+ const delays=[...html.matchAll(/--delay:(\d+)ms/g)].map(match=>Number(match[1]));
+ assert.equal(delays.length,35);
+ assert.ok(Math.min(...delays)>=150,'initial triangle has a visible first beat');
+ assert.ok(Math.max(...delays)+640<=1700,'last arrival settles before boot minimum');
+ assert.equal(new Set(delays).size,35,'arrivals are staggered');
+ for(const match of html.matchAll(/--(?:portrait-)?([xy]):([\d.]+)v[wh]/g)){
+  assert.ok(Number(match[2])>0&&Number(match[2])<100,`landing stays within viewport: ${match[0]}`);
+ }
+});
+
+test('critical CSS supports a still reduced-motion pile and portrait landing positions',()=>{
+ assert.match(bootHead,/@media\(prefers-reduced-motion:reduce\)\{\s*\.boot-rain\{display:none\}/);
+ assert.match(bootHead,/@media\(max-aspect-ratio:1\/1\)/);
+ assert.match(bootHead,/--landing-y:var\(--portrait-y\);left:var\(--portrait-x\)/);
  assert.match(bootHead,/pointer-events:none/);
- assert.match(bootHead,/\/fonts\/caveat-converter-v1.woff2/);
- assert.doesNotMatch(bootHead,/https?:/);
+ assert.match(bootHead,/transition:opacity \.4s ease-out/);
+ assert.doesNotMatch(bootHead,/https?:|@font-face|as="font"|infinite|clip-path/);
+ assert.equal((bootHead.match(/as="image"/g)||[]).length,4);
 });
 
-test('handwritten subset contains every Latin and Cyrillic title character',()=>{
- const manifest=JSON.parse(readFileSync(new URL('../site/data/boot-font.json',import.meta.url),'utf8'));
- const font=readFileSync(new URL(`../site/public/fonts/${manifest.file}`,import.meta.url));
- assert.equal(createHash('sha256').update(font).digest('hex'),manifest.sha256);
- const available=new Set(manifest.codepoints);
- for(const lang of ['en','ru','es','fr','de','pt','it','tr']){
-  for(const character of strings[lang].title)assert.ok(available.has(character.codePointAt(0)),`${lang}: missing ${character}`);
- }
+test('bootstrap URL is versioned from its current contents',()=>{
+ const code=readFileSync(new URL('../site/public/boot.js',import.meta.url));
+ const version=createHash('sha256').update(code).digest('hex').slice(0,16);
+ assert.ok(bootHead.includes(`<script src="/boot.js?v=${version}"></script>`));
 });

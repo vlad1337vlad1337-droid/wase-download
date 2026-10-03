@@ -12,6 +12,7 @@ export function initTheme(){
  let storage;try{storage=localStorage;}catch{}
  const controller=createThemeController({storage,media:matchMedia('(prefers-color-scheme: dark)'),apply:(color,preference)=>{
   document.documentElement.dataset.theme=color;
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',color==='dark'?'#141414':'#E8E8E6');
   if(label)label.textContent=copy[preference];
   summary?.setAttribute('aria-label',`${copy.theme}: ${copy[preference]}`);
   picker?.setAttribute('data-preference',preference);

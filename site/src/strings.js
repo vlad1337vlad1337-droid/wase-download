@@ -46,3 +46,6 @@ for(const [lang,t]of Object.entries(strings))Object.assign(t,baseInterfaceTransl
 // This note is shown only after selecting the browser fallback. Keep it short
 // and avoid the old universal no-upload/no-queue promise in generated HTML.
 for(const t of Object.values(strings))t.saving=t.local;
+
+const filePreparation={en:'Preparing files',ru:'Подготавливаем файлы',zh:'正在准备文件',es:'Preparando archivos',fr:'Préparation des fichiers',de:'Dateien werden vorbereitet',pt:'Preparando arquivos',it:'Preparazione dei file',tr:'Dosyalar hazırlanıyor',ja:'ファイルを準備中',ko:'파일 준비 중',ar:'جارٍ تجهيز الملفات',hi:'फ़ाइलें तैयार हो रही हैं'};
+for(const [lang,t]of Object.entries(strings))t.reading=filePreparation[lang];

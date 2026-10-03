@@ -252,3 +252,10 @@ body:has(.conversion-guide[open]) main{flex:1 0 auto}.conversion-guide{flex:none
  .format-dialog .category-list button small{flex:none}
  .format-dialog .format-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
+/* Recovery remains readable while static pages and navigation stay available. */
+.startup-recovery{position:relative;z-index:80;display:flex;align-items:center;justify-content:space-between;gap:16px;width:min(640px,calc(100% - 32px));margin:12px auto;padding:16px 18px;border-radius:18px;background:var(--panel,var(--soft));color:var(--ink);box-shadow:0 8px 28px #00000012}
+.startup-recovery p{margin:0;font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.startup-recovery button{flex:none;min-height:44px;border:0;border-radius:12px;padding:10px 16px;background:var(--ink);color:var(--paper);font:inherit;font-size:13px;cursor:pointer}
+@media(max-width:480px){.startup-recovery{flex-direction:column;align-items:stretch;gap:10px;padding:14px}.startup-recovery button{align-self:flex-start}}
+.convert-actions #archive-ready{flex:1;text-align:center}
+.convert-actions a.primary,.convert-actions a.secondary{display:flex;align-items:center;justify-content:center;text-decoration:none}
