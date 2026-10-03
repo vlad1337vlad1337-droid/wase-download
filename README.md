@@ -1,4 +1,4 @@
-<p align="center"><img src=".github/assets/banner.svg" alt="wase.download — a small tool for files" width="100%"></p>
+<p align="center"><img src=".github/assets/banner-generated.png" alt="wase.download — a small tool for files" width="100%"></p>
 
 <p align="center"><a href="https://wase.download">Open converter</a> · <a href="https://wase.download/en/formats/">Supported formats</a> · <a href="https://wase.download/en/developers/">Developers</a> · <a href="https://wase.download/en/privacy/">Privacy</a></p>
 

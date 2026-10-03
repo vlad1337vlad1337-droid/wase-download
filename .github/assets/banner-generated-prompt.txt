@@ -1,0 +1,2 @@
+Built-in imagegen, 2026-10-03. Reference: previous Wase Download banner.
+Generate a premium wide GitHub banner: off-white background, purple blob mascot with original oval dark eyes and no hands, small lavender app icon on the left, a larger slightly tilted mascot on the right. Exact text: wase.download; Drop. Convert. Download. Crisp minimal typography, generous whitespace, subtle dimensional shading, no browser chrome, no watermark or fabricated claims.

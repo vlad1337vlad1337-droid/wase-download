@@ -62,3 +62,6 @@ function setFormats(id,values){$(id)._formats=values;$(id)._category='all';const
  $('example').onclick=()=>{const canvas=document.createElement('canvas');canvas.width=320;canvas.height=240;const c=canvas.getContext('2d');c.fillStyle='#faf9f6';c.fillRect(0,0,320,240);c.fillStyle='#f44937';c.beginPath();c.arc(130,120,66,0,Math.PI*2);c.fill();c.fillStyle='#252624';c.fillRect(153,57,75,125);canvas.toBlob(b=>{if(b)addFiles([new File([b],'wase-example.png',{type:'image/png'})]);},'image/png');};
  setFormats('source',['AUTO','PNG','JPG','WEBP','GIF','BMP','SVG']);setFormats('target',['SVG','PNG','JPG','WEBP','BMP','ICO']);window.addEventListener('pagehide',e=>{if(!e.persisted){controller?.abort();items.forEach(release);}});outputSettings();render();
 }
+
+// Reveal after synchronous UI wiring; catalogue, engines and analytics load independently.
+window.__waseFinishBoot?.();

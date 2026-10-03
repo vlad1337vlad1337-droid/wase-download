@@ -65,3 +65,12 @@ main:not(.legal){max-width:920px;padding:38px 48px 40px;justify-content:center;g
 @media(max-width:720px){.helper-scene{inset:-260px 0 -120px;clip-path:none;overflow:hidden}.helper-0{top:150px}.helper-1{top:158px}}
 @media(max-width:359px){.helper-0{top:162px}.helper-1{top:168px}}
 @media(max-height:600px) and (max-width:720px){.helper-0,.helper-1{top:168px}}
+
+/* Keep all categories in one vertical list, including CAD. */
+.format-dialog .category-list{flex-wrap:nowrap;overflow-x:hidden;overflow-y:auto;min-width:0}.format-dialog .category-list button{width:100%;white-space:normal;overflow-wrap:anywhere}.format-dialog .category-list button small{flex:none}
+.hero{margin-bottom:122px}.helper-0{width:300px;height:300px;left:-108px;top:-205px;transform:rotate(-11deg)}.helper-1{width:272px;height:272px;right:-98px;top:-178px;transform:rotate(10deg)}.helper-2{width:190px;height:190px;left:-116px;bottom:-2px}.helper-3{width:194px;height:194px;right:-120px;bottom:-8px}
+@media(max-width:1000px){.helper-0{width:248px;height:248px;left:-64px;top:-167px}.helper-1{width:228px;height:228px;right:-60px;top:-149px}.helper-2{width:152px;height:152px;left:-80px}.helper-3{width:158px;height:158px;right:-84px}}
+@media(max-width:720px){.hero{margin-bottom:124px}.helper-0{width:200px;height:200px;left:-10px;top:124px;transform:rotate(-9deg)}.helper-1{width:184px;height:184px;right:-8px;top:136px;transform:rotate(9deg)}}
+@media(max-width:359px){.helper-0{width:176px;height:176px;left:-9px;top:141px}.helper-1{width:164px;height:164px;right:-9px;top:151px}.hero{margin-bottom:112px}}
+@media(max-height:600px){.hero{margin-bottom:86px}.helper-0,.helper-1{width:166px;height:166px;top:-112px}}
+@media(max-height:600px) and (max-width:720px){.helper-0,.helper-1{top:148px}}
