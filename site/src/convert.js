@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Wase Download contributors
 const MIME={SVG:'image/svg+xml',PNG:'image/png',JPG:'image/jpeg',WEBP:'image/webp',BMP:'image/bmp',ICO:'image/x-icon'};
 export const MAX_BYTES=20*1024*1024;
 export const MAX_PIXELS=16_000_000;

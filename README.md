@@ -8,9 +8,13 @@ A self-hosted file converter in English, Russian and Simplified Chinese. Drop a 
 - **One workspace:** visible file queue, individual downloads, ZIP, retry and cancellation.
 - **Two paths:** local browser image processing or resource-limited, offline server containers.
 - **Accessible by default:** compact responsive UI, light/dark themes, keyboard menus and reduced-motion support.
-- **Discoverable:** static localized pages, 2,853 conversion pages per language, backed by real HTTP checks, full declared catalogue and a read-only MCP endpoint.
+- **Discoverable:** static localized pages, 2,681 conversion pages per language, backed by real HTTP checks, full declared catalogue and a read-only MCP endpoint.
 
 The pinned server build declares 915 input extensions. This is an engine catalogue, not a promise that every possible file or conversion pair works. Real byte-level smoke tests cover each family; detailed constraints are below.
+
+## Support
+
+[Buy me a coffee](https://dalink.to/wase_download) to support hosting and development. If the project is useful, a GitHub star helps other people discover it. Donations are optional; the converter remains free to use.
 
 ## Run
 
@@ -38,7 +42,7 @@ RUN_SERVER_TESTS=1 npm test
 
 100 MB per file in server mode, 20 MB in browser fallback, 20 files per batch, 16 megapixels and an 8192-pixel input edge. SVG tracing downscales to at most 768/1024/1536 pixels for Simple/Balanced/Detailed, with 16/32/64 colors. Photographs are approximated, not losslessly vectorized. Browser GIF input uses the first frame. ICO has a maximum edge of 256 pixels. JPEG and BMP use a white background for transparency.
 
-Browser mode supports the six output formats above. Server mode reads its catalogue from the pinned ConvertX image (915 input extensions in this build). These are declared engine capabilities, not a claim that every arbitrary input file or pair has been tested. Available targets depend on the input extension. SVG scripts, external resources, embedded raster images and unsupported constructs are rejected; ordinary paths, shapes, text and gradients are supported.
+Browser mode supports SVG, PNG, JPG, WebP, BMP and ICO. Server mode reads its catalogue from the pinned ConvertX image (915 input extensions in this build). These are declared engine capabilities, not a claim that every arbitrary input file or pair has been tested. Available targets depend on the input extension. SVG scripts, external resources, embedded raster images and unsupported constructs are rejected; ordinary paths, shapes, text and gradients are supported.
 
 Clipboard formats and browser permissions vary. Paste keyboard shortcuts use the native paste event. The optional clipboard button shows a useful fallback when clipboard read is unavailable. Automated synthetic paste tests verify the event handling; physical iOS clipboard/device acceptance still needs a real-device check.
 
@@ -67,14 +71,24 @@ On the current one-core deployment, the API and converter containers share a **3
 
 LibreOffice, Pandoc, FFmpeg, resvg, FontTools and FontForge provide specialized conversions in the pinned server image. We retain upstream notices and do not claim these engines as original work.
 
-This repository is an ImageTracer fork: its original Unlicense and [upstream README](UPSTREAM_README.md) are preserved. The server integration is AGPL-3.0; complete modified engine source is at [wase-converter-engine](https://github.com/vlad1337vlad1337-droid/wase-converter-engine). See [third-party notices](THIRD_PARTY_NOTICES.md).
+Our original interface and tooling are MIT licensed: preserve the Wase Download copyright and permission notice when copying or forking. This repository started as an ImageTracer fork; its original Unlicense and [upstream README](UPSTREAM_README.md) remain preserved. See [licensing and attribution](LICENSING.md). The server integration is AGPL-3.0; complete modified engine source is at [wase-converter-engine](https://github.com/vlad1337vlad1337-droid/wase-converter-engine). See [third-party notices](THIRD_PARTY_NOTICES.md).
 
 ## Design
 
-Monochrome Wase Chat tokens, local Inter, Lucide controls and four small Blobatar helpers. Mascots never capture input; their animation stops when reduced motion is requested. No fabricated endorsements, usage numbers or project history.
+Monochrome Wase Chat tokens, local Inter, Lucide controls and four expressive Blobatar helpers holding the workspace. Mascots never capture input; their animation stops when reduced motion is requested. No fabricated endorsements, usage numbers or project history.
 
 ## Conversion and indexing audit
 
 The October 3 audit exercised 20,448 declared pairs using 156 representative input fixtures. Decoder validation and actual HTTP requests admitted 2,853 published pairs, including the original popular converters. This does not mean all 915 catalogue entries or arbitrary input files work. See [the complete coverage report](deploy/seo/SITEMAP-COVERAGE.md), [per-input gaps](deploy/seo/input-verification.json), and [new-pair receipts](deploy/seo/verified-receipts.json).
 
 Build output contains static EN/RU/ZH pages and a Sitemap index with language-specific child maps. Untested per-input directories remain accessible with `noindex,follow` and are excluded from Sitemap. Search-engine submission does not guarantee indexing or ranking.
+
+## Useful conversions, not arbitrary combinations
+
+The public policy excludes capture devices and implicit still-photo-to-video synthesis. For example, 3FR → MP4 is not offered as an ordinary file conversion; GIF → MP4 and video → audio remain available. Mixed batches expose only targets shared by every input. These semantic checks are separate from decoder validation and do not promise that arbitrary files or every catalogue declaration work.
+
+PNG Software metadata, JPEG comments, SVG comments and ZIP archive comments identify `Created by wase.download`. Other formats use the branded download filename without rewriting opaque binary structures or user document text. Image pixels, compression data and archive entry bytes remain untouched by this credit.
+
+## Reuse
+
+Forks should retain original Wase Download copyright notices, upstream credits and the applicable MIT / AGPL / Unlicense texts. See [LICENSING.md](LICENSING.md), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [CONTRIBUTING.md](CONTRIBUTING.md). The conversion credit identifies the tool and does not claim ownership of uploaded files.

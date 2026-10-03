@@ -1,34 +1,34 @@
 {
-  "canonicalPages": 8574,
-  "sitemapURLs": 8574,
-  "publishedPairs": 2853,
+  "canonicalPages": 8058,
+  "sitemapURLs": 8058,
+  "publishedPairs": 2681,
   "languages": [
     "en",
     "ru",
     "zh"
   ],
-  "inputFormats": 915,
-  "outputFormats": 521,
-  "declaredPairs": 153786,
-  "sameFormatPairs": 380,
-  "crossFormatPairs": 153406,
-  "unpublishedCrossFormatPairs": 150553,
+  "inputFormats": 903,
+  "outputFormats": 520,
+  "declaredPairs": 148202,
+  "sameFormatPairs": 375,
+  "crossFormatPairs": 147827,
+  "unpublishedCrossFormatPairs": 145146,
   "categories": {
     "document": {
-      "inputs": 549,
-      "declaredPairs": 95188
+      "inputs": 538,
+      "declaredPairs": 92924
     },
     "ebook": {
       "inputs": 26,
-      "declaredPairs": 1737
+      "declaredPairs": 1734
     },
     "image": {
-      "inputs": 227,
-      "declaredPairs": 48647
+      "inputs": 226,
+      "declaredPairs": 45430
     },
     "vector": {
       "inputs": 6,
-      "declaredPairs": 1430
+      "declaredPairs": 1339
     },
     "font": {
       "inputs": 4,
@@ -48,11 +48,11 @@
     },
     "video": {
       "inputs": 7,
-      "declaredPairs": 2387
+      "declaredPairs": 2380
     },
     "cad": {
       "inputs": 74,
-      "declaredPairs": 2911
+      "declaredPairs": 2909
     }
   },
   "issues": []

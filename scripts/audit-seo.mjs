@@ -16,7 +16,7 @@ export function audit(){
   const canonical=html.match(/<link rel="canonical" href="([^"]+)"/),title=html.match(/<title>([^<]+)<\/title>/)?.[1];
   if(!canonical){issues.push(`${path}: missing canonical`);continue;}
   // The language chooser at / intentionally duplicates /en/; it is not a canonical page.
-  if(canonical[1]!==url){if(path!=='/')issues.push(`${path}: unexpected canonical ${canonical[1]}`);continue;}
+  if(canonical[1]!==url){if(html.includes('data-retired="true"')&&html.includes('noindex,follow')&&/^https:\/\/wase\.download\/(en|ru|zh)\/formats\/[^/]+\/$/.test(canonical[1])&&existsSync(resolve(root,'.'+new URL(canonical[1]).pathname,'index.html')))continue;if(path!=='/')issues.push(`${path}: unexpected canonical ${canonical[1]}`);continue;}
   if(/<meta name="robots" content="noindex,follow"/.test(html)){if(!/^\/(en|ru|zh)\/formats\/[^/]+\/$/.test(path))issues.push(`${path}: unexpected noindex`);continue;}
   pages.set(url,html);
   if(!listed.has(url))issues.push(`${path}: canonical page missing from sitemap`);

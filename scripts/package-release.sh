@@ -5,4 +5,4 @@ out=${1:-/tmp}
 mkdir -p "$out"
 # Exclude macOS extended attributes and AppleDouble files from Linux artifacts.
 COPYFILE_DISABLE=1 tar --no-xattrs -czf "$out/wase-download-$revision-dist.tgz" -C dist .
-COPYFILE_DISABLE=1 tar --no-xattrs -czf "$out/wase-download-$revision-backend.tgz" backend/server.mjs backend/engine.mjs backend/engine-order.mjs backend/output-validation.py scripts/release.sh
+COPYFILE_DISABLE=1 tar --no-xattrs -czf "$out/wase-download-$revision-backend.tgz" backend/server.mjs backend/engine.mjs backend/engine-order.mjs backend/output-validation.py backend/conversion-policy.mjs backend/output-brand.mjs scripts/release.sh

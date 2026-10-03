@@ -2,12 +2,16 @@ import {mkdirSync,writeFileSync,readFileSync} from 'node:fs';
 import {page,inputRoutes} from './generate.mjs';
 import {strings} from '../site/src/strings.js';
 import {pairs} from '../site/src/published-pairs.js';
+import {pairs as baseline} from '../site/src/strings.js';
+import verified from '../site/data/verified-pairs.json' with {type:'json'};
+const retired=Object.entries({...baseline,...verified}).filter(([slug])=>!pairs[slug]);
 const base='https://wase.download',template=readFileSync('dist/en/index.html','utf8');
 const script=template.match(/<script type="module"[^>]+src="\/assets\/[^\"]+"[^>]*><\/script>/)?.[0];
 const css=template.match(/<link rel="stylesheet"[^>]+href="\/assets\/[^\"]+"[^>]*>/)?.[0];
 if(!script||!css)throw new Error('Missing compiled converter assets');
 const sitemaps=[];
 for(const lang of Object.keys(strings)){
+ for(const [slug,[input]]of retired){const route=inputRoutes[input.toLowerCase()];if(!route)continue;const target=`/${lang}/${route}/`,dir=`dist/${lang}/${slug}`;mkdirSync(dir,{recursive:true});writeFileSync(`${dir}/index.html`,`<!doctype html><html lang="${lang}"><head><meta charset="UTF-8"><meta name="robots" content="noindex,follow"><link rel="canonical" href="${base+target}"><meta http-equiv="refresh" content="0;url=${target}"><title>wase.download</title></head><body data-retired="true"><a href="${target}">Choose an available output format →</a></body></html>`);}
  const paths=['',...Object.keys(pairs),'privacy','about','formats','developers'];
  for(const path of [...Object.keys(pairs),...Object.values(inputRoutes)]){
   const dir=`dist/${lang}/${path}`;mkdirSync(dir,{recursive:true});

@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "description": "Private, multilingual image conversion and vector tracing in your browser",
-  "license": "(Unlicense AND AGPL-3.0-only)",
+  "license": "MIT AND AGPL-3.0-only AND Unlicense",
   "engines": {
     "node": ">=22.12.0"
   },
