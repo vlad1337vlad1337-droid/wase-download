@@ -80,3 +80,7 @@ main:not(.legal){max-width:920px;padding:38px 48px 40px;justify-content:center;g
 @media(max-width:720px){.privacy-page h1{font-size:24px}.privacy-page section{margin-top:20px}}
 @media(prefers-reduced-motion:reduce){.helper-eyes{transition:none!important}}
 @media(max-width:720px){.header .coffee-link,.header .icon-button{width:44px;height:44px;min-height:44px}.header .language>summary{min-height:44px}}
+
+/* Lightweight decorative ribbons; no images, event handlers or layout footprint. */
+body{isolation:isolate}.site-ribbons{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}.site-ribbons svg{display:block;width:100%;height:100%;opacity:.28}.site-ribbons path{stroke-width:2;stroke-linecap:round;vector-effect:non-scaling-stroke}.site-ribbons .ribbons-mobile{display:none}[data-theme=dark] .site-ribbons svg{opacity:.32}
+@media(max-width:720px){.site-ribbons .ribbons-wide{display:none}.site-ribbons .ribbons-mobile{display:block}.site-ribbons svg{opacity:.24}.site-ribbons path{stroke-width:1.5}}
