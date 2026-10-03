@@ -17,3 +17,7 @@
 ## Blobatar
 
 Local decorative SVG characters are generated at build time with [Alain00/blobatar](https://github.com/Alain00/blobatar), version 2.7.0. MIT License, Copyright (c) 2026 Alain. The full license is available at `site/public/licenses/blobatar-MIT.txt`. No external avatar service or runtime animation library is used.
+
+## PDF.js
+
+PDF result previews use [Mozilla PDF.js](https://github.com/mozilla/pdf.js), `pdfjs-dist` 6.3.289, Apache License 2.0. The library and its worker are loaded only when a PDF preview opens. The full Apache license is retained in `site/public/licenses/pdfjs-APACHE-2.0.txt`. Locally bundled standard fonts keep their Foxit and Liberation notices in the same directory; PDF.js image-decoder notices are retained there as well. Preview canvases contain the first page, without scripting, interactive annotations, or embedded HTML.

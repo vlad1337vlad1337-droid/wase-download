@@ -2,15 +2,15 @@
 
 <p align="center"><a href="https://wase.download">Open converter</a> · <a href="https://wase.download/en/formats/">Supported formats</a> · <a href="https://wase.download/en/developers/">Developers</a> · <a href="https://wase.download/en/privacy/">Privacy</a></p>
 
-A self-hosted file converter in English, Russian and Simplified Chinese. Drop a file, paste a screenshot, choose an output and download the result. No account and no third-party conversion API.
+A self-hosted file converter in 13 languages: English, Russian, Simplified Chinese, Spanish, French, German, Portuguese, Italian, Turkish, Japanese, Korean, Arabic and Hindi. Drop a file, paste a screenshot, choose an output and download the result. No account and no third-party conversion API.
 
 - **Ten families:** images, documents, ebooks, audio, archives, video, presentations, fonts, vectors and CAD/3D.
-- **One workspace:** visible file queue, individual downloads, ZIP, retry and cancellation.
+- **One workspace:** visible file queue, result preview, individual downloads, ZIP, retry and cancellation.
 - **Two paths:** local browser image processing or resource-limited, offline server containers.
 - **Accessible by default:** compact responsive UI, light/dark themes, keyboard menus and reduced-motion support.
-- **Discoverable:** static localized pages, 2,681 conversion pages per language, backed by real HTTP checks, full declared catalogue and a read-only MCP endpoint.
+- **Discoverable:** static localized pages backed by real HTTP checks, an input-dependent declared catalogue and a read-only MCP endpoint.
 
-The pinned server build declares 915 input extensions. This is an engine catalogue, not a promise that every possible file or conversion pair works. Real byte-level smoke tests cover each family; detailed constraints are below.
+The pinned engine build declares 915 input extensions; the upload policy exposes 885 actual file extensions after filtering devices and pseudo-formats. This is an engine catalogue, not a promise that every possible file or conversion pair works. Real byte-level smoke tests cover each family; detailed constraints are below.
 
 ## Support
 
@@ -18,7 +18,7 @@ The pinned server build declares 915 input extensions. This is an engine catalog
 
 ## Run
 
-Node.js 22.12+:
+Node.js 22.13+:
 
 ```sh
 npm ci
@@ -67,6 +67,7 @@ On the current one-core deployment, the API and converter containers share a **3
 | [VTracer](https://github.com/visioncortex/vtracer) | Server vectorization into real SVG paths |
 | [Blobatar](https://github.com/Alain00/blobatar) | Locally generated helper mascots |
 | [fflate](https://github.com/101arrowz/fflate) | ZIP packaging |
+| [PDF.js](https://github.com/mozilla/pdf.js) | Lazy, canvas-only PDF result preview |
 | [jSquash](https://github.com/jamsinclair/jSquash) | Local WebP encoding on Safari |
 
 LibreOffice, Pandoc, FFmpeg, resvg, FontTools and FontForge provide specialized conversions in the pinned server image. We retain upstream notices and do not claim these engines as original work.
@@ -75,20 +76,28 @@ Our original interface and tooling are MIT licensed: preserve the Wase Download 
 
 ## Design
 
-Monochrome Wase Chat tokens, local Inter, Lucide controls and four expressive Blobatar helpers holding the workspace. Mascots never capture input; their animation stops when reduced motion is requested. No fabricated endorsements, usage numbers or project history.
+Monochrome Wase Chat tokens, local Inter, Lucide controls and four expressive Blobatar helpers around the workspace. Mascots never capture input; their animation stops when reduced motion is requested. No fabricated endorsements, usage numbers or project history.
 
 ## Conversion and indexing audit
 
-The October 3 audit exercised 20,448 declared pairs using 156 representative input fixtures. Decoder validation and actual HTTP requests admitted 2,853 published pairs, including the original popular converters. This does not mean all 915 catalogue entries or arbitrary input files work. See [the complete coverage report](deploy/seo/SITEMAP-COVERAGE.md), [per-input gaps](deploy/seo/input-verification.json), and [new-pair receipts](deploy/seo/verified-receipts.json).
+The previous October 3 discovery run exercised 20,448 declared pairs using 156 representative input fixtures. Some parallel discovery attempts exhausted process limits; those attempts are not proof of conversion support. Archived byte validation and HTTP receipts plus the public file policy admit 2,681 published pairs, including the original popular converters. This does not mean all 915 catalogue entries or arbitrary input files work. See [the complete coverage report](deploy/seo/SITEMAP-COVERAGE.md), [per-input gaps](deploy/seo/input-verification.json), and [new-pair receipts](deploy/seo/verified-receipts.json).
 
-Build output contains static EN/RU/ZH pages and a Sitemap index with language-specific child maps. Untested per-input directories remain accessible with `noindex,follow` and are excluded from Sitemap. Search-engine submission does not guarantee indexing or ranking.
+Build output contains static pages in all 13 languages, with an Arabic RTL interface and a Sitemap index with language-specific child maps. Untested per-input directories remain accessible with `noindex,follow` and are excluded from Sitemap. Search-engine submission does not guarantee indexing or ranking.
 
 ## Useful conversions, not arbitrary combinations
 
-The public policy excludes capture devices and implicit still-photo-to-video synthesis. For example, 3FR → MP4 is not offered as an ordinary file conversion; GIF → MP4 and video → audio remain available. Mixed batches expose only targets shared by every input. These semantic checks are separate from decoder validation and do not promise that arbitrary files or every catalogue declaration work.
+The public policy excludes capture devices, ImageMagick generators/network transports and implicit still-photo-to-video synthesis. For example, 3FR → MP4 is not offered as an ordinary file conversion; GIF → MP4 and video → audio remain available. Mixed batches expose only targets shared by every input. These semantic checks are separate from decoder validation and do not promise that arbitrary files or every catalogue declaration work.
 
 PNG Software metadata, JPEG comments, SVG comments and ZIP archive comments identify `Created by wase.download`. Other formats use the branded download filename without rewriting opaque binary structures or user document text. Image pixels, compression data and archive entry bytes remain untouched by this credit.
 
 ## Reuse
 
 Forks should retain original Wase Download copyright notices, upstream credits and the applicable MIT / AGPL / Unlicense texts. See [LICENSING.md](LICENSING.md), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [CONTRIBUTING.md](CONTRIBUTING.md). The conversion credit identifies the tool and does not claim ownership of uploaded files.
+
+## Result preview
+
+Completed results replace the primary convert action with Download or Download ZIP. Images, audio and video use native browser viewers; bounded text previews render as plain text, including HTML and code. PDF previews lazily load PDF.js and render only the first page to a canvas with scripting and annotations disabled. Documents, fonts, CAD and archive types without a browser viewer remain downloadable and show an explicit preview-unavailable message. Browser codec support still varies. Preview never executes uploaded HTML or opens it in an iframe.
+
+The empty workspace fits ordinary mobile and desktop viewports. Long file queues scroll inside the workspace; opening conversion instructions, using a very short viewport, or increasing text size keeps normal page scrolling for accessibility.
+
+The current 13-language Sitemap contains 34,918 canonical URLs. The 885 upload identifiers and 143,995 declared directions are not all fixture-verified: the representative corpus covers 156 raw identifiers, and archived 2,845 HTTP receipts produce 2,673 eligible directions plus eight baseline pages. The focused JPEG/SVG regression, including a full-resolution noisy photo, is documented in [conversion-regression-2026-10-03.json](deploy/conversion-regression-2026-10-03.json). Those historical HTTP conversions were not all rerun in this UI update.

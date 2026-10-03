@@ -1,0 +1,45 @@
+{
+  "origin": "http://127.0.0.1:5190",
+  "results": [
+    {
+      "sample": "rgb.jpg",
+      "from": "jpg",
+      "to": "svg",
+      "http": 200,
+      "passed": true,
+      "ms": 1315,
+      "bytes": 394,
+      "sha256": "b5418dcbf460799a7d6b6aa85dd1d4d7351fb8ee2544ef25ff3925953d1e0bed"
+    },
+    {
+      "sample": "progressive.jpeg",
+      "from": "jpeg",
+      "to": "svg",
+      "http": 200,
+      "passed": true,
+      "ms": 892,
+      "bytes": 394,
+      "sha256": "b5418dcbf460799a7d6b6aa85dd1d4d7351fb8ee2544ef25ff3925953d1e0bed"
+    },
+    {
+      "sample": "cmyk.jpg",
+      "from": "jpg",
+      "to": "svg",
+      "http": 200,
+      "passed": true,
+      "ms": 892,
+      "bytes": 394,
+      "sha256": "2fa2a598fe6479bc524e3d88b100de0478a4d071aee33af17cd07b6a2c5d4815"
+    },
+    {
+      "sample": "large-photo.jpg",
+      "from": "jpeg",
+      "to": "svg",
+      "http": 200,
+      "passed": true,
+      "ms": 44950,
+      "bytes": 3265476,
+      "sha256": "3e1858f59c59a3712b7f29e12916354a9fa628961a78020b095d89e2eace8447"
+    }
+  ]
+}

@@ -1,2 +1,5 @@
 const priority=['vtracer','resvg','libheif','libjxl','vips','libreoffice','pandoc','calibre','ffmpeg','imagemagick','graphicsmagick'];
-export function engineOrder(choices){return [...priority.filter(e=>choices.includes(e)),...choices.filter(e=>!priority.includes(e))].slice(0,3);}
+// Keep this in sync with engine.mjs: all of these SVG directions use the same
+// bounded normalize/trace pipeline regardless of the original declared engine.
+const tracedRaster=new Set(['jpg','jpeg','jpe','png','bmp','gif','webp','tif','tiff','ico','avif','heic','heif','jxl']);
+export function engineOrder(choices,input,output){const order=[...priority.filter(e=>choices.includes(e)),...choices.filter(e=>!priority.includes(e))].slice(0,3);return output==='svg'&&tracedRaster.has(input)?order.slice(0,1):order;}

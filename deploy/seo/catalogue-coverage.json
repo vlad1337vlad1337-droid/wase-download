@@ -1,34 +1,44 @@
 {
-  "canonicalPages": 8058,
-  "sitemapURLs": 8058,
+  "canonicalPages": 34918,
+  "sitemapURLs": 34918,
   "publishedPairs": 2681,
   "languages": [
     "en",
     "ru",
-    "zh"
+    "zh",
+    "es",
+    "fr",
+    "de",
+    "pt",
+    "it",
+    "tr",
+    "ja",
+    "ko",
+    "ar",
+    "hi"
   ],
-  "inputFormats": 903,
-  "outputFormats": 520,
-  "declaredPairs": 148202,
-  "sameFormatPairs": 375,
-  "crossFormatPairs": 147827,
-  "unpublishedCrossFormatPairs": 145146,
+  "inputFormats": 885,
+  "outputFormats": 517,
+  "declaredPairs": 143995,
+  "sameFormatPairs": 372,
+  "crossFormatPairs": 143623,
+  "unpublishedCrossFormatPairs": 140942,
   "categories": {
     "document": {
-      "inputs": 538,
-      "declaredPairs": 92924
+      "inputs": 532,
+      "declaredPairs": 91757
     },
     "ebook": {
       "inputs": 26,
-      "declaredPairs": 1734
+      "declaredPairs": 1725
     },
     "image": {
-      "inputs": 226,
-      "declaredPairs": 45430
+      "inputs": 214,
+      "declaredPairs": 42444
     },
     "vector": {
       "inputs": 6,
-      "declaredPairs": 1339
+      "declaredPairs": 1321
     },
     "font": {
       "inputs": 4,
@@ -48,11 +58,11 @@
     },
     "video": {
       "inputs": 7,
-      "declaredPairs": 2380
+      "declaredPairs": 2359
     },
     "cad": {
       "inputs": 74,
-      "declaredPairs": 2909
+      "declaredPairs": 2903
     }
   },
   "issues": []

@@ -1,0 +1,96 @@
+{
+  "checkedAt": "2026-10-03T08:35:18.560Z",
+  "browser": "Codex in-app browser, actual DOM and rendered page; viewport emulation, not a physical iPhone",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 568,
+      "pageWidth": 320,
+      "pageHeight": 568,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "height": 700,
+      "pageWidth": 390,
+      "pageHeight": 700,
+      "passed": true
+    },
+    {
+      "width": 430,
+      "height": 740,
+      "pageWidth": 430,
+      "pageHeight": 740,
+      "passed": true
+    },
+    {
+      "width": 768,
+      "height": 600,
+      "pageWidth": 768,
+      "pageHeight": 600,
+      "passed": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "pageWidth": 844,
+      "pageHeight": 390,
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "pageWidth": 1280,
+      "pageHeight": 720,
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "pageWidth": 1440,
+      "pageHeight": 900,
+      "passed": true
+    }
+  ],
+  "queue": {
+    "files": 15,
+    "scrollHeight": 1163,
+    "visibleHeight": 175,
+    "pageHeight": 700,
+    "passed": true
+  },
+  "resultActions": {
+    "single": "Download",
+    "multiple": "Download all as ZIP",
+    "duplicateConvertRemoved": true,
+    "svgPreviewLoaded": true,
+    "pdfPreview": {
+      "firstPage": true,
+      "canvasWidth": 318,
+      "canvasHeight": 449,
+      "pixels": 142782,
+      "passed": true
+    }
+  },
+  "languageMenu": {
+    "languages": 13,
+    "visibleAboveConverter": true,
+    "internalScroll": true
+  },
+  "tests": {
+    "nodeFull": 41,
+    "nodeChangedEngineAndPolicies": 15,
+    "archiveChecks": 10,
+    "outputValidation": true,
+    "familiesHTTP": 10,
+    "HTTPRejections": 3,
+    "jpegHTTP": 4,
+    "vectorFixtures": 16
+  },
+  "limits": [
+    "Physical iPhone acceptance was not performed in this turn",
+    "The in-app browser did not expose blob download completion; download link/primary action/ZIP generation were exercised, but OS save confirmation remains unverified",
+    "Unsupported browser formats offer an explicit download fallback; PDF preview renders the first page only",
+    "Archived 2845 HTTP conversions were not all rerun; declarations are not guarantees"
+  ]
+}

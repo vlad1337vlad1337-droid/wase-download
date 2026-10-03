@@ -6,7 +6,7 @@
   "description": "Private, multilingual image conversion and vector tracing in your browser",
   "license": "MIT AND AGPL-3.0-only AND Unlicense",
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=22.13.0"
   },
   "scripts": {
     "generate": "node scripts/generate.mjs",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@jsquash/webp": "1.5.0",
-    "fflate": "^0.8.3"
+    "fflate": "^0.8.3",
+    "pdfjs-dist": "6.3.289"
   }
 }

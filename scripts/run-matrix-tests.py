@@ -1,5 +1,5 @@
 """Run inside a networkless read-only converter container. Reports failures, never assumes success."""
-import os,json,shutil,subprocess,time,hashlib,struct,zipfile
+import os,json,shutil,subprocess,time,hashlib,struct,zipfile,signal
 plan=json.load(open(os.environ.get('MATRIX_PLAN','/corpus/plan.json'))); report='/report/results.jsonl'
 completed=set()
 if os.path.exists(report):
@@ -17,9 +17,21 @@ for i,case in enumerate(plan['cases']):
    if os.path.isdir(path)and not os.path.islink(path):shutil.rmtree(path)
    else:os.unlink(path)
   shutil.copyfile(case['fixture'],'/job/input.'+case['input'])
-  p=subprocess.run(['timeout','-k','1','12','bun','/engine.mjs',case['input'],case['output'],engine],capture_output=True)
-  attempt={'engine':engine,'exit':p.returncode};result['attempts'].append(attempt)
-  if p.returncode!=0:attempt['error']=p.stderr.decode('utf8','replace')[-500:];continue
+  # Killing only Bun/timeout can leave converter grandchildren behind. Later
+  # cases then fail with EAGAIN at the PID cap, falsely blaming their formats.
+  process=subprocess.Popen(['bun','/engine.mjs',case['input'],case['output'],engine],stdout=subprocess.PIPE,stderr=subprocess.PIPE,start_new_session=True)
+  timed_out=False
+  try:stdout,stderr=process.communicate(timeout=float(os.environ.get('MATRIX_ATTEMPT_SECONDS','60')))
+  except subprocess.TimeoutExpired:
+   timed_out=True
+   try:os.killpg(process.pid,signal.SIGKILL)
+   except ProcessLookupError:pass
+   stdout,stderr=process.communicate()
+  finally:
+   try:os.killpg(process.pid,signal.SIGKILL)
+   except ProcessLookupError:pass
+  attempt={'engine':engine,'exit':124 if timed_out else process.returncode};result['attempts'].append(attempt)
+  if attempt['exit']!=0:attempt['error']=('Attempt deadline exceeded' if timed_out else stderr.decode('utf8','replace')[-500:]);continue
   outputs=[f for f in os.listdir('/job')if f!='input.'+case['input'] and os.path.isfile('/job/'+f)and not os.path.islink('/job/'+f)]
   if not outputs:attempt['error']='No regular output files';continue
   try:

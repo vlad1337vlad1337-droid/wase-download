@@ -9,6 +9,16 @@ playwright-report/
 site/en/
 site/ru/
 site/zh/
+site/es/
+site/fr/
+site/de/
+site/pt/
+site/it/
+site/tr/
+site/ja/
+site/ko/
+site/ar/
+site/hi/
 site/index.html
 site/public/sitemap.xml
 site/public/robots.txt

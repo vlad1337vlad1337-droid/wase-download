@@ -1,3 +1,4 @@
+import {additionalPrivacy} from './locales.js';
 // SPDX-License-Identifier: MIT
 // Describes the actual default server path and limited browser fallback.
 export const privacy = {
@@ -35,3 +36,5 @@ export const privacy = {
   ]
  }
 };
+
+Object.assign(privacy,additionalPrivacy);

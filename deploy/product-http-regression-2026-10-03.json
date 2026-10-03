@@ -1,0 +1,113 @@
+{
+  "origin": "http://127.0.0.1:5190",
+  "results": [
+    {
+      "category": "image",
+      "from": "png",
+      "to": "svg",
+      "http": 200,
+      "bytes": 526,
+      "passed": true,
+      "ms": 1372
+    },
+    {
+      "category": "vector",
+      "from": "svg",
+      "to": "png",
+      "http": 200,
+      "bytes": 229,
+      "passed": true,
+      "ms": 479
+    },
+    {
+      "category": "document",
+      "from": "txt",
+      "to": "pdf",
+      "http": 200,
+      "bytes": 12857,
+      "passed": true,
+      "ms": 2571
+    },
+    {
+      "category": "audio",
+      "from": "wav",
+      "to": "mp3",
+      "http": 200,
+      "bytes": 1413,
+      "passed": true,
+      "ms": 836
+    },
+    {
+      "category": "video",
+      "from": "mp4",
+      "to": "webm",
+      "http": 200,
+      "bytes": 692,
+      "passed": true,
+      "ms": 811
+    },
+    {
+      "category": "archive",
+      "from": "zip",
+      "to": "tar.gz",
+      "http": 200,
+      "bytes": 122,
+      "passed": true,
+      "ms": 516
+    },
+    {
+      "category": "font",
+      "from": "woff2",
+      "to": "woff",
+      "http": 200,
+      "bytes": 59784,
+      "passed": true,
+      "ms": 958
+    },
+    {
+      "category": "cad",
+      "from": "stl",
+      "to": "obj",
+      "http": 200,
+      "bytes": 736,
+      "passed": true,
+      "ms": 508
+    },
+    {
+      "category": "presentation",
+      "from": "odp",
+      "to": "pdf",
+      "http": 200,
+      "bytes": 16228,
+      "passed": true,
+      "ms": 2068
+    },
+    {
+      "category": "ebook",
+      "from": "epub",
+      "to": "txt",
+      "http": 200,
+      "bytes": 16,
+      "passed": true,
+      "ms": 3430
+    },
+    {
+      "scenario": "unsupported-pair",
+      "http": 400,
+      "expected": 400,
+      "passed": true
+    },
+    {
+      "scenario": "forbidden-origin",
+      "http": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "scenario": "empty-file",
+      "http": 422,
+      "expected": 422,
+      "passed": true
+    }
+  ]
+}
