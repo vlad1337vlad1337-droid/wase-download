@@ -11,7 +11,21 @@ const retiredPattern=new RegExp(`^https://wase\\.download/(${localePattern})/for
 const base='https://wase.download',root=resolve('dist');
 const read=p=>readFileSync(p,'utf8');
 const walk=p=>readdirSync(p,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(resolve(p,e.name)):e.name.endsWith('.html')?[resolve(p,e.name)]:[]);
-export function audit(){
+export function auditLocalReferences(html,url,{directory=root,localExists=path=>existsSync(path)||existsSync(resolve(path,'index.html'))}={}){
+ const issues=[];
+ for(const m of html.matchAll(/(?:href|src)="([^"]+)"/g)){
+  try{
+   const target=new URL(m[1].replaceAll('&amp;','&'),url);if(target.origin!==base)continue;
+   const local=resolve(directory,'.'+decodeURIComponent(target.pathname));
+   const relativePath=relative(directory,local);
+   if(relativePath==='..'||relativePath.startsWith('../')||relativePath.startsWith('..\\'))issues.push(`unsafe local link ${target.pathname}`);
+   else if(!localExists(local))issues.push(`broken link ${target.pathname}`);
+  }catch{issues.push(`invalid link ${m[1]}`);}
+ }
+ return issues;
+}
+export function audit({directory=root}={}){
+ const root=resolve(directory);
  const issues=[],xml=read(resolve(root,'sitemap.xml'));
  const urls=sitemapURLs(root),listed=new Set(urls),pages=new Map(),titles=new Set(),reciprocalChecks=[],existence=new Map();
  const localExists=path=>{if(!existence.has(path))existence.set(path,existsSync(path)||existsSync(resolve(path,'index.html')));return existence.get(path);};
@@ -19,6 +33,9 @@ export function audit(){
 
  for(const file of walk(root)){
   const html=read(file),path='/'+relative(root,file).replaceAll('\\','/').replace(/index\.html$/,''),url=base+path;
+  // Error, retired and noindex pages remain usable public screens. Check their
+  // links and resources even though they intentionally stay out of Sitemap.
+  for(const issue of auditLocalReferences(html,url,{directory:root,localExists}))issues.push(`${path}: ${issue}`);
   if(html.includes('data-error-page="true"')){
    if(!errorPattern.test(path)||!html.includes('noindex,follow')||listed.has(url))issues.push(`${path}: invalid error page indexing`);
    continue;
@@ -36,11 +53,6 @@ export function audit(){
   if(/<meta[^>]+(?:noindex|nofollow)/i.test(html))issues.push(`${path}: blocked indexing`);
   const schema=html.match(/<script type="application\/ld\+json">([^<]+)<\/script>/)?.[1];
   try{if(JSON.parse(schema).url!==url)issues.push(`${path}: schema URL mismatch`);}catch{issues.push(`${path}: invalid structured data`);}
-  for(const m of html.matchAll(/(?:href|src)="([^"]+)"/g)){
-   const target=new URL(m[1].replaceAll('&amp;','&'),url);if(target.origin!==base)continue;
-   const local=resolve(root,'.'+decodeURIComponent(target.pathname));
-   if(!localExists(local))issues.push(`${path}: broken link ${target.pathname}`);
-  }
   const alternates=[...html.matchAll(/hreflang="([^"]+)" href="([^"]+)"/g)];
   if(alternates.length!==Object.keys(strings).length+1)issues.push(`${path}: incomplete hreflang`);
   for(const [,language,target]of alternates){pages.get(url).add(`${language}|${target}`);reciprocalChecks.push({path,url,language,target});}

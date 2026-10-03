@@ -259,3 +259,12 @@ body:has(.conversion-guide[open]) main{flex:1 0 auto}.conversion-guide{flex:none
 @media(max-width:480px){.startup-recovery{flex-direction:column;align-items:stretch;gap:10px;padding:14px}.startup-recovery button{align-self:flex-start}}
 .convert-actions #archive-ready{flex:1;text-align:center}
 .convert-actions a.primary,.convert-actions a.secondary{display:flex;align-items:center;justify-content:center;text-decoration:none}
+
+/* A keyboard, zoom or very short landscape window must not collapse the file
+ * list to zero or clip its actions. Keep a usable queue and allow page scroll. */
+@media(max-height:360px){
+ body:has(.converter-shell):not(:has(.conversion-guide[open])){height:auto;min-height:100svh}
+ body:has(.converter-shell) main{flex:1 0 auto;min-height:0}
+ body:has(.converter.has-files) .converter-shell{flex:none;max-height:none}
+ .converter-shell .converter.has-files{height:360px;min-height:360px}
+}
