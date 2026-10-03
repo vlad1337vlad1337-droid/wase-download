@@ -1,0 +1,26 @@
+/* SPDX-License-Identifier: MIT */
+/* A visible coffee label uses the space freed by moving appearance to the footer. */
+header.header .coffee-link{display:inline-flex;align-items:center;justify-content:center;width:auto;min-width:0;min-height:32px;height:32px;gap:6px;padding:5px 10px;border-radius:12px;background:#ffdd85;transform:none;box-shadow:none;font-size:11px;line-height:1.2;white-space:nowrap}
+header.header .coffee-link span{display:inline}
+header.header .coffee-link::before,header.header .coffee-link::after{content:none}
+header.header .coffee-link:hover{transform:none;background:#ffe5a6;box-shadow:none}
+header.header .coffee-link svg{flex:none;width:16px;height:16px}
+header.header .language>div{right:auto;inset-inline-end:0}
+body>footer .footer-meta{display:flex;align-items:center;justify-content:space-between;gap:8px 16px;width:100%;min-width:0;flex-wrap:nowrap}
+body>footer .footer-meta small{flex:1 1 auto;min-width:0;margin:0;overflow-wrap:anywhere}
+body>footer:has(.theme-choice[open]){z-index:70}
+body>footer .theme-choice{position:relative;flex:none;margin:0;border:0;padding:0;color:var(--muted);font-size:11px;line-height:1.2;z-index:65}
+body>footer .theme-choice>summary{display:flex;align-items:center;justify-content:center;gap:5px;list-style:none;cursor:pointer;min-height:28px;padding:4px 6px;border-radius:8px;color:var(--muted);user-select:none}
+body>footer .theme-choice>summary::-webkit-details-marker{display:none}
+body>footer .theme-choice>summary::marker{content:''}
+body>footer .theme-choice>summary svg{width:14px;height:14px;flex:none}
+body>footer .theme-choice>summary:hover,body>footer .theme-choice[open]>summary{background:var(--soft);color:var(--ink)}
+body>footer .theme-choice .theme-menu{position:absolute;inset-inline-end:0;bottom:calc(100% + 5px);display:grid;gap:3px;min-width:130px;max-width:calc(100vw - 32px);padding:6px;border:1px solid var(--line);border-radius:14px;background:var(--paper);box-shadow:0 8px 28px #0002;animation:theme-menu-in .15s ease-out}
+body>footer .theme-menu button{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;min-height:36px;padding:8px 10px;border:0;border-radius:9px;background:none;color:var(--ink);font:inherit;text-align:start;cursor:pointer}
+body>footer .theme-menu button::after{content:'';width:5px;height:5px;flex:none;border-radius:50%;background:transparent}
+body>footer .theme-menu button[aria-pressed=true]{background:var(--soft)}
+body>footer .theme-menu button[aria-pressed=true]::after{background:#8173e8}
+body>footer .theme-menu button:hover{background:var(--soft)}
+@keyframes theme-menu-in{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:359px){header.header .coffee-link{font-size:10px;gap:4px;padding:5px 8px}header.header .coffee-link svg{width:14px;height:14px}body>footer .theme-choice{font-size:10px}}
+@media(prefers-reduced-motion:reduce){body>footer .theme-choice .theme-menu{animation:none}}
