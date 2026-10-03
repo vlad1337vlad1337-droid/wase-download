@@ -1,0 +1,330 @@
+{
+  "verifiedAtUTC": "2026-10-03T08:02:16.352998+00:00",
+  "scope": "Wase Download application-layer DoS and code security review; not a volumetric attack or full penetration test",
+  "origin": "https://wase.download",
+  "fixed": [
+    "Bounded per-IP and global request counters replace unlimited client maps and per-request full-map scans",
+    "HTTP nginx API rate/connection budgets reject excess before the Node broker; VPN stream routing unchanged",
+    "Two outstanding uploads/jobs per IP; nine total; upload completes before taking the single converter slot",
+    "MCP only exposes two read-only metadata tools; 16 KiB body, 5 second deadline, validated IDs/arguments and concurrency caps",
+    "Overall deadline also closes stalled downloads; cancellation and rejection release slots and temporary files",
+    "Converter output uses a 256 MiB / 10000 inode tmpfs Docker volume instead of a writable host output directory",
+    "Docker init and independent 180-second container timeout; non-root, no network, read-only root, no capabilities",
+    "Large downloads and multi-file ZIP output stream with backpressure, avoiding whole-result memory copies",
+    "Directory/output traversal budgets and symlink/special-file rejection",
+    "Conditional format catalogue handles nginx weak gzip ETags and returns 304",
+    "Unhandled async request failures are caught; HTTP connection/header lifetimes bounded",
+    "Backend release package now contains the required discovery, guard, stream and archive modules",
+    "SSH password/keyboard-interactive authentication disabled; independent key login verified"
+  ],
+  "limits": {
+    "convertPerIPPerMinute": 20,
+    "convertGlobalPerMinute": 120,
+    "outstandingPerIP": 2,
+    "outstandingGlobal": 9,
+    "activeConverters": 1,
+    "uploadMB": 100,
+    "uploadDeadlineSeconds": 90,
+    "jobDeadlineSeconds": 180,
+    "outputMB": 200,
+    "outputTmpfsMiB": 256,
+    "outputInodes": 10000,
+    "containerMemoryMiB": 768,
+    "containerCPU": 0.25,
+    "containerPIDs": 128,
+    "apiMemoryMiB": 512,
+    "apiCPU": 0.15,
+    "sharedSliceCPU": 0.35,
+    "sharedSliceMemoryMiB": 1300,
+    "mcpPerIPPerMinute": 90,
+    "mcpGlobalPerMinute": 600,
+    "mcpConcurrentGlobal": 16,
+    "mcpConcurrentPerIP": 4,
+    "mcpBodyBytes": 16384,
+    "mcpBodySeconds": 5,
+    "nginxAPIPerIPPerSecond": 3,
+    "nginxAPIPerIPBurst": 20,
+    "nginxAPIGlobalPerSecond": 20,
+    "nginxAPIGlobalBurst": 40,
+    "nginxAPIRequestsPerIP": 8,
+    "nginxAPIRequestsGlobal": 32
+  },
+  "verification": {
+    "automaticNodeTestsPassed": 33,
+    "archiveSecurityTestsPassed": 10,
+    "outputValidationChecks": "passed",
+    "build": "passed",
+    "seoStaticCoverage": "8058 canonical pages, no issues",
+    "npmAuditKnownVulnerabilities": 0,
+    "npmAuditScope": "npm runtime and development dependencies; not Docker image, OS or kernel scanning",
+    "localConversionSmoke": {
+      "origin": "http://127.0.0.1:5190",
+      "results": [
+        {
+          "category": "image",
+          "from": "png",
+          "to": "svg",
+          "http": 200,
+          "bytes": 504,
+          "passed": true,
+          "ms": 498
+        },
+        {
+          "category": "vector",
+          "from": "svg",
+          "to": "png",
+          "http": 200,
+          "bytes": 229,
+          "passed": true,
+          "ms": 370
+        },
+        {
+          "category": "document",
+          "from": "txt",
+          "to": "pdf",
+          "http": 200,
+          "bytes": 12857,
+          "passed": true,
+          "ms": 2388
+        },
+        {
+          "category": "audio",
+          "from": "wav",
+          "to": "mp3",
+          "http": 200,
+          "bytes": 1413,
+          "passed": true,
+          "ms": 764
+        },
+        {
+          "category": "video",
+          "from": "mp4",
+          "to": "webm",
+          "http": 200,
+          "bytes": 692,
+          "passed": true,
+          "ms": 652
+        },
+        {
+          "category": "archive",
+          "from": "zip",
+          "to": "tar.gz",
+          "http": 200,
+          "bytes": 122,
+          "passed": true,
+          "ms": 457
+        },
+        {
+          "category": "font",
+          "from": "woff2",
+          "to": "woff",
+          "http": 200,
+          "bytes": 59784,
+          "passed": true,
+          "ms": 911
+        },
+        {
+          "category": "cad",
+          "from": "stl",
+          "to": "obj",
+          "http": 200,
+          "bytes": 736,
+          "passed": true,
+          "ms": 452
+        },
+        {
+          "category": "presentation",
+          "from": "odp",
+          "to": "pdf",
+          "http": 200,
+          "bytes": 16228,
+          "passed": true,
+          "ms": 2099
+        },
+        {
+          "category": "ebook",
+          "from": "epub",
+          "to": "txt",
+          "http": 200,
+          "bytes": 16,
+          "passed": true,
+          "ms": 3363
+        },
+        {
+          "scenario": "unsupported-pair",
+          "http": 400,
+          "expected": 400,
+          "passed": true
+        },
+        {
+          "scenario": "forbidden-origin",
+          "http": 403,
+          "expected": 403,
+          "passed": true
+        },
+        {
+          "scenario": "empty-file",
+          "http": 422,
+          "expected": 422,
+          "passed": true
+        }
+      ]
+    },
+    "productionConversionSmoke": {
+      "origin": "https://wase.download",
+      "results": [
+        {
+          "category": "image",
+          "from": "png",
+          "to": "svg",
+          "http": 200,
+          "bytes": 504,
+          "passed": true,
+          "ms": 4438
+        },
+        {
+          "category": "vector",
+          "from": "svg",
+          "to": "png",
+          "http": 200,
+          "bytes": 229,
+          "passed": true,
+          "ms": 4205
+        },
+        {
+          "category": "document",
+          "from": "txt",
+          "to": "pdf",
+          "http": 200,
+          "bytes": 12852,
+          "passed": true,
+          "ms": 15112
+        },
+        {
+          "category": "audio",
+          "from": "wav",
+          "to": "mp3",
+          "http": 200,
+          "bytes": 1413,
+          "passed": true,
+          "ms": 8687
+        },
+        {
+          "category": "video",
+          "from": "mp4",
+          "to": "webm",
+          "http": 200,
+          "bytes": 692,
+          "passed": true,
+          "ms": 5491
+        },
+        {
+          "category": "archive",
+          "from": "zip",
+          "to": "tar.gz",
+          "http": 200,
+          "bytes": 122,
+          "passed": true,
+          "ms": 5099
+        },
+        {
+          "category": "font",
+          "from": "woff2",
+          "to": "woff",
+          "http": 200,
+          "bytes": 59784,
+          "passed": true,
+          "ms": 8482
+        },
+        {
+          "category": "cad",
+          "from": "stl",
+          "to": "obj",
+          "http": 200,
+          "bytes": 736,
+          "passed": true,
+          "ms": 5019
+        },
+        {
+          "category": "presentation",
+          "from": "odp",
+          "to": "pdf",
+          "http": 200,
+          "bytes": 16223,
+          "passed": true,
+          "ms": 14901
+        },
+        {
+          "category": "ebook",
+          "from": "epub",
+          "to": "txt",
+          "http": 200,
+          "bytes": 16,
+          "passed": true,
+          "ms": 22690
+        },
+        {
+          "scenario": "unsupported-pair",
+          "http": 400,
+          "expected": 400,
+          "passed": true
+        },
+        {
+          "scenario": "forbidden-origin",
+          "http": 403,
+          "expected": 403,
+          "passed": true
+        },
+        {
+          "scenario": "empty-file",
+          "http": 422,
+          "expected": 422,
+          "passed": true
+        }
+      ]
+    },
+    "localAdversarialScenarios": [
+      "rotating identities cannot grow rate map indefinitely",
+      "MCP incomplete body closes on deadline",
+      "oversized chunked body rejected",
+      "third outstanding request from same IP rejected 429",
+      "other IP remains usable while uploads are incomplete",
+      "aborted requests release occupancy",
+      "streaming ZIP and brand bytes preserved"
+    ],
+    "productionChecks": [
+      "MCP initialize, tools/list and conversion_info return 200",
+      "MCP 17 KB request rejected 413 by edge",
+      "object JSON-RPC ID rejected 400",
+      "gzip catalogue ETag revalidation returns 304",
+      "epub-to-txt product page returns 200",
+      "main nginx and API services active",
+      "fresh warning/error journal empty",
+      "no residual job containers or labeled temporary volumes",
+      "independent SSH public-key login after password disable"
+    ],
+    "fileSHA256": {
+      "backend/server.mjs": "101f2cab7d219307553ec9bd812fae77ec436926683c572898e8ed189742ccba",
+      "backend/engine.mjs": "cd01fdd86fdf947fe6a231381065be21332bdfe64e05b3b5957cebc324c2afd8",
+      "backend/discovery.mjs": "f2f9d57f1593bd1b6849e3b73cf83accd67735dc095c8dc9f4713c05d7b3c7b1",
+      "backend/request-guard.mjs": "bc6d8d963e092e5fb9be01ce36e0863acccca35cc9a9d5ec66338ce699493692",
+      "backend/output-stream.mjs": "1ccb0b9aff33ca4bea35fdd25c90425f946476a79be5d69aec587be9a5a9e68e",
+      "deploy/production-nginx.conf": "e8250ef0bc906071932acd9ea9f20d0c51de6b9a4c0cab289ff4cc5594f0006e"
+    }
+  },
+  "remainingRisks": [
+    "Public unauthenticated conversion can still have its finite queue exhausted by distributed clients. Limits bound resource use, not guaranteed availability.",
+    "Direct shared website/VPN IP can be overwhelmed by link saturation or TLS/SYN floods before HTTP limits. Upstream provider anti-DDoS protection was not verified or enabled by this audit.",
+    "HTTP broker still controls a rootful Docker daemon through the docker group. A broker compromise could affect the host; rootless/dedicated worker architecture remains a separate hardening step.",
+    "CPU/RAM limits do not provide complete kernel or bandwidth isolation between converters and VPN on the same host.",
+    "No full Docker image/OS CVE scan or exploit-oriented penetration test performed.",
+    "Normal job cleanup verified; a broker crash can leave temporary artifacts and stopped containers for administrative cleanup."
+  ],
+  "references": [
+    "https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html",
+    "https://nginx.org/en/docs/http/ngx_http_limit_conn_module.html",
+    "https://docs.nginx.com/nginx/admin-guide/security-controls/controlling-access-proxied-http",
+    "https://nodejs.org/api/http.html",
+    "https://docs.docker.com/engine/security/"
+  ]
+}

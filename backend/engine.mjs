@@ -28,3 +28,6 @@ if(conversionError)throw conversionError;
 await promisify(execFile)('python3',['/output-validation.py',output,'/job',input],{timeout:10000});
 
 if(!outputs.length)throw new Error('No output files');
+
+// Docker tmpfs disappears on stop; the broker copies output before removing us.
+if(process.argv[5]==='hold'){console.log('\nWASE_OUTPUT_READY');await new Promise(()=>{setTimeout(()=>process.exit(0),180000);});}

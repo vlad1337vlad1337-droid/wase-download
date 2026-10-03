@@ -1,16 +1,23 @@
-export function discoveryHandler(registry,origins,maxFileMB){
- const tools=[{name:'list_formats',description:'Browse declared input formats. This reads metadata only; it does not upload or convert files.',annotations:{readOnlyHint:true,destructiveHint:false,idempotentHint:true,openWorldHint:false},inputSchema:{type:'object',properties:{category:{type:'string'},query:{type:'string',maxLength:32},offset:{type:'integer',minimum:0},limit:{type:'integer',minimum:1,maximum:100}},additionalProperties:false}},
+import {rateLimit,clientIP,reject,occupancy,deadline} from './request-guard.mjs';
+export function discoveryHandler(registry,origins,maxFileMB,options={}){
+ const tools=[{name:'list_formats',description:'Browse declared input formats. This reads metadata only; it does not upload or convert files.',annotations:{readOnlyHint:true,destructiveHint:false,idempotentHint:true,openWorldHint:false},inputSchema:{type:'object',properties:{category:{type:'string',maxLength:32},query:{type:'string',maxLength:32},offset:{type:'integer',minimum:0},limit:{type:'integer',minimum:1,maximum:100}},additionalProperties:false}},
  {name:'conversion_info',description:'Get declared output formats and operational limits for one input, or check one pair. Engine declarations are not a guarantee for every file.',annotations:{readOnlyHint:true,destructiveHint:false,idempotentHint:true,openWorldHint:false},inputSchema:{type:'object',properties:{from:{type:'string',maxLength:32},to:{type:'string',maxLength:32}},required:['from'],additionalProperties:false}}];
- const matrix=registry.matrix,categories=registry.categories||{},inputs=Object.keys(matrix).sort();const visits=new Map();
+ const matrix=registry.matrix,categories=registry.categories||{},inputs=Object.keys(matrix).sort();const visits=rateLimit({limit:90,globalLimit:600,...options.rate});const connections=occupancy({perClient:4,total:16});
  const limits={fileMB:maxFileMB,batch:20,activeJobs:1,readOnlyDiscovery:true};
  const json=(res,status,value)=>{res.writeHead(status,{'Content-Type':'application/json','Cache-Control':'no-store'});res.end(JSON.stringify(value));};
  return async(req,res)=>{
-  if(req.headers.origin&&!origins.has(req.headers.origin)){res.writeHead(403).end();return;}
-  if(req.method!=='POST'){res.writeHead(405,{Allow:'POST'}).end();return;}
-  if(!String(req.headers['content-type']||'').startsWith('application/json')){res.writeHead(415).end();return;}
-  const key=String(req.headers['x-real-ip']||req.socket.remoteAddress),now=Date.now();for(const[k,v]of visits)if(now-v.start>60000)visits.delete(k);const visit=visits.get(key)||{start:now,count:0};visits.set(key,visit);if(++visit.count>90){res.writeHead(429,{'Retry-After':'60'}).end();return;}
-  let request;try{let data='',size=0;for await(const chunk of req){size+=chunk.length;if(size>16384){res.writeHead(413).end();return;}data+=chunk;}request=JSON.parse(data);}catch{json(res,400,{jsonrpc:'2.0',id:null,error:{code:-32700,message:'Invalid JSON'}});return;}
-  if(!request||Array.isArray(request)||request.jsonrpc!=='2.0'||typeof request.method!=='string'){json(res,400,{jsonrpc:'2.0',id:null,error:{code:-32600,message:'Invalid request'}});return;}
+  if(req.headers.origin&&!origins.has(req.headers.origin)){reject(req,res,403);return;}
+  if(req.method!=='POST'){res.setHeader('Allow','POST');reject(req,res,405);return;}
+  if(!String(req.headers['content-type']||'').startsWith('application/json')){reject(req,res,415);return;}
+  const key=clientIP(req);if(!visits.allow(key)){reject(req,res,429);return;}
+  if(Number(req.headers['content-length'])>16384){reject(req,res,413);return;}
+  const release=connections.enter(key);if(!release){reject(req,res,429);return;}
+  const controller=new AbortController(),clear=deadline(req,res,controller,options.bodyTimeout||5000);
+  let request;try{
+   const chunks=[];let size=0;for await(const chunk of req){size+=chunk.length;if(size>16384){reject(req,res,413);return;}chunks.push(chunk);}request=JSON.parse(Buffer.concat(chunks).toString('utf8'));
+  }catch{if(!res.destroyed)json(res,400,{jsonrpc:'2.0',id:null,error:{code:-32700,message:'Invalid JSON'}});return;}
+  finally{clear();release();}
+  if(!request||Array.isArray(request)||request.jsonrpc!=='2.0'||typeof request.method!=='string'||request.method.length>64||(request.id!==undefined&&request.id!==null&&!(typeof request.id==='string'&&request.id.length<=128)&&!(typeof request.id==='number'&&Number.isSafeInteger(request.id)))){json(res,400,{jsonrpc:'2.0',id:null,error:{code:-32600,message:'Invalid request'}});return;}
   if(request.id===undefined){res.writeHead(202).end();return;}
   const reply=result=>json(res,200,{jsonrpc:'2.0',id:request.id,result});const error=(code,message)=>json(res,200,{jsonrpc:'2.0',id:request.id,error:{code,message}});
   const text=value=>({content:[{type:'text',text:JSON.stringify(value)}],structuredContent:value});
@@ -21,7 +28,7 @@ export function discoveryHandler(registry,origins,maxFileMB){
   const name=request.params?.name,args=request.params?.arguments||{};
   if(!args||Array.isArray(args)||typeof args!=='object'){error(-32602,'Invalid arguments');return;}
   if(name==='list_formats'){
-   if(Object.keys(args).some(k=>!['category','query','offset','limit'].includes(k))||(args.query!==undefined&&(typeof args.query!=='string'||args.query.length>32))||(args.category!==undefined&&typeof args.category!=='string')||(args.offset!==undefined&&(!Number.isInteger(args.offset)||args.offset<0))||(args.limit!==undefined&&(!Number.isInteger(args.limit)||args.limit<1||args.limit>100))){error(-32602,'Invalid arguments');return;}
+   if(Object.keys(args).some(k=>!['category','query','offset','limit'].includes(k))||(args.query!==undefined&&(typeof args.query!=='string'||args.query.length>32))||(args.category!==undefined&&(typeof args.category!=='string'||args.category.length>32))||(args.offset!==undefined&&(!Number.isInteger(args.offset)||args.offset<0))||(args.limit!==undefined&&(!Number.isInteger(args.limit)||args.limit<1||args.limit>100))){error(-32602,'Invalid arguments');return;}
    const matches=inputs.filter(f=>(!args.category||categories[f]===args.category)&&(!args.query||f.includes(args.query.toLowerCase()))),offset=args.offset||0,limit=args.limit||40;
    reply(text({total:matches.length,formats:matches.slice(offset,offset+limit).map(from=>({from,category:categories[from],outputs:Object.keys(matrix[from]).length})),nextOffset:offset+limit<matches.length?offset+limit:null,limits}));return;
   }
