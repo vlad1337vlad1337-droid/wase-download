@@ -8,24 +8,14 @@ html[data-theme=dark]{background:#141414;color-scheme:dark}
 [data-theme=dark] .boot-screen{background:#141414}
 .boot-screen.is-leaving{opacity:0}
 .boot-pile,.boot-rain{position:absolute;inset:0;pointer-events:none}
-.boot-pile{z-index:1;--seed-size:min(22vw,16vh);--seed-step:calc(var(--seed-size)*.57)}
-.boot-rain{z-index:2;--rain-size:max(23vw,33vh)}
+.boot-pile{--seed-size:min(18.5185vw,16.6667vh)}
 .boot-face{position:absolute;display:block;aspect-ratio:1;transform-origin:center;user-select:none}
-.boot-face img{position:absolute;left:-22.5%;top:-22.5%;display:block;width:145%;height:145%;max-width:none;object-fit:contain}
-.boot-face--resting{width:var(--seed-size);left:calc(50% + var(--column)*var(--seed-step));bottom:calc(-.15*var(--seed-size) + var(--row)*var(--seed-step)*.76);transform:translateX(-50%) rotate(var(--turn))}
-.boot-face--falling{--landing-y:var(--y);width:var(--rain-size);left:var(--x);top:var(--landing-y);transform:translate3d(-50%,-50%,0) rotate(var(--turn));animation:boot-fall .64s both;animation-delay:var(--delay);will-change:transform}
-@keyframes boot-fall{
- 0%{transform:translate3d(calc(-50% + var(--drift)),calc(0px - var(--landing-y) - 150%),0) rotate(var(--entry-turn));animation-timing-function:cubic-bezier(.45,0,.86,.55)}
- 78%{transform:translate3d(-50%,calc(-50% + 7px),0) rotate(calc(var(--turn) + 3deg));animation-timing-function:ease-out}
- 90%{transform:translate3d(-50%,calc(-50% - 5px),0) rotate(calc(var(--turn) - 1deg));animation-timing-function:ease-in-out}
- 100%{transform:translate3d(-50%,-50%,0) rotate(var(--turn))}
-}
-@media(max-aspect-ratio:1/1){
- .boot-rain{--rain-size:max(34vw,22vh)}
- .boot-face--falling{--landing-y:var(--portrait-y);left:var(--portrait-x)}
-}
+.boot-face img{position:absolute;left:50%;top:50%;display:block;width:var(--art-size,150%);height:var(--art-size,150%);max-width:none;object-fit:contain;transform:translate(-50%,-50%)}
+.boot-face--resting{width:var(--seed-size);left:calc(50% + var(--column)*var(--seed-size)*1.01);bottom:calc(var(--row)*var(--seed-size)*.875);transform:translateX(-50%) rotate(var(--turn))}
+.boot-face--falling{display:none}
+.is-physics .boot-face{left:0;top:0;bottom:auto;will-change:transform}
+.is-physics .boot-face.is-active{display:block}
 @media(prefers-reduced-motion:reduce){
  .boot-rain{display:none}
- .boot-face--falling{animation:none;will-change:auto}
  .boot-screen{transition:none!important}
 }

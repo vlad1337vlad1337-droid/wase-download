@@ -10,6 +10,7 @@ test('all locales get a bounded decorative pile using only the four original mas
   const html=bootMarkup(lang);
   assert.equal((html.match(/boot-face--resting/g)||[]).length,15);
   assert.equal((html.match(/boot-face--falling/g)||[]).length,35);
+  assert.equal((html.match(/data-boot-body/g)||[]).length,50);
   assert.equal((html.match(/<img /g)||[]).length,50);
   assert.equal((html.match(/alt=""/g)||[]).length,50);
   assert.deepEqual([...new Set([...html.matchAll(/src="([^"]+)"/g)].map(match=>match[1]))].sort(),[0,1,2,3].map(i=>`/mascots/boot-${i}.svg`));
@@ -18,30 +19,27 @@ test('all locales get a bounded decorative pile using only the four original mas
  }
 });
 
-test('arrival cadence fills the screen within the 1700ms boot minimum',()=>{
+test('only the initial triangle is positioned in markup; rain has no scripted landing grid',()=>{
  const html=bootMarkup('en');
- const delays=[...html.matchAll(/--delay:(\d+)ms/g)].map(match=>Number(match[1]));
- assert.equal(delays.length,35);
- assert.ok(Math.min(...delays)>=150,'initial triangle has a visible first beat');
- assert.ok(Math.max(...delays)+640<=1700,'last arrival settles before boot minimum');
- assert.equal(new Set(delays).size,35,'arrivals are staggered');
- for(const match of html.matchAll(/--(?:portrait-)?([xy]):([\d.]+)v[wh]/g)){
-  assert.ok(Number(match[2])>0&&Number(match[2])<100,`landing stays within viewport: ${match[0]}`);
- }
+ for(let row=0;row<5;row++)assert.equal((html.match(new RegExp(`--row:${row};`,'g'))||[]).length,5-row);
+ assert.doesNotMatch(html,/--(?:portrait-)?[xy]:|--delay:|--entry-turn:/);
+ assert.doesNotMatch(bootHead,/@keyframes|boot-fall|animation-delay/);
 });
 
-test('critical CSS supports a still reduced-motion pile and portrait landing positions',()=>{
+test('critical CSS provides an immediately visible static reduced-motion fallback',()=>{
  assert.match(bootHead,/@media\(prefers-reduced-motion:reduce\)\{\s*\.boot-rain\{display:none\}/);
- assert.match(bootHead,/@media\(max-aspect-ratio:1\/1\)/);
- assert.match(bootHead,/--landing-y:var\(--portrait-y\);left:var\(--portrait-x\)/);
+ assert.match(bootHead,/\.boot-face--falling\{display:none\}/);
+ assert.match(bootHead,/\.is-physics \.boot-face\.is-active\{display:block\}/);
  assert.match(bootHead,/pointer-events:none/);
  assert.match(bootHead,/transition:opacity \.4s ease-out/);
  assert.doesNotMatch(bootHead,/https?:|@font-face|as="font"|infinite|clip-path/);
  assert.equal((bootHead.match(/as="image"/g)||[]).length,4);
 });
 
-test('bootstrap URL is versioned from its current contents',()=>{
- const code=readFileSync(new URL('../site/public/boot.js',import.meta.url));
- const version=createHash('sha256').update(code).digest('hex').slice(0,16);
- assert.ok(bootHead.includes(`<script src="/boot.js?v=${version}"></script>`));
+test('bootstrap and optional local physics URLs are versioned from current contents',()=>{
+ const version=path=>createHash('sha256').update(readFileSync(new URL(path,import.meta.url))).digest('hex').slice(0,16);
+ assert.ok(bootHead.includes(`src="/boot.js?v=${version('../site/public/boot.js')}"`));
+ assert.ok(bootHead.includes(`data-engine="/vendor/matter-0.20.0.min.js?v=${version('../site/public/vendor/matter-0.20.0.min.js')}"`));
+ assert.ok(bootHead.includes(`data-physics="/boot-physics.js?v=${version('../site/public/boot-physics.js')}"`));
+ assert.equal((bootHead.match(/<script /g)||[]).length,1,'decorative engine loading cannot defer app startup');
 });
