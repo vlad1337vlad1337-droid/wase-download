@@ -1,0 +1,416 @@
+{
+  "generatedAtUTC": "2026-10-04T07:45:12.483997+00:00",
+  "scope": "Local ARM64 representative-fixture worker audit, frozen bulk plus explicitly separated narrow code deltas; not universal format/content support or production AMD64 certification",
+  "productionMutated": false,
+  "catalogue": {
+    "inputs": 885,
+    "outputs": 517,
+    "declaredPairs": 143995,
+    "autoIsFormat": false,
+    "allToAllSupported": false
+  },
+  "resources": {
+    "image": {
+      "id": "sha256:4419ec6c0c00effaaa67975d2f9f2824cba8789eca3070c33fdc7df3d3cfc8e3",
+      "architecture": "arm64",
+      "created": "2026-10-02T22:06:52.136528096+03:00",
+      "size": 1465341711,
+      "repoDigests": [
+        "wase-converter@sha256:4419ec6c0c00effaaa67975d2f9f2824cba8789eca3070c33fdc7df3d3cfc8e3"
+      ]
+    },
+    "bulkWorkers": 2,
+    "cpuPerBulkWorker": 0.7,
+    "memoryMiBPerBulkWorker": 768,
+    "network": "none",
+    "readOnlyRoot": true,
+    "caseDeadlineSeconds": 180,
+    "productionCPUQuotaChanged": false
+  },
+  "bulkRun": {
+    "sourceCommit": "c8d91c8853687c328237052484838c8b521daf39",
+    "backendSHA256": {
+      "engine.mjs": "77d5ba4dfbe22a9801da3aa6b17961dc2713892d1081718508609fa05f475363",
+      "extra.py": "53d4f791e5d1b672494530d9392be2906c11c29120ce152ba7c260c79dfce01c",
+      "output-validation.py": "07d46af27ef31ceae7c18344cb48468f368bb44ed41ae5d408852652947ccb8a",
+      "engine-order.mjs": "1e7069b43874b870b8a6a0a149b2f1b4ab8f041e338a15345d449e9ec56bee01",
+      "conversion-policy.mjs": "884926d607b9dc541ba972eae328ed73df5e1396864b909195763e7dbbad7a35",
+      "server.mjs": "48e03438bbd4ed275ff842bdca90665581d5be3c9c508cae80d5fee8b446d278",
+      "output-brand.mjs": "b1f9f1fd0c56f95ab6983b824428b4a610e249920155272db68e6fe8dd3b56c7",
+      "output-stream.mjs": "1ccb0b9aff33ca4bea35fdd25c90425f946476a79be5d69aec587be9a5a9e68e"
+    },
+    "wallSeconds": 437.5,
+    "planned": 2982,
+    "executed": 2982,
+    "passed": 2896,
+    "failed": 86,
+    "published": {
+      "executed": 2681,
+      "passed": 2681,
+      "failed": 0
+    },
+    "additionalInputs": {
+      "executed": 301,
+      "passed": 215,
+      "failed": 86
+    },
+    "complete": true
+  },
+  "deltas": {
+    "media": {
+      "cases": 136,
+      "planned": 136,
+      "passed": 136,
+      "failed": 0,
+      "targets": {
+        "3g2": 68,
+        "3gp": 68
+      },
+      "caseSets": {
+        "3g2-AMR-failure-recheck": 57,
+        "affected-3gp-regression": 57,
+        "standard-media-regression": 22
+      },
+      "totalCaseSeconds": 43.567,
+      "maximumCaseSeconds": 0.534,
+      "codecs": {
+        "aac": 126,
+        "mpeg4": 10
+      },
+      "brands": {
+        "3g2a": 68,
+        "3gp4": 68
+      },
+      "sourceSHA256": {
+        "engine.mjs": "93d9b0ff8a499ca0047cf17eec42a3860d67f7c9076155219c59371ec64cd3f6",
+        "extra.py": "53d4f791e5d1b672494530d9392be2906c11c29120ce152ba7c260c79dfce01c",
+        "output-validation.py": "580b4b5b1f460f367a9b713f33d894239b832c2681d7888f1571d903fc53114d"
+      },
+      "image": "sha256:4419ec6c0c00effaaa67975d2f9f2824cba8789eca3070c33fdc7df3d3cfc8e3",
+      "limits": {
+        "workers": 1,
+        "cpu": 0.7,
+        "memoryMiB": 768,
+        "network": "none",
+        "caseDeadlineSeconds": 62,
+        "outputBudgetMiB": 32,
+        "outputDecodeSeconds": 1
+      },
+      "validation": "Real worker output, exact muxer brand, explicit MPEG4/AAC codec inspection, successful first-second decode; representative fixtures only",
+      "productionMutated": false,
+      "officialSources": [
+        "https://raw.githubusercontent.com/FFmpeg/FFmpeg/master/doc/muxers.texi",
+        "https://raw.githubusercontent.com/FFmpeg/FFmpeg/master/doc/encoders.texi",
+        "https://raw.githubusercontent.com/FFmpeg/FFmpeg/master/libavformat/movenc.c"
+      ]
+    },
+    "alpha": {
+      "pairs": 14,
+      "passed": 14,
+      "failed": 0,
+      "backendSHA256": {
+        "engine.mjs": "2e9166ccc1569c2ec1cd74c89e282785a4cfde41755a3472d89d3d0cb3bf256e",
+        "extra.py": "53d4f791e5d1b672494530d9392be2906c11c29120ce152ba7c260c79dfce01c",
+        "output-validation.py": "580b4b5b1f460f367a9b713f33d894239b832c2681d7888f1571d903fc53114d",
+        "engine-order.mjs": "1e7069b43874b870b8a6a0a149b2f1b4ab8f041e338a15345d449e9ec56bee01",
+        "conversion-policy.mjs": "884926d607b9dc541ba972eae328ed73df5e1396864b909195763e7dbbad7a35",
+        "server.mjs": "48e03438bbd4ed275ff842bdca90665581d5be3c9c508cae80d5fee8b446d278",
+        "output-brand.mjs": "b1f9f1fd0c56f95ab6983b824428b4a610e249920155272db68e6fe8dd3b56c7",
+        "output-stream.mjs": "1ccb0b9aff33ca4bea35fdd25c90425f946476a79be5d69aec587be9a5a9e68e"
+      },
+      "allDeclaredTraceInputs": true,
+      "qualityCases": 8,
+      "qualityPassed": 8,
+      "qualitySnapshotSHA256": {
+        "extra.py": "53d4f791e5d1b672494530d9392be2906c11c29120ce152ba7c260c79dfce01c",
+        "output-validation.py": "580b4b5b1f460f367a9b713f33d894239b832c2681d7888f1571d903fc53114d",
+        "engine.mjs": "2e9166ccc1569c2ec1cd74c89e282785a4cfde41755a3472d89d3d0cb3bf256e"
+      },
+      "sampleAlphaErrorMaximum": 0,
+      "embeddedBitmap": false,
+      "failureInjection": true,
+      "wholeTraceDeadlineSeconds": 120,
+      "alphaTraceDeadlineSeconds": 15
+    },
+    "font": {
+      "validatorSHA256": "580b4b5b1f460f367a9b713f33d894239b832c2681d7888f1571d903fc53114d",
+      "syntheticTests": 5,
+      "workerDirections": 12,
+      "reportedPassed": 12,
+      "testFile": "tests/font-output-validation.py",
+      "separateFromBulk": true
+    },
+    "validatorGap": {
+      "generatedAtUTC": "2026-10-04T07:43:08.697398+00:00",
+      "productionMutated": false,
+      "originalFailures": 8,
+      "recoveredFailures": 7,
+      "correctlyStillRejected": 1,
+      "positiveNew3MFMesh": 1,
+      "affectedPublishedTargets": 0,
+      "publishedMatrixSize": 2681,
+      "candidateBackendSHA256": {
+        "extra.py": "53d4f791e5d1b672494530d9392be2906c11c29120ce152ba7c260c79dfce01c",
+        "output-validation.py": "ee7c901c90001a36f60a8fc0b76c66c857a0c433545bdc8229ede36fd06b4870",
+        "engine.mjs": "2e9166ccc1569c2ec1cd74c89e282785a4cfde41755a3472d89d3d0cb3bf256e"
+      },
+      "resourceLimits": {
+        "workers": 1,
+        "cpu": 0.3,
+        "memoryMiB": 768,
+        "network": "none",
+        "caseTimeoutSeconds": 65
+      },
+      "cases": 9,
+      "seconds": 5.412,
+      "limits": [
+        "FFmetadata, Markdown and Beamer are bounded UTF-8/structural text checks, not render or TeX execution.",
+        "3MF checks bounded ZIP, OPC relationships/content type, model/mesh/build XML and indices; it is not complete 3MF conformance or geometry fidelity.",
+        "X3DB HelloWorld input produces a geometrically empty 3MF and remains rejected.",
+        "No historical bulk result has been relabelled with this newer validator revision.",
+        "FFMETA fixtures extract container metadata only; they do not preserve input media/subtitle payload."
+      ],
+      "finalValidatorSHA256": "33d6ab58d7c4f4256124ecde3483a58eafbf414e026578fd050576c33731f1eb",
+      "commentOnlyFinalRevision": {
+        "pythonASTIdenticalToTestedSnapshot": true,
+        "changedClaim": "Removed text-truncation detection claim; UTF-8 text cut on a character boundary is indistinguishable from shorter valid text."
+      },
+      "metadataExtractionCases": [
+        "aqt\u2192ffmeta",
+        "evc\u2192ffmeta",
+        "sup\u2192ffmeta"
+      ]
+    }
+  },
+  "combinedEvidence": {
+    "distinctDirections": 3070,
+    "passed": 3048,
+    "failed": 22,
+    "inputsWithCurrentCases": 423,
+    "inputsWithoutFixtures": 462,
+    "remainingFailedPairs": [
+      {
+        "input": "3d",
+        "output": "stl",
+        "reason": "missing-companion-or-document-context",
+        "finding": "Unreal 3D/UC needs paired animation/data files and original naming; MDL fixture is an IDSQ sequence referencing a main model; MPC needs its pixel-cache companion; TEX is a PSTricks picture fragment without a standalone document.",
+        "fixtureSHA256": "8dccb9b35ea4d5c828491e32596f4cfb6c46fb838f964c9921c5aba1557d68ed",
+        "fixtureProvenance": "https://raw.githubusercontent.com/assimp/assimp/master/test/models/3D/box_d.3d",
+        "nextStep": "Keep rejection for the single-file contract; support explicit bundles/context only with a separate bounded design."
+      },
+      {
+        "input": "arw",
+        "output": "png",
+        "reason": "nonrepresentative-raw-decoding-unresolved",
+        "finding": "Tika metadata/EXIF fixtures are only 828-1769 bytes with tiny preview/raw data; current decoders fail. This is not proof that ordinary full-resolution camera RAW formats all fail, nor proof these fixtures are universally invalid.",
+        "fixtureSHA256": "25b7343cab2c8613d2197a1de85c3e6e9e09285d55db2193911572edb1663741",
+        "fixtureProvenance": "https://raw.githubusercontent.com/apache/tika/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-integration-tests/src/test/resources/test-documents/testARW.arw",
+        "nextStep": "Obtain licensed representative camera RAW samples and compare supported subtypes/decoders before making a claim."
+      },
+      {
+        "input": "cr2",
+        "output": "png",
+        "reason": "nonrepresentative-raw-decoding-unresolved",
+        "finding": "Tika metadata/EXIF fixtures are only 828-1769 bytes with tiny preview/raw data; current decoders fail. This is not proof that ordinary full-resolution camera RAW formats all fail, nor proof these fixtures are universally invalid.",
+        "fixtureSHA256": "f933251bbea4abbc75f66fc4b3d2dbe210378fd3c2d4ba7510c801ba22fe9a68",
+        "fixtureProvenance": "https://raw.githubusercontent.com/apache/tika/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-integration-tests/src/test/resources/test-documents/testCR2.cr2",
+        "nextStep": "Obtain licensed representative camera RAW samples and compare supported subtypes/decoders before making a claim."
+      },
+      {
+        "input": "frm",
+        "output": "png",
+        "reason": "fixture-extension-type-mismatch",
+        "finding": "The fixture is respectively glTF binary buffer, TNEF Winmail, NASA DIF XML or MySQL FRM, while this route dispatches FFmpeg video/demux formats sharing the same suffix.",
+        "fixtureSHA256": "bcf5670dc8f21ddcbdc6b6b1bdd14f6769636529d9592a68564688e6dd076841",
+        "fixtureProvenance": "https://raw.githubusercontent.com/apache/tika/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-integration-tests/src/test/resources/test-documents/testMYSQL.frm",
+        "nextStep": "Replace the test with a valid fixture of the declared FFmpeg subtype; clarify ambiguous extensions in product contract."
+      },
+      {
+        "input": "mpc",
+        "output": "png",
+        "reason": "missing-companion-or-document-context",
+        "finding": "Unreal 3D/UC needs paired animation/data files and original naming; MDL fixture is an IDSQ sequence referencing a main model; MPC needs its pixel-cache companion; TEX is a PSTricks picture fragment without a standalone document.",
+        "fixtureSHA256": "2ceda9a26c5c83b703ff345e11aed113c4649c76b44908e8c287d59f96c47cf7",
+        "fixtureProvenance": "generated or separately acquired fixture; see remaining-inputs-plan.json",
+        "nextStep": "Keep rejection for the single-file contract; support explicit bundles/context only with a separate bounded design."
+      },
+      {
+        "input": "raw",
+        "output": "stl",
+        "reason": "upstream-assimp-export-failure",
+        "finding": "Assimp imports its own WithColor.raw fixture successfully, then STL export aborts on SceneCombiner nullptr assertion.",
+        "fixtureSHA256": "1f32792e4038542abec45d2e2bafe64c9666254ec026e3d181bd3f3033015ca8",
+        "fixtureProvenance": "https://raw.githubusercontent.com/assimp/assimp/master/test/models/RAW/WithColor.raw",
+        "nextStep": "Investigate/upgrade narrow Assimp RAW importer/export handling with a real regression before changing engines."
+      },
+      {
+        "input": "rgf",
+        "output": "png",
+        "reason": "upstream-imagemagick-decoder-failure",
+        "finding": "Own 200x160 RGF has 2 header bytes plus 4000 packed bitmap bytes, matching the official writer; official current reader instead reads width*height bytes and reports EOF.",
+        "fixtureSHA256": "000402b6df2855626f54a5c958d10c01d7eeed35c738dffa778de4bcd712292e",
+        "fixtureProvenance": "generated or separately acquired fixture; see remaining-inputs-plan.json",
+        "nextStep": "Use a bounded packed-RGF decoder or a patched upstream reader; padding input silently would hide an upstream bug."
+      },
+      {
+        "input": "xps",
+        "output": "txt",
+        "reason": "xps-reader-failure-unresolved",
+        "finding": "Fixture is a CRC-valid XPS ZIP with a FixedPage and embedded font; ImageMagick returns no images. The existing stderr does not prove a missing delegate versus a reader subtype issue.",
+        "fixtureSHA256": "753adec1e32f6751dc0c8655c3497e8f48cf92f3da47bbb59d8e23825e22c552",
+        "fixtureProvenance": "https://raw.githubusercontent.com/apache/tika/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-microsoft-module/src/test/resources/test-documents/testXLSX.xps",
+        "nextStep": "Inspect XPS delegate/backend with a representative text-extraction engine; do not claim invalid fixture or missing dependency without proof."
+      },
+      {
+        "input": "bin",
+        "output": "png",
+        "reason": "fixture-extension-type-mismatch",
+        "finding": "The fixture is respectively glTF binary buffer, TNEF Winmail, NASA DIF XML or MySQL FRM, while this route dispatches FFmpeg video/demux formats sharing the same suffix.",
+        "fixtureSHA256": "d0cdd23f2fa0996a0db99d4932fb9912a51a34e27c8bf832d072dc856ee9a7af",
+        "fixtureProvenance": "https://raw.githubusercontent.com/assimp/assimp/master/test/models/glTF2/textureTransform/TextureTransformTest.bin",
+        "nextStep": "Replace the test with a valid fixture of the declared FFmpeg subtype; clarify ambiguous extensions in product contract."
+      },
+      {
+        "input": "chm",
+        "output": "txt",
+        "reason": "negative-fixture",
+        "finding": "Provenance is testChm_oom.chm, an upstream adversarial/OOM regression fixture, not a representative standalone help document.",
+        "fixtureSHA256": "cf4780553f0c25058ccc001d43d23cb5a7d47297e0e90a2a412f0fdb7db091a0",
+        "fixtureProvenance": "https://raw.githubusercontent.com/apache/tika/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-microsoft-module/src/test/resources/test-documents/testChm_oom.chm",
+        "nextStep": "Keep as safe rejection/negative coverage; add a normal licensed CHM for positive coverage."
+      },
+      {
+        "input": "dat",
+        "output": "png",
+        "reason": "fixture-extension-type-mismatch",
+        "finding": "The fixture is respectively glTF binary buffer, TNEF Winmail, NASA DIF XML or MySQL FRM, while this route dispatches FFmpeg video/demux formats sharing the same suffix.",
+        "fixtureSHA256": "628a17f328eeda3712175f0e6199aca69658889cd5a9f7723c078e7920799c9f",
+        "fixtureProvenance": "https://raw.githubusercontent.com/apache/tika/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-microsoft-module/src/test/resources/test-documents/testWINMAIL.dat",
+        "nextStep": "Replace the test with a valid fixture of the declared FFmpeg subtype; clarify ambiguous extensions in product contract."
+      },
+      {
+        "input": "dif",
+        "output": "png",
+        "reason": "fixture-extension-type-mismatch",
+        "finding": "The fixture is respectively glTF binary buffer, TNEF Winmail, NASA DIF XML or MySQL FRM, while this route dispatches FFmpeg video/demux formats sharing the same suffix.",
+        "fixtureSHA256": "1b2ddcc80cef6f3763569085100fe79b72bb6b1b4fd02c7f0437b766d498060d",
+        "fixtureProvenance": "https://raw.githubusercontent.com/apache/tika/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-integration-tests/src/test/resources/test-documents/active_layer_arcss_grid_barrow_alaska_2012.dif",
+        "nextStep": "Replace the test with a valid fixture of the declared FFmpeg subtype; clarify ambiguous extensions in product contract."
+      },
+      {
+        "input": "djvu",
+        "output": "txt",
+        "reason": "missing-ocr-feature",
+        "finding": "Calibre explicitly rejects image-only DJVU without a text layer; fixture is 89-byte DJVM.",
+        "fixtureSHA256": "09921d5e7ac4418c79683a45139d36d49c072afb24dcb8b828c68c66d5c2e1bb",
+        "fixtureProvenance": "https://raw.githubusercontent.com/apache/tika/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-integration-tests/src/test/resources/test-documents/testDJVU.djvu",
+        "nextStep": "State text-layer requirement; OCR is a separate feature, not a validator workaround."
+      },
+      {
+        "input": "g4",
+        "output": "png",
+        "reason": "missing-required-geometry",
+        "finding": "Raw Group4 fax has no embedded image dimensions. ImageMagick gets zero scanline size because this single-file UI supplies no geometry.",
+        "fixtureSHA256": "d49c197b651d4cc0bbb78c2f209d521ac8044a0e04a64d2380bedd50c0967184",
+        "fixtureProvenance": "generated or separately acquired fixture; see remaining-inputs-plan.json",
+        "nextStep": "Expose validated dimensions or limit route to inputs carrying geometry; do not guess pixels."
+      },
+      {
+        "input": "mdl",
+        "output": "stl",
+        "reason": "missing-companion-or-document-context",
+        "finding": "Unreal 3D/UC needs paired animation/data files and original naming; MDL fixture is an IDSQ sequence referencing a main model; MPC needs its pixel-cache companion; TEX is a PSTricks picture fragment without a standalone document.",
+        "fixtureSHA256": "269d6ecf7917728dee0f1087cc0ce561d4ce59f75d41d03d82db2411364cd766",
+        "fixtureProvenance": "https://raw.githubusercontent.com/assimp/assimp/master/test/models/MDL/MDL (HL1)/man01.mdl",
+        "nextStep": "Keep rejection for the single-file contract; support explicit bundles/context only with a separate bounded design."
+      },
+      {
+        "input": "nef",
+        "output": "png",
+        "reason": "nonrepresentative-raw-decoding-unresolved",
+        "finding": "Tika metadata/EXIF fixtures are only 828-1769 bytes with tiny preview/raw data; current decoders fail. This is not proof that ordinary full-resolution camera RAW formats all fail, nor proof these fixtures are universally invalid.",
+        "fixtureSHA256": "74ddbfecd4c83c50af6f705260ba0eaf03d90ea69620ab863bfbc7a7f5303422",
+        "fixtureProvenance": "https://raw.githubusercontent.com/apache/tika/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-image-module/src/test/resources/test-documents/testNEF_dup.nef",
+        "nextStep": "Obtain licensed representative camera RAW samples and compare supported subtypes/decoders before making a claim."
+      },
+      {
+        "input": "pef",
+        "output": "png",
+        "reason": "nonrepresentative-raw-decoding-unresolved",
+        "finding": "Tika metadata/EXIF fixtures are only 828-1769 bytes with tiny preview/raw data; current decoders fail. This is not proof that ordinary full-resolution camera RAW formats all fail, nor proof these fixtures are universally invalid.",
+        "fixtureSHA256": "955debd9820f2bff9cfe5458230da8dd7b2289346c70a1f9bd8b364db6fdb0aa",
+        "fixtureProvenance": "https://raw.githubusercontent.com/apache/tika/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-integration-tests/src/test/resources/test-documents/testPEF.pef",
+        "nextStep": "Obtain licensed representative camera RAW samples and compare supported subtypes/decoders before making a claim."
+      },
+      {
+        "input": "stp",
+        "output": "stl",
+        "reason": "unsupported-step-subtype",
+        "finding": "Fixture is STEP AP214 automotive_design; current Assimp route enters the IFC reader, which rejects that schema.",
+        "fixtureSHA256": "d21e2b9c6e47dedc51f825db04c16c4e37a8cdab118e5c5866c25b154e12995c",
+        "fixtureProvenance": "generated or separately acquired fixture; see remaining-inputs-plan.json",
+        "nextStep": "Dedicated mechanical STEP implementation is needed; do not promise generic STEP from an IFC subset."
+      },
+      {
+        "input": "tex",
+        "output": "pdf",
+        "reason": "missing-companion-or-document-context",
+        "finding": "Unreal 3D/UC needs paired animation/data files and original naming; MDL fixture is an IDSQ sequence referencing a main model; MPC needs its pixel-cache companion; TEX is a PSTricks picture fragment without a standalone document.",
+        "fixtureSHA256": "0c3ef84516b4a306d36b75847f3767a663c7ed2e856585beb62e136e83adbdd6",
+        "fixtureProvenance": "generated or separately acquired fixture; see remaining-inputs-plan.json",
+        "nextStep": "Keep rejection for the single-file contract; support explicit bundles/context only with a separate bounded design."
+      },
+      {
+        "input": "uc",
+        "output": "stl",
+        "reason": "missing-companion-or-document-context",
+        "finding": "Unreal 3D/UC needs paired animation/data files and original naming; MDL fixture is an IDSQ sequence referencing a main model; MPC needs its pixel-cache companion; TEX is a PSTricks picture fragment without a standalone document.",
+        "fixtureSHA256": "e8b915aeb04151592e56d77cc27e41ca0b4e17b53b707a6b280a22e42c036770",
+        "fixtureProvenance": "https://raw.githubusercontent.com/assimp/assimp/master/test/models/3D/box.uc",
+        "nextStep": "Keep rejection for the single-file contract; support explicit bundles/context only with a separate bounded design."
+      },
+      {
+        "input": "usdc",
+        "output": "stl",
+        "reason": "reader-not-available",
+        "finding": "Fixture has PXR-USDC binary crate signature; pinned Assimp reports no suitable reader. No generic SDK is installed by this audit.",
+        "fixtureSHA256": "8809de8456ffc621acbf9ae2fc57dab2a55dceedf6f7399393bf4f577b0e52a1",
+        "fixtureProvenance": "generated or separately acquired fixture; see remaining-inputs-plan.json",
+        "nextStep": "Explicitly track binary USD capability gap; verify a supported USD backend before publishing verified routes."
+      },
+      {
+        "input": "x3db",
+        "output": "3mf",
+        "reason": "empty-geometry-output",
+        "finding": "Assimp produces a 3MF package with zero objects/meshes and empty build. Newly strict 3MF validation correctly rejects it; generated own OBJ triangle -> 3MF passes.",
+        "fixtureSHA256": "b1dea7d97417e33fc51b37946702924f1bafd8207c17aa4b2b9f12beb5b76cbb",
+        "fixtureProvenance": "https://raw.githubusercontent.com/assimp/assimp/master/test/models/X3DB/HelloWorld.x3db",
+        "nextStep": "Investigate source importer geometry handling; do not accept empty output to increase pass counts."
+      }
+    ],
+    "publishedPairsCoveredByBulk": 2681,
+    "singleRevisionFullRerun": false,
+    "finalValidatorSHA256": "33d6ab58d7c4f4256124ecde3483a58eafbf414e026578fd050576c33731f1eb"
+  },
+  "files": {
+    "inputCoverage": "current-input-coverage-20261004.csv",
+    "inputCoverageSHA256": "0b59cc605c74742e7460fe8138443ab5baf5d3726f02302682bfcc2311ab0cc0",
+    "localAllDirectionsCSVRows": 143995,
+    "localAllDirectionsCSVSHA256": "dc930b968c7a4d1aface3351c3e82c1dad3c95f7ea681dee57c6e61eec19f029",
+    "bulkJSONLSHA256": {
+      "0": "e7b984abf28fd4977452db8f1c2f3d8bdcaca7768e6db19410fc7550de45cf22",
+      "1": "9a3547f89990b6cab2c4c5802e2935d41eafd357423cea7ce857113dc7f89e5b"
+    },
+    "alphaJSONLSHA256": "056a83a0834929146e6d5dfc79d821d2d6258efb71f1653f46990d932caeb104",
+    "mediaJSONLSHA256": "3c9332c34644b345aa927a528de0071910193ecbcb44d37a9df81b4c46d95cd9",
+    "validatorGapJSONLSHA256": "2cfab5bd8645dcb7d778bc757a902b652847245a8b03a108f5eeca813af7778d"
+  },
+  "limitations": [
+    "One or several known fixtures are not every variant or file; output validation is not full content fidelity.",
+    "462 declared input identifiers have no current specimen and have not been runtime certified.",
+    "The unchanged paths retain frozen bulk evidence; changed alpha, media and font branches have separate targeted regressions.",
+    "Failed fixtures are not automatically unsupported formats; invalid/incomplete specimens and engine limits require triage.",
+    "Raw declarations and sitemap inclusion do not prove conversion success or search indexing.",
+    "FFMETA extraction cases preserve container metadata only, not source media or subtitle content."
+  ]
+}

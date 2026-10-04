@@ -38,19 +38,34 @@ async function traceRaster(){
     const dimensions=await call('vipsheader',['-a',normalized],5000);
     const tracedWidth=Number(dimensions.stdout.match(/^width:\s*(\d+)/m)?.[1]),tracedHeight=Number(dimensions.stdout.match(/^height:\s*(\d+)/m)?.[1]);
     const bands=Number(dimensions.stdout.match(/^bands:\s*(\d+)/m)?.[1]),space=dimensions.stdout.match(/^interpretation:\s*(\S+)/m)?.[1];
+    let alphaMask='';
     // VTracer 0.6.4 panics when every pixel is transparent. Its correct vector
     // representation is an empty canvas, rather than a rejected valid image.
     if((bands===4&&space==='srgb')||(bands===2&&space==='b-w')){
      await call('vips',['extract_band',normalized,'/tmp/wase-alpha.v',String(bands-1)],5000);
      const alpha=await call('vips',['max','/tmp/wase-alpha.v'],5000);
      if(Number(alpha.stdout.trim())===0){await writeFile('/job/output.svg',`<svg xmlns="http://www.w3.org/2000/svg" width="${canvasWidth}" height="${canvasHeight}" viewBox="0 0 ${canvasWidth} ${canvasHeight}"/>`);return;}
+     const minimum=await call('vips',['min','/tmp/wase-alpha.v'],5000);
+     if(Number(minimum.stdout.trim())<255){
+      // VTracer traces colours but discards partial opacity. Trace the alpha
+      // plane separately into vector paths; never disguise a bitmap as SVG.
+      // This allowance is part of the existing whole-pipeline deadline.
+      await call('vips',['copy','/tmp/wase-alpha.v','/tmp/wase-alpha.png'],5000);
+      await call('vtracer',['--input','/tmp/wase-alpha.png','--output','/tmp/wase-alpha.svg','--colormode','color','--hierarchical','cutout','--color_precision','8','--gradient_step','1','--filter_speckle','0','--mode','polygon'],15000);
+      const mask=await readFile('/tmp/wase-alpha.svg','utf8');
+      const maskBody=mask.match(/<svg\b[^>]*>([\s\S]*?)<\/svg>/)?.[1];
+      if(!maskBody?.trim())throw new Error('Could not preserve raster transparency');
+      alphaMask=maskBody.replace(/fill="#([0-9a-f]{2})\1\1"/gi,(_match,channel)=>`fill="#fff" fill-opacity="${(parseInt(channel,16)/255).toFixed(5)}"`);
+      if(/fill="(?!#fff")/.test(alphaMask))throw new Error('Unsupported alpha mask colour');
+     }
     }
     const traceBudget=index===0?(detailed?60000:85000):(detailed?45000:25000);
     await call('vtracer',['--input',normalized,'--output','/job/output.svg',...(!detailed||index>0?['--preset','poster']:[]),...(!detailed?['--mode','polygon']:[])],traceBudget);
     const svg=await readFile('/job/output.svg','utf8');
     // A fully transparent source can legitimately produce an empty SVG.
     if(!/<svg\b/.test(svg))throw new Error('No SVG document produced');
-    const result=svg.replace(/<svg\b([^>]*)>/,(_match,attributes)=>'<svg'+attributes.replace(/\s(?:width|height|viewBox)="[^"]*"/g,'')+` width="${canvasWidth}" height="${canvasHeight}" viewBox="0 0 ${tracedWidth} ${tracedHeight}">`);
+    let result=svg.replace(/<svg\b([^>]*)>/,(_match,attributes)=>'<svg'+attributes.replace(/\s(?:width|height|viewBox)="[^"]*"/g,'')+` width="${canvasWidth}" height="${canvasHeight}" viewBox="0 0 ${tracedWidth} ${tracedHeight}">`);
+    if(alphaMask)result=result.replace(/(<svg\b[^>]*>)([\s\S]*?)(<\/svg>)/,(_match,start,body,end)=>`${start}<defs><mask id="wase-alpha" x="0" y="0" width="100%" height="100%">${alphaMask}</mask></defs><g mask="url(#wase-alpha)">${body}</g>${end}`);
     await writeFile('/job/output.svg',result);return;
    }catch(error){failure=error;if(performance.now()-started>=120000)break;}
   }
@@ -58,7 +73,11 @@ async function traceRaster(){
  }finally{await rm(normalized,{force:true});}
 }
 let conversionError;try{
-if(output==='svg'&&traceInputs.has(input))await traceRaster();else if(engine==='wasepresentation'){const filters={pdf:'impress_pdf_Export',pptx:'Impress MS PowerPoint 2007 XML',odp:'impress8'};await promisify(execFile)('soffice',['--headless','-env:UserInstallation=file:///tmp/wase-impress','--convert-to',output+':'+filters[output],'--outdir','/job',`/job/input.${input}`],{timeout:160000});}else if(engine==='wasefont'||engine==='wasearchive')await promisify(execFile)('python3',['/extra.py',engine,input,output],{timeout:170000});else if(output==='avif')await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,'-frames:v','1','-c:v','libaom-av1','-cpu-used','8','-crf','30','-still-picture','1','-threads','1','/job/output.avif'],{timeout:50000});else if(engine==='ffmpeg'&&['png','jpg','jpeg','bmp','ico','tif','tiff'].includes(output))await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,...(output==='ico'?['-vf','scale=256:256:force_original_aspect_ratio=decrease']:[]),'-frames:v','1','-threads','1',`/job/output.${output}`],{timeout:60000});else if(engine==='vips'&&output==='dzi')await promisify(execFile)('vips',['dzsave',`/job/input.${input}`,'/job/output']);else await engines[engine].convert(`/job/input.${input}`,input,output,`/job/output.${output}`);
+if(output==='svg'&&traceInputs.has(input))await traceRaster();else if(engine==='wasepresentation'){const filters={pdf:'impress_pdf_Export',pptx:'Impress MS PowerPoint 2007 XML',odp:'impress8'};await promisify(execFile)('soffice',['--headless','-env:UserInstallation=file:///tmp/wase-impress','--convert-to',output+':'+filters[output],'--outdir','/job',`/job/input.${input}`],{timeout:160000});}else if(engine==='wasefont'||engine==='wasearchive')await promisify(execFile)('python3',['/extra.py',engine,input,output],{timeout:170000});else if(output==='avif')await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,'-frames:v','1','-c:v','libaom-av1','-cpu-used','8','-crf','30','-still-picture','1','-threads','1','/job/output.avif'],{timeout:50000});else if(engine==='ffmpeg'&&['3gp','3g2'].includes(output)){
+ // The 3G2 muxer defaults to AMR, whose encoder is absent in the pinned
+ // image. Encode supported streams explicitly and retain the real muxer.
+ await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,'-map','0:v:0?','-map','0:a:0?','-sn','-dn','-c:v','mpeg4','-q:v','5','-pix_fmt','yuv420p','-vf','scale=ceil(iw/2)*2:ceil(ih/2)*2','-c:a','aac','-b:a','128k','-threads','1','-f',output,`/job/output.${output}`],{timeout:60000});
+}else if(engine==='ffmpeg'&&['png','jpg','jpeg','bmp','ico','tif','tiff'].includes(output))await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,...(output==='ico'?['-vf','scale=256:256:force_original_aspect_ratio=decrease']:[]),'-frames:v','1','-threads','1',`/job/output.${output}`],{timeout:60000});else if(engine==='vips'&&output==='dzi')await promisify(execFile)('vips',['dzsave',`/job/input.${input}`,'/job/output']);else await engines[engine].convert(`/job/input.${input}`,input,output,`/job/output.${output}`);
 
 }catch(error){conversionError=error;}
 

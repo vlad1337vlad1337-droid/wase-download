@@ -1,5 +1,20 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {spawnSync} from 'node:child_process';import {zipSync,unzipSync} from 'fflate';
 import {brandedParts,brandBlob,CREDIT} from '../backend/output-brand.mjs';import {usablePair,publicCatalogue,publicRegistry} from '../backend/conversion-policy.mjs';
+
+test('overlapping document claims do not change public targets with converter discovery order',()=>{
+ const matrix={pdf:{png:['imagemagick'],mpg:['imagemagick']},txt:{pdf:['libreoffice'],wmv:['ffmpeg']},pdb:{txt:['calibre'],mp4:['imagemagick']},png:{mp4:['ffmpeg'],jpg:['vips']}};
+ const first={pdf:'image',txt:'image',pdb:'image',png:'image'};
+ const second={pdf:'ebook',txt:'ebook',pdb:'ebook',png:'image'};
+ const a=publicRegistry({matrix,categories:first}),b=publicRegistry({matrix,categories:second});
+ assert.deepEqual(a,b);
+ assert.deepEqual(a.matrix.png,{jpg:['vips']});
+ assert.deepEqual(first,{pdf:'image',txt:'image',pdb:'image',png:'image'});
+ const inputs=Object.fromEntries(Object.keys(matrix).map((format,index)=>[format,index]));
+ const groups=Object.values(matrix).map(targets=>Object.keys(targets));
+ const staticA=publicCatalogue({inputs,groups,categories:first});
+ assert.deepEqual(staticA,publicCatalogue({inputs,groups,categories:second}));
+ for(const format of Object.keys(a.matrix))assert.deepEqual(staticA.groups[staticA.inputs[format]],Object.keys(a.matrix[format]));
+});
 const join=parts=>Buffer.concat(parts.map(v=>Buffer.from(v)));
 test('PNG metadata preserves every original byte and uses a valid small chunk',async()=>{const original=fs.readFileSync('tests/fixtures/logo.png'),parts=brandedParts(original,'png'),out=join(parts);assert.equal(parts.length,3);assert.deepEqual(Buffer.concat([out.subarray(0,33),out.subarray(33+parts[1].length)]),original);assert.equal(new DataView(parts[1].buffer).getUint32(0),parts[1].length-12);assert.ok(out.includes(Buffer.from(CREDIT)));assert.deepEqual(Buffer.from(await (await brandBlob(new Blob([original]),'png')).arrayBuffer()),out);});
 test('SVG UTF-8 and BOM remain valid and existing credit is not duplicated',()=>{const original=Buffer.from('\ufeff<svg xmlns="http://www.w3.org/2000/svg"><text>Привет</text></svg>');const out=join(brandedParts(original,'svg'));assert.ok(out.toString().includes('<svg xmlns="http://www.w3.org/2000/svg"><!-- '+CREDIT+' -->'));assert.ok(out.toString().includes('Привет'));assert.deepEqual(join(brandedParts(out,'svg')),out);});
