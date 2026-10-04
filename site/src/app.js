@@ -12,7 +12,7 @@ import {browserSelection,fallbackCopy} from './browser-fallback.js';
 import {initFileDrop} from './file-drop.js';
 import {fileDropCopy} from './file-drop-copy.js';
 import {initFormatDialogs} from './format-dialogs.js';
-import {readFormatCache,writeFormatCache,validCatalog} from './catalog-cache.js';
+import {readFormatCache,writeFormatCache,prepareCatalog} from './catalog-cache.js';
 import { strings } from './strings.js';
 import {categoryLabels} from './seo.js';
 import { inspect,convert } from './convert.js';
@@ -121,7 +121,7 @@ function setFormats(id,values){$(id)._formats=values;$(id)._category='all';const
  let formatStorage;try{formatStorage=localStorage;}catch{}
  const cachedFormats=readFormatCache(formatStorage);
  const catalogAbort=new AbortController(),catalogTimer=setTimeout(()=>catalogAbort.abort(),4500);
- const refreshCatalog=fetch('/api/formats',{signal:catalogAbort.signal}).then(r=>{if(!r.ok)throw new Error();return r.json();}).then(data=>{if(!validCatalog(data))throw new Error('Invalid catalogue');writeFormatCache(formatStorage,data);return data;}).finally(()=>clearTimeout(catalogTimer));
+ const refreshCatalog=fetch('/api/formats',{signal:catalogAbort.signal}).then(r=>{if(!r.ok)throw new Error();return r.json();}).then(data=>{const allowed=prepareCatalog(data);writeFormatCache(formatStorage,allowed);return allowed;}).finally(()=>clearTimeout(catalogTimer));
  // A fresh cached catalogue opens immediately. Revalidation updates the next visit,
  // never resets files or changes the selected format in the current session.
  if(cachedFormats)refreshCatalog.catch(()=>{});
