@@ -6,20 +6,6 @@
  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',root.dataset.theme==='dark'?'#141414':'#E8E8E6');
  root.classList.add('is-booting');
  let finished=false,initialized=false,recoveryPending=false;
- const animationConfig=document.currentScript?.dataset;
- let stopAnimation=()=>{};
- // The optional physics files never block parsing or the app module. A bounded
- // wait lets the pile settle, while a failed download still reveals the UI.
- const animation=(!animationConfig?.engine||!animationConfig?.physics||matchMedia('(prefers-reduced-motion: reduce)').matches)?Promise.resolve():new Promise(resolve=>{
-  let complete=false;const scripts=[];
-  const finish=()=>{if(complete)return;complete=true;clearTimeout(deadline);window.removeEventListener?.('wase:boot-animation-ready',finish);document.removeEventListener?.('DOMContentLoaded',launch);for(const script of scripts){script.onload=null;script.onerror=null;}resolve();};
-  const deadline=setTimeout(finish,3400);
-  stopAnimation=finish;
-  window.addEventListener('wase:boot-animation-ready',finish,{once:true});
-  const load=src=>new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=src;script.async=true;script.onload=resolve;script.onerror=reject;scripts.push(script);document.head.append(script);});
-  const launch=()=>{if(complete||finished)return finish();load(animationConfig.engine).then(()=>{if(!complete&&!finished)return load(animationConfig.physics);}).catch(finish);};
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',launch,{once:true});else launch();
- });
  const recoveryCopy={
   en:['The interface could not start. Page information is still available.','Try again'],
   ru:['Не удалось запустить интерфейс. Информация на странице доступна.','Попробовать снова'],
@@ -37,7 +23,6 @@
  };
  const reveal=()=>{
   if(finished)return;finished=true;clearTimeout(failSafe);
-  stopAnimation();window.dispatchEvent?.(new Event('boot:stop'));
   root.classList.remove('is-booting');
   const screen=document.getElementById('boot-screen');
   if(screen){screen.classList.add('is-leaving');setTimeout(()=>screen.remove(),400)}
@@ -75,7 +60,7 @@
   // is separate: a slow optional request must not be reported as a failed app.
   initialized=true;root.dataset.appReady='true';clearRecovery();
   const fonts=document.fonts?Promise.race([document.fonts.ready,new Promise(resolve=>setTimeout(resolve,800))]):Promise.resolve();
-  Promise.all([minimum,animation,fonts,Promise.resolve(ready).catch(()=>{})]).then(()=>requestAnimationFrame(()=>requestAnimationFrame(reveal)));
+  Promise.all([minimum,fonts,Promise.resolve(ready).catch(()=>{})]).then(()=>requestAnimationFrame(()=>requestAnimationFrame(reveal)));
  };
  window.addEventListener('error',event=>{
   if(initialized)return;
