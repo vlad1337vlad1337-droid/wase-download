@@ -29,7 +29,7 @@ test('motion is finite, decorative and disabled for reduced-motion preference',(
  assert.match(bootHead,/@media\(prefers-reduced-motion:reduce\)\{\.boot-screen,\.boot-screen \*\{animation:none!important;transition:none!important\}\}/);
  assert.match(bootHead,/pointer-events:none/);
  assert.match(bootHead,/transition:opacity \.4s ease-out/);
- assert.doesNotMatch(bootHead,/infinite|backdrop-filter|filter:blur/);
+ assert.doesNotMatch(bootHead,/infinite|backdrop-filter|filter:blur|boot-wordmark::?before|background:linear-gradient/);
 });
 
 test('bootstrap URL is versioned from its actual contents',()=>{
