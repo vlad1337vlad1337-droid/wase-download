@@ -4,25 +4,20 @@ html[data-theme=dark]{background:#141414;color-scheme:dark}
 .boot-screen{display:none}
 .boot-screen,.boot-screen *{box-sizing:border-box}
 .is-booting body>header,.is-booting body>main,.is-booting body>footer,.is-booting body>.consent{visibility:hidden}
-.is-booting .boot-screen,.boot-screen.is-leaving{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:#E8E8E6;color:#202020;--boot-bg:#E8E8E6;--boot-muted:#666663;pointer-events:none;overflow:hidden;isolation:isolate;transition:opacity .4s ease-out}
-[data-theme=dark] .boot-screen{background:#141414;color:#f2f2f2;--boot-bg:#141414;--boot-muted:#a2a2a2}
+.is-booting .boot-screen,.boot-screen.is-leaving{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:#E8E8E6;color:#202020;pointer-events:none;overflow:hidden;isolation:isolate;transition:opacity .4s ease-out}
+[data-theme=dark] .boot-screen{background:#141414;color:#f2f2f2}
 .boot-screen.is-leaving{opacity:0}
-.boot-signature{width:min(420px,calc(100% - 40px));text-align:center;transform:translateY(-12px);animation:boot-arrive .6s cubic-bezier(.2,.7,.2,1) both}
-.boot-crew{position:relative;width:290px;max-width:100%;height:154px;margin:0 auto -52px}
+.boot-signature{width:min(290px,calc(100% - 32px));text-align:center;animation:boot-arrive .6s cubic-bezier(.2,.7,.2,1) both}
+.boot-crew{position:relative;width:290px;max-width:100%;height:176px;margin:0 auto}
 .boot-friend{position:absolute;display:block;transform:rotate(var(--tilt));animation:boot-greet 1.65s ease-in-out both;animation-delay:var(--delay)}
 .boot-friend svg{display:block;width:100%;height:100%;overflow:visible}
-.boot-friend--left{width:108px;height:108px;left:0;bottom:18px;--tilt:-14deg;--delay:.08s}
-.boot-friend--center{width:176px;height:176px;left:57px;top:-16px;--tilt:5deg;--delay:0s;z-index:1}
-.boot-friend--right{width:110px;height:110px;right:0;bottom:18px;--tilt:15deg;--delay:.18s}
+.boot-friend--left{width:108px;height:108px;left:0;bottom:18px;--tilt:-14deg;--delay:.08s;--toward:10px;--turn:16deg;animation-name:boot-together}
+.boot-friend--center{width:176px;height:176px;left:57px;top:0;--tilt:5deg;--delay:0s;z-index:1}
+.boot-friend--right{width:110px;height:110px;right:0;bottom:18px;--tilt:15deg;--delay:.18s;--toward:-10px;--turn:-16deg;animation-name:boot-together}
 .boot-eyes{transform-box:fill-box;transform-origin:center;animation:boot-blink 1.7s ease-in-out both;animation-delay:var(--delay)}
-.boot-wordmark{position:relative;z-index:2;font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;font-size:clamp(29px,7.8vw,46px);font-weight:700;line-height:1.25;letter-spacing:-.055em;white-space:nowrap}
-.boot-wordmark span{font-weight:500;color:var(--boot-muted)}
-.boot-underline{display:block;width:clamp(180px,60%,254px);height:26px;margin:-7px auto 0;overflow:visible}
-.boot-underline path{fill:none;stroke-linecap:round;stroke-width:3;stroke-dasharray:1;stroke-dashoffset:0;animation:boot-ink 1.25s cubic-bezier(.4,0,.15,1) both}
-.boot-underline path+path{stroke-width:2;opacity:.6;animation-delay:.25s}
-@keyframes boot-arrive{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(-12px)}}
+@keyframes boot-arrive{from{opacity:0}to{opacity:1}}
+@keyframes boot-together{0%,100%{transform:translateX(0) rotate(var(--tilt))}50%{transform:translateX(var(--toward)) rotate(var(--turn))}}
 @keyframes boot-greet{0%,100%{transform:translateY(0) rotate(var(--tilt))}45%{transform:translateY(-7px) rotate(calc(var(--tilt) - 3deg))}}
 @keyframes boot-blink{0%,40%,48%,100%{transform:scaleY(1)}44%{transform:scaleY(.12)}}
-@keyframes boot-ink{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
-@media(max-height:380px){.boot-signature{transform:none}.boot-crew{height:110px;margin-bottom:-35px;transform:scale(.8);transform-origin:center bottom}.boot-wordmark{font-size:30px}.boot-underline{margin-top:-6px}}
+@media(max-height:260px){.boot-signature{transform:scale(.8)}}
 @media(prefers-reduced-motion:reduce){.boot-screen,.boot-screen *{animation:none!important;transition:none!important}}

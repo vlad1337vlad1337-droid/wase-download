@@ -5,12 +5,11 @@ import {createHash} from 'node:crypto';
 import {bootHead,bootMarkup} from '../scripts/boot-screen.mjs';
 import {localeCodes} from '../site/src/locales.js';
 
-test('every locale gets the same compact, decorative brand lockup',()=>{
+test('every locale gets only three compact decorative mascots',()=>{
  for(const lang of localeCodes){
   const html=bootMarkup(lang);
   assert.equal((html.match(/class="boot-friend boot-friend--/g)||[]).length,3);
-  assert.match(html,/wase<span>\.download<\/span>/);
-  assert.match(html,/class="boot-underline"/);
+  assert.doesNotMatch(html,/boot-wordmark|boot-underline|download/);
   assert.match(html,/aria-hidden="true"/);
   assert.doesNotMatch(html,/boot-pile|boot-rain|<canvas|<script|<img|data-boot-body/);
   assert.ok(Buffer.byteLength(html)<5000,'the complete graphic is inline and small');
@@ -20,9 +19,10 @@ test('every locale gets the same compact, decorative brand lockup',()=>{
 test('decoration needs no image downloads, physics engine or animation JS',()=>{
  assert.equal((bootHead.match(/<script /g)||[]).length,1);
  assert.doesNotMatch(bootHead+bootMarkup(),/(?:src|href)="https?:\/\/|data-engine|data-physics|as="image"|as="font"|infinite/);
- assert.match(bootHead,/\.boot-wordmark\{[^}]*font-size:clamp/);
- assert.match(bootHead,/width:min\(420px,calc\(100% - 40px\)\)/);
- assert.match(bootHead,/max-height:380px/);
+ assert.match(bootHead,/width:min\(290px,calc\(100% - 32px\)\)/);
+ assert.match(bootHead,/max-height:260px/);
+ assert.match(bootHead,/--toward:10px;--turn:16deg/);
+ assert.match(bootHead,/--toward:-10px;--turn:-16deg/);
 });
 
 test('motion is finite, decorative and disabled for reduced-motion preference',()=>{
