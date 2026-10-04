@@ -2,7 +2,7 @@
 
 > Self-hosted file conversion with static instructions in 13 languages. No account or third-party conversion API key. Read-only MCP discovers declared capabilities; file upload is a separate user-authorized operation.
 
-The public build declares 885 inputs, 517 outputs and 143995 directional combinations. 2681 published directions have representative-fixture HTTP evidence. Declarations and fixture success do not guarantee arbitrary files. Server processing accepts up to 100 MiB per file; the app permits 20 files per batch, processed individually. Optional browser image processing has separate, narrower limits.
+The public build declares 885 inputs, 517 outputs and 143995 directional combinations. 3058 published directions have representative-fixture HTTP evidence. Declarations and fixture success do not guarantee arbitrary files. Server processing accepts up to 100 MiB per file; the app permits 20 files per batch, processed individually. Optional browser image processing has separate, narrower limits.
 
 ## Documentation
 

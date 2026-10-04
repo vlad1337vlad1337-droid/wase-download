@@ -77,7 +77,7 @@ if(output==='svg'&&traceInputs.has(input))await traceRaster();else if(engine==='
  // The 3G2 muxer defaults to AMR, whose encoder is absent in the pinned
  // image. Encode supported streams explicitly and retain the real muxer.
  await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,'-map','0:v:0?','-map','0:a:0?','-sn','-dn','-c:v','mpeg4','-q:v','5','-pix_fmt','yuv420p','-vf','scale=ceil(iw/2)*2:ceil(ih/2)*2','-c:a','aac','-b:a','128k','-threads','1','-f',output,`/job/output.${output}`],{timeout:60000});
-}else if(engine==='ffmpeg'&&['png','jpg','jpeg','bmp','ico','tif','tiff'].includes(output))await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,...(output==='ico'?['-vf','scale=256:256:force_original_aspect_ratio=decrease']:[]),'-frames:v','1','-threads','1',`/job/output.${output}`],{timeout:60000});else if(engine==='vips'&&output==='dzi')await promisify(execFile)('vips',['dzsave',`/job/input.${input}`,'/job/output']);else await engines[engine].convert(`/job/input.${input}`,input,output,`/job/output.${output}`);
+}else if(engine==='ffmpeg'&&['png','jpg','jpeg','bmp','ico','tif','tiff'].includes(output))await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,...(output==='ico'?['-vf','scale=256:256:force_original_aspect_ratio=decrease']:[]),'-frames:v','1','-threads','1',`/job/output.${output}`],{timeout:60000});else if(engine==='vips'&&output==='dzi')await promisify(execFile)('vips',['dzsave',`/job/input.${input}`,'/job/output']);else await engines[engine].convert(`/job/input.${input}`,engine==='pandoc'&&input==='pandoc native'?'native':input,output,`/job/output.${output}`);
 
 }catch(error){conversionError=error;}
 

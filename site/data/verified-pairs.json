@@ -11378,5 +11378,1513 @@
   "ppm-to-tiff64": [
     "PPM",
     "TIFF64"
+  ],
+  "302-to-3g2": [
+    "302",
+    "3G2"
+  ],
+  "302-to-3gp": [
+    "302",
+    "3GP"
+  ],
+  "3mf-to-stl": [
+    "3MF",
+    "STL"
+  ],
+  "4xm-to-png": [
+    "4XM",
+    "PNG"
+  ],
+  "aa3-to-3g2": [
+    "AA3",
+    "3G2"
+  ],
+  "aa3-to-3gp": [
+    "AA3",
+    "3GP"
+  ],
+  "aac-to-3g2": [
+    "AAC",
+    "3G2"
+  ],
+  "aac-to-3gp": [
+    "AAC",
+    "3GP"
+  ],
+  "aai-to-png": [
+    "AAI",
+    "PNG"
+  ],
+  "ac3-to-3g2": [
+    "AC3",
+    "3G2"
+  ],
+  "ac3-to-3gp": [
+    "AC3",
+    "3GP"
+  ],
+  "adp-to-3g2": [
+    "ADP",
+    "3G2"
+  ],
+  "adp-to-3gp": [
+    "ADP",
+    "3GP"
+  ],
+  "adx-to-3g2": [
+    "ADX",
+    "3G2"
+  ],
+  "adx-to-3gp": [
+    "ADX",
+    "3GP"
+  ],
+  "aea-to-3g2": [
+    "AEA",
+    "3G2"
+  ],
+  "aea-to-3gp": [
+    "AEA",
+    "3GP"
+  ],
+  "afc-to-3g2": [
+    "AFC",
+    "3G2"
+  ],
+  "afc-to-3gp": [
+    "AFC",
+    "3GP"
+  ],
+  "aiff-to-3g2": [
+    "AIFF",
+    "3G2"
+  ],
+  "aiff-to-3gp": [
+    "AIFF",
+    "3GP"
+  ],
+  "al-to-3g2": [
+    "AL",
+    "3G2"
+  ],
+  "al-to-3gp": [
+    "AL",
+    "3GP"
+  ],
+  "anm-to-png": [
+    "ANM",
+    "PNG"
+  ],
+  "ans-to-png": [
+    "ANS",
+    "PNG"
+  ],
+  "apm-to-3g2": [
+    "APM",
+    "3G2"
+  ],
+  "apm-to-3gp": [
+    "APM",
+    "3GP"
+  ],
+  "apng-to-png": [
+    "APNG",
+    "PNG"
+  ],
+  "aptx-to-adx": [
+    "APTX",
+    "ADX"
+  ],
+  "aptxhd-to-ac3": [
+    "APTXHD",
+    "AC3"
+  ],
+  "art-to-png": [
+    "ART",
+    "PNG"
+  ],
+  "assbin-to-stl": [
+    "ASSBIN",
+    "STL"
+  ],
+  "ast-to-3g2": [
+    "AST",
+    "3G2"
+  ],
+  "ast-to-3gp": [
+    "AST",
+    "3GP"
+  ],
+  "avi-to-3g2": [
+    "AVI",
+    "3G2"
+  ],
+  "avi-to-3gp": [
+    "AVI",
+    "3GP"
+  ],
+  "avs-to-png": [
+    "AVS",
+    "PNG"
+  ],
+  "awb-to-3g2": [
+    "AWB",
+    "3G2"
+  ],
+  "awb-to-3gp": [
+    "AWB",
+    "3GP"
+  ],
+  "azw3-to-txt": [
+    "AZW3",
+    "TXT"
+  ],
+  "bcstm-to-3g2": [
+    "BCSTM",
+    "3G2"
+  ],
+  "bcstm-to-3gp": [
+    "BCSTM",
+    "3GP"
+  ],
+  "bfi-to-png": [
+    "BFI",
+    "PNG"
+  ],
+  "bfstm-to-3g2": [
+    "BFSTM",
+    "3G2"
+  ],
+  "bfstm-to-3gp": [
+    "BFSTM",
+    "3GP"
+  ],
+  "bigtiff-to-png": [
+    "BIGTIFF",
+    "PNG"
+  ],
+  "bit-to-png": [
+    "BIT",
+    "PNG"
+  ],
+  "bmp2-to-png": [
+    "BMP2",
+    "PNG"
+  ],
+  "bmp3-to-png": [
+    "BMP3",
+    "PNG"
+  ],
+  "bmv-to-png": [
+    "BMV",
+    "PNG"
+  ],
+  "c2-to-3g2": [
+    "C2",
+    "3G2"
+  ],
+  "c2-to-3gp": [
+    "C2",
+    "3GP"
+  ],
+  "caf-to-3g2": [
+    "CAF",
+    "3G2"
+  ],
+  "caf-to-3gp": [
+    "CAF",
+    "3GP"
+  ],
+  "cal-to-png": [
+    "CAL",
+    "PNG"
+  ],
+  "cals-to-png": [
+    "CALS",
+    "PNG"
+  ],
+  "cdata-to-3g2": [
+    "CDATA",
+    "3G2"
+  ],
+  "cdata-to-3gp": [
+    "CDATA",
+    "3GP"
+  ],
+  "cdxl-to-png": [
+    "CDXL",
+    "PNG"
+  ],
+  "cin-to-png": [
+    "CIN",
+    "PNG"
+  ],
+  "cine-to-png": [
+    "CINE",
+    "PNG"
+  ],
+  "commonmark-to-pdf": [
+    "COMMONMARK",
+    "PDF"
+  ],
+  "commonmark-x-to-pdf": [
+    "COMMONMARK_X",
+    "PDF"
+  ],
+  "cur-to-png": [
+    "CUR",
+    "PNG"
+  ],
+  "dds-to-png": [
+    "DDS",
+    "PNG"
+  ],
+  "dfa-to-png": [
+    "DFA",
+    "PNG"
+  ],
+  "dfpwm-to-3g2": [
+    "DFPWM",
+    "3G2"
+  ],
+  "dfpwm-to-3gp": [
+    "DFPWM",
+    "3GP"
+  ],
+  "djot-to-pdf": [
+    "DJOT",
+    "PDF"
+  ],
+  "docbook-to-pdf": [
+    "DOCBOOK",
+    "PDF"
+  ],
+  "dokuwiki-to-pdf": [
+    "DOKUWIKI",
+    "PDF"
+  ],
+  "dpx-to-png": [
+    "DPX",
+    "PNG"
+  ],
+  "dss-to-3g2": [
+    "DSS",
+    "3G2"
+  ],
+  "dss-to-3gp": [
+    "DSS",
+    "3GP"
+  ],
+  "dts-to-3g2": [
+    "DTS",
+    "3G2"
+  ],
+  "dts-to-3gp": [
+    "DTS",
+    "3GP"
+  ],
+  "dtshd-to-3g2": [
+    "DTSHD",
+    "3G2"
+  ],
+  "dtshd-to-3gp": [
+    "DTSHD",
+    "3GP"
+  ],
+  "dxt1-to-png": [
+    "DXT1",
+    "PNG"
+  ],
+  "dxt5-to-png": [
+    "DXT5",
+    "PNG"
+  ],
+  "eac3-to-3g2": [
+    "EAC3",
+    "3G2"
+  ],
+  "eac3-to-3gp": [
+    "EAC3",
+    "3GP"
+  ],
+  "ec3-to-3g2": [
+    "EC3",
+    "3G2"
+  ],
+  "ec3-to-3gp": [
+    "EC3",
+    "3GP"
+  ],
+  "epdf-to-png": [
+    "EPDF",
+    "PNG"
+  ],
+  "epi-to-png": [
+    "EPI",
+    "PNG"
+  ],
+  "eps-to-png": [
+    "EPS",
+    "PNG"
+  ],
+  "epsf-to-png": [
+    "EPSF",
+    "PNG"
+  ],
+  "epsi-to-png": [
+    "EPSI",
+    "PNG"
+  ],
+  "ept-to-png": [
+    "EPT",
+    "PNG"
+  ],
+  "ept2-to-png": [
+    "EPT2",
+    "PNG"
+  ],
+  "ept3-to-png": [
+    "EPT3",
+    "PNG"
+  ],
+  "exr-to-png": [
+    "EXR",
+    "PNG"
+  ],
+  "f4v-to-png": [
+    "F4V",
+    "PNG"
+  ],
+  "farbfeld-to-png": [
+    "FARBFELD",
+    "PNG"
+  ],
+  "fax-to-png": [
+    "FAX",
+    "PNG"
+  ],
+  "ff-to-png": [
+    "FF",
+    "PNG"
+  ],
+  "fl32-to-png": [
+    "FL32",
+    "PNG"
+  ],
+  "flac-to-3g2": [
+    "FLAC",
+    "3G2"
+  ],
+  "flac-to-3gp": [
+    "FLAC",
+    "3GP"
+  ],
+  "flm-to-png": [
+    "FLM",
+    "PNG"
+  ],
+  "fts-to-png": [
+    "FTS",
+    "PNG"
+  ],
+  "g3-to-png": [
+    "G3",
+    "PNG"
+  ],
+  "g722-to-3g2": [
+    "G722",
+    "3G2"
+  ],
+  "g722-to-3gp": [
+    "G722",
+    "3GP"
+  ],
+  "gdv-to-png": [
+    "GDV",
+    "PNG"
+  ],
+  "gfm-to-pdf": [
+    "GFM",
+    "PDF"
+  ],
+  "gif87-to-png": [
+    "GIF87",
+    "PNG"
+  ],
+  "gltf-to-stl": [
+    "GLTF",
+    "STL"
+  ],
+  "h263-to-png": [
+    "H263",
+    "PNG"
+  ],
+  "h264-to-png": [
+    "H264",
+    "PNG"
+  ],
+  "haddock-to-pdf": [
+    "HADDOCK",
+    "PDF"
+  ],
+  "hdr-to-png": [
+    "HDR",
+    "PNG"
+  ],
+  "heic-to-png": [
+    "HEIC",
+    "PNG"
+  ],
+  "heic-to-svg": [
+    "HEIC",
+    "SVG"
+  ],
+  "heif-to-png": [
+    "HEIF",
+    "PNG"
+  ],
+  "heif-to-svg": [
+    "HEIF",
+    "SVG"
+  ],
+  "hevc-to-png": [
+    "HEVC",
+    "PNG"
+  ],
+  "hrz-to-png": [
+    "HRZ",
+    "PNG"
+  ],
+  "ico-to-svg": [
+    "ICO",
+    "SVG"
+  ],
+  "iff-to-3g2": [
+    "IFF",
+    "3G2"
+  ],
+  "iff-to-3gp": [
+    "IFF",
+    "3GP"
+  ],
+  "ipl-to-png": [
+    "IPL",
+    "PNG"
+  ],
+  "ipynb-to-pdf": [
+    "IPYNB",
+    "PDF"
+  ],
+  "iqm-to-stl": [
+    "IQM",
+    "STL"
+  ],
+  "ircam-to-3g2": [
+    "IRCAM",
+    "3G2"
+  ],
+  "ircam-to-3gp": [
+    "IRCAM",
+    "3GP"
+  ],
+  "ism-to-png": [
+    "ISM",
+    "PNG"
+  ],
+  "isma-to-3g2": [
+    "ISMA",
+    "3G2"
+  ],
+  "isma-to-3gp": [
+    "ISMA",
+    "3GP"
+  ],
+  "ismv-to-png": [
+    "ISMV",
+    "PNG"
+  ],
+  "iss-to-3g2": [
+    "ISS",
+    "3G2"
+  ],
+  "iss-to-3gp": [
+    "ISS",
+    "3GP"
+  ],
+  "ivf-to-png": [
+    "IVF",
+    "PNG"
+  ],
+  "j2c-to-png": [
+    "J2C",
+    "PNG"
+  ],
+  "j2k-to-png": [
+    "J2K",
+    "PNG"
+  ],
+  "jats-to-pdf": [
+    "JATS",
+    "PDF"
+  ],
+  "jbig-to-png": [
+    "JBIG",
+    "PNG"
+  ],
+  "jira-to-pdf": [
+    "JIRA",
+    "PDF"
+  ],
+  "jng-to-png": [
+    "JNG",
+    "PNG"
+  ],
+  "jpc-to-png": [
+    "JPC",
+    "PNG"
+  ],
+  "jpm-to-png": [
+    "JPM",
+    "PNG"
+  ],
+  "jps-to-png": [
+    "JPS",
+    "PNG"
+  ],
+  "json-to-csv": [
+    "JSON",
+    "CSV"
+  ],
+  "lit-to-txt": [
+    "LIT",
+    "TXT"
+  ],
+  "loas-to-3g2": [
+    "LOAS",
+    "3G2"
+  ],
+  "loas-to-3gp": [
+    "LOAS",
+    "3GP"
+  ],
+  "lrc-to-ass": [
+    "LRC",
+    "ASS"
+  ],
+  "lrf-to-txt": [
+    "LRF",
+    "TXT"
+  ],
+  "m2a-to-3g2": [
+    "M2A",
+    "3G2"
+  ],
+  "m2a-to-3gp": [
+    "M2A",
+    "3GP"
+  ],
+  "m2ts-to-png": [
+    "M2TS",
+    "PNG"
+  ],
+  "m2v-to-png": [
+    "M2V",
+    "PNG"
+  ],
+  "m4b-to-3g2": [
+    "M4B",
+    "3G2"
+  ],
+  "m4b-to-3gp": [
+    "M4B",
+    "3GP"
+  ],
+  "m4v-to-mp4": [
+    "M4V",
+    "MP4"
+  ],
+  "man-to-pdf": [
+    "MAN",
+    "PDF"
+  ],
+  "markdown-mmd-to-pdf": [
+    "MARKDOWN_MMD",
+    "PDF"
+  ],
+  "markdown-phpextra-to-pdf": [
+    "MARKDOWN_PHPEXTRA",
+    "PDF"
+  ],
+  "markdown-strict-to-pdf": [
+    "MARKDOWN_STRICT",
+    "PDF"
+  ],
+  "md2-to-stl": [
+    "MD2",
+    "STL"
+  ],
+  "mdc-to-stl": [
+    "MDC",
+    "STL"
+  ],
+  "mediawiki-to-pdf": [
+    "MEDIAWIKI",
+    "PDF"
+  ],
+  "mesh.xml-to-stl": [
+    "MESH.XML",
+    "STL"
+  ],
+  "miff-to-png": [
+    "MIFF",
+    "PNG"
+  ],
+  "mjpeg-to-png": [
+    "MJPEG",
+    "PNG"
+  ],
+  "mjpg-to-png": [
+    "MJPG",
+    "PNG"
+  ],
+  "mka-to-3g2": [
+    "MKA",
+    "3G2"
+  ],
+  "mka-to-3gp": [
+    "MKA",
+    "3GP"
+  ],
+  "mks-to-ass": [
+    "MKS",
+    "ASS"
+  ],
+  "mkv-to-3g2": [
+    "MKV",
+    "3G2"
+  ],
+  "mkv-to-3gp": [
+    "MKV",
+    "3GP"
+  ],
+  "mlp-to-3g2": [
+    "MLP",
+    "3G2"
+  ],
+  "mlp-to-3gp": [
+    "MLP",
+    "3GP"
+  ],
+  "mm-to-png": [
+    "MM",
+    "PNG"
+  ],
+  "mmf-to-3g2": [
+    "MMF",
+    "3G2"
+  ],
+  "mmf-to-3gp": [
+    "MMF",
+    "3GP"
+  ],
+  "mng-to-png": [
+    "MNG",
+    "PNG"
+  ],
+  "mobi-to-txt": [
+    "MOBI",
+    "TXT"
+  ],
+  "mov-to-3g2": [
+    "MOV",
+    "3G2"
+  ],
+  "mov-to-3gp": [
+    "MOV",
+    "3GP"
+  ],
+  "mp2-to-3g2": [
+    "MP2",
+    "3G2"
+  ],
+  "mp2-to-3gp": [
+    "MP2",
+    "3GP"
+  ],
+  "mp3-to-3g2": [
+    "MP3",
+    "3G2"
+  ],
+  "mp3-to-3gp": [
+    "MP3",
+    "3GP"
+  ],
+  "mp4-to-3g2": [
+    "MP4",
+    "3G2"
+  ],
+  "mp4-to-3gp": [
+    "MP4",
+    "3GP"
+  ],
+  "mpa-to-3g2": [
+    "MPA",
+    "3G2"
+  ],
+  "mpa-to-3gp": [
+    "MPA",
+    "3GP"
+  ],
+  "mpeg-to-adts": [
+    "MPEG",
+    "ADTS"
+  ],
+  "mpg-to-adts": [
+    "MPG",
+    "ADTS"
+  ],
+  "msbc-to-ac3": [
+    "MSBC",
+    "AC3"
+  ],
+  "msg-to-md": [
+    "MSG",
+    "MD"
+  ],
+  "mtv-to-png": [
+    "MTV",
+    "PNG"
+  ],
+  "muse-to-pdf": [
+    "MUSE",
+    "PDF"
+  ],
+  "mxf-to-png": [
+    "MXF",
+    "PNG"
+  ],
+  "mxg-to-png": [
+    "MXG",
+    "PNG"
+  ],
+  "nist-to-3g2": [
+    "NIST",
+    "3G2"
+  ],
+  "nist-to-3gp": [
+    "NIST",
+    "3GP"
+  ],
+  "nut-to-png": [
+    "NUT",
+    "PNG"
+  ],
+  "nuv-to-png": [
+    "NUV",
+    "PNG"
+  ],
+  "obj-to-3mf": [
+    "OBJ",
+    "3MF"
+  ],
+  "obu-to-png": [
+    "OBU",
+    "PNG"
+  ],
+  "ogg-to-3g2": [
+    "OGG",
+    "3G2"
+  ],
+  "ogg-to-3gp": [
+    "OGG",
+    "3GP"
+  ],
+  "opml-to-pdf": [
+    "OPML",
+    "PDF"
+  ],
+  "opus-to-3g2": [
+    "OPUS",
+    "3G2"
+  ],
+  "opus-to-3gp": [
+    "OPUS",
+    "3GP"
+  ],
+  "org-to-pdf": [
+    "ORG",
+    "PDF"
+  ],
+  "otb-to-png": [
+    "OTB",
+    "PNG"
+  ],
+  "ott-to-txt": [
+    "OTT",
+    "TXT"
+  ],
+  "pages-to-txt": [
+    "PAGES",
+    "TXT"
+  ],
+  "palm-to-png": [
+    "PALM",
+    "PNG"
+  ],
+  "pam-to-png": [
+    "PAM",
+    "PNG"
+  ],
+  "pcd-to-png": [
+    "PCD",
+    "PNG"
+  ],
+  "pcds-to-png": [
+    "PCDS",
+    "PNG"
+  ],
+  "pdfa-to-png": [
+    "PDFA",
+    "PNG"
+  ],
+  "pfm-to-png": [
+    "PFM",
+    "PNG"
+  ],
+  "pgmyuv-to-png": [
+    "PGMYUV",
+    "PNG"
+  ],
+  "pgx-to-png": [
+    "PGX",
+    "PNG"
+  ],
+  "phm-to-png": [
+    "PHM",
+    "PNG"
+  ],
+  "picon-to-png": [
+    "PICON",
+    "PNG"
+  ],
+  "pict-to-png": [
+    "PICT",
+    "PNG"
+  ],
+  "pix-to-png": [
+    "PIX",
+    "PNG"
+  ],
+  "pjs-to-ass": [
+    "PJS",
+    "ASS"
+  ],
+  "pnm-to-png": [
+    "PNM",
+    "PNG"
+  ],
+  "ps-to-png": [
+    "PS",
+    "PNG"
+  ],
+  "psb-to-png": [
+    "PSB",
+    "PNG"
+  ],
+  "ptif-to-png": [
+    "PTIF",
+    "PNG"
+  ],
+  "pva-to-png": [
+    "PVA",
+    "PNG"
+  ],
+  "q3s-to-stl": [
+    "Q3S",
+    "STL"
+  ],
+  "qcp-to-3g2": [
+    "QCP",
+    "3G2"
+  ],
+  "qcp-to-3gp": [
+    "QCP",
+    "3GP"
+  ],
+  "qoi-to-png": [
+    "QOI",
+    "PNG"
+  ],
+  "ras-to-png": [
+    "RAS",
+    "PNG"
+  ],
+  "rcv-to-png": [
+    "RCV",
+    "PNG"
+  ],
+  "rka-to-ac3": [
+    "RKA",
+    "AC3"
+  ],
+  "rm-to-png": [
+    "RM",
+    "PNG"
+  ],
+  "roq-to-png": [
+    "ROQ",
+    "PNG"
+  ],
+  "rsd-to-3g2": [
+    "RSD",
+    "3G2"
+  ],
+  "rsd-to-3gp": [
+    "RSD",
+    "3GP"
+  ],
+  "rso-to-3g2": [
+    "RSO",
+    "3G2"
+  ],
+  "rso-to-3gp": [
+    "RSO",
+    "3GP"
+  ],
+  "rt-to-ass": [
+    "RT",
+    "ASS"
+  ],
+  "sb-to-3g2": [
+    "SB",
+    "3G2"
+  ],
+  "sb-to-3gp": [
+    "SB",
+    "3GP"
+  ],
+  "sbc-to-ac3": [
+    "SBC",
+    "AC3"
+  ],
+  "scc-to-ass": [
+    "SCC",
+    "ASS"
+  ],
+  "sf-to-3g2": [
+    "SF",
+    "3G2"
+  ],
+  "sf-to-3gp": [
+    "SF",
+    "3GP"
+  ],
+  "sgi-to-png": [
+    "SGI",
+    "PNG"
+  ],
+  "shn-to-3g2": [
+    "SHN",
+    "3G2"
+  ],
+  "shn-to-3gp": [
+    "SHN",
+    "3GP"
+  ],
+  "six-to-png": [
+    "SIX",
+    "PNG"
+  ],
+  "sixel-to-png": [
+    "SIXEL",
+    "PNG"
+  ],
+  "smi-to-ass": [
+    "SMI",
+    "ASS"
+  ],
+  "smk-to-png": [
+    "SMK",
+    "PNG"
+  ],
+  "sol-to-3g2": [
+    "SOL",
+    "3G2"
+  ],
+  "sol-to-3gp": [
+    "SOL",
+    "3GP"
+  ],
+  "sox-to-3g2": [
+    "SOX",
+    "3G2"
+  ],
+  "sox-to-3gp": [
+    "SOX",
+    "3GP"
+  ],
+  "spdif-to-3g2": [
+    "SPDIF",
+    "3G2"
+  ],
+  "spdif-to-3gp": [
+    "SPDIF",
+    "3GP"
+  ],
+  "ssa-to-ass": [
+    "SSA",
+    "ASS"
+  ],
+  "str-to-png": [
+    "STR",
+    "PNG"
+  ],
+  "strimg-to-png": [
+    "STRIMG",
+    "PNG"
+  ],
+  "sub-to-ass": [
+    "SUB",
+    "ASS"
+  ],
+  "sun-to-png": [
+    "SUN",
+    "PNG"
+  ],
+  "sw-to-3g2": [
+    "SW",
+    "3G2"
+  ],
+  "sw-to-3gp": [
+    "SW",
+    "3GP"
+  ],
+  "swf-to-png": [
+    "SWF",
+    "PNG"
+  ],
+  "tab-to-txt": [
+    "TAB",
+    "TXT"
+  ],
+  "tak-to-ac3": [
+    "TAK",
+    "AC3"
+  ],
+  "tar.bz2-to-zip": [
+    "TAR.BZ2",
+    "ZIP"
+  ],
+  "tar.xz-to-zip": [
+    "TAR.XZ",
+    "ZIP"
+  ],
+  "tco-to-3g2": [
+    "TCO",
+    "3G2"
+  ],
+  "tco-to-3gp": [
+    "TCO",
+    "3GP"
+  ],
+  "ter-to-stl": [
+    "TER",
+    "STL"
+  ],
+  "textile-to-pdf": [
+    "TEXTILE",
+    "PDF"
+  ],
+  "tga-to-png": [
+    "TGA",
+    "PNG"
+  ],
+  "thd-to-3g2": [
+    "THD",
+    "3G2"
+  ],
+  "thd-to-3gp": [
+    "THD",
+    "3GP"
+  ],
+  "tiff-to-svg": [
+    "TIFF",
+    "SVG"
+  ],
+  "tiff64-to-png": [
+    "TIFF64",
+    "PNG"
+  ],
+  "tmv-to-png": [
+    "TMV",
+    "PNG"
+  ],
+  "toml-to-json": [
+    "TOML",
+    "JSON"
+  ],
+  "ts-to-png": [
+    "TS",
+    "PNG"
+  ],
+  "tsv-to-pdf": [
+    "TSV",
+    "PDF"
+  ],
+  "tta-to-ac3": [
+    "TTA",
+    "AC3"
+  ],
+  "txd-to-png": [
+    "TXD",
+    "PNG"
+  ],
+  "typst-to-pdf": [
+    "TYPST",
+    "PDF"
+  ],
+  "ub-to-3g2": [
+    "UB",
+    "3G2"
+  ],
+  "ub-to-3gp": [
+    "UB",
+    "3GP"
+  ],
+  "ul-to-3g2": [
+    "UL",
+    "3G2"
+  ],
+  "ul-to-3gp": [
+    "UL",
+    "3GP"
+  ],
+  "uw-to-3g2": [
+    "UW",
+    "3G2"
+  ],
+  "uw-to-3gp": [
+    "UW",
+    "3GP"
+  ],
+  "vag-to-3g2": [
+    "VAG",
+    "3G2"
+  ],
+  "vag-to-3gp": [
+    "VAG",
+    "3GP"
+  ],
+  "vc1-to-png": [
+    "VC1",
+    "PNG"
+  ],
+  "vicar-to-png": [
+    "VICAR",
+    "PNG"
+  ],
+  "viff-to-png": [
+    "VIFF",
+    "PNG"
+  ],
+  "vips-to-png": [
+    "VIPS",
+    "PNG"
+  ],
+  "vmd-to-png": [
+    "VMD",
+    "PNG"
+  ],
+  "vob-to-png": [
+    "VOB",
+    "PNG"
+  ],
+  "voc-to-3g2": [
+    "VOC",
+    "3G2"
+  ],
+  "voc-to-3gp": [
+    "VOC",
+    "3GP"
+  ],
+  "vtt-to-ass": [
+    "VTT",
+    "ASS"
+  ],
+  "vvc-to-png": [
+    "VVC",
+    "PNG"
+  ],
+  "w64-to-3g2": [
+    "W64",
+    "3G2"
+  ],
+  "w64-to-3gp": [
+    "W64",
+    "3GP"
+  ],
+  "wav-to-3g2": [
+    "WAV",
+    "3G2"
+  ],
+  "wav-to-3gp": [
+    "WAV",
+    "3GP"
+  ],
+  "wbmp-to-png": [
+    "WBMP",
+    "PNG"
+  ],
+  "webm-to-3g2": [
+    "WEBM",
+    "3G2"
+  ],
+  "webm-to-3gp": [
+    "WEBM",
+    "3GP"
+  ],
+  "webp-to-svg": [
+    "WEBP",
+    "SVG"
+  ],
+  "wma-to-3g2": [
+    "WMA",
+    "3G2"
+  ],
+  "wma-to-3gp": [
+    "WMA",
+    "3GP"
+  ],
+  "wpg-to-png": [
+    "WPG",
+    "PNG"
+  ],
+  "wtv-to-png": [
+    "WTV",
+    "PNG"
+  ],
+  "wv-to-3g2": [
+    "WV",
+    "3G2"
+  ],
+  "wv-to-3gp": [
+    "WV",
+    "3GP"
+  ],
+  "wve-to-png": [
+    "WVE",
+    "PNG"
+  ],
+  "x3d-to-obj": [
+    "X3D",
+    "OBJ"
+  ],
+  "xbm-to-png": [
+    "XBM",
+    "PNG"
+  ],
+  "xhtml-to-txt": [
+    "XHTML",
+    "TXT"
+  ],
+  "xml-to-pdf": [
+    "XML",
+    "PDF"
+  ],
+  "xpm-to-png": [
+    "XPM",
+    "PNG"
+  ],
+  "xwd-to-png": [
+    "XWD",
+    "PNG"
+  ],
+  "y4m-to-png": [
+    "Y4M",
+    "PNG"
+  ],
+  "yaml-to-json": [
+    "YAML",
+    "JSON"
+  ],
+  "yop-to-png": [
+    "YOP",
+    "PNG"
+  ],
+  "zae-to-stl": [
+    "ZAE",
+    "STL"
+  ],
+  "nef-to-png": [
+    "NEF",
+    "PNG"
+  ],
+  "cr2-to-png": [
+    "CR2",
+    "PNG"
+  ],
+  "arw-to-png": [
+    "ARW",
+    "PNG"
+  ],
+  "pef-to-png": [
+    "PEF",
+    "PNG"
+  ],
+  "av1-to-png": [
+    "AV1",
+    "PNG"
+  ],
+  "dirac-to-png": [
+    "DIRAC",
+    "PNG"
+  ],
+  "h261-to-png": [
+    "H261",
+    "PNG"
+  ],
+  "dv-to-png": [
+    "DV",
+    "PNG"
+  ],
+  "dnxhd-to-png": [
+    "DNXHD",
+    "PNG"
+  ],
+  "mk3d-to-png": [
+    "MK3D",
+    "PNG"
+  ],
+  "argo-asf-to-wav": [
+    "ARGO_ASF",
+    "WAV"
+  ],
+  "daud-to-wav": [
+    "DAUD",
+    "WAV"
+  ],
+  "gsm-to-wav": [
+    "GSM",
+    "WAV"
+  ],
+  "smjpeg-to-wav": [
+    "SMJPEG",
+    "WAV"
+  ],
+  "bibtex-to-csljson": [
+    "BIBTEX",
+    "CSLJSON"
+  ],
+  "biblatex-to-csljson": [
+    "BIBLATEX",
+    "CSLJSON"
+  ],
+  "bits-to-html": [
+    "BITS",
+    "HTML"
+  ],
+  "creole-to-html": [
+    "CREOLE",
+    "HTML"
+  ],
+  "endnotexml-to-csljson": [
+    "ENDNOTEXML",
+    "CSLJSON"
+  ],
+  "pandoc-native-to-html": [
+    "PANDOC NATIVE",
+    "HTML"
+  ],
+  "ris-to-csljson": [
+    "RIS",
+    "CSLJSON"
+  ],
+  "t2t-to-html": [
+    "T2T",
+    "HTML"
+  ],
+  "tikiwiki-to-html": [
+    "TIKIWIKI",
+    "HTML"
+  ],
+  "twiki-to-html": [
+    "TWIKI",
+    "HTML"
+  ],
+  "vimwiki-to-html": [
+    "VIMWIKI",
+    "HTML"
+  ],
+  "vcf-to-csv": [
+    "VCF",
+    "CSV"
+  ],
+  "mpl2-to-srt": [
+    "MPL2",
+    "SRT"
+  ],
+  "mpsub-to-srt": [
+    "MPSUB",
+    "SRT"
+  ],
+  "sami-to-srt": [
+    "SAMI",
+    "SRT"
+  ],
+  "webvtt-to-srt": [
+    "WEBVTT",
+    "SRT"
+  ],
+  "realtext-to-srt": [
+    "REALTEXT",
+    "SRT"
+  ],
+  "aqtitle-to-srt": [
+    "AQTITLE",
+    "SRT"
+  ],
+  "jacosub-to-srt": [
+    "JACOSUB",
+    "SRT"
+  ],
+  "vplayer-to-srt": [
+    "VPLAYER",
+    "SRT"
+  ],
+  "abw-to-txt": [
+    "ABW",
+    "TXT"
+  ],
+  "pml-to-epub": [
+    "PML",
+    "EPUB"
+  ],
+  "ac3d-to-stl": [
+    "AC3D",
+    "STL"
+  ],
+  "cbz-to-epub": [
+    "CBZ",
+    "EPUB"
+  ],
+  "rb-to-epub": [
+    "RB",
+    "EPUB"
+  ],
+  "snb-to-epub": [
+    "SNB",
+    "EPUB"
+  ],
+  "tcr-to-epub": [
+    "TCR",
+    "EPUB"
+  ],
+  "potx-to-pdf": [
+    "POTX",
+    "PDF"
+  ],
+  "microdvd-to-srt": [
+    "MICRODVD",
+    "SRT"
   ]
 }

@@ -1,5 +1,5 @@
 """Small structural format regressions, without Docker or network access."""
-import importlib.util,tempfile,struct,zlib,zipfile,unittest
+import importlib.util,tempfile,struct,zlib,zipfile,unittest,json
 from pathlib import Path
 from unittest.mock import patch
 spec=importlib.util.spec_from_file_location('validation',Path(__file__).resolve().parents[1]/'backend/output-validation.py')
@@ -87,6 +87,15 @@ class OutputValidation(unittest.TestCase):
   for text in [';FFMETADATA1\nencoder=Lavf62.12.102\n',';FFMETADATA1\n; Comment\n[CHAPTER]\nTIMEBASE=1/1000\ntitle=One\\\ntwo\n',';FFMETADATA1\nkey\\=part=value\\\\\n']:
    self.assertEqual(validation.validate('ffmeta',self.file('ffmeta',text.encode())),'passed')
   for bad in [b'arbitrary text',b';FFMETADATA1\nbroken entry\n',b';FFMETADATA1\nkey=value\\',b';FFMETADATA1\nkey=\0binary']:self.reject('ffmeta',bad)
+ def test_csljson_bibliographic_records(self):
+  records=[{'id':'book-1','type':'book','title':'A real reference','author':[{'family':'Example','given':'Alex'}],'issued':{'date-parts':[[2026,10,4]]}}, {'id':2,'type':'article-journal','title':'Other reference','DOI':'10.1234/example','volume':12,'page':'1-4','editor':[{'literal':'Editorial Board'}],'accessed':{'literal':'October 2026'},'custom':{'reviewed':True}}]
+  self.assertEqual(validation.validate('csljson',self.file('csljson',json.dumps(records).encode())),'passed')
+ def test_csljson_rejects_empty_arbitrary_and_malformed_bibliographies(self):
+  base={'id':'ref-1','type':'book','title':'A real reference'}
+  bad=[{},[],[{}],['text'],[{'id':'x','type':'book'}],[{'id':True,'type':'book','title':'X'}],[dict(base,type='unknown')],[dict(base,title=['wrong'])],[dict(base,author='Example')],[dict(base,author=[{'family':12}])],[dict(base,issued={'date-parts':[[2026,1,2,3]]})],[dict(base,issued={'date-parts':[]})],[dict(base,issued={'date-parts':[[True]]})],[dict(base,unrelated='data')],[base,base]]
+  for value in bad:self.reject('csljson',json.dumps(value).encode())
+  for value in [b'[{"id":"x","type":"book","title":"One","title":"Two"}]',b'[{"id":NaN,"type":"book","title":"X"}]',b'[{"id":"x","type":"book","title":"X"}']:
+   self.reject('csljson',value)
  def test_beamer_frame_fragments_and_standalone_documents(self):
   for text in ['\\begin{frame}\n\\end{frame}\n','\\documentclass{beamer}\n\\begin{document}\n\\begin{frame}{Title}\nText\\end{frame}\\end{document}']:
    self.assertEqual(validation.validate('beamer',self.file('beamer',text.encode())),'passed')

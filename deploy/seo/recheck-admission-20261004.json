@@ -1,0 +1,2076 @@
+{
+  "generatedAtUTC": "2026-10-04T08:46:12.628Z",
+  "applied": true,
+  "sourceRevision": "5504045bea5c28b18695e5453bce9fc2ba765ff6f10e7740d0c7e150d107bb0a",
+  "reviewed": 412,
+  "added": [
+    {
+      "input": "302",
+      "output": "3g2",
+      "slug": "302-to-3g2"
+    },
+    {
+      "input": "302",
+      "output": "3gp",
+      "slug": "302-to-3gp"
+    },
+    {
+      "input": "3mf",
+      "output": "stl",
+      "slug": "3mf-to-stl"
+    },
+    {
+      "input": "4xm",
+      "output": "png",
+      "slug": "4xm-to-png"
+    },
+    {
+      "input": "aa3",
+      "output": "3g2",
+      "slug": "aa3-to-3g2"
+    },
+    {
+      "input": "aa3",
+      "output": "3gp",
+      "slug": "aa3-to-3gp"
+    },
+    {
+      "input": "aac",
+      "output": "3g2",
+      "slug": "aac-to-3g2"
+    },
+    {
+      "input": "aac",
+      "output": "3gp",
+      "slug": "aac-to-3gp"
+    },
+    {
+      "input": "aai",
+      "output": "png",
+      "slug": "aai-to-png"
+    },
+    {
+      "input": "ac3",
+      "output": "3g2",
+      "slug": "ac3-to-3g2"
+    },
+    {
+      "input": "ac3",
+      "output": "3gp",
+      "slug": "ac3-to-3gp"
+    },
+    {
+      "input": "adp",
+      "output": "3g2",
+      "slug": "adp-to-3g2"
+    },
+    {
+      "input": "adp",
+      "output": "3gp",
+      "slug": "adp-to-3gp"
+    },
+    {
+      "input": "adx",
+      "output": "3g2",
+      "slug": "adx-to-3g2"
+    },
+    {
+      "input": "adx",
+      "output": "3gp",
+      "slug": "adx-to-3gp"
+    },
+    {
+      "input": "aea",
+      "output": "3g2",
+      "slug": "aea-to-3g2"
+    },
+    {
+      "input": "aea",
+      "output": "3gp",
+      "slug": "aea-to-3gp"
+    },
+    {
+      "input": "afc",
+      "output": "3g2",
+      "slug": "afc-to-3g2"
+    },
+    {
+      "input": "afc",
+      "output": "3gp",
+      "slug": "afc-to-3gp"
+    },
+    {
+      "input": "aiff",
+      "output": "3g2",
+      "slug": "aiff-to-3g2"
+    },
+    {
+      "input": "aiff",
+      "output": "3gp",
+      "slug": "aiff-to-3gp"
+    },
+    {
+      "input": "al",
+      "output": "3g2",
+      "slug": "al-to-3g2"
+    },
+    {
+      "input": "al",
+      "output": "3gp",
+      "slug": "al-to-3gp"
+    },
+    {
+      "input": "anm",
+      "output": "png",
+      "slug": "anm-to-png"
+    },
+    {
+      "input": "ans",
+      "output": "png",
+      "slug": "ans-to-png"
+    },
+    {
+      "input": "apm",
+      "output": "3g2",
+      "slug": "apm-to-3g2"
+    },
+    {
+      "input": "apm",
+      "output": "3gp",
+      "slug": "apm-to-3gp"
+    },
+    {
+      "input": "apng",
+      "output": "png",
+      "slug": "apng-to-png"
+    },
+    {
+      "input": "aptx",
+      "output": "adx",
+      "slug": "aptx-to-adx"
+    },
+    {
+      "input": "aptxhd",
+      "output": "ac3",
+      "slug": "aptxhd-to-ac3"
+    },
+    {
+      "input": "art",
+      "output": "png",
+      "slug": "art-to-png"
+    },
+    {
+      "input": "assbin",
+      "output": "stl",
+      "slug": "assbin-to-stl"
+    },
+    {
+      "input": "ast",
+      "output": "3g2",
+      "slug": "ast-to-3g2"
+    },
+    {
+      "input": "ast",
+      "output": "3gp",
+      "slug": "ast-to-3gp"
+    },
+    {
+      "input": "avi",
+      "output": "3g2",
+      "slug": "avi-to-3g2"
+    },
+    {
+      "input": "avi",
+      "output": "3gp",
+      "slug": "avi-to-3gp"
+    },
+    {
+      "input": "avs",
+      "output": "png",
+      "slug": "avs-to-png"
+    },
+    {
+      "input": "awb",
+      "output": "3g2",
+      "slug": "awb-to-3g2"
+    },
+    {
+      "input": "awb",
+      "output": "3gp",
+      "slug": "awb-to-3gp"
+    },
+    {
+      "input": "azw3",
+      "output": "txt",
+      "slug": "azw3-to-txt"
+    },
+    {
+      "input": "bcstm",
+      "output": "3g2",
+      "slug": "bcstm-to-3g2"
+    },
+    {
+      "input": "bcstm",
+      "output": "3gp",
+      "slug": "bcstm-to-3gp"
+    },
+    {
+      "input": "bfi",
+      "output": "png",
+      "slug": "bfi-to-png"
+    },
+    {
+      "input": "bfstm",
+      "output": "3g2",
+      "slug": "bfstm-to-3g2"
+    },
+    {
+      "input": "bfstm",
+      "output": "3gp",
+      "slug": "bfstm-to-3gp"
+    },
+    {
+      "input": "bigtiff",
+      "output": "png",
+      "slug": "bigtiff-to-png"
+    },
+    {
+      "input": "bit",
+      "output": "png",
+      "slug": "bit-to-png"
+    },
+    {
+      "input": "bmp2",
+      "output": "png",
+      "slug": "bmp2-to-png"
+    },
+    {
+      "input": "bmp3",
+      "output": "png",
+      "slug": "bmp3-to-png"
+    },
+    {
+      "input": "bmv",
+      "output": "png",
+      "slug": "bmv-to-png"
+    },
+    {
+      "input": "c2",
+      "output": "3g2",
+      "slug": "c2-to-3g2"
+    },
+    {
+      "input": "c2",
+      "output": "3gp",
+      "slug": "c2-to-3gp"
+    },
+    {
+      "input": "caf",
+      "output": "3g2",
+      "slug": "caf-to-3g2"
+    },
+    {
+      "input": "caf",
+      "output": "3gp",
+      "slug": "caf-to-3gp"
+    },
+    {
+      "input": "cal",
+      "output": "png",
+      "slug": "cal-to-png"
+    },
+    {
+      "input": "cals",
+      "output": "png",
+      "slug": "cals-to-png"
+    },
+    {
+      "input": "cdata",
+      "output": "3g2",
+      "slug": "cdata-to-3g2"
+    },
+    {
+      "input": "cdata",
+      "output": "3gp",
+      "slug": "cdata-to-3gp"
+    },
+    {
+      "input": "cdxl",
+      "output": "png",
+      "slug": "cdxl-to-png"
+    },
+    {
+      "input": "cin",
+      "output": "png",
+      "slug": "cin-to-png"
+    },
+    {
+      "input": "cine",
+      "output": "png",
+      "slug": "cine-to-png"
+    },
+    {
+      "input": "commonmark",
+      "output": "pdf",
+      "slug": "commonmark-to-pdf"
+    },
+    {
+      "input": "commonmark_x",
+      "output": "pdf",
+      "slug": "commonmark-x-to-pdf"
+    },
+    {
+      "input": "cur",
+      "output": "png",
+      "slug": "cur-to-png"
+    },
+    {
+      "input": "dds",
+      "output": "png",
+      "slug": "dds-to-png"
+    },
+    {
+      "input": "dfa",
+      "output": "png",
+      "slug": "dfa-to-png"
+    },
+    {
+      "input": "dfpwm",
+      "output": "3g2",
+      "slug": "dfpwm-to-3g2"
+    },
+    {
+      "input": "dfpwm",
+      "output": "3gp",
+      "slug": "dfpwm-to-3gp"
+    },
+    {
+      "input": "djot",
+      "output": "pdf",
+      "slug": "djot-to-pdf"
+    },
+    {
+      "input": "docbook",
+      "output": "pdf",
+      "slug": "docbook-to-pdf"
+    },
+    {
+      "input": "dokuwiki",
+      "output": "pdf",
+      "slug": "dokuwiki-to-pdf"
+    },
+    {
+      "input": "dpx",
+      "output": "png",
+      "slug": "dpx-to-png"
+    },
+    {
+      "input": "dss",
+      "output": "3g2",
+      "slug": "dss-to-3g2"
+    },
+    {
+      "input": "dss",
+      "output": "3gp",
+      "slug": "dss-to-3gp"
+    },
+    {
+      "input": "dts",
+      "output": "3g2",
+      "slug": "dts-to-3g2"
+    },
+    {
+      "input": "dts",
+      "output": "3gp",
+      "slug": "dts-to-3gp"
+    },
+    {
+      "input": "dtshd",
+      "output": "3g2",
+      "slug": "dtshd-to-3g2"
+    },
+    {
+      "input": "dtshd",
+      "output": "3gp",
+      "slug": "dtshd-to-3gp"
+    },
+    {
+      "input": "dxt1",
+      "output": "png",
+      "slug": "dxt1-to-png"
+    },
+    {
+      "input": "dxt5",
+      "output": "png",
+      "slug": "dxt5-to-png"
+    },
+    {
+      "input": "eac3",
+      "output": "3g2",
+      "slug": "eac3-to-3g2"
+    },
+    {
+      "input": "eac3",
+      "output": "3gp",
+      "slug": "eac3-to-3gp"
+    },
+    {
+      "input": "ec3",
+      "output": "3g2",
+      "slug": "ec3-to-3g2"
+    },
+    {
+      "input": "ec3",
+      "output": "3gp",
+      "slug": "ec3-to-3gp"
+    },
+    {
+      "input": "epdf",
+      "output": "png",
+      "slug": "epdf-to-png"
+    },
+    {
+      "input": "epi",
+      "output": "png",
+      "slug": "epi-to-png"
+    },
+    {
+      "input": "eps",
+      "output": "png",
+      "slug": "eps-to-png"
+    },
+    {
+      "input": "epsf",
+      "output": "png",
+      "slug": "epsf-to-png"
+    },
+    {
+      "input": "epsi",
+      "output": "png",
+      "slug": "epsi-to-png"
+    },
+    {
+      "input": "ept",
+      "output": "png",
+      "slug": "ept-to-png"
+    },
+    {
+      "input": "ept2",
+      "output": "png",
+      "slug": "ept2-to-png"
+    },
+    {
+      "input": "ept3",
+      "output": "png",
+      "slug": "ept3-to-png"
+    },
+    {
+      "input": "exr",
+      "output": "png",
+      "slug": "exr-to-png"
+    },
+    {
+      "input": "f4v",
+      "output": "png",
+      "slug": "f4v-to-png"
+    },
+    {
+      "input": "farbfeld",
+      "output": "png",
+      "slug": "farbfeld-to-png"
+    },
+    {
+      "input": "fax",
+      "output": "png",
+      "slug": "fax-to-png"
+    },
+    {
+      "input": "ff",
+      "output": "png",
+      "slug": "ff-to-png"
+    },
+    {
+      "input": "fl32",
+      "output": "png",
+      "slug": "fl32-to-png"
+    },
+    {
+      "input": "flac",
+      "output": "3g2",
+      "slug": "flac-to-3g2"
+    },
+    {
+      "input": "flac",
+      "output": "3gp",
+      "slug": "flac-to-3gp"
+    },
+    {
+      "input": "flm",
+      "output": "png",
+      "slug": "flm-to-png"
+    },
+    {
+      "input": "fts",
+      "output": "png",
+      "slug": "fts-to-png"
+    },
+    {
+      "input": "g3",
+      "output": "png",
+      "slug": "g3-to-png"
+    },
+    {
+      "input": "g722",
+      "output": "3g2",
+      "slug": "g722-to-3g2"
+    },
+    {
+      "input": "g722",
+      "output": "3gp",
+      "slug": "g722-to-3gp"
+    },
+    {
+      "input": "gdv",
+      "output": "png",
+      "slug": "gdv-to-png"
+    },
+    {
+      "input": "gfm",
+      "output": "pdf",
+      "slug": "gfm-to-pdf"
+    },
+    {
+      "input": "gif87",
+      "output": "png",
+      "slug": "gif87-to-png"
+    },
+    {
+      "input": "gltf",
+      "output": "stl",
+      "slug": "gltf-to-stl"
+    },
+    {
+      "input": "h263",
+      "output": "png",
+      "slug": "h263-to-png"
+    },
+    {
+      "input": "h264",
+      "output": "png",
+      "slug": "h264-to-png"
+    },
+    {
+      "input": "haddock",
+      "output": "pdf",
+      "slug": "haddock-to-pdf"
+    },
+    {
+      "input": "hdr",
+      "output": "png",
+      "slug": "hdr-to-png"
+    },
+    {
+      "input": "heic",
+      "output": "png",
+      "slug": "heic-to-png"
+    },
+    {
+      "input": "heic",
+      "output": "svg",
+      "slug": "heic-to-svg"
+    },
+    {
+      "input": "heif",
+      "output": "png",
+      "slug": "heif-to-png"
+    },
+    {
+      "input": "heif",
+      "output": "svg",
+      "slug": "heif-to-svg"
+    },
+    {
+      "input": "hevc",
+      "output": "png",
+      "slug": "hevc-to-png"
+    },
+    {
+      "input": "hrz",
+      "output": "png",
+      "slug": "hrz-to-png"
+    },
+    {
+      "input": "ico",
+      "output": "svg",
+      "slug": "ico-to-svg"
+    },
+    {
+      "input": "iff",
+      "output": "3g2",
+      "slug": "iff-to-3g2"
+    },
+    {
+      "input": "iff",
+      "output": "3gp",
+      "slug": "iff-to-3gp"
+    },
+    {
+      "input": "ipl",
+      "output": "png",
+      "slug": "ipl-to-png"
+    },
+    {
+      "input": "ipynb",
+      "output": "pdf",
+      "slug": "ipynb-to-pdf"
+    },
+    {
+      "input": "iqm",
+      "output": "stl",
+      "slug": "iqm-to-stl"
+    },
+    {
+      "input": "ircam",
+      "output": "3g2",
+      "slug": "ircam-to-3g2"
+    },
+    {
+      "input": "ircam",
+      "output": "3gp",
+      "slug": "ircam-to-3gp"
+    },
+    {
+      "input": "ism",
+      "output": "png",
+      "slug": "ism-to-png"
+    },
+    {
+      "input": "isma",
+      "output": "3g2",
+      "slug": "isma-to-3g2"
+    },
+    {
+      "input": "isma",
+      "output": "3gp",
+      "slug": "isma-to-3gp"
+    },
+    {
+      "input": "ismv",
+      "output": "png",
+      "slug": "ismv-to-png"
+    },
+    {
+      "input": "iss",
+      "output": "3g2",
+      "slug": "iss-to-3g2"
+    },
+    {
+      "input": "iss",
+      "output": "3gp",
+      "slug": "iss-to-3gp"
+    },
+    {
+      "input": "ivf",
+      "output": "png",
+      "slug": "ivf-to-png"
+    },
+    {
+      "input": "j2c",
+      "output": "png",
+      "slug": "j2c-to-png"
+    },
+    {
+      "input": "j2k",
+      "output": "png",
+      "slug": "j2k-to-png"
+    },
+    {
+      "input": "jats",
+      "output": "pdf",
+      "slug": "jats-to-pdf"
+    },
+    {
+      "input": "jbig",
+      "output": "png",
+      "slug": "jbig-to-png"
+    },
+    {
+      "input": "jira",
+      "output": "pdf",
+      "slug": "jira-to-pdf"
+    },
+    {
+      "input": "jng",
+      "output": "png",
+      "slug": "jng-to-png"
+    },
+    {
+      "input": "jpc",
+      "output": "png",
+      "slug": "jpc-to-png"
+    },
+    {
+      "input": "jpm",
+      "output": "png",
+      "slug": "jpm-to-png"
+    },
+    {
+      "input": "jps",
+      "output": "png",
+      "slug": "jps-to-png"
+    },
+    {
+      "input": "json",
+      "output": "csv",
+      "slug": "json-to-csv"
+    },
+    {
+      "input": "lit",
+      "output": "txt",
+      "slug": "lit-to-txt"
+    },
+    {
+      "input": "loas",
+      "output": "3g2",
+      "slug": "loas-to-3g2"
+    },
+    {
+      "input": "loas",
+      "output": "3gp",
+      "slug": "loas-to-3gp"
+    },
+    {
+      "input": "lrc",
+      "output": "ass",
+      "slug": "lrc-to-ass"
+    },
+    {
+      "input": "lrf",
+      "output": "txt",
+      "slug": "lrf-to-txt"
+    },
+    {
+      "input": "m2a",
+      "output": "3g2",
+      "slug": "m2a-to-3g2"
+    },
+    {
+      "input": "m2a",
+      "output": "3gp",
+      "slug": "m2a-to-3gp"
+    },
+    {
+      "input": "m2ts",
+      "output": "png",
+      "slug": "m2ts-to-png"
+    },
+    {
+      "input": "m2v",
+      "output": "png",
+      "slug": "m2v-to-png"
+    },
+    {
+      "input": "m4b",
+      "output": "3g2",
+      "slug": "m4b-to-3g2"
+    },
+    {
+      "input": "m4b",
+      "output": "3gp",
+      "slug": "m4b-to-3gp"
+    },
+    {
+      "input": "m4v",
+      "output": "mp4",
+      "slug": "m4v-to-mp4"
+    },
+    {
+      "input": "man",
+      "output": "pdf",
+      "slug": "man-to-pdf"
+    },
+    {
+      "input": "markdown_mmd",
+      "output": "pdf",
+      "slug": "markdown-mmd-to-pdf"
+    },
+    {
+      "input": "markdown_phpextra",
+      "output": "pdf",
+      "slug": "markdown-phpextra-to-pdf"
+    },
+    {
+      "input": "markdown_strict",
+      "output": "pdf",
+      "slug": "markdown-strict-to-pdf"
+    },
+    {
+      "input": "md2",
+      "output": "stl",
+      "slug": "md2-to-stl"
+    },
+    {
+      "input": "mdc",
+      "output": "stl",
+      "slug": "mdc-to-stl"
+    },
+    {
+      "input": "mediawiki",
+      "output": "pdf",
+      "slug": "mediawiki-to-pdf"
+    },
+    {
+      "input": "mesh.xml",
+      "output": "stl",
+      "slug": "mesh.xml-to-stl"
+    },
+    {
+      "input": "miff",
+      "output": "png",
+      "slug": "miff-to-png"
+    },
+    {
+      "input": "mjpeg",
+      "output": "png",
+      "slug": "mjpeg-to-png"
+    },
+    {
+      "input": "mjpg",
+      "output": "png",
+      "slug": "mjpg-to-png"
+    },
+    {
+      "input": "mka",
+      "output": "3g2",
+      "slug": "mka-to-3g2"
+    },
+    {
+      "input": "mka",
+      "output": "3gp",
+      "slug": "mka-to-3gp"
+    },
+    {
+      "input": "mks",
+      "output": "ass",
+      "slug": "mks-to-ass"
+    },
+    {
+      "input": "mkv",
+      "output": "3g2",
+      "slug": "mkv-to-3g2"
+    },
+    {
+      "input": "mkv",
+      "output": "3gp",
+      "slug": "mkv-to-3gp"
+    },
+    {
+      "input": "mlp",
+      "output": "3g2",
+      "slug": "mlp-to-3g2"
+    },
+    {
+      "input": "mlp",
+      "output": "3gp",
+      "slug": "mlp-to-3gp"
+    },
+    {
+      "input": "mm",
+      "output": "png",
+      "slug": "mm-to-png"
+    },
+    {
+      "input": "mmf",
+      "output": "3g2",
+      "slug": "mmf-to-3g2"
+    },
+    {
+      "input": "mmf",
+      "output": "3gp",
+      "slug": "mmf-to-3gp"
+    },
+    {
+      "input": "mng",
+      "output": "png",
+      "slug": "mng-to-png"
+    },
+    {
+      "input": "mobi",
+      "output": "txt",
+      "slug": "mobi-to-txt"
+    },
+    {
+      "input": "mov",
+      "output": "3g2",
+      "slug": "mov-to-3g2"
+    },
+    {
+      "input": "mov",
+      "output": "3gp",
+      "slug": "mov-to-3gp"
+    },
+    {
+      "input": "mp2",
+      "output": "3g2",
+      "slug": "mp2-to-3g2"
+    },
+    {
+      "input": "mp2",
+      "output": "3gp",
+      "slug": "mp2-to-3gp"
+    },
+    {
+      "input": "mp3",
+      "output": "3g2",
+      "slug": "mp3-to-3g2"
+    },
+    {
+      "input": "mp3",
+      "output": "3gp",
+      "slug": "mp3-to-3gp"
+    },
+    {
+      "input": "mp4",
+      "output": "3g2",
+      "slug": "mp4-to-3g2"
+    },
+    {
+      "input": "mp4",
+      "output": "3gp",
+      "slug": "mp4-to-3gp"
+    },
+    {
+      "input": "mpa",
+      "output": "3g2",
+      "slug": "mpa-to-3g2"
+    },
+    {
+      "input": "mpa",
+      "output": "3gp",
+      "slug": "mpa-to-3gp"
+    },
+    {
+      "input": "mpeg",
+      "output": "adts",
+      "slug": "mpeg-to-adts"
+    },
+    {
+      "input": "mpg",
+      "output": "adts",
+      "slug": "mpg-to-adts"
+    },
+    {
+      "input": "msbc",
+      "output": "ac3",
+      "slug": "msbc-to-ac3"
+    },
+    {
+      "input": "msg",
+      "output": "md",
+      "slug": "msg-to-md"
+    },
+    {
+      "input": "mtv",
+      "output": "png",
+      "slug": "mtv-to-png"
+    },
+    {
+      "input": "muse",
+      "output": "pdf",
+      "slug": "muse-to-pdf"
+    },
+    {
+      "input": "mxf",
+      "output": "png",
+      "slug": "mxf-to-png"
+    },
+    {
+      "input": "mxg",
+      "output": "png",
+      "slug": "mxg-to-png"
+    },
+    {
+      "input": "nist",
+      "output": "3g2",
+      "slug": "nist-to-3g2"
+    },
+    {
+      "input": "nist",
+      "output": "3gp",
+      "slug": "nist-to-3gp"
+    },
+    {
+      "input": "nut",
+      "output": "png",
+      "slug": "nut-to-png"
+    },
+    {
+      "input": "nuv",
+      "output": "png",
+      "slug": "nuv-to-png"
+    },
+    {
+      "input": "obj",
+      "output": "3mf",
+      "slug": "obj-to-3mf"
+    },
+    {
+      "input": "obu",
+      "output": "png",
+      "slug": "obu-to-png"
+    },
+    {
+      "input": "ogg",
+      "output": "3g2",
+      "slug": "ogg-to-3g2"
+    },
+    {
+      "input": "ogg",
+      "output": "3gp",
+      "slug": "ogg-to-3gp"
+    },
+    {
+      "input": "opml",
+      "output": "pdf",
+      "slug": "opml-to-pdf"
+    },
+    {
+      "input": "opus",
+      "output": "3g2",
+      "slug": "opus-to-3g2"
+    },
+    {
+      "input": "opus",
+      "output": "3gp",
+      "slug": "opus-to-3gp"
+    },
+    {
+      "input": "org",
+      "output": "pdf",
+      "slug": "org-to-pdf"
+    },
+    {
+      "input": "otb",
+      "output": "png",
+      "slug": "otb-to-png"
+    },
+    {
+      "input": "ott",
+      "output": "txt",
+      "slug": "ott-to-txt"
+    },
+    {
+      "input": "pages",
+      "output": "txt",
+      "slug": "pages-to-txt"
+    },
+    {
+      "input": "palm",
+      "output": "png",
+      "slug": "palm-to-png"
+    },
+    {
+      "input": "pam",
+      "output": "png",
+      "slug": "pam-to-png"
+    },
+    {
+      "input": "pcd",
+      "output": "png",
+      "slug": "pcd-to-png"
+    },
+    {
+      "input": "pcds",
+      "output": "png",
+      "slug": "pcds-to-png"
+    },
+    {
+      "input": "pdfa",
+      "output": "png",
+      "slug": "pdfa-to-png"
+    },
+    {
+      "input": "pfm",
+      "output": "png",
+      "slug": "pfm-to-png"
+    },
+    {
+      "input": "pgmyuv",
+      "output": "png",
+      "slug": "pgmyuv-to-png"
+    },
+    {
+      "input": "pgx",
+      "output": "png",
+      "slug": "pgx-to-png"
+    },
+    {
+      "input": "phm",
+      "output": "png",
+      "slug": "phm-to-png"
+    },
+    {
+      "input": "picon",
+      "output": "png",
+      "slug": "picon-to-png"
+    },
+    {
+      "input": "pict",
+      "output": "png",
+      "slug": "pict-to-png"
+    },
+    {
+      "input": "pix",
+      "output": "png",
+      "slug": "pix-to-png"
+    },
+    {
+      "input": "pjs",
+      "output": "ass",
+      "slug": "pjs-to-ass"
+    },
+    {
+      "input": "pnm",
+      "output": "png",
+      "slug": "pnm-to-png"
+    },
+    {
+      "input": "ps",
+      "output": "png",
+      "slug": "ps-to-png"
+    },
+    {
+      "input": "psb",
+      "output": "png",
+      "slug": "psb-to-png"
+    },
+    {
+      "input": "ptif",
+      "output": "png",
+      "slug": "ptif-to-png"
+    },
+    {
+      "input": "pva",
+      "output": "png",
+      "slug": "pva-to-png"
+    },
+    {
+      "input": "q3s",
+      "output": "stl",
+      "slug": "q3s-to-stl"
+    },
+    {
+      "input": "qcp",
+      "output": "3g2",
+      "slug": "qcp-to-3g2"
+    },
+    {
+      "input": "qcp",
+      "output": "3gp",
+      "slug": "qcp-to-3gp"
+    },
+    {
+      "input": "qoi",
+      "output": "png",
+      "slug": "qoi-to-png"
+    },
+    {
+      "input": "ras",
+      "output": "png",
+      "slug": "ras-to-png"
+    },
+    {
+      "input": "rcv",
+      "output": "png",
+      "slug": "rcv-to-png"
+    },
+    {
+      "input": "rka",
+      "output": "ac3",
+      "slug": "rka-to-ac3"
+    },
+    {
+      "input": "rm",
+      "output": "png",
+      "slug": "rm-to-png"
+    },
+    {
+      "input": "roq",
+      "output": "png",
+      "slug": "roq-to-png"
+    },
+    {
+      "input": "rsd",
+      "output": "3g2",
+      "slug": "rsd-to-3g2"
+    },
+    {
+      "input": "rsd",
+      "output": "3gp",
+      "slug": "rsd-to-3gp"
+    },
+    {
+      "input": "rso",
+      "output": "3g2",
+      "slug": "rso-to-3g2"
+    },
+    {
+      "input": "rso",
+      "output": "3gp",
+      "slug": "rso-to-3gp"
+    },
+    {
+      "input": "rt",
+      "output": "ass",
+      "slug": "rt-to-ass"
+    },
+    {
+      "input": "sb",
+      "output": "3g2",
+      "slug": "sb-to-3g2"
+    },
+    {
+      "input": "sb",
+      "output": "3gp",
+      "slug": "sb-to-3gp"
+    },
+    {
+      "input": "sbc",
+      "output": "ac3",
+      "slug": "sbc-to-ac3"
+    },
+    {
+      "input": "scc",
+      "output": "ass",
+      "slug": "scc-to-ass"
+    },
+    {
+      "input": "sf",
+      "output": "3g2",
+      "slug": "sf-to-3g2"
+    },
+    {
+      "input": "sf",
+      "output": "3gp",
+      "slug": "sf-to-3gp"
+    },
+    {
+      "input": "sgi",
+      "output": "png",
+      "slug": "sgi-to-png"
+    },
+    {
+      "input": "shn",
+      "output": "3g2",
+      "slug": "shn-to-3g2"
+    },
+    {
+      "input": "shn",
+      "output": "3gp",
+      "slug": "shn-to-3gp"
+    },
+    {
+      "input": "six",
+      "output": "png",
+      "slug": "six-to-png"
+    },
+    {
+      "input": "sixel",
+      "output": "png",
+      "slug": "sixel-to-png"
+    },
+    {
+      "input": "smi",
+      "output": "ass",
+      "slug": "smi-to-ass"
+    },
+    {
+      "input": "smk",
+      "output": "png",
+      "slug": "smk-to-png"
+    },
+    {
+      "input": "sol",
+      "output": "3g2",
+      "slug": "sol-to-3g2"
+    },
+    {
+      "input": "sol",
+      "output": "3gp",
+      "slug": "sol-to-3gp"
+    },
+    {
+      "input": "sox",
+      "output": "3g2",
+      "slug": "sox-to-3g2"
+    },
+    {
+      "input": "sox",
+      "output": "3gp",
+      "slug": "sox-to-3gp"
+    },
+    {
+      "input": "spdif",
+      "output": "3g2",
+      "slug": "spdif-to-3g2"
+    },
+    {
+      "input": "spdif",
+      "output": "3gp",
+      "slug": "spdif-to-3gp"
+    },
+    {
+      "input": "ssa",
+      "output": "ass",
+      "slug": "ssa-to-ass"
+    },
+    {
+      "input": "str",
+      "output": "png",
+      "slug": "str-to-png"
+    },
+    {
+      "input": "strimg",
+      "output": "png",
+      "slug": "strimg-to-png"
+    },
+    {
+      "input": "sub",
+      "output": "ass",
+      "slug": "sub-to-ass"
+    },
+    {
+      "input": "sun",
+      "output": "png",
+      "slug": "sun-to-png"
+    },
+    {
+      "input": "sw",
+      "output": "3g2",
+      "slug": "sw-to-3g2"
+    },
+    {
+      "input": "sw",
+      "output": "3gp",
+      "slug": "sw-to-3gp"
+    },
+    {
+      "input": "swf",
+      "output": "png",
+      "slug": "swf-to-png"
+    },
+    {
+      "input": "tab",
+      "output": "txt",
+      "slug": "tab-to-txt"
+    },
+    {
+      "input": "tak",
+      "output": "ac3",
+      "slug": "tak-to-ac3"
+    },
+    {
+      "input": "tar.bz2",
+      "output": "zip",
+      "slug": "tar.bz2-to-zip"
+    },
+    {
+      "input": "tar.xz",
+      "output": "zip",
+      "slug": "tar.xz-to-zip"
+    },
+    {
+      "input": "tco",
+      "output": "3g2",
+      "slug": "tco-to-3g2"
+    },
+    {
+      "input": "tco",
+      "output": "3gp",
+      "slug": "tco-to-3gp"
+    },
+    {
+      "input": "ter",
+      "output": "stl",
+      "slug": "ter-to-stl"
+    },
+    {
+      "input": "textile",
+      "output": "pdf",
+      "slug": "textile-to-pdf"
+    },
+    {
+      "input": "tga",
+      "output": "png",
+      "slug": "tga-to-png"
+    },
+    {
+      "input": "thd",
+      "output": "3g2",
+      "slug": "thd-to-3g2"
+    },
+    {
+      "input": "thd",
+      "output": "3gp",
+      "slug": "thd-to-3gp"
+    },
+    {
+      "input": "tiff",
+      "output": "svg",
+      "slug": "tiff-to-svg"
+    },
+    {
+      "input": "tiff64",
+      "output": "png",
+      "slug": "tiff64-to-png"
+    },
+    {
+      "input": "tmv",
+      "output": "png",
+      "slug": "tmv-to-png"
+    },
+    {
+      "input": "toml",
+      "output": "json",
+      "slug": "toml-to-json"
+    },
+    {
+      "input": "ts",
+      "output": "png",
+      "slug": "ts-to-png"
+    },
+    {
+      "input": "tsv",
+      "output": "pdf",
+      "slug": "tsv-to-pdf"
+    },
+    {
+      "input": "tta",
+      "output": "ac3",
+      "slug": "tta-to-ac3"
+    },
+    {
+      "input": "txd",
+      "output": "png",
+      "slug": "txd-to-png"
+    },
+    {
+      "input": "typst",
+      "output": "pdf",
+      "slug": "typst-to-pdf"
+    },
+    {
+      "input": "ub",
+      "output": "3g2",
+      "slug": "ub-to-3g2"
+    },
+    {
+      "input": "ub",
+      "output": "3gp",
+      "slug": "ub-to-3gp"
+    },
+    {
+      "input": "ul",
+      "output": "3g2",
+      "slug": "ul-to-3g2"
+    },
+    {
+      "input": "ul",
+      "output": "3gp",
+      "slug": "ul-to-3gp"
+    },
+    {
+      "input": "uw",
+      "output": "3g2",
+      "slug": "uw-to-3g2"
+    },
+    {
+      "input": "uw",
+      "output": "3gp",
+      "slug": "uw-to-3gp"
+    },
+    {
+      "input": "vag",
+      "output": "3g2",
+      "slug": "vag-to-3g2"
+    },
+    {
+      "input": "vag",
+      "output": "3gp",
+      "slug": "vag-to-3gp"
+    },
+    {
+      "input": "vc1",
+      "output": "png",
+      "slug": "vc1-to-png"
+    },
+    {
+      "input": "vicar",
+      "output": "png",
+      "slug": "vicar-to-png"
+    },
+    {
+      "input": "viff",
+      "output": "png",
+      "slug": "viff-to-png"
+    },
+    {
+      "input": "vips",
+      "output": "png",
+      "slug": "vips-to-png"
+    },
+    {
+      "input": "vmd",
+      "output": "png",
+      "slug": "vmd-to-png"
+    },
+    {
+      "input": "vob",
+      "output": "png",
+      "slug": "vob-to-png"
+    },
+    {
+      "input": "voc",
+      "output": "3g2",
+      "slug": "voc-to-3g2"
+    },
+    {
+      "input": "voc",
+      "output": "3gp",
+      "slug": "voc-to-3gp"
+    },
+    {
+      "input": "vtt",
+      "output": "ass",
+      "slug": "vtt-to-ass"
+    },
+    {
+      "input": "vvc",
+      "output": "png",
+      "slug": "vvc-to-png"
+    },
+    {
+      "input": "w64",
+      "output": "3g2",
+      "slug": "w64-to-3g2"
+    },
+    {
+      "input": "w64",
+      "output": "3gp",
+      "slug": "w64-to-3gp"
+    },
+    {
+      "input": "wav",
+      "output": "3g2",
+      "slug": "wav-to-3g2"
+    },
+    {
+      "input": "wav",
+      "output": "3gp",
+      "slug": "wav-to-3gp"
+    },
+    {
+      "input": "wbmp",
+      "output": "png",
+      "slug": "wbmp-to-png"
+    },
+    {
+      "input": "webm",
+      "output": "3g2",
+      "slug": "webm-to-3g2"
+    },
+    {
+      "input": "webm",
+      "output": "3gp",
+      "slug": "webm-to-3gp"
+    },
+    {
+      "input": "webp",
+      "output": "svg",
+      "slug": "webp-to-svg"
+    },
+    {
+      "input": "wma",
+      "output": "3g2",
+      "slug": "wma-to-3g2"
+    },
+    {
+      "input": "wma",
+      "output": "3gp",
+      "slug": "wma-to-3gp"
+    },
+    {
+      "input": "wpg",
+      "output": "png",
+      "slug": "wpg-to-png"
+    },
+    {
+      "input": "wtv",
+      "output": "png",
+      "slug": "wtv-to-png"
+    },
+    {
+      "input": "wv",
+      "output": "3g2",
+      "slug": "wv-to-3g2"
+    },
+    {
+      "input": "wv",
+      "output": "3gp",
+      "slug": "wv-to-3gp"
+    },
+    {
+      "input": "wve",
+      "output": "png",
+      "slug": "wve-to-png"
+    },
+    {
+      "input": "x3d",
+      "output": "obj",
+      "slug": "x3d-to-obj"
+    },
+    {
+      "input": "xbm",
+      "output": "png",
+      "slug": "xbm-to-png"
+    },
+    {
+      "input": "xhtml",
+      "output": "txt",
+      "slug": "xhtml-to-txt"
+    },
+    {
+      "input": "xml",
+      "output": "pdf",
+      "slug": "xml-to-pdf"
+    },
+    {
+      "input": "xpm",
+      "output": "png",
+      "slug": "xpm-to-png"
+    },
+    {
+      "input": "xwd",
+      "output": "png",
+      "slug": "xwd-to-png"
+    },
+    {
+      "input": "y4m",
+      "output": "png",
+      "slug": "y4m-to-png"
+    },
+    {
+      "input": "yaml",
+      "output": "json",
+      "slug": "yaml-to-json"
+    },
+    {
+      "input": "yop",
+      "output": "png",
+      "slug": "yop-to-png"
+    },
+    {
+      "input": "zae",
+      "output": "stl",
+      "slug": "zae-to-stl"
+    },
+    {
+      "input": "nef",
+      "output": "png",
+      "slug": "nef-to-png"
+    },
+    {
+      "input": "cr2",
+      "output": "png",
+      "slug": "cr2-to-png"
+    },
+    {
+      "input": "arw",
+      "output": "png",
+      "slug": "arw-to-png"
+    },
+    {
+      "input": "pef",
+      "output": "png",
+      "slug": "pef-to-png"
+    },
+    {
+      "input": "av1",
+      "output": "png",
+      "slug": "av1-to-png"
+    },
+    {
+      "input": "dirac",
+      "output": "png",
+      "slug": "dirac-to-png"
+    },
+    {
+      "input": "h261",
+      "output": "png",
+      "slug": "h261-to-png"
+    },
+    {
+      "input": "dv",
+      "output": "png",
+      "slug": "dv-to-png"
+    },
+    {
+      "input": "dnxhd",
+      "output": "png",
+      "slug": "dnxhd-to-png"
+    },
+    {
+      "input": "mk3d",
+      "output": "png",
+      "slug": "mk3d-to-png"
+    },
+    {
+      "input": "argo_asf",
+      "output": "wav",
+      "slug": "argo-asf-to-wav"
+    },
+    {
+      "input": "daud",
+      "output": "wav",
+      "slug": "daud-to-wav"
+    },
+    {
+      "input": "gsm",
+      "output": "wav",
+      "slug": "gsm-to-wav"
+    },
+    {
+      "input": "smjpeg",
+      "output": "wav",
+      "slug": "smjpeg-to-wav"
+    },
+    {
+      "input": "bibtex",
+      "output": "csljson",
+      "slug": "bibtex-to-csljson"
+    },
+    {
+      "input": "biblatex",
+      "output": "csljson",
+      "slug": "biblatex-to-csljson"
+    },
+    {
+      "input": "bits",
+      "output": "html",
+      "slug": "bits-to-html"
+    },
+    {
+      "input": "creole",
+      "output": "html",
+      "slug": "creole-to-html"
+    },
+    {
+      "input": "endnotexml",
+      "output": "csljson",
+      "slug": "endnotexml-to-csljson"
+    },
+    {
+      "input": "pandoc native",
+      "output": "html",
+      "slug": "pandoc-native-to-html"
+    },
+    {
+      "input": "ris",
+      "output": "csljson",
+      "slug": "ris-to-csljson"
+    },
+    {
+      "input": "t2t",
+      "output": "html",
+      "slug": "t2t-to-html"
+    },
+    {
+      "input": "tikiwiki",
+      "output": "html",
+      "slug": "tikiwiki-to-html"
+    },
+    {
+      "input": "twiki",
+      "output": "html",
+      "slug": "twiki-to-html"
+    },
+    {
+      "input": "vimwiki",
+      "output": "html",
+      "slug": "vimwiki-to-html"
+    },
+    {
+      "input": "vcf",
+      "output": "csv",
+      "slug": "vcf-to-csv"
+    },
+    {
+      "input": "mpl2",
+      "output": "srt",
+      "slug": "mpl2-to-srt"
+    },
+    {
+      "input": "mpsub",
+      "output": "srt",
+      "slug": "mpsub-to-srt"
+    },
+    {
+      "input": "sami",
+      "output": "srt",
+      "slug": "sami-to-srt"
+    },
+    {
+      "input": "webvtt",
+      "output": "srt",
+      "slug": "webvtt-to-srt"
+    },
+    {
+      "input": "realtext",
+      "output": "srt",
+      "slug": "realtext-to-srt"
+    },
+    {
+      "input": "aqtitle",
+      "output": "srt",
+      "slug": "aqtitle-to-srt"
+    },
+    {
+      "input": "jacosub",
+      "output": "srt",
+      "slug": "jacosub-to-srt"
+    },
+    {
+      "input": "vplayer",
+      "output": "srt",
+      "slug": "vplayer-to-srt"
+    },
+    {
+      "input": "abw",
+      "output": "txt",
+      "slug": "abw-to-txt"
+    },
+    {
+      "input": "pml",
+      "output": "epub",
+      "slug": "pml-to-epub"
+    },
+    {
+      "input": "ac3d",
+      "output": "stl",
+      "slug": "ac3d-to-stl"
+    },
+    {
+      "input": "cbz",
+      "output": "epub",
+      "slug": "cbz-to-epub"
+    },
+    {
+      "input": "rb",
+      "output": "epub",
+      "slug": "rb-to-epub"
+    },
+    {
+      "input": "snb",
+      "output": "epub",
+      "slug": "snb-to-epub"
+    },
+    {
+      "input": "tcr",
+      "output": "epub",
+      "slug": "tcr-to-epub"
+    },
+    {
+      "input": "potx",
+      "output": "pdf",
+      "slug": "potx-to-pdf"
+    },
+    {
+      "input": "microdvd",
+      "output": "srt",
+      "slug": "microdvd-to-srt"
+    }
+  ],
+  "excluded": [
+    {
+      "input": "264",
+      "output": "png",
+      "reason": "Raw H.264 extension alias; prefer the separately tested H264 conversion page."
+    },
+    {
+      "input": "265",
+      "output": "png",
+      "reason": "Raw HEVC/H.265 extension alias; prefer the separately tested HEVC conversion page."
+    },
+    {
+      "input": "3g2",
+      "output": "txt",
+      "reason": "ImageMagick TXT is pixel enumeration, not transcript or document text."
+    },
+    {
+      "input": "3gp",
+      "output": "txt",
+      "reason": "ImageMagick TXT is pixel enumeration, not transcript or document text."
+    },
+    {
+      "input": "aqt",
+      "output": "ffmeta",
+      "reason": "FFmetadata extracts metadata only, not subtitle payload."
+    },
+    {
+      "input": "ass",
+      "output": "ass",
+      "reason": "Same-format rewrite; does not create a distinct conversion landing page."
+    },
+    {
+      "input": "avc",
+      "output": "png",
+      "reason": "Raw H.264 extension alias; prefer the separately tested H264 conversion page."
+    },
+    {
+      "input": "bie",
+      "output": "png",
+      "reason": "Documented alias of JBIG; use canonical input spelling for landing pages."
+    },
+    {
+      "input": "bvh",
+      "output": "stl",
+      "reason": "Hold: skeleton animation to static mesh can synthesize skeleton visualization; authored mesh preservation is not demonstrated."
+    },
+    {
+      "input": "csljson",
+      "output": "beamer",
+      "reason": "Hold: output template/bibliography needs a direct content-preservation check before landing-page admission."
+    },
+    {
+      "input": "evc",
+      "output": "ffmeta",
+      "reason": "FFmetadata extracts metadata only, not video payload."
+    },
+    {
+      "input": "h265",
+      "output": "png",
+      "reason": "Raw HEVC/H.265 extension alias; prefer the separately tested HEVC conversion page."
+    },
+    {
+      "input": "htm",
+      "output": "doc",
+      "reason": "Canonical spelling alias of JPG, TIFF or HTML; keep existing canonical landing pages."
+    },
+    {
+      "input": "icb",
+      "output": "png",
+      "reason": "Documented alias of TGA; use canonical input spelling for landing pages."
+    },
+    {
+      "input": "icon",
+      "output": "png",
+      "reason": "Documented alias of ICO; use canonical input spelling for landing pages."
+    },
+    {
+      "input": "jbg",
+      "output": "png",
+      "reason": "Documented alias of JBIG; use canonical input spelling for landing pages."
+    },
+    {
+      "input": "jpe",
+      "output": "png",
+      "reason": "Canonical spelling alias of JPG, TIFF or HTML; keep existing canonical landing pages."
+    },
+    {
+      "input": "jpe",
+      "output": "svg",
+      "reason": "Canonical spelling alias of JPG, TIFF or HTML; keep existing canonical landing pages."
+    },
+    {
+      "input": "jpeg",
+      "output": "png",
+      "reason": "Canonical spelling alias of JPG, TIFF or HTML; keep existing canonical landing pages."
+    },
+    {
+      "input": "jpeg",
+      "output": "svg",
+      "reason": "Canonical spelling alias of JPG, TIFF or HTML; keep existing canonical landing pages."
+    },
+    {
+      "input": "pdb",
+      "output": "txt",
+      "reason": "Actual final worker fell back from Calibre (vIMGView FireViewer, not an ebook) to ImageMagick. Downloaded TXT starts with an ImageMagick pixel-enumeration header, so it is not extracted document/ebook text."
+    },
+    {
+      "input": "pjpeg",
+      "output": "png",
+      "reason": "Canonical spelling alias of JPG, TIFF or HTML; keep existing canonical landing pages."
+    },
+    {
+      "input": "png00",
+      "output": "png",
+      "reason": "PNG encoder/pixel-depth variant to PNG; no separately evidenced distinct landing-page purpose."
+    },
+    {
+      "input": "png24",
+      "output": "png",
+      "reason": "PNG encoder/pixel-depth variant to PNG; no separately evidenced distinct landing-page purpose."
+    },
+    {
+      "input": "png32",
+      "output": "png",
+      "reason": "PNG encoder/pixel-depth variant to PNG; no separately evidenced distinct landing-page purpose."
+    },
+    {
+      "input": "png48",
+      "output": "png",
+      "reason": "PNG encoder/pixel-depth variant to PNG; no separately evidenced distinct landing-page purpose."
+    },
+    {
+      "input": "png64",
+      "output": "png",
+      "reason": "PNG encoder/pixel-depth variant to PNG; no separately evidenced distinct landing-page purpose."
+    },
+    {
+      "input": "png8",
+      "output": "png",
+      "reason": "PNG encoder/pixel-depth variant to PNG; no separately evidenced distinct landing-page purpose."
+    },
+    {
+      "input": "sup",
+      "output": "ffmeta",
+      "reason": "FFmetadata extracts metadata only, not subtitle payload."
+    },
+    {
+      "input": "tif",
+      "output": "png",
+      "reason": "Canonical spelling alias of JPG, TIFF or HTML; keep existing canonical landing pages."
+    },
+    {
+      "input": "tif",
+      "output": "svg",
+      "reason": "Canonical spelling alias of JPG, TIFF or HTML; keep existing canonical landing pages."
+    },
+    {
+      "input": "vda",
+      "output": "png",
+      "reason": "Documented alias of TGA; use canonical input spelling for landing pages."
+    },
+    {
+      "input": "vst",
+      "output": "png",
+      "reason": "Documented alias of TGA; use canonical input spelling for landing pages."
+    },
+    {
+      "input": "v",
+      "output": "png",
+      "reason": "V is the VIPS native image file spelling; VIPS→PNG is already a candidate in this same release, so avoid duplicate landing pages."
+    },
+    {
+      "input": "ffmetadata",
+      "output": "ffmeta",
+      "reason": "Metadata alias normalization to FFMETA; no consumer content conversion landing page."
+    }
+  ],
+  "rejected": [],
+  "existing": [],
+  "previousPairCount": 2845,
+  "resultPairCount": 3222,
+  "previousReceiptCount": 2845,
+  "resultReceiptCount": 3222
+}

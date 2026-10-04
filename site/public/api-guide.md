@@ -6,7 +6,7 @@ Wase Download is a self-hosted file converter. It requires no account or third-p
 
 The deployed build declares **885 input identifiers**, **517 output identifiers** and **143995 directional combinations** after filtering devices, pseudo-formats and ordinary still-image-to-video synthesis. Targets depend on the input; formats are not an all-to-all matrix.
 
-**2681 published directions** have representative-fixture validation and successful HTTP conversion evidence. This is not a guarantee for every file, codec, font, document feature, animation or visual result. The full published list is [verified-conversions.json](https://wase.download/verified-conversions.json). Its evidence is historical representative testing, not a live health check of every pair.
+**3058 published directions** have representative-fixture validation and successful HTTP conversion evidence. This is not a guarantee for every file, codec, font, document feature, animation or visual result. The full published list is [verified-conversions.json](https://wase.download/verified-conversions.json). Its evidence is historical representative testing, not a live health check of every pair.
 
 - [Static catalogue](https://wase.download/formats.json): public declarations from this build.
 - [Runtime catalogue](https://wase.download/api/formats): declarations reported by the running broker.

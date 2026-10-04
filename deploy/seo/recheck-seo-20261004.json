@@ -1,0 +1,120 @@
+{
+  "generatedAtUTC": "2026-10-04T08:53:14.565264+00:00",
+  "scope": "Final local generated HTML after new admissions and after mutating tests completed; exhaustive per-input/anchor checks plus built-in all-page canonical/Sitemap audit. Not a crawl of all production URLs or proof of search indexing.",
+  "staticAudit": {
+    "generatedAtUTC": "2026-10-04T08:52:48.139Z",
+    "scope": "Every public input directory in all locales and every declared cross-format output anchor, plus format-index SSR discovery; built-in separate audit covers all canonical and retired HTML links.",
+    "inputFormats": 885,
+    "languages": [
+      "en",
+      "ru",
+      "zh",
+      "es",
+      "fr",
+      "de",
+      "pt",
+      "it",
+      "tr",
+      "ja",
+      "ko",
+      "ar",
+      "hi"
+    ],
+    "inputPagesChecked": 11505,
+    "inputPagesPassed": 11505,
+    "inputPagesNoindex": 11505,
+    "expectedInputPages": 11505,
+    "canonicalPagesIncludingNoindexChecked": 11505,
+    "indexableSitemapURLs": 39819,
+    "publishedPairs": 3058,
+    "inputsWithPublishedPairs": 414,
+    "inputsWithoutPublishedPairs": 471,
+    "outputAnchorsChecked": 1867099,
+    "verifiedOutputLinks": 39754,
+    "unpublishedQueryLinks": 1827345,
+    "uniqueInputTitles": 11505,
+    "uniqueInputDescriptions": 11505,
+    "localeResults": {
+      "en": {
+        "inputPages": 885,
+        "outputLinks": 143623
+      },
+      "ru": {
+        "inputPages": 885,
+        "outputLinks": 143623
+      },
+      "zh": {
+        "inputPages": 885,
+        "outputLinks": 143623
+      },
+      "es": {
+        "inputPages": 885,
+        "outputLinks": 143623
+      },
+      "fr": {
+        "inputPages": 885,
+        "outputLinks": 143623
+      },
+      "de": {
+        "inputPages": 885,
+        "outputLinks": 143623
+      },
+      "pt": {
+        "inputPages": 885,
+        "outputLinks": 143623
+      },
+      "it": {
+        "inputPages": 885,
+        "outputLinks": 143623
+      },
+      "tr": {
+        "inputPages": 885,
+        "outputLinks": 143623
+      },
+      "ja": {
+        "inputPages": 885,
+        "outputLinks": 143623
+      },
+      "ko": {
+        "inputPages": 885,
+        "outputLinks": 143623
+      },
+      "ar": {
+        "inputPages": 885,
+        "outputLinks": 143623
+      },
+      "hi": {
+        "inputPages": 885,
+        "outputLinks": 143623
+      }
+    },
+    "hashes": {
+      "formats.json": "5b2eae6ef245af007a5df855111cbee634393d98d298ede359d6d90d26ff1579",
+      "sitemap.xml": "70439c9f9df79b6cccf5206659e4eec6ea072137e9471b790ff3382d0fded4d1"
+    },
+    "issues": []
+  },
+  "allPageAudit": {
+    "canonicalPages": 39819,
+    "sitemapURLs": 39819,
+    "issues": []
+  },
+  "admission": {
+    "newDirections": 377,
+    "newLocalizedPages": 4901,
+    "publicDirections": 3058,
+    "inputsWithIndexablePairs": 414,
+    "inputsWithoutIndexablePairs": 471
+  },
+  "productionDelivery": {
+    "status": "Pending separate post-deployment bounded check",
+    "baselineGETRequests": 44,
+    "baselineSourceCommit": "fa9b9bc74bfbb613284f7f112cbde2358b695366",
+    "notAllLiveURLs": true
+  },
+  "limitations": [
+    "All 885 input identifiers have generated directory pages; their 11505 localized pages intentionally remain noindex,follow outside Sitemap.",
+    "Static technical verification does not establish editorial quality of every translation or guide.",
+    "Sitemap availability, canonical and hreflang do not guarantee crawling, indexing, ranking or AI citations."
+  ]
+}

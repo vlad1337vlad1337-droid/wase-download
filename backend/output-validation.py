@@ -20,6 +20,64 @@ def validate_ffmetadata(path):
   if not re.fullmatch(r'(?:\\.|[^=\\])+=(?:\\.|[^\\])*',line):raise ValueError('Invalid FFmetadata entry')
  if pending:raise ValueError('Truncated FFmetadata escape')
 
+def validate_csljson(path):
+ # Bibliographies are arrays of CSL records, not arbitrary JSON. The fields
+ # follow https://resource.citationstyles.org/schema/v1.0/input/json/csl-data.json.
+ # Also require content: an empty bibliography is not a successful conversion.
+ def unique(pairs):
+  result={}
+  for key,value in pairs:
+   if key in result:raise ValueError('Duplicate CSL JSON key')
+   result[key]=value
+  return result
+ def invalid_constant(value):raise ValueError('Non-finite CSL JSON number')
+ data=json.loads(validate_text(path),object_pairs_hook=unique,parse_constant=invalid_constant)
+ if not isinstance(data,list) or not data or len(data)>20000:raise ValueError('Invalid CSL bibliography')
+ types=set('article article-journal article-magazine article-newspaper bill book broadcast chapter classic collection dataset document entry entry-dictionary entry-encyclopedia event figure graphic hearing interview legal_case legislation manuscript map motion_picture musical_score pamphlet paper-conference patent performance periodical personal_communication post post-weblog regulation report review review-book software song speech standard thesis treaty webpage'.split())
+ names=set('author chair collection-editor compiler composer container-author contributor curator director editor editorial-director executive-producer guest host interviewer illustrator narrator organizer original-author performer producer recipient reviewed-author script-writer series-creator translator'.split())
+ dates=set('accessed available-date event-date issued original-date submitted'.split())
+ numbers=set('chapter-number citation-number collection-number edition first-reference-note-number issue locator number number-of-pages number-of-volumes page page-first part printing supplement volume'.split())
+ strings=set('citation-key language journalAbbreviation shortTitle abstract annote archive archive_collection archive_location archive-place authority call-number citation-label collection-title container-title container-title-short dimensions division DOI event event-title event-place genre ISBN ISSN jurisdiction keyword medium note original-publisher original-publisher-place original-title part-title PMCID PMID publisher publisher-place references reviewed-genre reviewed-title scale section source status title title-short URL version volume-title volume-title-short year-suffix'.split())
+ name_strings=set('family given dropping-particle non-dropping-particle suffix literal'.split());name_flags={'comma-suffix','static-ordering','parse-names'}
+ def scalar(value,boolean=False):return isinstance(value,str) or type(value) in (int,float) and math.isfinite(value) or boolean and type(value)is bool
+ def text(value):return isinstance(value,str) and bool(value.strip())
+ ids=set()
+ for item in data:
+  if not isinstance(item,dict) or not scalar(item.get('id')) or not str(item['id']).strip() or item.get('type') not in types:raise ValueError('Invalid CSL record identity')
+  ident=str(item['id'])
+  if ident in ids:raise ValueError('Duplicate CSL record identity')
+  ids.add(ident);content=False
+  for key,value in item.items():
+   if key in ('id','type'):continue
+   if key in strings:
+    if not isinstance(value,str):raise ValueError('Invalid CSL text field')
+    content|=text(value)
+   elif key in numbers:
+    if not scalar(value):raise ValueError('Invalid CSL number field')
+    content|=str(value).strip()!=''
+   elif key in names:
+    if not isinstance(value,list):raise ValueError('Invalid CSL name list')
+    for person in value:
+     if not isinstance(person,dict) or set(person)-name_strings-name_flags:raise ValueError('Invalid CSL name')
+     if any(not isinstance(v,str) if k in name_strings else not scalar(v,True) for k,v in person.items()):raise ValueError('Invalid CSL name field')
+     content|=any(text(person.get(k)) for k in ('family','given','literal'))
+   elif key in dates:
+    if not isinstance(value,dict) or set(value)-{'date-parts','season','circa','literal','raw'}:raise ValueError('Invalid CSL date')
+    for field,part in value.items():
+     if field=='date-parts':
+      if not isinstance(part,list) or not 1<=len(part)<=2 or any(not isinstance(p,list) or not 1<=len(p)<=3 or any(not scalar(n) for n in p) for p in part):raise ValueError('Invalid CSL date parts')
+      content=True
+     elif field in ('literal','raw'):
+      if not isinstance(part,str):raise ValueError('Invalid CSL date text')
+      content|=text(part)
+     elif not scalar(part,field=='circa'):raise ValueError('Invalid CSL date flag')
+   elif key=='categories':
+    if not isinstance(value,list) or any(not isinstance(v,str) for v in value):raise ValueError('Invalid CSL categories')
+   elif key=='custom':
+    if not isinstance(value,dict):raise ValueError('Invalid CSL custom data')
+   else:raise ValueError('Unknown CSL field')
+  if not content:raise ValueError('Empty CSL record')
+
 def validate_beamer(path):
  # Accept Pandoc's frame fragments as well as standalone documents. This is
  # TeX structure validation; it neither executes macros nor claims compilation.
@@ -219,6 +277,7 @@ def validate(ext,path):
    assert font.getBestCmap()
  elif ext=='doc':assert b.startswith(bytes.fromhex('d0cf11e0a1b11ae1'))
  elif ext=='json':json.load(open(path))
+ elif ext=='csljson':validate_csljson(path)
  elif ext=='xml':
   import xml.etree.ElementTree as ET
   ET.parse(path)

@@ -1,0 +1,148 @@
+{
+  "generatedAtUTC": "2026-10-04T08:45:14.766516+00:00",
+  "scope": "Representative local ARM64 tests and bounded validation; all 885 input identifiers inventoried, not all verified. No complete all-input or all-direction certification.",
+  "catalogue": {
+    "inputs": 885,
+    "outputs": 517,
+    "declaredPairs": 143995,
+    "allToAllSupported": false
+  },
+  "baseline3070": {
+    "sourceCommit": "fa9b9bc74bfbb613284f7f112cbde2358b695366",
+    "backendSHA256": {
+      "engine.mjs": "2e9166ccc1569c2ec1cd74c89e282785a4cfde41755a3472d89d3d0cb3bf256e",
+      "extra.py": "53d4f791e5d1b672494530d9392be2906c11c29120ce152ba7c260c79dfce01c",
+      "output-validation.py": "33d6ab58d7c4f4256124ecde3483a58eafbf414e026578fd050576c33731f1eb",
+      "engine-order.mjs": "1e7069b43874b870b8a6a0a149b2f1b4ab8f041e338a15345d449e9ec56bee01",
+      "conversion-policy.mjs": "b0b4a84c869abc33335a7108c85c0c9f177e3bcb3b6e0079d3cac8fd42f0bed3",
+      "server.mjs": "48e03438bbd4ed275ff842bdca90665581d5be3c9c508cae80d5fee8b446d278",
+      "output-brand.mjs": "b1f9f1fd0c56f95ab6983b824428b4a610e249920155272db68e6fe8dd3b56c7",
+      "output-stream.mjs": "1ccb0b9aff33ca4bea35fdd25c90425f946476a79be5d69aec587be9a5a9e68e"
+    },
+    "freshKnownDirectionCases": 3070,
+    "passed": 3048,
+    "failed": 22,
+    "published": {
+      "executed": 2681,
+      "statuses": {
+        "passed": 2681
+      },
+      "inputs": 122
+    },
+    "singleRevisionFullKnownCaseRerun": true
+  },
+  "candidateBackend": {
+    "revisionKind": "Immutable fa9 base plus tested narrow Pandoc-native / CSLJSON delta; not a new committed release",
+    "backendSHA256": {
+      "output-stream.mjs": "1ccb0b9aff33ca4bea35fdd25c90425f946476a79be5d69aec587be9a5a9e68e",
+      "extra.py": "53d4f791e5d1b672494530d9392be2906c11c29120ce152ba7c260c79dfce01c",
+      "discovery.mjs": "f2f9d57f1593bd1b6849e3b73cf83accd67735dc095c8dc9f4713c05d7b3c7b1",
+      "output-validation.py": "8574dfafc83fd89e459a9dd244a1fb40d40190be4bb52266af589470d64d461c",
+      "LICENSE": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "engine.mjs": "e9af37bffdadae85627652a8a55fc2e13765612e11d428fc08443cd256a6cc60",
+      "request-guard.mjs": "bc6d8d963e092e5fb9be01ce36e0863acccca35cc9a9d5ec66338ce699493692",
+      "output-brand.mjs": "b1f9f1fd0c56f95ab6983b824428b4a610e249920155272db68e6fe8dd3b56c7",
+      "github-stats.mjs": "605a155bca3cc55ea974f5da92f1be9d690af3df404656744bff22f63643052b",
+      "server.mjs": "48e03438bbd4ed275ff842bdca90665581d5be3c9c508cae80d5fee8b446d278",
+      "conversion-policy.mjs": "b0b4a84c869abc33335a7108c85c0c9f177e3bcb3b6e0079d3cac8fd42f0bed3",
+      "engine-order.mjs": "1e7069b43874b870b8a6a0a149b2f1b4ab8f041e338a15345d449e9ec56bee01"
+    },
+    "workerCases": 380,
+    "workerPassed": 380,
+    "full3070RerunAfterNarrowDelta": false
+  },
+  "coverage": {
+    "distinctDirections": 3152,
+    "directionsWithAtLeastOnePass": 3093,
+    "directionsWithOnlyFailedSpecimens": 59,
+    "directionsWithAnyFailedSpecimen": 64,
+    "directionsWithBothPassedAndFailedSpecimens": 5,
+    "currentSpecimenCases": 3157,
+    "currentPassedSpecimenCases": 3093,
+    "currentFailedSpecimenCases": 64,
+    "inputsWithCurrentCases": 504,
+    "inputsWithAtLeastOnePass": 446,
+    "inputsWithoutSuccessfulCase": 58,
+    "inputsWithoutFixtures": 381,
+    "untestedDirections": 140843,
+    "allDeclaredDirectionsAttemptedInputs": [
+      "fodp",
+      "odp",
+      "tex",
+      "vcf"
+    ],
+    "allDeclaredDirectionsPassedInputs": [
+      "fodp",
+      "odp",
+      "vcf"
+    ],
+    "singleRevisionFullRerun": false
+  },
+  "separateSpecimenResultsPreservedFor": [
+    "arw\u2192png",
+    "cr2\u2192png",
+    "lrc\u2192ass",
+    "nef\u2192png",
+    "pef\u2192png"
+  ],
+  "executionCounts": {
+    "workerConversionRecordsAcrossStages": 3685,
+    "workerStatusRecords": {
+      "passed": 3613,
+      "failed": 72
+    },
+    "httpConversionRequests": 380,
+    "httpStatuses": {
+      "200": 380
+    },
+    "downloadContentStatuses": {
+      "passed": 379,
+      "failed": 1
+    },
+    "distinctHTTPPassedDirections": 379,
+    "seoEligibleHTTPPassedDirections": 377,
+    "note": "Repeated regressions and code/specimen retries are counted as executions here; they are not extra distinct directions."
+  },
+  "strictMedia": {
+    "cases": 136,
+    "statuses": {
+      "passed": 136
+    },
+    "brands": {
+      "3g2a": 68,
+      "3gp4": 68
+    },
+    "codecs": {
+      "aac": 126,
+      "mpeg4": 10
+    },
+    "decodedFirstSecond": 136
+  },
+  "httpEvidence": {
+    "revision": "5504045bea5c28b18695e5453bce9fc2ba765ff6f10e7740d0c7e150d107bb0a",
+    "requests": 380,
+    "http200": 380,
+    "distinctValidatedDirections": 379,
+    "eligibleNewSEODirections": 377,
+    "negativeLRCFixturePreserved": true,
+    "positiveLRCFixturePassed": true,
+    "ARWDimensionExpectationCorrectedUsingSourceLibRawAndExactDecodedPixelEquality": true,
+    "automaticSEOAdmission": false
+  },
+  "categorySource": "Fresh production API catalogue retrieved before this release; ARM worker categories are not substituted.",
+  "limitations": [
+    "One or several known fixtures do not prove all subtypes or uploaded files work.",
+    "381 declared input identifiers still have no independent specimen; some identifiers denote aliases, raw data with external parameters, profiles, protocols, or compound formats.",
+    "A failed specimen does not prove an entire format is unsupported. Both successful full camera RAW and earlier failing metadata specimens are retained.",
+    "The negative-timestamp FATE LRC fixture remains a failed content check; a separate ordinary-timestamp specimen is tracked independently.",
+    "Raw data requiring dimensions/parameters may be valid with external context but fail the ordinary single-file upload contract.",
+    "HTTP validation uses bounded full-pixel, first-second media, first-page PDF, text/cue, mesh or package checks; it is not universal semantic/layout/color fidelity.",
+    "Worker/structural pass counts include transformations that may later be excluded from SEO for semantic reasons; PDB-to-TXT pixel enumeration is excluded from new SEO admission.",
+    "This is local ARM64 evidence; it is not production AMD64 certification and does not imply search indexing."
+  ],
+  "files": {
+    "inputCoverage": "recheck-input-coverage-20261004.csv",
+    "inputCoverageSHA256": "6871eeacd9927b56c00361d2ad5afb9409d8830efa7eec318ac415043cd3c4ec"
+  },
+  "productionLoadForAudit": "Local workers and localhost HTTP broker only; no production conversion matrix requests."
+}

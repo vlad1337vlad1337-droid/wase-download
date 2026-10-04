@@ -1,7 +1,7 @@
 {
-  "canonicalPages": 34918,
-  "sitemapURLs": 34918,
-  "publishedPairs": 2681,
+  "canonicalPages": 39819,
+  "sitemapURLs": 39819,
+  "publishedPairs": 3058,
   "languages": [
     "en",
     "ru",
@@ -22,15 +22,15 @@
   "declaredPairs": 143995,
   "sameFormatPairs": 372,
   "crossFormatPairs": 143623,
-  "unpublishedCrossFormatPairs": 140942,
+  "unpublishedCrossFormatPairs": 140565,
   "categories": {
     "document": {
-      "inputs": 532,
-      "declaredPairs": 91757
+      "inputs": 534,
+      "declaredPairs": 92407
     },
     "ebook": {
-      "inputs": 26,
-      "declaredPairs": 1725
+      "inputs": 24,
+      "declaredPairs": 1075
     },
     "image": {
       "inputs": 214,
