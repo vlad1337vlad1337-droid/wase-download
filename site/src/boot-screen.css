@@ -7,7 +7,7 @@ html[data-theme=dark]{background:#141414;color-scheme:dark}
 .is-booting .boot-screen,.boot-screen.is-leaving{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:#E8E8E6;color:#202020;pointer-events:none;overflow:hidden;isolation:isolate;transition:opacity .4s ease-out}
 [data-theme=dark] .boot-screen{background:#141414;color:#f2f2f2}
 .boot-screen.is-leaving{opacity:0}
-.boot-signature{width:min(290px,calc(100% - 32px));text-align:center;animation:boot-arrive .6s cubic-bezier(.2,.7,.2,1) both}
+.boot-signature{width:min(290px,calc(100% - 32px));text-align:center}
 .boot-crew{position:relative;width:290px;max-width:100%;height:176px;margin:0 auto}
 .boot-friend{position:absolute;display:block;transform:rotate(var(--tilt));animation:boot-greet 1.65s ease-in-out both;animation-delay:var(--delay)}
 .boot-friend svg{display:block;width:100%;height:100%;overflow:visible}
@@ -15,7 +15,6 @@ html[data-theme=dark]{background:#141414;color-scheme:dark}
 .boot-friend--center{width:176px;height:176px;left:57px;top:0;--tilt:5deg;--delay:0s;z-index:1}
 .boot-friend--right{width:110px;height:110px;right:0;bottom:18px;--tilt:15deg;--delay:.18s;--toward:-10px;--turn:-16deg;animation-name:boot-together}
 .boot-eyes{transform-box:fill-box;transform-origin:center;animation:boot-blink 1.7s ease-in-out both;animation-delay:var(--delay)}
-@keyframes boot-arrive{from{opacity:0}to{opacity:1}}
 @keyframes boot-together{0%,100%{transform:translateX(0) rotate(var(--tilt))}50%{transform:translateX(var(--toward)) rotate(var(--turn))}}
 @keyframes boot-greet{0%,100%{transform:translateY(0) rotate(var(--tilt))}45%{transform:translateY(-7px) rotate(calc(var(--tilt) - 3deg))}}
 @keyframes boot-blink{0%,40%,48%,100%{transform:scaleY(1)}44%{transform:scaleY(.12)}}

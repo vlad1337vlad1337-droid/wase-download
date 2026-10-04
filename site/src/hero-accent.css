@@ -1,6 +1,7 @@
 /* SPDX-License-Identifier: MIT */
 .hero h1{position:relative;display:inline-block}
-.hero-underline{display:block;width:124px;height:12px;margin:5px auto 0;overflow:visible;opacity:.72;color:var(--brand-purple,#8173e8)}
+.hero-underline{display:block;width:124px;height:12px;margin:5px auto 0;overflow:visible;opacity:1;color:var(--brand-purple,#8173e8)}
+html[data-theme=dark] .hero-underline{color:#a99bf3}
 .hero-underline path{vector-effect:non-scaling-stroke;stroke-linecap:round}
 @media(max-width:720px) and (min-height:481px){body:has(.converter-shell) .hero{position:relative;top:-12px}.hero-underline{width:108px;height:10px;margin-top:4px}}
 @media(max-height:640px){.hero-underline{width:94px;height:8px;margin-top:3px}}
