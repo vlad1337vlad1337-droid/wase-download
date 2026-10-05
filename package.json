@@ -6,7 +6,7 @@
   "description": "Self-hosted file conversion, vector tracing and read-only agent discovery in 13 languages",
   "license": "MIT AND AGPL-3.0-only AND Unlicense",
   "engines": {
-    "node": ">=22.13.0"
+    "node": ">=24.21.0"
   },
   "scripts": {
     "generate": "node scripts/generate.mjs",
@@ -20,12 +20,12 @@
     "@modelcontextprotocol/sdk": "^1.32.0",
     "@playwright/test": "1.63.0",
     "blobatar": "2.7.0",
-    "lucide": "1.50.0",
+    "lucide": "1.52.0",
     "vite": "8.3.2"
   },
   "dependencies": {
     "@jsquash/webp": "1.5.0",
     "fflate": "^0.8.3",
-    "pdfjs-dist": "6.3.289"
+    "pdfjs-dist": "6.4.299"
   }
 }
