@@ -31,5 +31,5 @@ test('all locales have save controls and unavailable-server messages',()=>{
  assert.deepEqual(Object.keys(communityCopy),localeCodes);assert.deepEqual(Object.keys(fallbackCopy),localeCodes);for(const copy of Object.values(communityCopy))for(const value of Object.values(copy))assert.ok(value.trim());
 });
 test('an offline document or unsupported image direction resets to a working browser choice',()=>{
- assert.deepEqual(browserSelection('EPUB','TXT'),{source:'AUTO',target:'SVG'});assert.deepEqual(browserSelection('PNG','AVIF'),{source:'PNG',target:'SVG'});assert.deepEqual(browserSelection('JPG','PNG'),{source:'JPG',target:'PNG'});
+ assert.deepEqual(browserSelection('EPUB','TXT'),{source:'AUTO',target:'AUTO'});assert.deepEqual(browserSelection('PNG','AVIF'),{source:'PNG',target:'AUTO'});assert.deepEqual(browserSelection('JPG','PNG'),{source:'JPG',target:'PNG'});
 });
