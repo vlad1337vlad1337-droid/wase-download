@@ -30,6 +30,8 @@ test('server uploads report progress and map failures by code',()=>{
  // The bar must be attached after the status joins the row (a detached
  // status.after() silently dropped it).
  assert.match(app,/info\.append\(status\);if\(i\.status==='working'&&serverMode\(\)\)\{const bar=[^}]*info\.append\(bar\);\}/);assert.doesNotMatch(app,/status\.after\(bar\)/);
+ // A retried file must not keep an old pause/limit code that stops the batch.
+ assert.match(app,/delete i\.error;delete i\.errorCode;i\.status='working'/);assert.match(app,/if\(i\.status==='failed'&&\['paused','rate_limited'\]\.includes\(i\.errorCode\)\)break;/);
  assert.match(app,/if\(!file\.size\)throw new Error\('empty'\)/,'empty files are rejected before upload');
  assert.doesNotMatch(app,/fetch\(`\/api\/convert/);
 });

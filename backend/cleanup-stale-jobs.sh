@@ -7,7 +7,9 @@
 set -u
 cd "$(dirname "$0")/.." || exit 1
 job_root=${JOB_ROOT:-backend/.jobs}
-wait_s=${CLEANUP_COMMAND_TIMEOUT:-30}
+# Four Docker calls at most, each bounded: 4 x 15 s stays inside systemd's
+# default 90 s start timeout even when the daemon hangs.
+wait_s=${CLEANUP_COMMAND_TIMEOUT:-15}
 if [ -n "${DOCKER_CONTEXT:-}" ]; then set -- --context "$DOCKER_CONTEXT"; else set --; fi
 
 if [ "${FORCE:-0}" != 1 ] && command -v systemctl >/dev/null 2>&1 && systemctl is-active --quiet wase-download-api 2>/dev/null; then
@@ -21,15 +23,19 @@ bounded() { if command -v timeout >/dev/null 2>&1; then timeout "$wait_s" "$@"; 
 status=0
 listed=$(bounded docker "$@" ps -a --filter name=wase-wase-job- --format '{{.Names}}') || { echo "cleanup-stale-jobs: docker ps failed" >&2; status=1; }
 containers=$(printf '%s\n' "$listed" | names)
-for name in $containers; do
-  bounded docker "$@" rm -f "$name" >/dev/null || { echo "cleanup-stale-jobs: could not remove container $name" >&2; status=1; }
-done
+if [ -n "$containers" ]; then
+  # shellcheck disable=SC2086 # names are validated by names() and contain no spaces
+  bounded docker "$@" rm -f $containers >/dev/null || { echo "cleanup-stale-jobs: could not remove container(s): $(echo $containers)" >&2; status=1; }
+fi
 listed=$(bounded docker "$@" volume ls -q --filter label=wase.download.job=true) || { echo "cleanup-stale-jobs: docker volume ls failed" >&2; status=1; }
 volumes=$(printf '%s\n' "$listed" | names)
-for name in $volumes; do
-  bounded docker "$@" volume rm "$name" >/dev/null || { echo "cleanup-stale-jobs: could not remove volume $name" >&2; status=1; }
-done
-if [ -d "$job_root" ]; then
+if [ -n "$volumes" ]; then
+  # shellcheck disable=SC2086
+  bounded docker "$@" volume rm $volumes >/dev/null || { echo "cleanup-stale-jobs: could not remove volume(s): $(echo $volumes)" >&2; status=1; }
+fi
+if [ -L "$job_root" ]; then
+  echo "cleanup-stale-jobs: $job_root is a symlink; job directories not cleaned" >&2; status=1
+elif [ -d "$job_root" ]; then
   find "$job_root" -mindepth 1 -maxdepth 1 -type d -name 'wase-job-*' -exec rm -rf {} + || status=1
 fi
 count() { printf '%s\n' $1 | grep -c . || true; }

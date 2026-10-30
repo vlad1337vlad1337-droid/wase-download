@@ -31,7 +31,7 @@ export function reject(req,res,status,message=''){
 // Conversion errors are JSON {code,message}; the UI translates by code.
 export function fail(req,res,status,code,message){
  if(res.destroyed||res.headersSent)return false;
- res.setHeader('Content-Type','application/json');res.setHeader('Cache-Control','no-store');
+ res.removeHeader('Content-Length');res.removeHeader('Content-Disposition');res.setHeader('Content-Type','application/json');res.setHeader('Cache-Control','no-store');
  if(status===503)res.setHeader('Retry-After','60');
  reject(req,res,status,JSON.stringify({code,message}));return true;
 }

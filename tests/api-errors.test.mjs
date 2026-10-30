@@ -53,3 +53,10 @@ test('a deadline answers 504 timeout when nothing was sent yet',async()=>{
  try{const response=await fetch(`http://127.0.0.1:${server.address().port}/`,{signal:AbortSignal.timeout(3000)});assert.equal(response.status,504);assert.deepEqual(await response.json(),{code:'timeout',message:'Conversion took too long'});}
  finally{server.closeAllConnections();server.close();}
 });
+
+test('an error after file headers were prepared does not advertise the file length',async()=>{
+ const server=http.createServer((req,res)=>{res.setHeader('Content-Length',100000);res.setHeader('Content-Disposition','attachment; filename="x"');fail(req,res,422,'engine_failed','Could not convert');});
+ server.listen(0,'127.0.0.1');await once(server,'listening');
+ try{const response=await fetch(`http://127.0.0.1:${server.address().port}/`,{signal:AbortSignal.timeout(3000)});assert.equal(response.headers.get('content-disposition'),null);assert.deepEqual(await response.json(),{code:'engine_failed',message:'Could not convert'});}
+ finally{server.closeAllConnections();server.close();}
+});

@@ -176,6 +176,7 @@ class ConverterOutputCoverage(unittest.TestCase):
   self.ok('emf',emf);self.bad('emf',b'\0'*88)
   self.ok('wmf',b'\xd7\xcd\xc6\x9a'+b'\0'*18+struct.pack('<HH',1,9)+b'\0'*14);self.bad('wmf',b'not a metafile'*3)
   self.ok('dxf','999\nDXF\n0\nSECTION\n2\nENTITIES\n0\nENDSEC\n0\nEOF\n');self.bad('dxf','0\nSECTION\n')
+  self.ok('dxf','0\nSECTION\n2\nENTITIES\n'+'0\nLINE\n8\n0\n'*300000+'0\nENDSEC\n0\nEOF\n\n\n\n')  # > 2 MiB, trailing blank lines
   self.ok('stlb',b'\0'*80+struct.pack('<I',1)+b'\0'*50);self.bad('stlb',b'\0'*80+struct.pack('<I',2)+b'\0'*50)
   self.ok('mat',b'MATLAB 5.0 MAT-file, Platform: x'.ljust(128,b' '));self.bad('mat',b'3 4\n0 0 0\n')  # vips matrix text
  def test_glb_and_gltf_require_version_two(self):
@@ -193,6 +194,7 @@ class ConverterOutputCoverage(unittest.TestCase):
   self.ok('html5','<h1 id="x">A</h1><p>b</p>');self.ok('revealjs','<section id="a"><h1>A</h1></section>');self.bad('html4','no markup')
   self.ok('fb2','<?xml version="1.0"?><FictionBook xmlns="http://www.gribuser.ru/xml/fictionbook/2.0"><body/></FictionBook>')
   self.bad('fb2','<?xml version="1.0"?><html/>');self.bad('fb2','<!DOCTYPE x [<!ENTITY a "b">]><FictionBook/>')
+  self.bad('fb2','<!--'+'x'*70000+'--><!DOCTYPE x [<!ENTITY a "b">]><FictionBook/>')  # entity hidden past the first 64 KiB
   self.ok('toml','title = "x"\n[owner]\nname = "y"\n');self.bad('toml',"[{name = 'alpha'}]\n")  # Dasel's CSV array export is not TOML
   self.ok('ipynb','{"cells":[],"nbformat":4}');self.bad('ipynb','{"cells":{}}')
   self.ok('geojson','{"type":"FeatureCollection","features":[]}');self.bad('assjson','[1,2]')

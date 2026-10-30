@@ -34,6 +34,6 @@ test('pre-start cleanup removes only Wase job containers, volumes and directorie
 
 test('pre-start cleanup reports a failure instead of claiming a clean state',async()=>{
  const ctx=await setup();
- try{const result=run(ctx,{FAKE_FAIL:'1'});assert.equal(result.status,1);assert.match(result.stderr,/could not remove container wase-wase-job-Ab12Cd-1/);}
+ try{const result=run(ctx,{FAKE_FAIL:'1'});assert.equal(result.status,1);assert.match(result.stderr,/could not remove container\(s\): wase-wase-job-Ab12Cd-1/);}
  finally{await rm(ctx.dir,{recursive:true,force:true});}
 });

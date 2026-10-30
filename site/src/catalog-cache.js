@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 import {publicCatalogue} from '../../backend/conversion-policy.mjs';
-const key='wase-formats-v3',maxAge=24*60*60*1000;
+// v4: engine-level removals (e.g. video -> mtv) cannot be re-derived from a cached body.
+const key='wase-formats-v4',maxAge=24*60*60*1000;
 export function validCatalog(data){
  if(!data||!Array.isArray(data.groups)||!data.groups.length||data.groups.length>2000||!data.inputs||typeof data.inputs!=='object'||Array.isArray(data.inputs))return false;
  const inputs=Object.entries(data.inputs);
@@ -15,8 +16,8 @@ export function prepareCatalog(data){
  return result;
 }
 export function readFormatCache(storage,now=Date.now()){
- try{const raw=storage.getItem(key);if(!raw||raw.length>2000000)return null;const entry=JSON.parse(raw);return entry.version===3&&Number.isFinite(entry.savedAt)&&now>=entry.savedAt&&now-entry.savedAt<maxAge?prepareCatalog(entry.data):null;}catch{return null;}
+ try{const raw=storage.getItem(key);if(!raw||raw.length>2000000)return null;const entry=JSON.parse(raw);return entry.version===4&&Number.isFinite(entry.savedAt)&&now>=entry.savedAt&&now-entry.savedAt<maxAge?prepareCatalog(entry.data):null;}catch{return null;}
 }
 export function writeFormatCache(storage,data,now=Date.now()){
- try{storage.setItem(key,JSON.stringify({version:3,savedAt:now,data:prepareCatalog(data)}));}catch{}
+ try{storage.setItem(key,JSON.stringify({version:4,savedAt:now,data:prepareCatalog(data)}));}catch{}
 }

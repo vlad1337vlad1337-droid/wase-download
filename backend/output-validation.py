@@ -257,15 +257,24 @@ def validate_markup(path):
  # require text that actually contains element markup.
  if not re.search(r'<[A-Za-z][\w:.-]*[\s/>]',validate_text_sample(path)):raise ValueError('No markup in output')
 
+def scan_for(path,pattern,chunk=1024*1024):
+ # Streams the whole file with an overlap, so a marker cannot hide past a prefix.
+ with open(path,'rb') as source:
+  tail=b''
+  while block:=source.read(chunk):
+   if re.search(pattern,tail+block,re.I):return True
+   tail=block[-64:]
+ return False
+
 def validate_xml(path,root=None,limit=200*1024*1024):
  import xml.etree.ElementTree as ET
  if os.path.getsize(path)>limit:raise ValueError('XML output exceeds validation limits')
- with open(path,'rb') as source:
-  if re.search(br'<!ENTITY',source.read(65536),re.I):raise ValueError('Unsafe XML output')
+ if scan_for(path,br'<!ENTITY'):raise ValueError('Unsafe XML output')
+ # One streaming pass; cleared elements keep memory flat for large books/scenes.
  first=None
- for event,element in ET.iterparse(path,events=('start',)):
-  first=element.tag.rsplit('}',1)[-1];break
- for _ in ET.iterparse(path):pass
+ for event,element in ET.iterparse(path,events=('start','end')):
+  if first is None:first=element.tag.rsplit('}',1)[-1]
+  if event=='end':element.clear()
  if first is None or root and first not in root:raise ValueError('Unexpected XML document root')
 
 def validate_json(path,kind=dict,keys=()):
@@ -313,7 +322,10 @@ def validate_wmf(path):
 
 def validate_dxf(path):
  lines=[line.strip() for line in validate_text_sample(path).splitlines()]
- if 'SECTION' not in lines or 'EOF' not in lines[-3:]:raise ValueError('Invalid DXF structure')
+ # The prefix sample may not reach the end of a large drawing; read the tail.
+ with open(path,'rb') as source:
+  source.seek(max(0,os.path.getsize(path)-256));tail=source.read().decode('utf-8','replace').split()
+ if 'SECTION' not in lines or tail[-1:]!=['EOF']:raise ValueError('Invalid DXF structure')
 
 def validate_pdb(path):
  # Palm database (calibre e-books and ImageMagick Palm images): 78-byte header
@@ -356,9 +368,9 @@ def validate(ext,path):
  elif ext in ODF_KINDS:validate_odf(ext,path)
  elif ext in OOXML:validate_ooxml(ext,path)
  elif ext in ('epub2','epub3','kepub.epub'):
+  validate_zip(path,required=['mimetype'])
   with zipfile.ZipFile(path) as archive:
-   if archive.read('mimetype')!=b'application/epub+zip':raise ValueError('Invalid EPUB mimetype')
-  validate_zip(path)
+   if archive.getinfo('mimetype').file_size>64 or archive.read('mimetype')!=b'application/epub+zip':raise ValueError('Invalid EPUB mimetype')
  elif ext=='htmlz':validate_zip(path,suffix='.html')
  elif ext=='txtz':validate_zip(path,suffix='.txt')
  elif ext=='chunkedhtml':validate_zip(path,suffix='.html')

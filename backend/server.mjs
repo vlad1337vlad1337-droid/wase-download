@@ -17,7 +17,7 @@ const allowedOrigins=new Set((process.env.PUBLIC_ORIGINS||'http://127.0.0.1:5188
 const image=process.env.CONVERTX_IMAGE||'wase-converter:20261002';
 const docker=process.env.DOCKER_CONTEXT?['--context',process.env.DOCKER_CONTEXT]:[];
 const script=resolve('backend/engine.mjs');const jobRoot=resolve(process.env.JOB_ROOT||'backend/.jobs');await mkdir(jobRoot,{recursive:true});
-function run(args,signal){return new Promise((yes,no)=>{const p=spawn('docker',[...docker,...args],{signal,killSignal:'SIGKILL'});let out='',err='';p.stdout.on('data',b=>{out+=b;if(out.length>8e6)p.kill('SIGKILL');});p.stderr.on('data',b=>{err=(err+b).slice(-4000);});p.on('error',no);p.on('exit',c=>{if(c===0){yes(out);return;}const error=new Error(process.env.CONVERTER_DEBUG==='1'?err.slice(-1200):'Conversion failed');error.exitCode=c;error.stderr=err;no(error);});});}
+function run(args,signal){return new Promise((yes,no)=>{const p=spawn('docker',[...docker,...args],{signal,killSignal:'SIGKILL'});let out='',err='';p.stdout.on('data',b=>{out+=b;if(out.length>8e6)p.kill('SIGKILL');});p.stderr.on('data',b=>{err=(err+b).slice(-4000);});p.on('error',no);p.on('close',c=>{if(c===0){yes(out);return;}const error=new Error(process.env.CONVERTER_DEBUG==='1'?err.slice(-1200):'Conversion failed');error.exitCode=c;error.stderr=err;no(error);});});}
 // Removal waits longer than the old 3 s under load, but shutdown keeps the short
 // deadline so active cleanup still fits the unit's 20-second stop budget.
 const positive=(value,fallback)=>Number(value)>0?Number(value):fallback;
