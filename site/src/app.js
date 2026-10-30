@@ -19,6 +19,7 @@ import {categoryLabels} from './seo.js';
 import { inspect,convert } from './convert.js';
 import {initResultPreview} from './result-preview.js';
 import {outputMime,resultsComplete} from './result-preview-policy.js';
+import {fillCopy,statusCode,serverErrorCodes} from './server-copy.js';
 initFormatDialogs();
 initCommunity();
 const mascotState=initMascots(document.querySelector('.converter-shell'));
@@ -61,6 +62,27 @@ if($('converter')){
  }
 
  function focusDownloadIfIdle(keyboard){if(keyboard&&[document.body,$('convert'),$('download-zip')].includes(document.activeElement)){const link=!downloadReady.hidden?downloadReady:!partialZip.hidden?partialZip:null;link?.focus({preventScroll:true});}}
+ const serverMessage=code=>fillCopy(t.serverErrors[code]||t.serverErrors.engine_failed,{limit:fileLimit,target});
+ // Update one row in place: progress events must not rebuild the whole queue.
+ function showProgress(item,phase,percent){
+  if(item.phase===phase&&item.progress===percent)return;item.phase=phase;item.progress=percent;
+  const row=document.querySelector(`.file-row[data-id="${item.id}"]`),text=phase==='upload'?fillCopy(t.uploading,{percent}):t.converting;if(!row)return;
+  row.querySelector('.file-status').textContent=text;const bar=row.querySelector('.file-progress');if(bar){bar.value=phase==='upload'?percent:100;bar.setAttribute('aria-label',text);}
+ }
+ // XHR reports upload progress (fetch cannot); errors carry the API's code.
+ function uploadFile(item,signal){return new Promise((resolve,reject)=>{
+  if(signal.aborted){reject(new Error('cancelled'));return;}
+  const xhr=new XMLHttpRequest(),cancel=()=>xhr.abort(),settle=()=>signal.removeEventListener('abort',cancel),failWith=code=>reject(Object.assign(new Error('server'),{code}));
+  signal.addEventListener('abort',cancel,{once:true});
+  xhr.open('POST',`/api/convert?from=${encodeURIComponent(item.type.toLowerCase())}&to=${encodeURIComponent(target.toLowerCase())}`);xhr.responseType='blob';
+  xhr.upload.onprogress=event=>{if(event.lengthComputable&&event.total)showProgress(item,'upload',Math.min(99,Math.floor(event.loaded/event.total*100)));};
+  xhr.upload.onload=()=>showProgress(item,'convert',100);
+  xhr.onload=()=>{settle();if(xhr.status>=200&&xhr.status<300){resolve({blob:xhr.response,zipped:(xhr.getResponseHeader('content-type')||'').includes('application/zip')});return;}
+   const fallback=statusCode(xhr.status);Promise.resolve(xhr.response?.text()).then(text=>{const code=JSON.parse(text).code;failWith(serverErrorCodes.includes(code)?code:fallback);}).catch(()=>failWith(fallback));};
+  xhr.onerror=()=>{settle();failWith('network');};
+  xhr.onabort=()=>{settle();reject(new Error('cancelled'));};
+  xhr.send(item.file);
+ });}
  function downloadFile(url,name){const a=document.createElement('a');a.href=url;a.download=name;a.hidden=true;document.body.append(a);a.click();setTimeout(()=>a.remove(),1000);}
  const announce=(message,error=false)=>{$('announcement').textContent=message;$('announcement').classList.toggle('error',error);};
  const size=n=>n>=1048576?`${(n/1048576).toFixed(1)} ${t.mb}`:`${Math.max(1,Math.round(n/1024))} ${t.kb}`;
@@ -76,7 +98,7 @@ if($('converter')){
   mascotState?.(busy?'processing':items.some(i=>i.error)?'error':items.length&&items.every(i=>i.status==='done')?'success':'idle');$('converter').classList.toggle('is-converting',busy);$('converter').setAttribute('aria-busy',String(busy||adding||zipBusy));$('workspace').hidden=!items.length&&!adding;$('converter').classList.toggle('has-files',!!items.length||adding);$('file-count').textContent=adding&&!items.length?t.reading:`${t.files} · ${items.length}`;$('file-list').replaceChildren();
   for(const i of items){const row=document.createElement('article');row.className='file-row'+(i.status==='working'?' is-working':'');row.dataset.id=String(i.id);
    const img=document.createElement('img');img.hidden=!i.previewable&&!i.result?.blob.type.startsWith('image/');img.loading='lazy';img.decoding='async';img.className='file-preview';img.alt=i.file.name;img.src=i.result?.blob.type.startsWith('image/')?i.resultUrl:i.url;row.append(img);const info=document.createElement('div');info.style.minWidth='0';const name=document.createElement('div');name.className='file-name';name.textContent=i.file.name;info.append(name);
-   const meta=document.createElement('div');meta.className='file-meta';meta.textContent=`${i.type}${i.width?` · ${i.width} × ${i.height}`:''} · ${size(i.file.size)}`+(i.result?` → ${target} · ${size(i.result.blob.size)}`:'');info.append(meta);const status=document.createElement('div');status.className='file-status'+(i.status==='done'?' is-done':i.error?' is-error':'');status.textContent=i.error?i.error==='server'?t.serverError:t.errors[i.error]||t.failed:i.status==='working'?t.converting:i.status==='done'?t.done:t.queued;info.append(status);row.append(info);
+   const meta=document.createElement('div');meta.className='file-meta';meta.textContent=`${i.type}${i.width?` · ${i.width} × ${i.height}`:''} · ${size(i.file.size)}`+(i.result?` → ${target} · ${size(i.result.blob.size)}`:'');info.append(meta);const status=document.createElement('div');status.className='file-status'+(i.status==='done'?' is-done':i.error?' is-error':'');status.textContent=i.error?i.error==='server'?serverMessage(i.errorCode):t.errors[i.error]||t.failed:i.status==='working'?(i.phase==='upload'?fillCopy(t.uploading,{percent:i.progress}):t.converting):i.status==='done'?t.done:t.queued;if(i.status==='working'&&serverMode()){const bar=document.createElement('progress');bar.className='file-progress';bar.max=100;bar.value=i.phase==='upload'?i.progress:100;bar.setAttribute('aria-label',status.textContent);status.after(bar);}info.append(status);row.append(info);
    if(i.resultUrl){const actions=document.createElement('div');actions.className='result-actions';const view=document.createElement('button');view.type='button';view.className='secondary preview-button';view.textContent=t.preview;view.setAttribute('aria-label',`${t.preview}: ${i.outputName}`);view.onclick=()=>preview(i);actions.append(view);const a=document.createElement('a');a.className='download';a.href=i.resultUrl;a.download=i.outputName;a.textContent=t.download;a.addEventListener('click',()=>a.classList.add('is-saved'),{once:true});actions.append(a);row.append(actions);}const remove=document.createElement('button');remove.type='button';remove.className='remove';remove.textContent='×';remove.setAttribute('aria-label',`${t.remove}: ${i.file.name}`);remove.disabled=locked;remove.onclick=()=>removeItem(i);(row.querySelector('.result-actions')||row).append(remove);$('file-list').append(row);
   }
   $('queue-scroll').scrollTop=listScroll;
@@ -93,12 +115,12 @@ if($('converter')){
     try{
      let data;
      if(serverMode()){
-      if(file.size>fileLimit*1024*1024)throw new Error('size');const lower=file.name.toLowerCase();const type=Object.keys(catalog).filter(x=>lower.endsWith('.'+x)).sort((a,b)=>b.length-a.length)[0];
+      if(!file.size)throw new Error('empty');if(file.size>fileLimit*1024*1024)throw new Error('size');const lower=file.name.toLowerCase();const type=Object.keys(catalog).filter(x=>lower.endsWith('.'+x)).sort((a,b)=>b.length-a.length)[0];
       if(!catalog?.[type])throw new Error('type');data={type:type.toUpperCase(),url:URL.createObjectURL(file),previewable:/^(png|jpg|jpeg|webp|gif|bmp|svg)$/.test(type)};
      }else{data=await inspect(file,{signal:current.signal});data.previewable=true;}
      if(current.signal.aborted){URL.revokeObjectURL(data.url);break;}
      items.push({...data,file,id:++nextId,status:'queued'});render();
-    }catch(e){if(current.signal.aborted)break;const message=e.message==='size'?t.fileTooLarge.replace('{limit}',String(serverMode()?fileLimit:20)):e.message==='type'?t.unsupportedFile:t.errors[e.message]||t.errors.decode;announce(`${file.name}: ${message}`,true);}
+    }catch(e){if(current.signal.aborted)break;const message=e.message==='size'?t.fileTooLarge.replace('{limit}',String(serverMode()?fileLimit:20)):e.message==='type'?t.unsupportedFile:e.message==='empty'?t.serverErrors.empty:t.errors[e.message]||t.errors.decode;announce(`${file.name}: ${message}`,true);}
    }
   }catch(e){if(!current.signal.aborted)announce(t.errors[e.message]||t.failed,true);}
   finally{
@@ -152,7 +174,7 @@ function setFormats(id,values){$(id)._formats=values;$(id)._category='all';const
   }catch(e){announce(current.signal.aborted?t.errors.cancelled:e.message==='zipLimit'?t.zipLimit:t.failed,!current.signal.aborted);}
   finally{zipBusy=false;if(controller===current)controller=null;render();focusDownloadIfIdle(keyboard);}
  };
- $('convert').onclick=async event=>{const keyboard=event?.detail===0;if(busy||adding||zipBusy||!items.length||!compatible||target==='AUTO')return;if(resultsComplete(items)){if(items.length>1){$('download-zip').onclick(event);}else{downloadFile(items[0].resultUrl,items[0].outputName);}return;}busy=true;controller=new AbortController();const current=controller,opts={detail:$('detail').value,colors:Number($('colors').value),quality:Number($('quality').value),edge:Number($('edge').value)};render();announce('');for(const i of items){if(current.signal.aborted)break;if(i.status==='done'&&i.result)continue;if(i.resultUrl)URL.revokeObjectURL(i.resultUrl);delete i.resultUrl;delete i.result;delete i.error;i.status='working';render();try{let result;if(serverMode()){const r=await fetch(`/api/convert?from=${encodeURIComponent(i.type.toLowerCase())}&to=${encodeURIComponent(target.toLowerCase())}`,{method:'POST',body:i.file,signal:current.signal});if(!r.ok)throw new Error(r.status===429?'serverBusy':r.status===413?'uploadLimit':'server');const blob=await r.blob();const zipped=r.headers.get('content-type')?.includes('application/zip');result={extension:zipped?'zip':target.toLowerCase(),blob:new Blob([blob],{type:outputMime(zipped?'zip':target)})};}else{result=await convert(i,target,opts,current.signal);result.blob=await brandBlob(result.blob,result.extension||target.toLowerCase());}if(current.signal.aborted)throw new Error('cancelled');i.result=result;i.resultUrl=URL.createObjectURL(result.blob);i.outputName=i.file.name.replace(/\.[^.]+$/,'')+' - wase.download.'+(result.extension||target.toLowerCase());i.status='done';}catch(e){i.error=current.signal.aborted?'cancelled':e.message;i.status='failed';}render();}busy=false;controller=null;render();focusDownloadIfIdle(keyboard);announce(current.signal.aborted?t.errors.cancelled:items.some(i=>i.error)?t.failed:t.done,items.some(i=>i.error));};
+ $('convert').onclick=async event=>{const keyboard=event?.detail===0;if(busy||adding||zipBusy||!items.length||!compatible||target==='AUTO')return;if(resultsComplete(items)){if(items.length>1){$('download-zip').onclick(event);}else{downloadFile(items[0].resultUrl,items[0].outputName);}return;}busy=true;controller=new AbortController();const current=controller,opts={detail:$('detail').value,colors:Number($('colors').value),quality:Number($('quality').value),edge:Number($('edge').value)};render();announce('');for(const i of items){if(current.signal.aborted)break;if(i.status==='done'&&i.result)continue;if(i.resultUrl)URL.revokeObjectURL(i.resultUrl);delete i.resultUrl;delete i.result;delete i.error;i.status='working';render();try{let result;if(serverMode()){const {blob,zipped}=await uploadFile(i,current.signal);result={extension:zipped?'zip':target.toLowerCase(),blob:new Blob([blob],{type:outputMime(zipped?'zip':target)})};}else{result=await convert(i,target,opts,current.signal);result.blob=await brandBlob(result.blob,result.extension||target.toLowerCase());}if(current.signal.aborted)throw new Error('cancelled');i.result=result;i.resultUrl=URL.createObjectURL(result.blob);i.outputName=i.file.name.replace(/\.[^.]+$/,'')+' - wase.download.'+(result.extension||target.toLowerCase());i.status='done';}catch(e){i.error=current.signal.aborted?'cancelled':e.message;i.errorCode=e.code;i.status='failed';}delete i.phase;delete i.progress;render();if(['paused','rate_limited'].includes(i.errorCode))break;}busy=false;controller=null;render();focusDownloadIfIdle(keyboard);const failed=items.filter(i=>i.error),codes=new Set(failed.map(i=>i.error==='server'?i.errorCode:i.error));announce(current.signal.aborted?t.errors.cancelled:!failed.length?t.done:codes.size===1&&failed[0].error==='server'?serverMessage(failed[0].errorCode):t.failed,!!failed.length);};
  // The built-in example is PNG; do not mislabel it as a document/font fixture.
  $('example').hidden=!['AUTO','PNG','JPG','JPEG','WEBP','GIF','BMP','SVG','AVIF','HEIC','HEIF','TIF','TIFF','ICO'].includes(document.body.dataset.source||'AUTO');
  $('example').onclick=()=>{const canvas=document.createElement('canvas');canvas.width=320;canvas.height=240;const c=canvas.getContext('2d');c.fillStyle='#faf9f6';c.fillRect(0,0,320,240);c.fillStyle='#f44937';c.beginPath();c.arc(130,120,66,0,Math.PI*2);c.fill();c.fillStyle='#252624';c.fillRect(153,57,75,125);canvas.toBlob(b=>{if(b)addFiles([new File([b],'wase-example.png',{type:'image/png'})]);},'image/png');};

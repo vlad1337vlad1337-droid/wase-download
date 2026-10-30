@@ -28,10 +28,18 @@ export function reject(req,res,status,message=''){
  // Do not drain an unbounded upload after rejecting it; close after the response.
  res.once('finish',()=>{if(!req.complete)req.destroy();});
 }
+// Conversion errors are JSON {code,message}; the UI translates by code.
+export function fail(req,res,status,code,message){
+ if(res.destroyed||res.headersSent)return false;
+ res.setHeader('Content-Type','application/json');res.setHeader('Cache-Control','no-store');
+ if(status===503)res.setHeader('Retry-After','60');
+ reject(req,res,status,JSON.stringify({code,message}));return true;
+}
 export function occupancy({perClient=2,total=9}={}){
  const clients=new Map();let active=0;
  return {enter(key){const count=clients.get(key)||0;if(count>=perClient||active>=total)return null;clients.set(key,count+1);active++;let released=false;return ()=>{if(released)return;released=true;active--;const next=clients.get(key)-1;if(next)clients.set(key,next);else clients.delete(key);};},get active(){return active;}};
 }
-export function deadline(req,res,controller,ms){
- const timer=setTimeout(()=>{controller.abort();req.destroy();res.destroy();},ms);timer.unref();return ()=>clearTimeout(timer);
+// onTimeout may answer before the sockets close; return true when it did.
+export function deadline(req,res,controller,ms,onTimeout){
+ const timer=setTimeout(()=>{controller.abort();if(onTimeout?.()){setTimeout(()=>{req.destroy();res.destroy();},5000).unref();return;}req.destroy();res.destroy();},ms);timer.unref();return ()=>clearTimeout(timer);
 }
