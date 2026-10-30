@@ -4,14 +4,14 @@ import {readFileSync} from 'node:fs';
 import {publicCatalogue,publicRegistry} from '../backend/conversion-policy.mjs';
 
 test('FFmpeg muxer labels cannot advertise sound or subtitles for uploaded images',()=>{
- const outputs=['wma','dts','caf','srt','h261','mxf','png','svg','pdf','mp4'];
+ const outputs=['wma','ac3','caf','srt','nut','vob','png','svg','pdf','mp4'];
  const targets=Object.fromEntries(outputs.map(output=>[output,['ffmpeg']]));
- const registry=publicRegistry({matrix:{png:targets,gif:targets,mp4:targets},categories:{png:'image',gif:'image',mp4:'video',wma:'document',dts:'document',caf:'document',srt:'document',h261:'document',mxf:'document',svg:'vector',pdf:'document'}});
+ const registry=publicRegistry({matrix:{png:targets,gif:targets,mp4:targets},categories:{png:'image',gif:'image',mp4:'video',wma:'document',ac3:'document',caf:'document',srt:'document',nut:'document',vob:'document',svg:'vector',pdf:'document'}});
  assert.deepEqual(Object.keys(registry.matrix.png),['png','svg','pdf']);
- assert.deepEqual(Object.keys(registry.matrix.gif),['h261','mxf','png','svg','pdf','mp4']);
+ assert.deepEqual(Object.keys(registry.matrix.gif),['nut','vob','png','svg','pdf','mp4']);
  assert.deepEqual(Object.keys(registry.matrix.mp4),outputs);
  assert.equal(registry.categories.wma,'audio');
- assert.equal(registry.categories.mxf,'video');
+ assert.equal(registry.categories.vob,'video');
  const cached=publicCatalogue({inputs:{png:0,gif:0,mp4:0},groups:[outputs],categories:registry.categories});
  for(const input of ['png','gif','mp4'])assert.deepEqual(cached.groups[cached.inputs[input]],Object.keys(registry.matrix[input]));
 });

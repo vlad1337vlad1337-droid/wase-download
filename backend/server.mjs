@@ -1,4 +1,4 @@
-import {publicRegistry} from './conversion-policy.mjs';
+import {publicRegistry,catalogueResponse} from './conversion-policy.mjs';
 import {brandedFile,zipFiles} from './output-stream.mjs';
 import {rateLimit,clientIP,reject,occupancy,deadline,matchesETag} from './request-guard.mjs';
 import {pipeline} from 'node:stream/promises';
@@ -59,7 +59,7 @@ function readyContainer(args,signal){return new Promise((yes,no)=>{
  });}
 const base=['run','--rm','--init','--network','none','--read-only','--cap-drop','ALL','--security-opt','no-new-privileges','--user','1000:1000','-e','HOME=/home/convertx','-e','XDG_CONFIG_HOME=/tmp/config','-e','XDG_CACHE_HOME=/tmp/cache','--cpus',process.env.CONVERT_CPU||'0.25','--cpu-shares','128',...(process.env.CONVERT_CGROUP?['--cgroup-parent',process.env.CONVERT_CGROUP]:[]),'--memory','768m','--pids-limit','128','-v',`${resolve('backend/extra.py')}:/extra.py:ro`,'--tmpfs','/tmp:rw,size=128m','--tmpfs','/home/convertx:rw,size=64m,mode=1777','-v',`${resolve('backend/output-validation.py')}:/output-validation.py:ro`,'-v',`${script}:/engine.mjs:ro`,'--entrypoint','bun'];
 const registry=publicRegistry(JSON.parse(await run([...base,image,'/engine.mjs','catalog'])));const catalog=registry.matrix||registry;
-const groups=[],inputGroups={},groupIds=new Map();for(const [input,targets]of Object.entries(catalog)){const values=Object.keys(targets).sort(),key=JSON.stringify(values);if(!groupIds.has(key)){groupIds.set(key,groups.length);groups.push(values);}inputGroups[input]=groupIds.get(key);}const publicCatalog=JSON.stringify({groups,inputs:inputGroups,categories:registry.categories||{},limits:{fileMB:maxFileMB,batch:20}});
+const publicCatalog=JSON.stringify(catalogueResponse({...registry,matrix:catalog},{fileMB:maxFileMB,batch:20}));
 const handleDiscovery=discoveryHandler(registry,allowedOrigins,maxFileMB);
 let active=0;const waiting=[];
 function acquire(signal){if(signal.aborted)return Promise.reject(new Error('Cancelled'));if(active<maxConcurrent){active++;return Promise.resolve();}return new Promise((resolve,reject)=>{const ticket={run(){signal.removeEventListener('abort',cancel);active++;resolve();}};function cancel(){const index=waiting.indexOf(ticket);if(index!==-1)waiting.splice(index,1);reject(new Error('Cancelled'));}waiting.push(ticket);signal.addEventListener('abort',cancel,{once:true});});}
