@@ -13,6 +13,7 @@ test('public search and AI readers share a wildcard policy that excludes all API
  assert.deepEqual(users,['*']); // No specific bot group can lose API exclusions.
  assert.match(policy,/^Allow: \/$/m);assert.match(policy,/^Disallow: \/api\/$/m);assert.match(policy,/^Disallow: \/api\$$/m);
  assert.match(policy,/^Sitemap: https:\/\/wase.download\/sitemap.xml$/m);
+ assert.match(policy,/^Disallow: \/\*\?to=$/m);assert.match(policy,/^Disallow: \/\*\/formats\/\*\/\?to=$/m);
  for(const bot of searchBots)assert.ok(!policy.includes(bot),bot+' must retain the same public policy');
  assert.ok(!/Crawl-delay|Disallow:\s*\/$/m.test(policy));
 });
@@ -62,4 +63,13 @@ test('structured data and social descriptions cannot break out into executable H
  const title='</script><script>bad()</script>',metadata=searchMetadata({title,description:'"<unsafe>',lang:'en',path:'/en/'});
  assert.ok(!metadata.includes('<script>bad()'));assert.ok(!metadata.includes('content=""<unsafe>'));
  const schema=JSON.parse(metadata.match(/<script type="application\/ld\+json">([^<]+)<\/script>/)[1]);assert.equal(schema.name,title+' · wase.download');
+});
+
+test('format-page output preselections are not followed by crawlers',()=>{
+ for(const lang of ['en','ru'])for(const route of ['formats/png/','formats/mp4/']){
+  const html=read(`dist/${lang}/${route}index.html`),links=[...html.matchAll(/<a [^>]*href="[^"]*\?to=[^"]*"[^>]*>/g)].map(match=>match[0]);
+  assert.ok(links.length>10,route);
+  for(const link of links)assert.match(link,/ rel="nofollow"/,link);
+  assert.ok(!/<a href="\/[a-z]{2}\/[a-z0-9.-]+-to-[a-z0-9.-]+\/" rel="nofollow"/.test(html),'published pair pages stay followable');
+ }
 });
