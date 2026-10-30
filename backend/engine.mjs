@@ -72,12 +72,20 @@ async function traceRaster(){
   throw failure||new Error('Could not trace raster image');
  }finally{await rm(normalized,{force:true});}
 }
+// FFmpeg's image2 muxer writes one file per frame and fails on a video's second
+// frame unless given a pattern. Still-image targets keep only the first frame.
+const stillFrames=new Set('png jpg jpeg bmp ico tif tiff dpx exr jls ljpg pam pbm pcx pfm pgm pgmyuv phm ppm sgi tga xwd sun sunras ras rs im1 im8 im24 vbn xbm qoi hdr wbmp jp2 j2c j2k pix'.split(' '));
+// The RSO and GSM encoders accept mono only (GSM at 8 kHz) and FFmpeg does not
+// downmix for them, so every stereo upload failed.
+const monoAudio={rso:[],gsm:['-ar','8000']};
+// Assimp's "glb"/"gltf" exporters write glTF 1.0, which current viewers reject;
+// the .glb/.gltf extensions are expected to contain glTF 2.0.
 let conversionError;try{
 if(output==='svg'&&traceInputs.has(input))await traceRaster();else if(engine==='wasepresentation'){const filters={pdf:'impress_pdf_Export',pptx:'Impress MS PowerPoint 2007 XML',odp:'impress8'};await promisify(execFile)('soffice',['--headless','-env:UserInstallation=file:///tmp/wase-impress','--convert-to',output+':'+filters[output],'--outdir','/job',`/job/input.${input}`],{timeout:160000});}else if(engine==='wasefont'||engine==='wasearchive')await promisify(execFile)('python3',['/extra.py',engine,input,output],{timeout:170000});else if(output==='avif')await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,'-frames:v','1','-c:v','libaom-av1','-cpu-used','8','-crf','30','-still-picture','1','-threads','1','/job/output.avif'],{timeout:50000});else if(engine==='ffmpeg'&&['3gp','3g2'].includes(output)){
  // The 3G2 muxer defaults to AMR, whose encoder is absent in the pinned
  // image. Encode supported streams explicitly and retain the real muxer.
  await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,'-map','0:v:0?','-map','0:a:0?','-sn','-dn','-c:v','mpeg4','-q:v','5','-pix_fmt','yuv420p','-vf','scale=ceil(iw/2)*2:ceil(ih/2)*2','-c:a','aac','-b:a','128k','-threads','1','-f',output,`/job/output.${output}`],{timeout:60000});
-}else if(engine==='ffmpeg'&&['png','jpg','jpeg','bmp','ico','tif','tiff'].includes(output))await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,...(output==='ico'?['-vf','scale=256:256:force_original_aspect_ratio=decrease']:[]),'-frames:v','1','-threads','1',`/job/output.${output}`],{timeout:60000});else if(engine==='vips'&&output==='dzi')await promisify(execFile)('vips',['dzsave',`/job/input.${input}`,'/job/output']);else await engines[engine].convert(`/job/input.${input}`,engine==='pandoc'&&input==='pandoc native'?'native':input,output,`/job/output.${output}`);
+}else if(engine==='ffmpeg'&&stillFrames.has(output))await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,...(output==='ico'?['-vf','scale=256:256:force_original_aspect_ratio=decrease']:[]),'-frames:v','1','-threads','1',`/job/output.${output}`],{timeout:60000});else if(engine==='ffmpeg'&&Object.hasOwn(monoAudio,output))await promisify(execFile)('ffmpeg',['-nostdin','-y','-threads','1','-i',`/job/input.${input}`,'-vn','-ac','1',...monoAudio[output],'-threads','1',`/job/output.${output}`],{timeout:60000});else if(engine==='assimp'&&['glb','gltf'].includes(output))await promisify(execFile)('assimp',['export',`/job/input.${input}`,`/job/output.${output}`,`-f${output}2`],{timeout:60000});else if(engine==='vips'&&output==='dzi')await promisify(execFile)('vips',['dzsave',`/job/input.${input}`,'/job/output']);else await engines[engine].convert(`/job/input.${input}`,engine==='pandoc'&&input==='pandoc native'?'native':input,output,`/job/output.${output}`);
 
 }catch(error){conversionError=error;}
 
