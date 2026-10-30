@@ -27,6 +27,9 @@ test('every code the broker sends has a message; status fallback covers proxies'
 test('server uploads report progress and map failures by code',()=>{
  const app=readFileSync(new URL('../site/src/app.js',import.meta.url),'utf8');
  assert.match(app,/new XMLHttpRequest\(\)/);assert.match(app,/xhr\.upload\.onprogress=/);assert.match(app,/className='file-progress'/);
+ // The bar must be attached after the status joins the row (a detached
+ // status.after() silently dropped it).
+ assert.match(app,/info\.append\(status\);if\(i\.status==='working'&&serverMode\(\)\)\{const bar=[^}]*info\.append\(bar\);\}/);assert.doesNotMatch(app,/status\.after\(bar\)/);
  assert.match(app,/if\(!file\.size\)throw new Error\('empty'\)/,'empty files are rejected before upload');
  assert.doesNotMatch(app,/fetch\(`\/api\/convert/);
 });
