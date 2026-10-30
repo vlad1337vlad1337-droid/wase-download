@@ -129,4 +129,90 @@ class OutputValidation(unittest.TestCase):
   with patch.object(zipfile.ZipFile,'infolist',bomb),patch.object(zipfile.ZipFile,'open',side_effect=AssertionError('must not decompress')):
    with self.assertRaisesRegex(ValueError,'validation limits'):validation.validate('3mf',str(path))
 
+def package(path,entries):
+ with zipfile.ZipFile(path,'w',compression=zipfile.ZIP_DEFLATED) as archive:
+  for name,data in entries.items():archive.writestr(name,data,compress_type=zipfile.ZIP_STORED if name=='mimetype' else zipfile.ZIP_DEFLATED)
+def ooxml(main_type,part='xl/workbook.xml'):
+ return {'[Content_Types].xml':f'<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Override PartName="/{part}" ContentType="application/vnd.openxmlformats-officedocument.{main_type}"/></Types>','_rels/.rels':'<Relationships/>',part:'<workbook/>'}
+
+class ConverterOutputCoverage(unittest.TestCase):
+ """Validators for outputs that previously always failed with 422 (evidence run 2026-10-30)."""
+ def setUp(self):
+  self.folder=tempfile.TemporaryDirectory();self.addCleanup(self.folder.cleanup)
+ def file(self,name,data):
+  path=Path(self.folder.name)/name;path.write_bytes(data if isinstance(data,bytes) else data.encode());return str(path)
+ def ok(self,ext,data,name=None):self.assertEqual(validation.validate(ext,self.file(name or 'out.'+ext,data)),'passed')
+ def bad(self,ext,data,name=None):
+  with self.assertRaises(Exception):
+   if validation.validate(ext,self.file(name or 'out.'+ext,data))!='passed':raise ValueError('not validated')
+ def zipped(self,ext,entries):
+  path=str(Path(self.folder.name)/('pkg.'+ext));package(path,entries);return path
+ def test_office_open_xml_checks_the_declared_main_part(self):
+  self.assertEqual(validation.validate('xlsx',self.zipped('xlsx',ooxml('spreadsheetml.sheet.main+xml'))),'passed')
+  self.assertEqual(validation.validate('docm',self.zipped('docm',ooxml('wordprocessingml.document.macroEnabled.main+xml','word/document.xml'))),'passed')
+  # LibreOffice labels a macro-free template .dotm; Office rejects that file.
+  for ext,entries in [('dotm',ooxml('wordprocessingml.template.main+xml','word/document.xml')),('xlsx',{'other.txt':'x'}),('xlsx',ooxml('spreadsheetml.sheet.main+xml','xl/other.xml'))]:
+   with self.assertRaises(Exception):validation.validate(ext,self.zipped(ext,entries))
+ def test_open_document_spreadsheets_templates_and_drawings(self):
+  ns='urn:oasis:names:tc:opendocument:xmlns:office:1.0'
+  content=lambda kind:f'<office:document-content xmlns:office="{ns}"><office:body><office:{kind}/></office:body></office:document-content>'
+  self.assertEqual(validation.validate('ods',self.zipped('ods',{'mimetype':'application/vnd.oasis.opendocument.spreadsheet','content.xml':content('spreadsheet')})),'passed')
+  self.assertEqual(validation.validate('ott',self.zipped('ott',{'mimetype':'application/vnd.oasis.opendocument.text-template','content.xml':content('text')})),'passed')
+  manifest=lambda kind:f'<manifest:manifest xmlns:manifest="urn:oasis:names:tc:opendocument:xmlns:manifest:1.0"><manifest:file-entry manifest:media-type="application/vnd.oasis.opendocument.{kind}" manifest:full-path="/"/></manifest:manifest>'
+  self.assertEqual(validation.validate('odg',self.zipped('odg',{'META-INF/manifest.xml':manifest('graphics'),'content.xml':content('drawing')})),'passed')
+  for ext,entries in [('ods',{'mimetype':'application/vnd.oasis.opendocument.text','content.xml':content('spreadsheet')}),('odg',{'META-INF/manifest.xml':manifest('text'),'content.xml':content('drawing')})]:
+   with self.assertRaises(Exception):validation.validate(ext,self.zipped(ext,entries))
+ def test_epub_variants_and_calibre_zip_books(self):
+  for ext in ['epub3','kepub.epub']:self.assertEqual(validation.validate(ext,self.zipped(ext,{'mimetype':'application/epub+zip','OEBPS/content.opf':'<package/>'})),'passed')
+  self.assertEqual(validation.validate('htmlz',self.zipped('htmlz',{'index.html':'<p>x</p>'})),'passed')
+  with self.assertRaises(Exception):validation.validate('epub2',self.zipped('epub2',{'mimetype':'application/zip'}))
+  with self.assertRaises(Exception):validation.validate('txtz',self.zipped('txtz',{'index.html':'x'}))
+ def test_binary_ebook_3d_and_vector_signatures(self):
+  mobi=b'Unknown'.ljust(60,b'\0')+b'BOOKMOBI'+b'\0'*32
+  self.ok('mobi',mobi);self.ok('azw3',mobi);self.bad('mobi',b'\0'*60+b'TEXtREAd')
+  self.ok('lit',b'ITOLITLS'+b'\0'*40);self.ok('x',b'xof 0303txt 0032\n');self.ok('stp',b'ISO-10303-21;\nHEADER;')
+  self.bad('x',b'\x89PNG\r\n\x1a\n'+b'\0'*20)  # GraphicsMagick's mislabeled ".x"
+  emf=struct.pack('<II',1,88)+b'\0'*32+b' EMF'+b'\0'*44
+  self.ok('emf',emf);self.bad('emf',b'\0'*88)
+  self.ok('wmf',b'\xd7\xcd\xc6\x9a'+b'\0'*18+struct.pack('<HH',1,9)+b'\0'*14);self.bad('wmf',b'not a metafile'*3)
+  self.ok('dxf','999\nDXF\n0\nSECTION\n2\nENTITIES\n0\nENDSEC\n0\nEOF\n');self.bad('dxf','0\nSECTION\n')
+  self.ok('stlb',b'\0'*80+struct.pack('<I',1)+b'\0'*50);self.bad('stlb',b'\0'*80+struct.pack('<I',2)+b'\0'*50)
+  self.ok('mat',b'MATLAB 5.0 MAT-file, Platform: x'.ljust(128,b' '));self.bad('mat',b'3 4\n0 0 0\n')  # vips matrix text
+ def test_glb_and_gltf_require_version_two(self):
+  body=b'{"asset":{"version":"2.0"}}  '
+  def glb(version,extra=0):return b'glTF'+struct.pack('<II',version,20+len(body)+extra)+struct.pack('<I',len(body))+b'JSON'+body
+  self.ok('glb',glb(2));self.bad('glb',glb(1));self.bad('glb',glb(2,4))
+  self.ok('gltf','{"asset":{"version":"2.0"},"meshes":[]}');self.bad('gltf','{"asset":{"version":"1.0"}}');self.bad('gltf2','{"meshes":[]}')
+ def test_text_markup_and_data_formats(self):
+  for ext in ['rst','latex','asciidoc','org','yaml','tsv','typst']:self.ok(ext,'Заголовок\n=========\n\nText.\n')
+  for ext in ['rst','yaml']:
+   self.bad(ext,b'binary\0data');self.bad(ext,b'\xff\xfe\xfa');self.bad(ext,b'  \n')
+  self.ok('docbook','<section xml:id="a"><title>A</title></section><section/>')
+  self.ok('opendocument','<text:h text:outline-level="1">A</text:h>')
+  self.bad('jats','Plain text without elements')
+  self.ok('html5','<h1 id="x">A</h1><p>b</p>');self.ok('revealjs','<section id="a"><h1>A</h1></section>');self.bad('html4','no markup')
+  self.ok('fb2','<?xml version="1.0"?><FictionBook xmlns="http://www.gribuser.ru/xml/fictionbook/2.0"><body/></FictionBook>')
+  self.bad('fb2','<?xml version="1.0"?><html/>');self.bad('fb2','<!DOCTYPE x [<!ENTITY a "b">]><FictionBook/>')
+  self.ok('toml','title = "x"\n[owner]\nname = "y"\n');self.bad('toml',"[{name = 'alpha'}]\n")  # Dasel's CSV array export is not TOML
+  self.ok('ipynb','{"cells":[],"nbformat":4}');self.bad('ipynb','{"cells":{}}')
+  self.ok('geojson','{"type":"FeatureCollection","features":[]}');self.bad('assjson','[1,2]')
+ def test_large_text_is_checked_on_a_bounded_prefix(self):
+  path=self.file('big.latex','é'*(1024*1024+7))
+  self.assertEqual(validation.validate('latex',path),'passed')
+ def test_ffprobe_aliases_use_real_demuxer_names(self):
+  import subprocess
+  def probe(name):
+   result=subprocess.CompletedProcess([],0,json.dumps({'streams':[{'codec_type':'video'}],'format':{'format_name':name}}).encode(),b'')
+   return lambda command,**kwargs:result if command[0]=='ffprobe' else subprocess.CompletedProcess(command,1,b'',b'')
+  for ext,name,status in [('ts','mpegts','passed'),('vob','mpeg','passed'),('wma','asf','passed'),('m4b','mov,mp4,m4a,3gp,3g2,mj2','passed'),('264','h264','passed'),('al','alaw','passed'),('ts','mp3','produced-unvalidated'),('al','gsm','produced-unvalidated')]:
+   with patch.object(validation.subprocess,'run',side_effect=probe(name)):self.assertEqual(validation.validate(ext,self.file('out.'+ext,b'data')),status,ext)
+ def test_imagemagick_multi_frame_output_uses_first_frame_coder(self):
+  import subprocess
+  def run(command,**kwargs):
+   if command[0]=='ffprobe':return subprocess.CompletedProcess(command,1,b'',b'')
+   return subprocess.CompletedProcess(command,0,b'PSD\nPSD\n',b'')
+  with patch.object(validation.subprocess,'run',side_effect=run):
+   self.assertEqual(validation.validate('psd',self.file('out.psd',b'8BPS')),'passed')
+   self.assertEqual(validation.validate('png24',self.file('out.png24',b'8BPS')),'produced-unvalidated')
+
 if __name__=='__main__':unittest.main()
