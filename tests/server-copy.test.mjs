@@ -8,7 +8,7 @@ import {localeCodes} from '../site/src/locales.js';
 test('every locale translates every server error code and progress state',()=>{
  for(const lang of localeCodes){
   const copy=serverCopy[lang];assert.ok(copy,lang);
-  assert.match(copy.uploading,/\{percent\}/);
+  assert.match(copy.targetUnavailable,/\{source\}/);assert.match(copy.targetUnavailable,/\{target\}/);assert.match(copy.uploading,/\{percent\}/);
   assert.deepEqual(Object.keys(copy.errors).sort(),[...serverErrorCodes].sort(),lang);
   assert.match(copy.errors.too_large,/\{limit\}/);assert.match(copy.errors.engine_failed,/\{target\}/);
   if(lang!=='en')for(const code of serverErrorCodes)assert.notEqual(copy.errors[code],serverCopy.en.errors[code],`${lang}.${code} must not inherit English`);
