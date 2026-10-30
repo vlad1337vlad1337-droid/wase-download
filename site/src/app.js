@@ -35,7 +35,6 @@ document.addEventListener('click',event=>document.querySelectorAll('.choice').fo
 const counter=import.meta.env.VITE_METRIKA_ID;
 function startAnalytics(){if(!/^\d+$/.test(counter||'')||window.__waseAnalyticsStarted)return;window.__waseAnalyticsStarted=true;window.ym=window.ym||function(){(window.ym.a=window.ym.a||[]).push(arguments);};window.ym.l=Date.now();const script=document.createElement('script');script.src='https://mc.yandex.ru/metrika/tag.js';script.async=true;script.onload=()=>window.ym(Number(counter),'init',{clickmap:false,trackLinks:false,accurateTrackBounce:true,webvisor:false});document.head.append(script);}
 if(/^\d+$/.test(counter||'')){$('analytics-settings').hidden=false;const consent=store.get('wase-analytics');if(consent==='yes')startAnalytics();else if(!consent)$('consent').hidden=false;$('analytics-settings').onclick=()=>{$('consent').hidden=false;};document.querySelectorAll('[data-consent]').forEach(b=>b.onclick=()=>{const answer=b.dataset.consent;store.set('wase-analytics',answer);$('consent').hidden=true;if(answer==='yes')startAnalytics();else if(window.__waseAnalyticsStarted){window.ym?.(Number(counter),'destruct');window.location.reload();}});}
-let startupReady=Promise.resolve();
 if($('converter')){
  const queueMotion=initQueueMotion(document.querySelector('.converter-shell'),$('converter'),{companions:[document.querySelector('.hero'),document.querySelector('.conversion-guide')].filter(Boolean)});
  const requestedOutput=new URLSearchParams(location.search).get('to');
@@ -140,7 +139,6 @@ function setFormats(id,values){$(id)._formats=values;$(id)._category='all';const
  // never resets files or changes the selected format in the current session.
  if(cachedFormats)refreshCatalog.catch(()=>{});
  catalogReady=(cachedFormats?Promise.resolve(cachedFormats):refreshCatalog).then(data=>{const groups=data.groups.map(values=>Object.fromEntries(values.map(v=>[v,true])));categories=data.categories||{};fileLimit=data.limits?.fileMB||100;catalog=Object.fromEntries(Object.entries(data.inputs).map(([input,index])=>[input,groups[index]]));$('processing').querySelector('[value=server]').disabled=false;if(!items.length&&!adding&&!modeChosen){$('processing').value='server';$('processing').onchange();syncPickers();}}).catch(()=>{$('processing').value='browser';$('processing').onchange();syncPickers();announce(fallbackCopy[document.body.dataset.lang]||fallbackCopy.en);}).finally(()=>{document.body.classList.remove('catalog-loading');});
- startupReady=catalogReady;
  document.querySelectorAll('.settings select').forEach(e=>e.addEventListener('change',invalidate));$('clear').onclick=()=>{items.forEach(release);items=[];compatible=true;$('source').querySelector('.format-value').textContent=serverMode()?(document.body.dataset.source||'AUTO'):browserSelection(document.body.dataset.source||'AUTO',target).source;render();announce('');refreshTargets();$('choose').focus({preventScroll:true});};$('cancel').onclick=()=>controller?.abort();
  $('download-zip').onclick=async event=>{
   const keyboard=event?.detail===0;
@@ -161,5 +159,5 @@ function setFormats(id,values){$(id)._formats=values;$(id)._category='all';const
  setFormats('source',['AUTO','PNG','JPG','WEBP','GIF','BMP','SVG']);setFormats('target',['AUTO',...browserOutputs]);window.addEventListener('pagehide',e=>{if(!e.persisted){controller?.abort();items.forEach(release);clearArchive();}});outputSettings();render();
 }
 
-// Reveal the stable first screen after its catalogue is ready; conversion engines remain lazy.
-window.__waseFinishBoot?.(startupReady);
+// The app is interactive now; the catalogue and conversion engines load in place.
+window.__waseFinishBoot?.();

@@ -40,7 +40,7 @@ test('a newer bootstrap creates recovery for cached HTML without a placeholder',
 test('a late initialized app clears recovery without changing its disabled control state',async()=>{
  const b=boot();b.events.error({target:b.script});b.elements.converter.disabled=true;
  b.window.__waseFinishBoot();assert.equal(b.root.dataset.appReady,'true');assert.equal(b.elements['startup-recovery'].hidden,true);assert.equal(b.elements.converter.inert,false);assert.equal(b.elements.converter.disabled,true);
- b.timers.find(timer=>timer.ms===1700).fn();await flush();assert.equal(b.reloads,0);
+ await flush();assert.equal(b.reloads,0);assert.ok(!b.timers.some(timer=>timer.ms===1700));
 });
 test('a ready app waiting for catalogue is not mistaken for a broken module',()=>{
  const b=boot();b.window.__waseFinishBoot(new Promise(()=>{}));b.timers.find(timer=>timer.ms===6500).fn();

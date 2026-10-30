@@ -3,8 +3,7 @@ html{background:#E8E8E6;color-scheme:light}
 html[data-theme=dark]{background:#141414;color-scheme:dark}
 .boot-screen{display:none}
 .boot-screen,.boot-screen *{box-sizing:border-box}
-.is-booting body>header,.is-booting body>main,.is-booting body>footer,.is-booting body>.consent{visibility:hidden}
-.is-booting .boot-screen,.boot-screen.is-leaving{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:#E8E8E6;color:#202020;pointer-events:none;overflow:hidden;isolation:isolate;transition:opacity .4s ease-out}
+.boot-splash .boot-screen,.boot-screen.is-leaving{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:#E8E8E6;color:#202020;pointer-events:none;overflow:hidden;isolation:isolate;transition:opacity .4s ease-out}
 [data-theme=dark] .boot-screen{background:#141414;color:#f2f2f2}
 .boot-screen.is-leaving{opacity:0}
 .boot-signature{width:min(290px,calc(100% - 32px));text-align:center}
