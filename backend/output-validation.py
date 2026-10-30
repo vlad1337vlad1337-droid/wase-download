@@ -212,14 +212,22 @@ def validate_jpeg(path):
      scan=True;entropy=True
  raise ValueError('Missing JPEG end')
 
+ODF_KINDS={'odt':('text','text'),'ott':('text-template','text'),'odp':('presentation','presentation'),'ods':('spreadsheet','spreadsheet'),'ots':('spreadsheet-template','spreadsheet'),'odg':('graphics','drawing'),'otg':('graphics-template','drawing')}
 def validate_odf(ext,path):
  import xml.etree.ElementTree as ET
- expected={'odt':b'application/vnd.oasis.opendocument.text','odp':b'application/vnd.oasis.opendocument.presentation'}[ext]
+ mimetype,body_kind=ODF_KINDS[ext];expected=('application/vnd.oasis.opendocument.'+mimetype).encode()
  namespace='{urn:oasis:names:tc:opendocument:xmlns:office:1.0}'
  with zipfile.ZipFile(path) as archive:
   entries=archive.infolist();names=[entry.filename for entry in entries]
   if len(entries)>5000 or len(set(names))!=len(names) or sum(entry.file_size for entry in entries)>200*1024*1024 or any(entry.flag_bits&1 for entry in entries):raise ValueError('ODF package exceeds validation limits')
-  if archive.getinfo('mimetype').file_size>256 or archive.read('mimetype')!=expected:raise ValueError('Incorrect ODF mimetype')
+  if 'mimetype' in names:
+   if archive.getinfo('mimetype').file_size>256 or archive.read('mimetype')!=expected:raise ValueError('Incorrect ODF mimetype')
+  else:
+   # Inkscape's ODG export omits the optional mimetype entry; the manifest
+   # still declares the package type for the root path.
+   if archive.getinfo('META-INF/manifest.xml').file_size>1024*1024:raise ValueError('ODF manifest exceeds validation limits')
+   root_entry=[entry for entry in re.findall(rb'<manifest:file-entry\b[^>]*>',archive.read('META-INF/manifest.xml')) if b'manifest:full-path="/"' in entry]
+   if len(root_entry)!=1 or b'manifest:media-type="'+expected+b'"' not in root_entry[0]:raise ValueError('Incorrect ODF package type')
   content=archive.getinfo('content.xml')
   root=None;body=False;kind=False;parents=[]
   with archive.open(content) as stream:
@@ -229,11 +237,114 @@ def validate_odf(ext,path):
      if root!=namespace+'document-content':raise ValueError('Invalid ODF document root')
     if event=='start':
      if parents==[namespace+'document-content'] and element.tag==namespace+'body':body=True
-     if parents==[namespace+'document-content',namespace+'body'] and element.tag==namespace+('text' if ext=='odt' else 'presentation'):kind=True
+     if parents==[namespace+'document-content',namespace+'body'] and element.tag==namespace+body_kind:kind=True
      parents.append(element.tag)
     else:parents.pop();element.clear()
   if not body or not kind:raise ValueError('Incorrect ODF document kind')
   if archive.testzip() is not None:raise ValueError('Corrupt ODF package')
+
+def validate_text_sample(path,limit=2*1024*1024):
+ # Large text exports are checked on a bounded prefix: valid UTF-8 (a split
+ # final character is allowed), no NUL/control bytes and some visible text.
+ import codecs
+ with open(path,'rb') as source:data=source.read(limit)
+ text=codecs.getincrementaldecoder('utf-8-sig')().decode(data,final=os.path.getsize(path)<=limit)
+ if not text.strip() or any(ord(c)<32 and c not in '\t\n\r\f\x1b' for c in text):raise ValueError('Invalid text output')
+ return text
+
+def validate_markup(path):
+ # Pandoc writes XML/HTML-like fragments (several roots, undeclared prefixes);
+ # require text that actually contains element markup.
+ if not re.search(r'<[A-Za-z][\w:.-]*[\s/>]',validate_text_sample(path)):raise ValueError('No markup in output')
+
+def scan_for(path,pattern,chunk=1024*1024):
+ # Streams the whole file with an overlap, so a marker cannot hide past a prefix.
+ with open(path,'rb') as source:
+  tail=b''
+  while block:=source.read(chunk):
+   if re.search(pattern,tail+block,re.I):return True
+   tail=block[-64:]
+ return False
+
+def validate_xml(path,root=None,limit=200*1024*1024):
+ import xml.etree.ElementTree as ET
+ if os.path.getsize(path)>limit:raise ValueError('XML output exceeds validation limits')
+ if scan_for(path,br'<!ENTITY'):raise ValueError('Unsafe XML output')
+ # One streaming pass; cleared elements keep memory flat for large books/scenes.
+ first=None
+ for event,element in ET.iterparse(path,events=('start','end')):
+  if first is None:first=element.tag.rsplit('}',1)[-1]
+  if event=='end':element.clear()
+ if first is None or root and first not in root:raise ValueError('Unexpected XML document root')
+
+def validate_json(path,kind=dict,keys=()):
+ def invalid_constant(value):raise ValueError('Non-finite JSON number')
+ with open(path,'rb') as source:data=json.loads(source.read().decode('utf-8-sig'),parse_constant=invalid_constant)
+ if not isinstance(data,kind) or any(key not in data for key in keys):raise ValueError('Unexpected JSON structure')
+ return data
+
+def validate_zip(path,required=None,suffix=None):
+ with zipfile.ZipFile(path) as archive:
+  entries=archive.infolist();names=[entry.filename for entry in entries]
+  if not entries or len(entries)>5000 or len(set(names))!=len(names) or sum(entry.file_size for entry in entries)>200*1024*1024 or any(entry.flag_bits&1 for entry in entries):raise ValueError('ZIP output exceeds validation limits')
+  if any(name.startswith('/') or '\\' in name or '..' in name.split('/') for name in names):raise ValueError('Unsafe ZIP entry name')
+  if required and not all(name in names for name in required):raise ValueError('Missing package part')
+  if suffix and not any(name.lower().endswith(suffix) for name in names):raise ValueError('Missing package content')
+  if archive.testzip() is not None:raise ValueError('Corrupt ZIP output')
+  return archive.read('[Content_Types].xml') if '[Content_Types].xml' in names else b''
+
+OOXML={'docm':('word/document.xml',b'macroEnabled.main+xml'),'dotm':('word/document.xml',b'template.macroEnabledTemplate.main+xml'),'dotx':('word/document.xml',b'wordprocessingml.template.main+xml'),'xlsx':('xl/workbook.xml',b'spreadsheetml.sheet.main+xml'),'xlsm':('xl/workbook.xml',b'sheet.macroEnabled.main+xml'),'xltx':('xl/workbook.xml',b'spreadsheetml.template.main+xml'),'xltm':('xl/workbook.xml',b'template.macroEnabled.main+xml')}
+def validate_ooxml(ext,path):
+ part,content_type=OOXML[ext]
+ if content_type not in validate_zip(path,required=['[Content_Types].xml',part]):raise ValueError('Incorrect Office Open XML document type')
+
+def validate_glb(path):
+ # Binary glTF 2.0: 12-byte header whose length matches the file, then a JSON
+ # chunk. glTF 1.0 binaries are rejected: current viewers no longer load them.
+ size=os.path.getsize(path)
+ with open(path,'rb') as source:header=source.read(20)
+ if len(header)<20 or header[:4]!=b'glTF' or struct.unpack('<I',header[4:8])[0]!=2 or struct.unpack('<I',header[8:12])[0]!=size:raise ValueError('Invalid GLB container')
+ if struct.unpack('<I',header[12:16])[0]<2 or header[16:20]!=b'JSON':raise ValueError('Missing GLB JSON chunk')
+
+def validate_stl_binary(path):
+ size=os.path.getsize(path)
+ with open(path,'rb') as source:source.seek(80);count=source.read(4)
+ if len(count)!=4 or not struct.unpack('<I',count)[0] or size!=84+50*struct.unpack('<I',count)[0]:raise ValueError('Invalid binary STL')
+
+def validate_emf(path):
+ with open(path,'rb') as source:b=source.read(88)
+ if len(b)<88 or struct.unpack('<I',b[:4])[0]!=1 or b[40:44]!=b' EMF':raise ValueError('Invalid EMF header')
+
+def validate_wmf(path):
+ with open(path,'rb') as source:b=source.read(40)
+ if b[:4]==b'\xd7\xcd\xc6\x9a':b=b[22:]
+ if len(b)<18 or struct.unpack('<H',b[:2])[0] not in (1,2) or struct.unpack('<H',b[2:4])[0]!=9:raise ValueError('Invalid WMF header')
+
+def validate_dxf(path):
+ lines=[line.strip() for line in validate_text_sample(path).splitlines()]
+ # The prefix sample may not reach the end of a large drawing; read the tail.
+ with open(path,'rb') as source:
+  source.seek(max(0,os.path.getsize(path)-256));tail=source.read().decode('utf-8','replace').split()
+ if 'SECTION' not in lines or tail[-1:]!=['EOF']:raise ValueError('Invalid DXF structure')
+
+def validate_pdb(path):
+ # Palm database (calibre e-books and ImageMagick Palm images): 78-byte header
+ # with a printable type/creator pair and a plausible record count.
+ with open(path,'rb') as source:b=source.read(78)
+ if len(b)<78 or not all(32<=c<127 for c in b[60:68]) or struct.unpack('>H',b[76:78])[0]==0:raise ValueError('Invalid Palm database')
+
+def validate_toml(path):
+ import tomllib
+ tomllib.loads(validate_text_sample(path,limit=8*1024*1024))
+
+# Exact text, markup and binary signatures observed in real converter output
+# (receipts: deploy/output-validation-receipts-2026-10-30.json).
+TEXT_OUTPUTS=set('asciidoc asciidoc_legacy asciidoctor commonmark commonmark_x context djot dokuwiki gfm haddock jira latex man markdown markdown_mmd markdown_phpextra markdown_strict markua mediawiki ms muse org plain rst texinfo textile typst xwiki zimwiki bibtex biblatex tab tsv tex hpgl pov pbrt yaml'.split())
+MARKUP_OUTPUTS=set('docbook docbook4 docbook5 jats jats_archiving jats_articleauthoring jats_publishing tei opml icml opendocument'.split())
+HTML_OUTPUTS=set('htm xhtml html4 html5 revealjs s5 slidy slideous dzslides'.split())
+XML_OUTPUTS={'fb2':{'FictionBook'},'fodt':{'document'},'collada':{'COLLADA'},'dae':{'COLLADA'},'assxml':{'ASSIMP'},'gimppath':{'svg'},'fxg':{'Graphic'},'sif':{'canvas'}}
+SIGNATURES={'mobi':(60,b'BOOKMOBI'),'azw3':(60,b'BOOKMOBI'),'lit':(0,b'ITOLITLS'),'lrf':(0,b'L\0R\0F\0\0\0'),'rb':(0,b'\xb0\x0c\xb0\x0c'),'snb':(0,b'SNBP000B'),'tcr':(0,b'!!8-Bit!!'),'assbin':(0,b'ASSIMP.binary-dump.'),'x':(0,b'xof '),'stp':(0,b'ISO-10303-21;'),'fbxa':(0,b'; FBX'),'plyb':(0,b'ply\nformat binary'),'xfig':(0,b'#FIG'),'postscript':(0,b'%!PS'),'gpl':(0,b'GIMP Palette'),'mat':(0,b'MATLAB 5.0 MAT-file'),'pdfpage':(0,b'%PDF-')}
+OLE2_OUTPUTS={'doc','dot','xls','xlt','wps','wpt'}
 
 def validate(ext,path):
  with open(path,'rb') as source:b=source.read(8192)
@@ -254,7 +365,15 @@ def validate(ext,path):
  elif ext in ('mp3','wav','flac','aac','ogg','opus','m4a','mp4','mov','webm'):
   p=subprocess.run(['ffprobe','-v','error','-show_streams','-of','json',path],capture_output=True,timeout=5)
   assert p.returncode==0 and json.loads(p.stdout).get('streams')
- elif ext in ('odt','odp'):validate_odf(ext,path)
+ elif ext in ODF_KINDS:validate_odf(ext,path)
+ elif ext in OOXML:validate_ooxml(ext,path)
+ elif ext in ('epub2','epub3','kepub.epub'):
+  validate_zip(path,required=['mimetype'])
+  with zipfile.ZipFile(path) as archive:
+   if archive.getinfo('mimetype').file_size>64 or archive.read('mimetype')!=b'application/epub+zip':raise ValueError('Invalid EPUB mimetype')
+ elif ext=='htmlz':validate_zip(path,suffix='.html')
+ elif ext=='txtz':validate_zip(path,suffix='.txt')
+ elif ext=='chunkedhtml':validate_zip(path,suffix='.html')
  elif ext in ('docx','epub','pptx','zip'):
   with zipfile.ZipFile(path)as z:
    assert z.namelist();assert z.testzip() is None
@@ -275,7 +394,8 @@ def validate(ext,path):
    # OpenType permits TrueType outlines in .otf too. Do not reject a valid
    # unwrapped font merely because it uses glyf rather than CFF/CFF2 outlines.
    assert font.getBestCmap()
- elif ext=='doc':assert b.startswith(bytes.fromhex('d0cf11e0a1b11ae1'))
+ elif ext in OLE2_OUTPUTS:
+  if not b.startswith(bytes.fromhex('d0cf11e0a1b11ae1')):raise ValueError('Invalid OLE2 compound document')
  elif ext=='json':json.load(open(path))
  elif ext=='csljson':validate_csljson(path)
  elif ext=='xml':
@@ -290,8 +410,36 @@ def validate(ext,path):
  elif ext in ('txt','csv'):assert len(b.strip())>0
  elif ext in ('stl','obj','ply','fbx','3ds'):
   p=subprocess.run(['assimp','info',path],capture_output=True,timeout=5);assert p.returncode==0
+ elif ext in TEXT_OUTPUTS:validate_text_sample(path)
+ elif ext in MARKUP_OUTPUTS:validate_markup(path)
+ elif ext in HTML_OUTPUTS:
+  if not re.search(r'<(?:!doctype html|html|head|body|section|div|p|h[1-6])[\s>]',validate_text_sample(path),re.I):raise ValueError('No HTML document content')
+ elif ext in XML_OUTPUTS:validate_xml(path,XML_OUTPUTS[ext])
+ elif ext in SIGNATURES:
+  offset,signature=SIGNATURES[ext]
+  if b[offset:offset+len(signature)]!=signature:raise ValueError('Output signature does not match its format')
+ elif ext in ('glb','glb2'):validate_glb(path)
+ elif ext in ('gltf','gltf2'):
+  asset=validate_json(path,keys=('asset',))['asset']
+  if not isinstance(asset,dict) or asset.get('version')!='2.0':raise ValueError('Expected a glTF 2.0 asset')
+ elif ext=='assjson':validate_json(path)
+ elif ext=='ipynb':
+  if not isinstance(validate_json(path,keys=('cells','nbformat'))['cells'],list):raise ValueError('Invalid notebook cells')
+ elif ext=='geojson':validate_json(path,keys=('type',))
+ elif ext=='toml':validate_toml(path)
+ elif ext=='stlb':validate_stl_binary(path)
+ elif ext=='objnomtl':
+  if not re.search(r'^v\s',validate_text_sample(path),re.M):raise ValueError('No OBJ vertices')
+ elif ext=='apng':validate_png(path)
+ elif ext=='emf':validate_emf(path)
+ elif ext=='wmf':validate_wmf(path)
+ elif ext=='dxf':validate_dxf(path)
+ elif ext=='pdb':validate_pdb(path)
  else:
-  aliases={'adts':'aac','jpe':'jpeg','jpg':'jpeg','tif':'tiff','svgz':'svg','pnm':'ppm','mpg':'mpeg','mpegvideo':'mpegvideo','m2v':'mpegvideo','aif':'aiff','mka':'matroska','mkv':'matroska','h264.mp4':'mp4','h265.mp4':'mp4','av1.mp4':'mp4','av1.mkv':'matroska','h265.mkv':'matroska'}
+  aliases={'adts':'aac','jpe':'jpeg','jpg':'jpeg','tif':'tiff','svgz':'svg','pnm':'ppm','mpg':'mpeg','mpegvideo':'mpegvideo','m2v':'mpegvideo','aif':'aiff','mka':'matroska','mkv':'matroska','h264.mp4':'mp4','h265.mp4':'mp4','av1.mp4':'mp4','av1.mkv':'matroska','h265.mkv':'matroska',
+   '264':'h264','265':'hevc','h264.mkv':'matroska','afc':'aiff','aifc':'aiff','aptxhd':'aptx_hd','aud':'wsaud','c2':'codec2','cpk':'film_cpk','dvd':'mpeg','vob':'mpeg','ec3':'eac3','latm':'loas','m2a':'mp3','mp2':'mp3','mpa':'mp3','m2t':'mpegts','m2ts':'mpegts','mts':'mpegts','ts':'mpegts','mjpg':'mjpeg','msbc':'sbc','oga':'ogg','ogv':'ogg','spx':'ogg','sf':'ircam','wma':'asf','wmv':'asf','y4m':'yuv4mpegpipe','m3u8':'hls','mpd':'dash','ul':'mulaw','sb':'s8','sw':'s16le','ub':'u8','uw':'u16le',
+   'f4v':'mp4','isma':'mp4','ismv':'mp4','m4b':'mp4','m4v':'mp4','psp':'mp4','im1':'sunrast_pipe','im8':'sunrast_pipe','im24':'sunrast_pipe','rs':'sunrast_pipe','sunras':'sunrast_pipe','jls':'jpegls_pipe','pgmyuv':'pgmyuv_pipe','pix':'alias_pix','vbn':'vbn_pipe',
+   'm1v':'mpegvideo','ra':'rm','al':'alaw','exr':'exr_pipe','ljpg':'jpeg','pjpeg':'jpeg','jps':'jpeg','eps2':'ps','eps3':'ps','ps2':'ps','ps3':'ps','ept2':'ept','ept3':'ept','bigtiff':'tiff64','ptif':'tiff','cal':'cals'}
   expected=aliases.get(ext,ext).lower()
   try:
    p=subprocess.run(['ffprobe','-v','error','-show_streams','-show_format','-of','json',path],capture_output=True,timeout=3)
@@ -300,8 +448,8 @@ def validate(ext,path):
     if data.get('streams') and expected in data.get('format',{}).get('format_name','').lower().split(','):return 'passed'
   except Exception:pass
   try:
-   p=subprocess.run(['magick','identify','-ping','-format','%m',path],capture_output=True,timeout=3)
-   if p.returncode==0 and p.stdout.decode('ascii','ignore').lower()==expected:return 'passed'
+   p=subprocess.run(['magick','identify','-ping','-format','%m\n',path],capture_output=True,timeout=3)
+   if p.returncode==0 and p.stdout.decode('ascii','ignore').strip().split('\n')[0].lower()==expected:return 'passed'
   except Exception:pass
   return 'produced-unvalidated' 
  return 'passed'

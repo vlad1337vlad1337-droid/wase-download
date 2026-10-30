@@ -23,7 +23,7 @@ else if(a[0]==='rm'||(a[0]==='volume'&&a[1]==='rm')){
  else{console.error(a[0]==='rm'?'Error response from daemon: No such container: '+a.at(-1):'Error response from daemon: get '+a.at(-1)+': no such volume');process.exitCode=1;}
 }
 `,{mode:0o755});
- const child=spawn(process.execPath,['backend/server.mjs'],{cwd:resolve('.'),env:{...process.env,PATH:bin+':'+process.env.PATH,API_PORT:'0',JOB_ROOT:jobs,FAKE_STARTED:started,FAKE_MODE:mode},stdio:['ignore','pipe','pipe']});
+ const child=spawn(process.execPath,['backend/server.mjs'],{cwd:resolve('.'),env:{...process.env,PATH:bin+':'+process.env.PATH,API_PORT:'0',JOB_ROOT:jobs,FAKE_STARTED:started,FAKE_MODE:mode,DOCKER_CLEANUP_TIMEOUT_MS:'3000'},stdio:['ignore','pipe','pipe']});
  const requests=[];let errors='';child.stderr.on('data',chunk=>{errors+=chunk;});
  try{
   const port=await new Promise((resolve,reject)=>{let text='';child.stdout.on('data',chunk=>{text+=chunk;const match=text.match(/Converter API ready: 127\.0\.0\.1:(\d+)/);if(match)resolve(Number(match[1]));});child.once('error',reject);child.once('exit',code=>reject(new Error(`Broker exited ${code}`)));});

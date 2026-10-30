@@ -49,3 +49,7 @@ for(const t of Object.values(strings))t.saving=t.local;
 
 const filePreparation={en:'Preparing files',ru:'Подготавливаем файлы',zh:'正在准备文件',es:'Preparando archivos',fr:'Préparation des fichiers',de:'Dateien werden vorbereitet',pt:'Preparando arquivos',it:'Preparazione dei file',tr:'Dosyalar hazırlanıyor',ja:'ファイルを準備中',ko:'파일 준비 중',ar:'جارٍ تجهيز الملفات',hi:'फ़ाइलें तैयार हो रही हैं'};
 for(const [lang,t]of Object.entries(strings))t.reading=filePreparation[lang];
+
+// Server progress, per-code API errors and the unavailable landing-page target.
+import {serverCopy} from './server-copy.js';
+for(const [lang,t]of Object.entries(strings))Object.assign(t,{targetUnavailable:serverCopy[lang].targetUnavailable,uploading:serverCopy[lang].uploading,serverErrors:serverCopy[lang].errors});

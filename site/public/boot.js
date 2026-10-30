@@ -5,7 +5,7 @@
  root.dataset.theme=saved==='dark'||saved==='light'?saved:(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',root.dataset.theme==='dark'?'#141414':'#E8E8E6');
  root.classList.add('is-booting');
- let finished=false,initialized=false,recoveryPending=false;
+ let finished=false,initialized=false,recoveryPending=false,splashShown=false;
  const recoveryCopy={
   en:['The interface could not start. Page information is still available.','Try again'],
   ru:['Не удалось запустить интерфейс. Информация на странице доступна.','Попробовать снова'],
@@ -22,10 +22,10 @@
   hi:['इंटरफ़ेस शुरू नहीं हो सका। पेज की जानकारी अब भी उपलब्ध है।','फिर कोशिश करें']
  };
  const reveal=()=>{
-  if(finished)return;finished=true;clearTimeout(failSafe);
-  root.classList.remove('is-booting');
+  if(finished)return;finished=true;clearTimeout(failSafe);clearTimeout(splash);
+  root.classList.remove('is-booting');root.classList.remove('boot-splash');
   const screen=document.getElementById('boot-screen');
-  if(screen){screen.classList.add('is-leaving');setTimeout(()=>screen.remove(),400)}
+  if(screen){if(splashShown){screen.classList.add('is-leaving');setTimeout(()=>screen.remove(),400)}else screen.remove()}
  };
  const clearRecovery=()=>{
   const panel=document.getElementById('startup-recovery');if(panel)panel.hidden=true;
@@ -52,15 +52,15 @@
   panel.replaceChildren(text,button);panel.hidden=false;
   const converter=document.getElementById('converter');if(converter){converter.inert=true;converter.setAttribute('aria-disabled','true');}
  };
- // Keep one short animation cycle, but never trap visitors if startup fails.
- const minimum=new Promise(resolve=>setTimeout(resolve,1700));
+ // Content is never hidden and there is no minimum display time: the decorative
+ // splash appears only when the app has not started within 500 ms.
+ const splash=setTimeout(()=>{if(!finished){splashShown=true;root.classList.add('boot-splash');}},500);
  const failSafe=setTimeout(recover,6500);
- window.__waseFinishBoot=(ready=Promise.resolve())=>{
-  // Reaching this call proves the app installed its handlers. Catalogue readiness
-  // is separate: a slow optional request must not be reported as a failed app.
-  initialized=true;root.dataset.appReady='true';clearRecovery();
-  const fonts=document.fonts?Promise.race([document.fonts.ready,new Promise(resolve=>setTimeout(resolve,800))]):Promise.resolve();
-  Promise.all([minimum,fonts,Promise.resolve(ready).catch(()=>{})]).then(()=>requestAnimationFrame(()=>requestAnimationFrame(reveal)));
+ window.__waseFinishBoot=ready=>{
+  // Reaching this call proves the app installed its handlers. The catalogue,
+  // fonts and engines keep loading in place; none of them delays the page.
+  Promise.resolve(ready).catch(()=>{});
+  initialized=true;root.dataset.appReady='true';clearRecovery();reveal();
  };
  window.addEventListener('error',event=>{
   if(initialized)return;

@@ -1,0 +1,4115 @@
+{
+ "date": "2026-10-30",
+ "image": "wase-converter:20261002 built from backend/Dockerfile (local colima arm64); production flags: --network none --read-only --cap-drop ALL --user 1000:1000 --memory 768m, /job on tmpfs",
+ "method": "One representative input per (output, engine order) from the public registry (600 cases, self-created samples incl. B3D and TXD), engine.mjs + output-validation.py run unmodified inside the image; every produced file re-probed with ffprobe, magick identify and the validator. Second run: standard 320x240/25 fps H.264+AAC stereo clip and 44.1 kHz stereo MP3, plus the engine.mjs changes.",
+ "summary": {
+  "cases": 600,
+  "outputsRestoredByValidators": 200,
+  "secondRunCases": 156
+ },
+ "restored": [
+  {
+   "output": "264",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 4630,
+   "ffprobe": "h264",
+   "magick": null,
+   "head": "000000016764000a"
+  },
+  {
+   "output": "265",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 4279,
+   "ffprobe": "hevc",
+   "magick": null,
+   "head": "0000000140010c01"
+  },
+  {
+   "output": "afc",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 90166,
+   "ffprobe": "aiff",
+   "magick": null,
+   "head": "464f524d0001602e"
+  },
+  {
+   "output": "aifc",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 90166,
+   "ffprobe": "aiff",
+   "magick": null,
+   "head": "464f524d0001602e"
+  },
+  {
+   "output": "apng",
+   "from": "txd",
+   "engine": "ffmpeg",
+   "bytes": 874,
+   "ffprobe": "png_pipe",
+   "magick": "PNG",
+   "head": "89504e470d0a1a0a"
+  },
+  {
+   "output": "apng",
+   "from": "jpg",
+   "engine": "imagemagick",
+   "bytes": 3727,
+   "ffprobe": "png_pipe",
+   "magick": "PNG",
+   "head": "89504e470d0a1a0a"
+  },
+  {
+   "output": "aptxhd",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 73566,
+   "ffprobe": "aptx_hd",
+   "magick": null,
+   "head": "73beff73befff800"
+  },
+  {
+   "output": "asciidoc",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 222,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3d3d20d0a2d0b5d1"
+  },
+  {
+   "output": "asciidoc_legacy",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 222,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3d3d20d0a2d0b5d1"
+  },
+  {
+   "output": "asciidoctor",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 222,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3d3d20d0a2d0b5d1"
+  },
+  {
+   "output": "assbin",
+   "from": "obj",
+   "engine": "assimp",
+   "bytes": 1911,
+   "ffprobe": null,
+   "magick": null,
+   "head": "415353494d502e62"
+  },
+  {
+   "output": "assjson",
+   "from": "obj",
+   "engine": "assimp",
+   "bytes": 3440,
+   "ffprobe": null,
+   "magick": null,
+   "head": "7b0a0920225f5f6d"
+  },
+  {
+   "output": "assxml",
+   "from": "obj",
+   "engine": "assimp",
+   "bytes": 4351,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c3f786d6c207665"
+  },
+  {
+   "output": "aud",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 22716,
+   "ffprobe": "wsaud",
+   "magick": null,
+   "head": "2256b05800000060"
+  },
+  {
+   "output": "azw3",
+   "from": "docx",
+   "engine": "calibre",
+   "bytes": 11103,
+   "ffprobe": null,
+   "magick": null,
+   "head": "556e6b6e6f776e00"
+  },
+  {
+   "output": "bigtiff",
+   "from": "png",
+   "engine": "graphicsmagick",
+   "bytes": 688,
+   "ffprobe": null,
+   "magick": "TIFF64",
+   "head": "49492b0008000000"
+  },
+  {
+   "output": "c2",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 371,
+   "ffprobe": "codec2",
+   "magick": null,
+   "head": "c0dec200080400e0"
+  },
+  {
+   "output": "cal",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 2092,
+   "ffprobe": null,
+   "magick": "CALS",
+   "head": "737263646f636964"
+  },
+  {
+   "output": "chunkedhtml",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 3925,
+   "ffprobe": null,
+   "magick": null,
+   "head": "504b030414000208"
+  },
+  {
+   "output": "collada",
+   "from": "obj",
+   "engine": "assimp",
+   "bytes": 3733,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c3f786d6c207665"
+  },
+  {
+   "output": "commonmark",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 289,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2320d0a2d0b5d181"
+  },
+  {
+   "output": "commonmark_x",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 214,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2320d0a2d0b5d181"
+  },
+  {
+   "output": "context",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 728,
+   "ffprobe": null,
+   "magick": null,
+   "head": "5c73746172747365"
+  },
+  {
+   "output": "cpk",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 163899,
+   "ffprobe": "film_cpk",
+   "magick": null,
+   "head": "46494c4d00000440"
+  },
+  {
+   "output": "dae",
+   "from": "obj",
+   "engine": "assimp",
+   "bytes": 3733,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c3f786d6c207665"
+  },
+  {
+   "output": "djot",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 233,
+   "ffprobe": null,
+   "magick": null,
+   "head": "7b23d182d0b5d181"
+  },
+  {
+   "output": "docbook",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 1046,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c73656374696f6e"
+  },
+  {
+   "output": "docbook4",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 957,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c73656374312069"
+  },
+  {
+   "output": "docbook5",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 1046,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c73656374696f6e"
+  },
+  {
+   "output": "docm",
+   "from": "docx",
+   "engine": "libreoffice",
+   "bytes": 5511,
+   "ffprobe": null,
+   "magick": null,
+   "head": "504b030414000808"
+  },
+  {
+   "output": "dokuwiki",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 202,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3d3d3d3d3d3d20d0"
+  },
+  {
+   "output": "dot",
+   "from": "docx",
+   "engine": "libreoffice",
+   "bytes": 9216,
+   "ffprobe": null,
+   "magick": null,
+   "head": "d0cf11e0a1b11ae1"
+  },
+  {
+   "output": "dotx",
+   "from": "docx",
+   "engine": "libreoffice",
+   "bytes": 5505,
+   "ffprobe": null,
+   "magick": null,
+   "head": "504b030414000808"
+  },
+  {
+   "output": "dvd",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 65536,
+   "ffprobe": "mpeg",
+   "magick": null,
+   "head": "000001ba44000400"
+  },
+  {
+   "output": "dxf",
+   "from": "png",
+   "engine": "inkscape",
+   "bytes": 210,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3939390a22445846"
+  },
+  {
+   "output": "dxf",
+   "from": "bmp",
+   "engine": "potrace",
+   "bytes": 2300,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3939390a44584620"
+  },
+  {
+   "output": "dzslides",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 426,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c73656374696f6e"
+  },
+  {
+   "output": "ec3",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 24768,
+   "ffprobe": "eac3",
+   "magick": null,
+   "head": "0b77011fb287c000"
+  },
+  {
+   "output": "emf",
+   "from": "png",
+   "engine": "inkscape",
+   "bytes": 17008,
+   "ffprobe": null,
+   "magick": "convert /tmp/magick-4zHV5vNkjt6YBey5AYknJDZUDfCoY7pg as a Draw document -> /tmp/magick-4zHV5vNkjt6YBey5AYknJDZUDfCoY7pg.pdf using filter : draw_pdf_Export",
+   "head": "01000000d8000000"
+  },
+  {
+   "output": "eps2",
+   "from": "png",
+   "engine": "graphicsmagick",
+   "bytes": 8669,
+   "ffprobe": null,
+   "magick": "PS",
+   "head": "252150532d41646f"
+  },
+  {
+   "output": "eps2",
+   "from": "tif",
+   "engine": "graphicsmagick",
+   "bytes": 19577,
+   "ffprobe": null,
+   "magick": "PS",
+   "head": "252150532d41646f"
+  },
+  {
+   "output": "eps2",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 8674,
+   "ffprobe": null,
+   "magick": "PS",
+   "head": "252150532d41646f"
+  },
+  {
+   "output": "eps3",
+   "from": "png",
+   "engine": "graphicsmagick",
+   "bytes": 4850,
+   "ffprobe": null,
+   "magick": "PS",
+   "head": "252150532d41646f"
+  },
+  {
+   "output": "eps3",
+   "from": "tif",
+   "engine": "graphicsmagick",
+   "bytes": 12869,
+   "ffprobe": null,
+   "magick": "PS",
+   "head": "252150532d41646f"
+  },
+  {
+   "output": "eps3",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 4882,
+   "ffprobe": null,
+   "magick": "PS",
+   "head": "252150532d41646f"
+  },
+  {
+   "output": "ept",
+   "from": "png",
+   "engine": "graphicsmagick",
+   "bytes": 37238,
+   "ffprobe": null,
+   "magick": "EPT",
+   "head": "c5d0d3c61e000000"
+  },
+  {
+   "output": "ept",
+   "from": "tif",
+   "engine": "graphicsmagick",
+   "bytes": 40394,
+   "ffprobe": null,
+   "magick": "EPT",
+   "head": "c5d0d3c61e000000"
+  },
+  {
+   "output": "ept",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 47298,
+   "ffprobe": null,
+   "magick": "EPT",
+   "head": "c5d0d3c61e000000"
+  },
+  {
+   "output": "ept2",
+   "from": "png",
+   "engine": "graphicsmagick",
+   "bytes": 15274,
+   "ffprobe": null,
+   "magick": "EPT",
+   "head": "c5d0d3c61e000000"
+  },
+  {
+   "output": "ept2",
+   "from": "tif",
+   "engine": "graphicsmagick",
+   "bytes": 29338,
+   "ffprobe": null,
+   "magick": "EPT",
+   "head": "c5d0d3c61e000000"
+  },
+  {
+   "output": "ept2",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 25394,
+   "ffprobe": null,
+   "magick": "EPT",
+   "head": "c5d0d3c61e000000"
+  },
+  {
+   "output": "ept3",
+   "from": "png",
+   "engine": "graphicsmagick",
+   "bytes": 11455,
+   "ffprobe": null,
+   "magick": "EPT",
+   "head": "c5d0d3c61e000000"
+  },
+  {
+   "output": "ept3",
+   "from": "tif",
+   "engine": "graphicsmagick",
+   "bytes": 22630,
+   "ffprobe": null,
+   "magick": "EPT",
+   "head": "c5d0d3c61e000000"
+  },
+  {
+   "output": "ept3",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 21602,
+   "ffprobe": null,
+   "magick": "EPT",
+   "head": "c5d0d3c61e000000"
+  },
+  {
+   "output": "epub2",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 5497,
+   "ffprobe": null,
+   "magick": null,
+   "head": "504b030414000208"
+  },
+  {
+   "output": "epub3",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 5656,
+   "ffprobe": null,
+   "magick": null,
+   "head": "504b030414000208"
+  },
+  {
+   "output": "f4v",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 25238,
+   "ffprobe": "mov,mp4,m4a,3gp,3g2,mj2",
+   "magick": null,
+   "head": "0000002066747970"
+  },
+  {
+   "output": "fb2",
+   "from": "txt",
+   "engine": "calibre",
+   "bytes": 892,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c3f786d6c207665"
+  },
+  {
+   "output": "fb2",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 781,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c3f786d6c207665"
+  },
+  {
+   "output": "fbxa",
+   "from": "obj",
+   "engine": "assimp",
+   "bytes": 9879,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3b2046425820372e"
+  },
+  {
+   "output": "fodt",
+   "from": "docx",
+   "engine": "libreoffice",
+   "bytes": 32900,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c3f786d6c207665"
+  },
+  {
+   "output": "fts",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 17280,
+   "ffprobe": "fits",
+   "magick": "FTS",
+   "head": "53494d504c452020"
+  },
+  {
+   "output": "fxg",
+   "from": "png",
+   "engine": "inkscape",
+   "bytes": 1138,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c3f786d6c207665"
+  },
+  {
+   "output": "geojson",
+   "from": "bmp",
+   "engine": "potrace",
+   "bytes": 1042,
+   "ffprobe": null,
+   "magick": null,
+   "head": "7b0a227479706522"
+  },
+  {
+   "output": "gfm",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 214,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2320d0a2d0b5d181"
+  },
+  {
+   "output": "gimppath",
+   "from": "bmp",
+   "engine": "potrace",
+   "bytes": 724,
+   "ffprobe": "svg_pipe",
+   "magick": null,
+   "head": "3c3f786d6c207665"
+  },
+  {
+   "output": "glb2",
+   "from": "obj",
+   "engine": "assimp",
+   "bytes": 1368,
+   "ffprobe": null,
+   "magick": null,
+   "head": "676c544602000000"
+  },
+  {
+   "output": "gltf",
+   "from": "obj",
+   "engine": "assimp",
+   "bytes": 2978,
+   "ffprobe": null,
+   "magick": null,
+   "head": "7b0a202020202261"
+  },
+  {
+   "output": "gltf2",
+   "from": "obj",
+   "engine": "assimp",
+   "bytes": 2760,
+   "ffprobe": null,
+   "magick": null,
+   "head": "7b0a202020202261"
+  },
+  {
+   "output": "gpl",
+   "from": "png",
+   "engine": "inkscape",
+   "bytes": 49,
+   "ffprobe": null,
+   "magick": null,
+   "head": "47494d502050616c"
+  },
+  {
+   "output": "h264.mkv",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 18846,
+   "ffprobe": "matroska,webm",
+   "magick": "MKV",
+   "head": "1a45dfa3a3428681"
+  },
+  {
+   "output": "haddock",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 262,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3d20d0a2d0b5d181"
+  },
+  {
+   "output": "hpgl",
+   "from": "png",
+   "engine": "inkscape",
+   "bytes": 182,
+   "ffprobe": null,
+   "magick": null,
+   "head": "494e3b50553b5350"
+  },
+  {
+   "output": "htm",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 473,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c3f786d6c207665"
+  },
+  {
+   "output": "htm",
+   "from": "docx",
+   "engine": "libreoffice",
+   "bytes": 2853,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c21444f43545950"
+  },
+  {
+   "output": "html4",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 384,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c68312069643d22"
+  },
+  {
+   "output": "html5",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 384,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c68312069643d22"
+  },
+  {
+   "output": "htmlz",
+   "from": "docx",
+   "engine": "calibre",
+   "bytes": 1386,
+   "ffprobe": null,
+   "magick": null,
+   "head": "504b030414000008"
+  },
+  {
+   "output": "icml",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 3181,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c50617261677261"
+  },
+  {
+   "output": "im1",
+   "from": "png",
+   "engine": "ffmpeg",
+   "bytes": 4655,
+   "ffprobe": "sunrast_pipe",
+   "magick": "SUN",
+   "head": "59a66a9500000040"
+  },
+  {
+   "output": "im24",
+   "from": "png",
+   "engine": "ffmpeg",
+   "bytes": 4655,
+   "ffprobe": "sunrast_pipe",
+   "magick": "SUN",
+   "head": "59a66a9500000040"
+  },
+  {
+   "output": "im8",
+   "from": "png",
+   "engine": "ffmpeg",
+   "bytes": 4655,
+   "ffprobe": "sunrast_pipe",
+   "magick": "SUN",
+   "head": "59a66a9500000040"
+  },
+  {
+   "output": "ipynb",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 499,
+   "ffprobe": null,
+   "magick": null,
+   "head": "7b0a202263656c6c"
+  },
+  {
+   "output": "isma",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 25410,
+   "ffprobe": "mov,mp4,m4a,3gp,3g2,mj2",
+   "magick": null,
+   "head": "0000001866747970"
+  },
+  {
+   "output": "ismv",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 25410,
+   "ffprobe": "mov,mp4,m4a,3gp,3g2,mj2",
+   "magick": null,
+   "head": "0000001866747970"
+  },
+  {
+   "output": "jats",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 649,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c7365632069643d"
+  },
+  {
+   "output": "jats_archiving",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 649,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c7365632069643d"
+  },
+  {
+   "output": "jats_articleauthoring",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 649,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c7365632069643d"
+  },
+  {
+   "output": "jats_publishing",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 649,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c7365632069643d"
+  },
+  {
+   "output": "jira",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 236,
+   "ffprobe": null,
+   "magick": null,
+   "head": "68312e207b616e63"
+  },
+  {
+   "output": "jls",
+   "from": "png",
+   "engine": "ffmpeg",
+   "bytes": 527,
+   "ffprobe": "jpegls_pipe",
+   "magick": null,
+   "head": "ffd8fff700110800"
+  },
+  {
+   "output": "jps",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 2090,
+   "ffprobe": "image2",
+   "magick": "JPEG",
+   "head": "ffd8ffe000104a46"
+  },
+  {
+   "output": "kepub.epub",
+   "from": "docx",
+   "engine": "calibre",
+   "bytes": 15371,
+   "ffprobe": null,
+   "magick": null,
+   "head": "504b030414000008"
+  },
+  {
+   "output": "latex",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 529,
+   "ffprobe": null,
+   "magick": null,
+   "head": "5c73656374696f6e"
+  },
+  {
+   "output": "latm",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 18875,
+   "ffprobe": "loas",
+   "magick": null,
+   "head": "56e01c200013881f"
+  },
+  {
+   "output": "lit",
+   "from": "docx",
+   "engine": "calibre",
+   "bytes": 12615,
+   "ffprobe": null,
+   "magick": null,
+   "head": "49544f4c49544c53"
+  },
+  {
+   "output": "ljpg",
+   "from": "png",
+   "engine": "ffmpeg",
+   "bytes": 5138,
+   "ffprobe": "image2",
+   "magick": "JPEG",
+   "head": "ffd8fffe00104c61"
+  },
+  {
+   "output": "lrf",
+   "from": "docx",
+   "engine": "calibre",
+   "bytes": 2902,
+   "ffprobe": null,
+   "magick": null,
+   "head": "4c00520046000000"
+  },
+  {
+   "output": "m2a",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 41795,
+   "ffprobe": "mp3",
+   "magick": null,
+   "head": "fff5e0c4ffffffff"
+  },
+  {
+   "output": "m2t",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 71628,
+   "ffprobe": "mpegts",
+   "magick": null,
+   "head": "474011100042f025"
+  },
+  {
+   "output": "m2ts",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 73728,
+   "ffprobe": "mpegts",
+   "magick": null,
+   "head": "0ebf462247401110"
+  },
+  {
+   "output": "m3u8",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 117,
+   "ffprobe": "hls",
+   "magick": null,
+   "head": "234558544d33550a"
+  },
+  {
+   "output": "m4b",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 25242,
+   "ffprobe": "mov,mp4,m4a,3gp,3g2,mj2",
+   "magick": null,
+   "head": "0000002066747970"
+  },
+  {
+   "output": "m4v",
+   "from": "wav",
+   "engine": "ffmpeg",
+   "bytes": 27988,
+   "ffprobe": "mov,mp4,m4a,3gp,3g2,mj2",
+   "magick": null,
+   "head": "0000001c66747970"
+  },
+  {
+   "output": "man",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 262,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2e534820d0a2d0b5"
+  },
+  {
+   "output": "markdown",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 198,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2320d0a2d0b5d181"
+  },
+  {
+   "output": "markdown_mmd",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 214,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2320d0a2d0b5d181"
+  },
+  {
+   "output": "markdown_phpextra",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 251,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2320d0a2d0b5d181"
+  },
+  {
+   "output": "markdown_strict",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 289,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2320d0a2d0b5d181"
+  },
+  {
+   "output": "markua",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 254,
+   "ffprobe": null,
+   "magick": null,
+   "head": "7b69643a20d182d0"
+  },
+  {
+   "output": "mat",
+   "from": "txt",
+   "engine": "graphicsmagick",
+   "bytes": 484888,
+   "ffprobe": null,
+   "magick": null,
+   "head": "4d41544c41422035"
+  },
+  {
+   "output": "mediawiki",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 277,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c7370616e206964"
+  },
+  {
+   "output": "mjpg",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 33313,
+   "ffprobe": "mjpeg",
+   "magick": "JPEG",
+   "head": "ffd8fffe00104c61"
+  },
+  {
+   "output": "mobi",
+   "from": "docx",
+   "engine": "calibre",
+   "bytes": 9422,
+   "ffprobe": null,
+   "magick": null,
+   "head": "556e6b6e6f776e00"
+  },
+  {
+   "output": "mp2",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 41795,
+   "ffprobe": "mp3",
+   "magick": null,
+   "head": "fff5e0c4ffffffff"
+  },
+  {
+   "output": "mpa",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 41795,
+   "ffprobe": "mp3",
+   "magick": null,
+   "head": "fff5e0c4ffffffff"
+  },
+  {
+   "output": "mpd",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 1880,
+   "ffprobe": "dash",
+   "magick": null,
+   "head": "3c3f786d6c207665"
+  },
+  {
+   "output": "ms",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 286,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2e534820310ad0a2"
+  },
+  {
+   "output": "msbc",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 32640,
+   "ffprobe": "sbc",
+   "magick": null,
+   "head": "9c313c5200000000"
+  },
+  {
+   "output": "mts",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 71628,
+   "ffprobe": "mpegts",
+   "magick": null,
+   "head": "474011100042f025"
+  },
+  {
+   "output": "mtv",
+   "from": "mp4",
+   "engine": "imagemagick",
+   "bytes": 1152160,
+   "ffprobe": null,
+   "magick": "MTV",
+   "head": "313630203132300a"
+  },
+  {
+   "output": "muse",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 190,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2a20d0a2d0b5d181"
+  },
+  {
+   "output": "objnomtl",
+   "from": "obj",
+   "engine": "assimp",
+   "bytes": 649,
+   "ffprobe": null,
+   "magick": null,
+   "head": "232046696c652070"
+  },
+  {
+   "output": "ods",
+   "from": "csv",
+   "engine": "libreoffice",
+   "bytes": 9102,
+   "ffprobe": null,
+   "magick": null,
+   "head": "504b030414000008"
+  },
+  {
+   "output": "oga",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 88487,
+   "ffprobe": "ogg",
+   "magick": null,
+   "head": "4f67675300020000"
+  },
+  {
+   "output": "ogv",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 29033,
+   "ffprobe": "ogg",
+   "magick": null,
+   "head": "4f67675300020000"
+  },
+  {
+   "output": "opendocument",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 1803,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c746578743a6820"
+  },
+  {
+   "output": "opml",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 259,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c6f75746c696e65"
+  },
+  {
+   "output": "org",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 264,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2a20d0a2d0b5d181"
+  },
+  {
+   "output": "ots",
+   "from": "csv",
+   "engine": "libreoffice",
+   "bytes": 9117,
+   "ffprobe": null,
+   "magick": null,
+   "head": "504b030414000008"
+  },
+  {
+   "output": "ott",
+   "from": "docx",
+   "engine": "libreoffice",
+   "bytes": 10911,
+   "ffprobe": null,
+   "magick": null,
+   "head": "504b030414000008"
+  },
+  {
+   "output": "pbrt",
+   "from": "obj",
+   "engine": "assimp",
+   "bytes": 1350,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2323232323232323"
+  },
+  {
+   "output": "pdb",
+   "from": "docx",
+   "engine": "calibre",
+   "bytes": 189,
+   "ffprobe": null,
+   "magick": null,
+   "head": "556e6b6e6f776e00"
+  },
+  {
+   "output": "pdfpage",
+   "from": "bmp",
+   "engine": "potrace",
+   "bytes": 754,
+   "ffprobe": null,
+   "magick": "PDF",
+   "head": "255044462d312e33"
+  },
+  {
+   "output": "pgmyuv",
+   "from": "png",
+   "engine": "ffmpeg",
+   "bytes": 6157,
+   "ffprobe": "pgmyuv_pipe",
+   "magick": "PGM",
+   "head": "50350a3634203936"
+  },
+  {
+   "output": "pix",
+   "from": "png",
+   "engine": "ffmpeg",
+   "bytes": 706,
+   "ffprobe": "alias_pix",
+   "magick": null,
+   "head": "0040004000000000"
+  },
+  {
+   "output": "pjpeg",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 2288,
+   "ffprobe": "jpeg_pipe",
+   "magick": "JPEG",
+   "head": "ffd8ffe000104a46"
+  },
+  {
+   "output": "plain",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 190,
+   "ffprobe": null,
+   "magick": null,
+   "head": "d0a2d0b5d181d182"
+  },
+  {
+   "output": "plyb",
+   "from": "obj",
+   "engine": "assimp",
+   "bytes": 834,
+   "ffprobe": null,
+   "magick": null,
+   "head": "706c790a666f726d"
+  },
+  {
+   "output": "postscript",
+   "from": "bmp",
+   "engine": "potrace",
+   "bytes": 1109,
+   "ffprobe": null,
+   "magick": "PS",
+   "head": "252150532d41646f"
+  },
+  {
+   "output": "pov",
+   "from": "png",
+   "engine": "inkscape",
+   "bytes": 1381,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2f2a232323232323"
+  },
+  {
+   "output": "ps2",
+   "from": "png",
+   "engine": "graphicsmagick",
+   "bytes": 8695,
+   "ffprobe": null,
+   "magick": "PS",
+   "head": "252150532d41646f"
+  },
+  {
+   "output": "ps2",
+   "from": "tif",
+   "engine": "graphicsmagick",
+   "bytes": 19603,
+   "ffprobe": null,
+   "magick": "PS",
+   "head": "252150532d41646f"
+  },
+  {
+   "output": "ps2",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 8700,
+   "ffprobe": null,
+   "magick": "PS",
+   "head": "252150532d41646f"
+  },
+  {
+   "output": "ps3",
+   "from": "png",
+   "engine": "graphicsmagick",
+   "bytes": 4864,
+   "ffprobe": null,
+   "magick": "PS",
+   "head": "252150532d41646f"
+  },
+  {
+   "output": "ps3",
+   "from": "tif",
+   "engine": "graphicsmagick",
+   "bytes": 12883,
+   "ffprobe": null,
+   "magick": "PS",
+   "head": "252150532d41646f"
+  },
+  {
+   "output": "ps3",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 4896,
+   "ffprobe": null,
+   "magick": "PS",
+   "head": "252150532d41646f"
+  },
+  {
+   "output": "psb",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 3359,
+   "ffprobe": null,
+   "magick": "PSB",
+   "head": "3842505300020000"
+  },
+  {
+   "output": "psd",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 2823,
+   "ffprobe": "psd_pipe",
+   "magick": "PSD",
+   "head": "3842505300010000"
+  },
+  {
+   "output": "psp",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 25368,
+   "ffprobe": "mov,mp4,m4a,3gp,3g2,mj2",
+   "magick": null,
+   "head": "0000002066747970"
+  },
+  {
+   "output": "ptif",
+   "from": "png",
+   "engine": "graphicsmagick",
+   "bytes": 1306,
+   "ffprobe": "tiff_pipe",
+   "magick": "TIFF",
+   "head": "49492a00ec000000"
+  },
+  {
+   "output": "ptif",
+   "from": "tif",
+   "engine": "graphicsmagick",
+   "bytes": 27388,
+   "ffprobe": "tiff_pipe",
+   "magick": "TIFF",
+   "head": "49492a0008400000"
+  },
+  {
+   "output": "ptif",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 16650,
+   "ffprobe": "tiff_pipe",
+   "magick": "TIFF",
+   "head": "49492a0008400000"
+  },
+  {
+   "output": "rb",
+   "from": "docx",
+   "engine": "calibre",
+   "bytes": 799,
+   "ffprobe": null,
+   "magick": null,
+   "head": "b00cb00c02004e55"
+  },
+  {
+   "output": "revealjs",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 426,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c73656374696f6e"
+  },
+  {
+   "output": "rs",
+   "from": "png",
+   "engine": "ffmpeg",
+   "bytes": 4655,
+   "ffprobe": "sunrast_pipe",
+   "magick": "SUN",
+   "head": "59a66a9500000040"
+  },
+  {
+   "output": "rst",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 208,
+   "ffprobe": null,
+   "magick": null,
+   "head": "d0a2d0b5d181d182"
+  },
+  {
+   "output": "s5",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 426,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c6469762069643d"
+  },
+  {
+   "output": "sb",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 45056,
+   "ffprobe": "s8",
+   "magick": null,
+   "head": "0000000000000000"
+  },
+  {
+   "output": "sf",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 91136,
+   "ffprobe": "ircam",
+   "magick": null,
+   "head": "64a301000044ac46"
+  },
+  {
+   "output": "sif",
+   "from": "png",
+   "engine": "inkscape",
+   "bytes": 189,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c63616e76617320"
+  },
+  {
+   "output": "slideous",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 426,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c6469762069643d"
+  },
+  {
+   "output": "slidy",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 426,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c6469762069643d"
+  },
+  {
+   "output": "snb",
+   "from": "docx",
+   "engine": "calibre",
+   "bytes": 623,
+   "ffprobe": null,
+   "magick": null,
+   "head": "534e425030303042"
+  },
+  {
+   "output": "spx",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 7752,
+   "ffprobe": "ogg",
+   "magick": null,
+   "head": "4f67675300020000"
+  },
+  {
+   "output": "stlb",
+   "from": "obj",
+   "engine": "assimp",
+   "bytes": 684,
+   "ffprobe": null,
+   "magick": null,
+   "head": "417373696d705363"
+  },
+  {
+   "output": "stp",
+   "from": "obj",
+   "engine": "assimp",
+   "bytes": 19268,
+   "ffprobe": null,
+   "magick": null,
+   "head": "49534f2d31303330"
+  },
+  {
+   "output": "stp",
+   "from": "b3d",
+   "engine": "assimp",
+   "bytes": 3305,
+   "ffprobe": null,
+   "magick": null,
+   "head": "49534f2d31303330"
+  },
+  {
+   "output": "sunras",
+   "from": "png",
+   "engine": "ffmpeg",
+   "bytes": 4655,
+   "ffprobe": "sunrast_pipe",
+   "magick": "SUN",
+   "head": "59a66a9500000040"
+  },
+  {
+   "output": "sw",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 90112,
+   "ffprobe": "s16le",
+   "magick": null,
+   "head": "0000000000000000"
+  },
+  {
+   "output": "tab",
+   "from": "docx",
+   "engine": "libreoffice",
+   "bytes": 185,
+   "ffprobe": null,
+   "magick": null,
+   "head": "efbbbfd0a2d0b5d1"
+  },
+  {
+   "output": "tcr",
+   "from": "docx",
+   "engine": "calibre",
+   "bytes": 476,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2121382d42697421"
+  },
+  {
+   "output": "tei",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 617,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c64697620747970"
+  },
+  {
+   "output": "tex",
+   "from": "png",
+   "engine": "inkscape",
+   "bytes": 218,
+   "ffprobe": null,
+   "magick": null,
+   "head": "254c615465582077"
+  },
+  {
+   "output": "texinfo",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 408,
+   "ffprobe": null,
+   "magick": null,
+   "head": "406e6f646520546f"
+  },
+  {
+   "output": "textile",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 226,
+   "ffprobe": null,
+   "magick": null,
+   "head": "68312823d182d0b5"
+  },
+  {
+   "output": "ts",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 71628,
+   "ffprobe": "mpegts",
+   "magick": null,
+   "head": "474011100042f025"
+  },
+  {
+   "output": "tsv",
+   "from": "csv",
+   "engine": "libreoffice",
+   "bytes": 52,
+   "ffprobe": null,
+   "magick": null,
+   "head": "6e616d652c717479"
+  },
+  {
+   "output": "txtz",
+   "from": "docx",
+   "engine": "calibre",
+   "bytes": 784,
+   "ffprobe": null,
+   "magick": null,
+   "head": "504b030414000008"
+  },
+  {
+   "output": "typst",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 378,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3d20d0a2d0b5d181"
+  },
+  {
+   "output": "ub",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 45056,
+   "ffprobe": "u8",
+   "magick": null,
+   "head": "8080808080808080"
+  },
+  {
+   "output": "ul",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 45056,
+   "ffprobe": "mulaw",
+   "magick": null,
+   "head": "ffffffffffffffff"
+  },
+  {
+   "output": "uw",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 90112,
+   "ffprobe": "u16le",
+   "magick": null,
+   "head": "0080008000800080"
+  },
+  {
+   "output": "vbn",
+   "from": "png",
+   "engine": "ffmpeg",
+   "bytes": 4288,
+   "ffprobe": "vbn_pipe",
+   "magick": null,
+   "head": "1ef10d9003000000"
+  },
+  {
+   "output": "vob",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 61440,
+   "ffprobe": "mpeg",
+   "magick": null,
+   "head": "000001ba44000400"
+  },
+  {
+   "output": "wma",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 58549,
+   "ffprobe": "asf",
+   "magick": null,
+   "head": "3026b2758e66cf11"
+  },
+  {
+   "output": "wmf",
+   "from": "png",
+   "engine": "inkscape",
+   "bytes": 16686,
+   "ffprobe": null,
+   "magick": "convert /tmp/magick-jYZwBv0v21vqEhhM7mYBKfzFxZcklHqJ as a Draw document -> /tmp/magick-jYZwBv0v21vqEhhM7mYBKfzFxZcklHqJ.pdf using filter : draw_pdf_Export",
+   "head": "d7cdc69a00000000"
+  },
+  {
+   "output": "wmv",
+   "from": "wav",
+   "engine": "ffmpeg",
+   "bytes": 54944,
+   "ffprobe": "asf",
+   "magick": null,
+   "head": "3026b2758e66cf11"
+  },
+  {
+   "output": "wps",
+   "from": "docx",
+   "engine": "libreoffice",
+   "bytes": 9216,
+   "ffprobe": null,
+   "magick": null,
+   "head": "d0cf11e0a1b11ae1"
+  },
+  {
+   "output": "wpt",
+   "from": "docx",
+   "engine": "libreoffice",
+   "bytes": 9216,
+   "ffprobe": null,
+   "magick": null,
+   "head": "d0cf11e0a1b11ae1"
+  },
+  {
+   "output": "x",
+   "from": "obj",
+   "engine": "assimp",
+   "bytes": 4664,
+   "ffprobe": null,
+   "magick": null,
+   "head": "786f662030333033"
+  },
+  {
+   "output": "xfig",
+   "from": "bmp",
+   "engine": "potrace",
+   "bytes": 656,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2346494720332e32"
+  },
+  {
+   "output": "xhtml",
+   "from": "docx",
+   "engine": "libreoffice",
+   "bytes": 2853,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3c21444f43545950"
+  },
+  {
+   "output": "xls",
+   "from": "csv",
+   "engine": "libreoffice",
+   "bytes": 5632,
+   "ffprobe": null,
+   "magick": "convert /tmp/magick-80ZGzUJWL1aNKcw6zBrrEa7bZBlSthhv as a Calc document -> /tmp/magick-80ZGzUJWL1aNKcw6zBrrEa7bZBlSthhv.pdf using filter : calc_pdf_Export",
+   "head": "d0cf11e0a1b11ae1"
+  },
+  {
+   "output": "xlsx",
+   "from": "csv",
+   "engine": "libreoffice",
+   "bytes": 5708,
+   "ffprobe": null,
+   "magick": "convert /tmp/magick-7xB-Uahs9fyUrPCYx-VfcJXmmhJZdgAa as a Calc document -> /tmp/magick-7xB-Uahs9fyUrPCYx-VfcJXmmhJZdgAa.pdf using filter : calc_pdf_Export",
+   "head": "504b030414000808"
+  },
+  {
+   "output": "xwiki",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 241,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3d20d0a2d0b5d181"
+  },
+  {
+   "output": "y4m",
+   "from": "mp4",
+   "engine": "ffmpeg",
+   "bytes": 576178,
+   "ffprobe": "yuv4mpegpipe",
+   "magick": null,
+   "head": "595556344d504547"
+  },
+  {
+   "output": "yaml",
+   "from": "csv",
+   "engine": "dasel",
+   "bytes": 121,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2d206e616d653a20"
+  },
+  {
+   "output": "yaml",
+   "from": "png",
+   "engine": "imagemagick",
+   "bytes": 3038,
+   "ffprobe": null,
+   "magick": null,
+   "head": "2d2d2d0a20207665"
+  },
+  {
+   "output": "zimwiki",
+   "from": "markdown",
+   "engine": "pandoc",
+   "bytes": 204,
+   "ffprobe": null,
+   "magick": null,
+   "head": "3d3d3d3d3d3d20d0"
+  }
+ ],
+ "removed": {
+  "raw headerless pixels or samples": [
+   "bayer",
+   "bayera",
+   "bgr",
+   "bgra",
+   "bgro",
+   "cmyk",
+   "cmyka",
+   "gray",
+   "graya",
+   "mono",
+   "rgb",
+   "rgba",
+   "rgbo",
+   "uyvy",
+   "ycbcr",
+   "ycbcra",
+   "yuv",
+   "y",
+   "pal",
+   "map",
+   "matte"
+  ],
+  "ImageMagick/GraphicsMagick pseudo-targets writing PNG, TIFF, MIFF or text dumps, or unreadable (pcl) / unencodable (jpt)": [
+   "b",
+   "c",
+   "g",
+   "k",
+   "m",
+   "o",
+   "r",
+   "p7",
+   "preview",
+   "data",
+   "inline",
+   "flif",
+   "group4",
+   "msvg",
+   "rsvg",
+   "sparse",
+   "pocketmod",
+   "histogram",
+   "info",
+   "msl",
+   "mvg",
+   "ashlar",
+   "brf",
+   "ubrl",
+   "ubrl6",
+   "isobrl",
+   "isobrl6",
+   "cip",
+   "ftxt",
+   "text",
+   "shtml",
+   "uil",
+   "pcl",
+   "jpt"
+  ],
+  "FFmpeg encoder missing in the image": [
+   "266",
+   "ac4",
+   "amr",
+   "avs2",
+   "avs3",
+   "bit",
+   "cavs",
+   "cvg",
+   "evc",
+   "h266.mkv",
+   "lbc",
+   "oma",
+   "rcv",
+   "vc1",
+   "vc2",
+   "vvc"
+  ],
+  "FFmpeg experimental encoder, not enabled without -strict -2": [
+   "dts",
+   "mlp",
+   "thd"
+  ],
+  "FFmpeg parameters never set by the converter (dnxhd/dnxhr need a profile bitrate, flm needs RGBA, amv audio frame size never matches)": [
+   "dnxhd",
+   "dnxhr",
+   "flm",
+   "amv"
+  ],
+  "FFmpeg writes another format (pcm=ALP ADPCM, vag=KVAG) or nothing can read it back (a64)": [
+   "a64",
+   "pcm",
+   "vag"
+  ],
+  "engine rejects the target in this image": [
+   "pandoc native",
+   "pml",
+   "oeb",
+   "jpx",
+   "nii",
+   "nia",
+   "nii.gz",
+   "nia.gz",
+   "hdr.gz",
+   "img.gz",
+   "xlsm",
+   "xlt"
+  ],
+  "LibreOffice writes a macro-free template content type under a macro extension": [
+   "dotm",
+   "xltm"
+  ]
+ },
+ "removedEngines": {
+  "exr": "imagemagick, graphicsmagick (no OpenEXR coder; file is JPEG/PNG)",
+  "x": "imagemagick, graphicsmagick (file is PNG; DirectX via assimp kept)",
+  "mat": "vips (vips matrix text, not MATLAB)",
+  "video inputs -> mtv/json/svgz": "imagemagick, graphicsmagick (decodes every frame; prod mp4->mtv 14/14 and mp4->json 2/2 failed; svgz came back as MP4)",
+  "mpc": "graphicsmagick (GraphicsMagick MPC cache is not readable by ImageMagick)"
+ },
+ "engineChanges": {
+  "still image from video": "ffmpeg -frames:v 1 for dpx exr jls ljpg pam pbm pcx pfm pgm pgmyuv phm ppm sgi tga xwd sun sunras ras rs im1 im8 im24 vbn xbm qoi hdr wbmp jp2 j2c j2k pix (previously failed at frame 2)",
+  "mono audio": "rso and gsm downmix to mono (gsm 8 kHz); stereo uploads failed before",
+  "glTF": "assimp glb/gltf export glTF 2.0 (glb2/gltf2) instead of glTF 1.0"
+ },
+ "secondRun": [
+  {
+   "kind": "assimp",
+   "from": "obj",
+   "output": "glb",
+   "engine": "assimp",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.glb"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "assimp",
+   "from": "b3d",
+   "output": "glb",
+   "engine": "assimp",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.glb"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "assimp",
+   "from": "obj",
+   "output": "glb2",
+   "engine": "assimp",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.glb2"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "assimp",
+   "from": "b3d",
+   "output": "glb2",
+   "engine": "assimp",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.glb2"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "assimp",
+   "from": "obj",
+   "output": "gltf",
+   "engine": "assimp",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.bin",
+    "output.gltf"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "assimp",
+   "from": "b3d",
+   "output": "gltf",
+   "engine": "assimp",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.bin",
+    "output.gltf"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "assimp",
+   "from": "obj",
+   "output": "gltf2",
+   "engine": "assimp",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.bin",
+    "output.gltf2"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "assimp",
+   "from": "b3d",
+   "output": "gltf2",
+   "engine": "assimp",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.bin",
+    "output.gltf2"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "dasel",
+   "from": "json",
+   "output": "csv",
+   "engine": "dasel",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.csv"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "dasel",
+   "from": "json",
+   "output": "toml",
+   "engine": "dasel",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.toml"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "dasel",
+   "from": "json",
+   "output": "yaml",
+   "engine": "dasel",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.yaml"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "im-video",
+   "from": "mp4",
+   "output": "json",
+   "engine": "imagemagick",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.json"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "im-video",
+   "from": "mp4",
+   "output": "mtv",
+   "engine": "imagemagick",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.mtv"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "im-video",
+   "from": "mp4",
+   "output": "svgz",
+   "engine": "imagemagick",
+   "engineVersion": "new",
+   "exit": 1,
+   "files": [
+    "output.svgz"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "png-ffmpeg",
+   "from": "png",
+   "output": "dpx",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.dpx"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "png-ffmpeg",
+   "from": "png",
+   "output": "exr",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 1,
+   "files": [
+    "output.exr"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "png-ffmpeg",
+   "from": "png",
+   "output": "hdr",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.hdr"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "png-ffmpeg",
+   "from": "png",
+   "output": "jp2",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.jp2"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "png-ffmpeg",
+   "from": "png",
+   "output": "pfm",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.pfm"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "png-ffmpeg",
+   "from": "png",
+   "output": "phm",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.phm"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "png-ffmpeg",
+   "from": "png",
+   "output": "qoi",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.qoi"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "png-im",
+   "from": "png",
+   "output": "exr",
+   "engine": "imagemagick",
+   "engineVersion": "new",
+   "exit": 1,
+   "files": [
+    "output.exr"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "png-im",
+   "from": "png",
+   "output": "j2c",
+   "engine": "imagemagick",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.j2c"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "png-im",
+   "from": "png",
+   "output": "j2k",
+   "engine": "imagemagick",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.j2k"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "png-im",
+   "from": "png",
+   "output": "jp2",
+   "engine": "imagemagick",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.jp2"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "png-im",
+   "from": "png",
+   "output": "jpt",
+   "engine": "imagemagick",
+   "engineVersion": "new",
+   "exit": 1,
+   "files": [
+    "output.jpt"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "png-vips",
+   "from": "png",
+   "output": "j2k",
+   "engine": "vips",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.j2k"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "png-vips",
+   "from": "png",
+   "output": "jp2",
+   "engine": "vips",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.jp2"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "png-vips",
+   "from": "png",
+   "output": "jpx",
+   "engine": "vips",
+   "engineVersion": "new",
+   "exit": 1,
+   "files": [],
+   "reason": ""
+  },
+  {
+   "kind": "std-audio",
+   "from": "mp3",
+   "output": "ac3",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 0,
+   "files": [
+    "output.ac3"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "std-audio",
+   "from": "mp3",
+   "output": "adx",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 0,
+   "files": [
+    "output.adx"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "std-audio",
+   "from": "mp3",
+   "output": "al",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.al"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "std-audio",
+   "from": "mp3",
+   "output": "amr",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-audio",
+   "from": "mp3",
+   "output": "gsm",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.gsm"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-audio",
+   "from": "mp3",
+   "output": "mp2",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.mp2"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "std-audio",
+   "from": "mp3",
+   "output": "pcm",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.pcm"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "std-audio",
+   "from": "mp3",
+   "output": "rso",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.rso"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-audio",
+   "from": "mp3",
+   "output": "vag",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.vag"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "std-audio",
+   "from": "mp3",
+   "output": "wma",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.wma"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "266",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "a64",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.a64"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "ac4",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "al",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.al"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "amr",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "amv",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.amv"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "avi",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 0,
+   "files": [
+    "output.avi"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "avs2",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "avs3",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "bit",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "cavs",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "cvg",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "dnxhd",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.dnxhd"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "dnxhr",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.dnxhr"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "dts",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.dts"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "dv",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.dv"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "evc",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "flm",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.flm"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "gsm",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.gsm"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "gxf",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.gxf"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "h261",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.h261"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "h263",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.h263"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "h266.mkv",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "lbc",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "m1v",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.m1v"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "mkv",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 0,
+   "files": [
+    "output.mkv"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "mlp",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.mlp"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "mxf",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.mxf"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "oma",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "pcm",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.pcm"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "ra",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.ra"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "rcv",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "rm",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 0,
+   "files": [
+    "output.rm"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "roq",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.roq"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "thd",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.thd"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "ts",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.ts"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "vag",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.vag"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "vc1",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "vc2",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.vc2"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "vob",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.vob"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "vvc",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Encoder not found"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "wma",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.wma"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "std-video",
+   "from": "mp4",
+   "output": "y",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.U",
+    "output.V",
+    "output.y"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "bmp",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.bmp"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "dpx",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.dpx"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "exr",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 1,
+   "files": [
+    "output.exr"
+   ],
+   "reason": "ValueError: Could not validate requested output format"
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "hdr",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.hdr"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "ico",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.ico"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "im1",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.im1"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "im24",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.im24"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "im8",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.im8"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "j2c",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.j2c"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "j2k",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.j2k"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "jls",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.jls"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "jp2",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.jp2"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "jpg",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.jpg"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "ljpg",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 1,
+   "files": [],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "pam",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.pam"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "pbm",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.pbm"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "pcx",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.pcx"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "pfm",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.pfm"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "pgm",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.pgm"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "pgmyuv",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.pgmyuv"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "phm",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.phm"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "pix",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.pix"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "png",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.png"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "ppm",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.ppm"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "qoi",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.qoi"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "ras",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.ras"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "rs",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.rs"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "sgi",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.sgi"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "sun",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.sun"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "sunras",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.sunras"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "tga",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.tga"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "tif",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.tif"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "vbn",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 1,
+   "files": [],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "wbmp",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.wbmp"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "xbm",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.xbm"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "xface",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 1,
+   "files": [],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-new",
+   "from": "mp4",
+   "output": "xwd",
+   "engine": "ffmpeg",
+   "engineVersion": "new",
+   "exit": 0,
+   "files": [
+    "output.xwd"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "bmp",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 0,
+   "files": [
+    "output.bmp"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "dpx",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.dpx"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "exr",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.exr"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "hdr",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.hdr"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "ico",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 0,
+   "files": [
+    "output.ico"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "im1",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.im1"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "im24",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.im24"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "im8",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.im8"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "j2c",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.j2c"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "j2k",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.j2k"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "jls",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.jls"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "jp2",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.jp2"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "jpg",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 0,
+   "files": [
+    "output.jpg"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "ljpg",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "pam",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.pam"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "pbm",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.pbm"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "pcx",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.pcx"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "pfm",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.pfm"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "pgm",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.pgm"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "pgmyuv",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.pgmyuv"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "phm",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.phm"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "pix",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.pix"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "png",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 0,
+   "files": [
+    "output.png"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "ppm",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.ppm"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "qoi",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.qoi"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "ras",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.ras"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "rs",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.rs"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "sgi",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.sgi"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "sun",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.sun"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "sunras",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.sunras"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "tga",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.tga"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "tif",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 0,
+   "files": [
+    "output.tif"
+   ],
+   "reason": ""
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "vbn",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "wbmp",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.wbmp"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "xbm",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.xbm"
+   ],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "xface",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [],
+   "reason": "Conversion failed!"
+  },
+  {
+   "kind": "still-old",
+   "from": "mp4",
+   "output": "xwd",
+   "engine": "ffmpeg",
+   "engineVersion": "master",
+   "exit": 1,
+   "files": [
+    "output.xwd"
+   ],
+   "reason": "Conversion failed!"
+  }
+ ],
+ "userReportedPairs": [
+  {
+   "from": "mp3",
+   "output": "rso",
+   "sample": "sample.mp3",
+   "attempts": [
+    {
+     "engine": "ffmpeg",
+     "exit": 0,
+     "files": [
+      "output.rso"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "docx",
+   "output": "json",
+   "sample": "sample.docx",
+   "attempts": [
+    {
+     "engine": "pandoc",
+     "exit": 0,
+     "files": [
+      "output.json"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "mp4",
+   "output": "h264.mp4",
+   "sample": "sample.mp4",
+   "attempts": [
+    {
+     "engine": "ffmpeg",
+     "exit": 0,
+     "files": [
+      "output.h264.mp4"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "mp4",
+   "output": "dpx",
+   "sample": "sample.mp4",
+   "attempts": [
+    {
+     "engine": "ffmpeg",
+     "exit": 1,
+     "files": [
+      "output.dpx"
+     ]
+    },
+    {
+     "engine": "imagemagick",
+     "exit": 0,
+     "files": [
+      "output-0.dpx",
+      "output-1.dpx",
+      "output-10.dpx"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "mp3",
+   "output": "asf",
+   "sample": "sample.mp3",
+   "attempts": [
+    {
+     "engine": "ffmpeg",
+     "exit": 0,
+     "files": [
+      "output.asf"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "mp4",
+   "output": "ivf",
+   "sample": "sample.mp4",
+   "attempts": [
+    {
+     "engine": "ffmpeg",
+     "exit": 0,
+     "files": [
+      "output.ivf"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "txd",
+   "output": "jpg",
+   "sample": "sample.txd",
+   "attempts": [
+    {
+     "engine": "ffmpeg",
+     "exit": 0,
+     "files": [
+      "output.jpg"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "b3d",
+   "output": "3ds",
+   "sample": "sample.b3d",
+   "attempts": [
+    {
+     "engine": "assimp",
+     "exit": 0,
+     "files": [
+      "output.3ds"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "b3d",
+   "output": "obj",
+   "sample": "sample.b3d",
+   "attempts": [
+    {
+     "engine": "assimp",
+     "exit": 0,
+     "files": [
+      "output.mtl",
+      "output.obj"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "png",
+   "output": "jpg",
+   "sample": "sample.png",
+   "attempts": [
+    {
+     "engine": "ffmpeg",
+     "exit": 0,
+     "files": [
+      "output.jpg"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "txd",
+   "output": "jpg",
+   "sample": "sample-dxt1.txd",
+   "attempts": [
+    {
+     "engine": "ffmpeg",
+     "exit": 0,
+     "files": [
+      "output.jpg"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "mp4",
+   "output": "mtv",
+   "sample": "sample.mp4",
+   "attempts": [
+    {
+     "engine": "imagemagick",
+     "exit": 1,
+     "files": [
+      "output.mtv"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "mp3",
+   "output": "adx",
+   "sample": "sample.mp3",
+   "attempts": [
+    {
+     "engine": "ffmpeg",
+     "exit": 0,
+     "files": [
+      "output.adx"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "json",
+   "output": "csv",
+   "sample": "sample.json",
+   "attempts": [
+    {
+     "engine": "dasel",
+     "exit": 1,
+     "files": []
+    }
+   ]
+  },
+  {
+   "from": "mp4",
+   "output": "json",
+   "sample": "sample.mp4",
+   "attempts": [
+    {
+     "engine": "imagemagick",
+     "exit": 0,
+     "files": [
+      "output.json"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "mp4",
+   "output": "m2v",
+   "sample": "sample.mp4",
+   "attempts": [
+    {
+     "engine": "ffmpeg",
+     "exit": 0,
+     "files": [
+      "output.m2v"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "jpg",
+   "output": "json",
+   "sample": "sample.jpg",
+   "attempts": [
+    {
+     "engine": "imagemagick",
+     "exit": 0,
+     "files": [
+      "output.json"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "txd",
+   "output": "png",
+   "sample": "sample.txd",
+   "attempts": [
+    {
+     "engine": "ffmpeg",
+     "exit": 0,
+     "files": [
+      "output.png"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "txd",
+   "output": "apng",
+   "sample": "sample.txd",
+   "attempts": [
+    {
+     "engine": "ffmpeg",
+     "exit": 1,
+     "files": [
+      "output.apng"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "b3d",
+   "output": "stl",
+   "sample": "sample.b3d",
+   "attempts": [
+    {
+     "engine": "assimp",
+     "exit": 0,
+     "files": [
+      "output.stl"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "b3d",
+   "output": "stp",
+   "sample": "sample.b3d",
+   "attempts": [
+    {
+     "engine": "assimp",
+     "exit": 1,
+     "files": [
+      "output.stp"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "mp4",
+   "output": "jpg",
+   "sample": "sample.mp4",
+   "attempts": [
+    {
+     "engine": "ffmpeg",
+     "exit": 0,
+     "files": [
+      "output.jpg"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "txd",
+   "output": "png",
+   "sample": "sample-dxt1.txd",
+   "attempts": [
+    {
+     "engine": "ffmpeg",
+     "exit": 0,
+     "files": [
+      "output.png"
+     ]
+    }
+   ]
+  }
+ ],
+ "keptInputDependent": {
+  "dv": "DV frame sizes only (720x480/576)",
+  "gxf": "PAL/NTSC sizes only",
+  "h261": "176x144 or 352x288 only",
+  "h263": "fixed CIF family sizes only",
+  "mxf": "48 kHz audio only (typical for phone video); gif->mxf receipt 2026-10-04",
+  "roq": "22.05 kHz audio, power-of-two sizes; mp4->roq receipt 2026-10-04",
+  "xface": "48x48 only",
+  "six/sixel": "PNG sample unreadable, JPEG passes (jpg->sixel receipt 2026-10-04)",
+  "mpc": "ImageMagick MPC validates; GraphicsMagick engine removed",
+  "mask/clip/thumbnail and GraphicsMagick exif/iptc/xmp/icc": "need the matching embedded data in the input"
+ }
+}

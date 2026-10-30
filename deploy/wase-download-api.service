@@ -16,10 +16,15 @@ Environment=MAX_FILE_MB=100
 Environment=MAX_CONCURRENT=1
 Environment=CONVERT_CPU=0.25
 Environment=CONVERT_CGROUP=wase-conversion.slice
+# Optional, root-owned 0600 file for secrets such as ALERT_WEBHOOK_URL.
+EnvironmentFile=-/etc/wase-download/api.env
 MemoryMax=512M
 CPUQuota=15%
 CPUWeight=10
 Slice=wase-conversion.slice
+# Remove job containers/volumes/directories left by a crash. "-": the API also
+# recovers a paused intake by itself, so a Docker hiccup must not block start.
+ExecStartPre=-/bin/sh /opt/wase-download/backend/cleanup-stale-jobs.sh
 ExecStart=/usr/bin/node /opt/wase-download/backend/server.mjs
 Restart=on-failure
 RestartSec=3

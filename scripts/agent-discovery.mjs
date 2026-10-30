@@ -117,11 +117,15 @@ The optional browser-only image fallback is a separate narrower path: 20 MiB per
 
 ### Error handling
 
-- **400**: the \`from\`/\`to\` pair is absent from the public runtime catalogue.
-- **403**: an unapproved Origin header was supplied.
-- **413**: the request exceeds the input limit.
-- **422**: the supplied file could not be converted/validated, or no engine produced a safe valid output. Try a valid smaller file or another declared output; do not claim success.
-- **429**: rate, occupancy or waiting-queue limit. Honor \`Retry-After\` (currently 60 seconds) and avoid parallel retries.
+Conversion errors are JSON \`{"code":"...","message":"..."}\` with \`Content-Type: application/json\`; branch on \`code\`, not on the English \`message\`.
+
+- **400** \`unsupported_pair\`: the \`from\`/\`to\` pair is absent from the public runtime catalogue.
+- **403** \`forbidden\`: an unapproved Origin header was supplied.
+- **413** \`too_large\`: the request exceeds the input limit.
+- **422** \`empty\`: the uploaded body was empty. \`output_too_large\`: the result exceeded 200 MiB or 5000 files. \`engine_failed\`: the supplied file could not be converted/validated, or no engine produced a safe valid output. Try a valid smaller file or another declared output; do not claim success.
+- **429** \`rate_limited\`: rate, occupancy or waiting-queue limit. Honor \`Retry-After\` (currently 60 seconds) and avoid parallel retries.
+- **503** \`paused\`: conversion intake is paused (Docker cleanup unconfirmed; it resumes automatically) or the service is restarting. Honor \`Retry-After\`.
+- **504** \`timeout\`: the upload or conversion exceeded its deadline.
 - **404**: unknown API path/method outside the supported discovery route.
 - **405/415 on MCP**: method or request Content-Type is unsupported.
 - **500 or interrupted connection**: unexpected failure, cancellation or a deadline; no result is guaranteed. Do not present partial bytes as a completed conversion.

@@ -5,6 +5,7 @@ import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
 import {chooseAutoTarget} from '../site/src/auto-target.js';
 import {browserSelection,browserOutputs} from '../site/src/browser-fallback.js';
+import {fillCopy} from '../site/src/server-copy.js';
 
 // Execute the shipped handlers against a small deterministic DOM boundary.
 // Network, image decoding and animations are deliberately outside these cases.
@@ -17,8 +18,8 @@ function harness(){
  const nodes={processing:{value:'server'},source:{querySelector:()=>sourceValue},target:{querySelector:()=>targetValue},convert:{disabled:false},announcement:{textContent:''},'processing-note':{},dropzone:{querySelector:()=>({})},'file-input':{}};
  const document={body:{dataset:{lang:'en',source:'AUTO',target:'SVG'}},querySelector:()=>note};
  const context=vm.createContext({
-  $:id=>nodes[id],document,browserSelection,browserOutputs,chooseAutoTarget,autoTarget:false,categories:{},
-  t:{noSharedFormat:'No shared output',serverInfo:'Server',local:'Browser',mb:'MB',files:'Files',saving:'Local'},
+  $:id=>nodes[id],document,browserSelection,browserOutputs,chooseAutoTarget,fillCopy,autoTarget:false,requestedTarget:null,categories:{},
+  t:{noSharedFormat:'No shared output',serverInfo:'Server',local:'Browser',mb:'MB',files:'Files',saving:'Local',targetUnavailable:'{source} to {target} is not available right now.'},
   items:[{type:'DOCX',url:'blob:docx'},{type:'MP3',url:'blob:mp3'}],
   catalog:{docx:{pdf:true},mp3:{wav:true},png:{svg:true,png:true}},
   target:'SVG',compatible:true,modeChosen:false,fileLimit:100,message:'',formats:{},released:[],invalidations:0,
@@ -82,3 +83,20 @@ test('catalogue/mode initialization preserves an explicit user-selected output',
  nodes.processing.onchange();assert.equal(c.target,'PNG');
  nodes.processing.value='browser';nodes.processing.onchange();assert.equal(c.target,'PNG');
 });
+
+test('a landing page whose output is unavailable says so instead of switching silently',()=>{
+ const {context:c,sourceValue,targetValue}=harness();
+ c.items=[];sourceValue.textContent='FLV';c.catalog.flv={pdf:true,png:true};c.target='MP4';targetValue.textContent='MP4';c.requestedTarget='MP4';
+ c.refreshTargets();
+ assert.equal(c.message,'FLV to MP4 is not available right now.');
+ assert.equal(c.target,'AUTO');assert.equal(targetValue.textContent,'AUTO');assert.equal(c.autoTarget,true);
+ assert.notEqual(c.target,'PDF','no silent substitute');
+ c.refreshTargets();assert.equal(c.message,'FLV to MP4 is not available right now.','the notice is shown once and kept');
+});
+
+test('an available requested output stays selected without a notice',()=>{
+ const {context:c,sourceValue,targetValue}=harness();
+ c.items=[];sourceValue.textContent='FLV';c.catalog.flv={mp4:true,pdf:true};c.target='MP4';targetValue.textContent='MP4';c.requestedTarget='MP4';
+ c.refreshTargets();assert.equal(c.target,'MP4');assert.equal(c.message,'');assert.equal(c.requestedTarget,null);
+});
+
